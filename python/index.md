@@ -1,6 +1,6 @@
 # Python
 
-有关的主题和概念的更高层次的讨论。他们不太专注于做事情，而更专注于获得关于如何工作的概念性框架。
+参考：[Python Wiki](https://wiki.python.org/moin/)
 
 ## 导航
 

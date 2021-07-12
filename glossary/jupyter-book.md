@@ -19,9 +19,6 @@
 [MyST-NB](https://myst-nb.readthedocs.io/en/latest/)
     {term}`Sphinx` 的扩展，它使用 {term}`MyST-Parser <MyST>` 将 Jupyter 笔记本直接解析为 Sphinx。这还允许用户在用 Sphinx 解析的笔记本中编写 MyST Markdown。它是 Jupyter Book 使用的核心技术之一。
 
-[Sphinx](https://www.sphinx-doc.org/en/master/)
-    用 Python 编写的文档引擎。Sphinx 支持许多科学和学术出版所必需的功能。它是 Jupyter Book 使用的核心技术之一。
-
 [Binder](https://mybinder.org)
     一种免费的公共服务，用于运行可复用的交互式计算环境。
     Binder 是 Jupyter 社区成员运行的 100% 开源的基础结构。Binder 项目背后的基础技术是 {term}`BinderHub`。
