@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jupyter</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/wiki");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/wiki/glossary/jupyter.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Jupyter Nook" href="jupyter-book.html" />
+    <link rel="prev" title="JavaScript" href="javascript.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  哲学
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../life/index.html">
+   生活
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../life/topic.html">
+     小窍门
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  网络
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   基础
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../web/start.html">
+     快速入门
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  编程
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/index.html">
+   Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/ipython.html">
+     IPython
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  学科
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../math/index.html">
+   数学
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/analysis.html">
+     分析
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  混沌
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../about/index.html">
+   关于
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../about/zreferences.html">
+     参考文献
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     术语表
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="canvas.html">
+       Canvas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="css.html">
+       CSS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="dash.html">
+       Dash
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="dataset.html">
+       数据集
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="html.html">
+       HTML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="http.html">
+       HTTP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="javascript.html">
+       JavaScript
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Jupyter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="jupyter-book.html">
+       Jupyter Nook
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="jupyter-widgets.html">
+       ipywidgets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="plotly.html">
+       Plotly Python 开源图形库
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="plotly-figure.html">
+       Python 图参考
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ros.html">
+       ROS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="soft.html">
+       常用软件
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="svg.html">
+       SVG
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../CHANGELOG.html">
+     变更日志
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
+   Sanstyle Book
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../other/index.html">
+   外部资源
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/topic.html">
+     话题
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/glossary/jupyter.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/wiki"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Fglossary/jupyter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter">
+<h1>Jupyter<a class="headerlink" href="#jupyter" title="永久链接至标题">¶</a></h1>
+<dl class="glossary">
+<dt id="term-Jupyter"><a class="reference external" href="https://jupyter.org/index.html">Jupyter</a><a class="headerlink" href="#term-Jupyter" title="Permalink to this term">¶</a></dt><dd><p>Jupyter（(/ˈdʒuːpɪtər/）是一个项目和社区，其目标是“开发跨数十种编程语言的<a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_software">开源软件</a>、<a class="reference external" href="https://en.wikipedia.org/wiki/Open_standard">开放标准</a>和<a class="reference external" href="https://en.wikipedia.org/wiki/Interactive_computing">交互式计算</a>服务”。它是 2014 年由 <a class="reference external" href="https://en.wikipedia.org/wiki/Fernando_P%C3%A9rez_(software_developer)">Fernando Pérez</a> 从 <a class="reference internal" href="#term-IPython"><span class="xref std std-term">IPython</span></a> 剥离出来的。Project Jupyter 的名字引用了Jupyter 支持的三种核心编程语言 <a class="reference external" href="https://en.wikipedia.org/wiki/R_(programming_language)">Julia</a>、<a class="reference internal" href="python.html#term-Python"><span class="xref std std-term">Python</span></a> 和 <a class="reference external" href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>，同时也是向伽利略（<a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo</a>）记录木星卫星发现的笔记本致敬。</p>
+</dd>
+<dt id="term-IPython"><a class="reference external" href="https://ipython.org/index.html">IPython</a><a class="headerlink" href="#term-IPython" title="Permalink to this term">¶</a></dt><dd><p>IPython（Interactive Python）是一个用于多种编程语言的交互式计算的 <a class="reference external" href="https://en.wikipedia.org/wiki/Shell_(computing)">shell 命令</a>，最初是为 Python 编程语言开发的，它提供<a class="reference external" href="https://en.wikipedia.org/wiki/Introspection_(computer_science)">内省</a>、<a class="reference external" href="https://en.wikipedia.org/wiki/Rich_media">富媒体</a>、shell 语法、<a class="reference external" href="https://en.wikipedia.org/wiki/Tab_completion">制表符补全</a>和历史记录。</p>
+</dd>
+<dt id="term-JupyterHub"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a><a class="headerlink" href="#term-JupyterHub" title="Permalink to this term">¶</a></dt><dd><p>JupyterHub 是 Jupyter 社区的核心开源工具，它允许您部署向多个用户提供远程数据科学环境的应用程序。它可以部署在云中，也可以部署在您自己的硬件上。
+JupyterHub 是一个用于 Jupyter 笔记本的多用户服务器。它通过生成、管理和代理许多单一的 Jupyter 笔记本服务器来支持许多用户。虽然 JupyterHub 需要管理服务器，但是像 Jupyo 这样的第三方服务通过托管和管理云中的多用户 Jupyter 笔记本提供了一种替代方法。</p>
+</dd>
+<dt id="term-Jupyter-Notebook"><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/index.html">Jupyter Notebook</a><a class="headerlink" href="#term-Jupyter-Notebook" title="Permalink to this term">¶</a></dt><dd><p>Jupyter Notebook（原名 IPython Notebook）是一个<a class="reference external" href="https://en.wikipedia.org/wiki/Web_application">基于 Web 的交互式</a>计算环境，用于创建 Jupyter 笔记本文档。“Notebook”这个术语可以指代许多不同的实体，主要是 Jupyter <a class="reference external" href="https://en.wikipedia.org/wiki/Web_application">Web 应用程序</a>、Jupyter Python <a class="reference external" href="https://en.wikipedia.org/wiki/Web_server">Web 服务器</a>或 Jupyter <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">文档格式</a>，具体取决于上下文。Jupyter Notebook 文档是一个 <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a> 文档，遵循版本模式，包含输入/输出单元格的有序列表，可以包含代码、文本（使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>）、数学、<a class="reference external" href="https://en.wikipedia.org/wiki/Plot_(graphics)">绘图</a>和富媒体，通常以 “.ipynb” 作为扩展名。</p>
+<p>一个 Jupyter Notebook 可以被转换成许多开放的标准输出格式（<a class="reference external" href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Presentation_slide">presentation slides</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/PDF">PDF</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/ReStructuredText">ReStructuredText</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, Python）通过 Web 界面的 “Download As” ，通过 <code class="docutils literal notranslate"><span class="pre">nbconvert</span></code> 库或“Jupyter nbconvert”命令行界面在 shell 中。为了简化 web上的笔记本文档可视化，<code class="docutils literal notranslate"><span class="pre">nbconvert</span></code>库是通过 NbViewer 提供的一个服务，它可以获取任何公开可用的笔记本文档的 URL，将其转换为 HTML 并显示给用户。</p>
+<p>Jupyter Notebook提供了一个基于浏览器的REPL，构建于许多流行的开源库之上：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/IPython">IPython</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ZeroMQ">ØMQ</a> (ZeroMQ)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tornado_(web_server)">Tornado (web server)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/JQuery">jQuery</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)">Bootstrap (front-end framework)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/MathJax">MathJax</a></p></li>
+</ul>
+</dd>
+<dt id="term-0"><a class="reference external" href="https://jupyter.readthedocs.io/en/latest/projects/kernels.html">Jupyter 内核</a><a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>Jupyter 内核是一个负责处理各种类型的请求（<a class="reference external" href="https://en.wikipedia.org/wiki/Execution_(computing)">代码执行</a>、<a class="reference external" href="https://en.wikipedia.org/wiki/Autocomplete">代码完成</a>、检查）并提供应答的程序。内核使用 ZeroMQ 与 Jupyter 的其他组件进行通信，因此可以位于相同或<a class="reference external" href="https://en.wikipedia.org/wiki/Remote_computer">远程机器</a>上。与许多其他类似于 notebook 的接口不同，在 Jupyter 中，内核不知道它们被附加到一个特定的文档，并且可以一次连接到多个客户机。通常，内核只允许执行一种语言，但也有一些例外。</p>
+</dd>
+<dt id="term-JupyterLab"><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/index.html">JupyterLab</a><a class="headerlink" href="#term-JupyterLab" title="Permalink to this term">¶</a></dt><dd><p>JupyterLab 是Project Jupyter 的一个较新的用户界面。它在一个灵活的用户界面中提供了经典的 Jupyter Notebook 的构建模块（笔记本、终端、文本编辑器、文件浏览器、富输出等）。第一个稳定版本于 2018 年 2 月 20 日发布。</p>
+</dd>
+<dt id="term-Jupyter-Book"><a class="reference external" href="https://pypi.org/project/jupyter-book/">Jupyter Book</a><a class="headerlink" href="#term-Jupyter-Book" title="Permalink to this term">¶</a></dt><dd><p>Jupyter Book 是一个开源项目，用于从计算材料中构建图书和文档。它允许用户在 Markdown 中构造内容，Markdown 的一个扩展版本名为 MyST，数学和公式 使用 MathJax, Jupyter notebook, reStructuredText，在构建时运行的 Jupyter notebook 的输出。可以产生多种输出格式（目前是单文件、多页 HTML 网页和 PDF 文件）。</p>
+</dd>
+<dt id="term-Jupyter-Notebook-Viewer"><a class="reference external" href="https://nbviewer.jupyter.org/">Jupyter Notebook Viewer</a><a class="headerlink" href="#term-Jupyter-Notebook-Viewer" title="Permalink to this term">¶</a></dt><dd><p>分享 Jupyter 笔记本的简单方法。</p>
+</dd>
+<dt id="term-nbgrader"><a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/">nbgrader</a><a class="headerlink" href="#term-nbgrader" title="Permalink to this term">¶</a></dt><dd><p>nbgrader 是一个在 Jupyter 笔记本上创建和批改作业的工具。它允许教师创建包含 Python 编码练习或任何其他支持的内核和文本响应的作业。提交的作业可以自动评分、手动评分或两者混合。</p>
+</dd>
+<dt id="term-1"><a class="reference external" href="https://en.wikipedia.org/wiki/Parallel_computing">并行计算</a><a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p>…</p>
+</dd>
+</dl>
+<p>多媒体是数字化的方式组织文字、相片、视觉艺术、声音、动画、影像。当多媒体的使用者或是观看者，可以自主性操作多媒体内的元件或元素可以在任何时间传递或上传，叫做<strong>互动式多媒体</strong>。使用者在互相连结的架构中可以自由地搜寻、互动，被称为<strong>超媒体</strong>。</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/wiki",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./glossary"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="javascript.html" title="previous page">JavaScript</a>
+    <a class='right-next' id="next-link" href="jupyter-book.html" title="next page">Jupyter Nook</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://sanstylelab.github.io/">SanstyleLab</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
