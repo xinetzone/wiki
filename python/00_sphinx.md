@@ -11,13 +11,12 @@
 
 Sphinx 特点如下：
     
-- 输出格式：HTML（包括派生格式如 HTML Help，Epub 和 Qt Help），纯文本，手册页和 LaTeX 或直接使用 rst2pdf 输出 PDF
-- 广泛的交叉引用：函数、类、术语表及类似信息的**语义标记**和**自动链接**
-- 层次结构：文档树的简单定义，自动链接到兄弟结点、父结点和子结点
-- 自动目录：通用目录和模块目录（index）
-- 代码处理：使用 Pygments 自动高亮显示
-- 使用 Jinja 2 模板引擎的灵活 HTML 输出
-- 可以使用各种扩展，例如自动测试代码片段和包含适当格式的文档字符串
-- Setuptools 集成
+- **输出格式**：HTML（包括派生格式如 Windows HTML Help），Epub 和 Qt Help，纯文本，手册页和 LaTeX（或直接使用 rst2pdf 输出 PDF），Texinfo
+- **广泛的交叉引用**：函数、类、术语表及类似信息的**语义标记**和**自动链接**
+- **层次结构**：文档树的简单定义，自动链接到兄弟结点、父结点和子结点
+- **自动目录**：通用目录和模块目录（index）
+- **代码处理**：使用 [Pygments](https://pygments.org/) 自动高亮显示
+- 内置[**扩展**](https://www.sphinx-doc.org/en/master/usage/extensions/index.html#builtin-sphinx-extensions)：例如自动测试代码片段和包含适当格式的文档字符串
+- **三方扩展**：[用户贡献](https://www.sphinx-doc.org/en/master/usage/extensions/index.html#third-party-extensions)的几十个扩展；大多数都可以从 PyPI 安装
 
 要了解更多信息，请参考 [文档](https://xinetzone.github.io/sphinx-doc/)。
