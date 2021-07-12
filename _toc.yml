@@ -1,37 +1,41 @@
 format: jb-book
 root: README
 parts:
-- caption: 教程
+- caption: 哲学
   chapters:
-  - file: start/index
+  - file: life/index
     sections:
-    - glob: start/**
-  - file: basics/index
-    sections:
-    - glob: basics/**
+    - glob: life/**
 
-- caption: 主题
+- caption: 网络
   chapters:
-  - file: topics/index
+  - file: web/index
     sections:
-    - glob: topics/**
+    - glob: web/**
 
-- caption: 原理
+- caption: 编程
   chapters:
-  - file: principle/index
+  - file: python/index
     sections:
-    - glob: principle/**
+    - glob: python/**
 
-- caption: 参考
+- caption: 学科
   chapters:
-  - file: reference/index
+  - file: math/index
     sections:
-    - glob: reference/**
+    - glob: math/**
 
 - caption: 混沌
   chapters:
-  - file: about
+  - file: about/index
+    sections:
+      - glob: about/**
+      - file: glossary/index
+        sections:
+        - glob: glossary/**
+      - file: CHANGELOG
   - url: https://xinetzone.github.io/sanstyle-book/
     title: Sanstyle Book
-  - file: book
-  - file: CHANGELOG
+  - file: other/index
+    sections:
+    - glob: other/**
