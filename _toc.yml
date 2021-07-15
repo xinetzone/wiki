@@ -1,11 +1,6 @@
 format: jb-book
 root: README
 parts:
-- caption: Sanstyle
-  chapters:
-  - file: sanstyle/index
-    sections:
-    - glob: sanstyle/**
 - caption: 哲学
   chapters:
   - file: life/index
@@ -29,6 +24,12 @@ parts:
   - file: math/index
     sections:
     - glob: math/**
+
+- caption: 书籍
+  chapters:
+  - file: sanstyle/index
+    sections:
+    - glob: sanstyle/**
 
 - caption: 混沌
   chapters:
