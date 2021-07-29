@@ -29,12 +29,12 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -96,7 +96,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="关于" href="../about/index.html" />
+    <link rel="next" title="开发提示和技巧" href="01_developer.html" />
     <link rel="prev" title="Executable Book Project" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -272,6 +272,21 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      EPB 开发规范
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_developer.html">
+     开发提示和技巧
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_tools.html">
+     EPB 工具
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="about.html">
+     关于 EBP
     </a>
    </li>
   </ul>
@@ -575,13 +590,117 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal nav-link" href="#id8">
    文档
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git">
+   Git 分支
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   打开拉请求
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pull-request-reviews">
+   Pull Request Reviews
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git">
-     Git 分支
+    <a class="reference internal nav-link" href="#id10">
+     源
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     批准变更
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     警惕
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     交流
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-list-what-to-look-for">
+   Check-list - What to look for
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scope">
+     Scope¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#design">
+     Design¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functionality">
+     Functionality¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complexity">
+     Complexity¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests">
+     Tests¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naming">
+     Naming¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comments">
+     Comments¶
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#style-consistency">
+     Style &amp; Consistency¶
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-pull-requests">
+   Merging Pull Requests¶
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   提交信息
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   发布和变更日志
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     创建一个版本的过程
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deprecations">
+   Deprecations
+  </a>
  </li>
 </ul>
 
@@ -716,8 +835,9 @@ Out [1]: &quot;hi&quot;
 ```
 </pre></div>
 </div>
+</div>
 <div class="section" id="git">
-<h3>Git 分支<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h3>
+<h2>Git 分支<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h2>
 <p>存储库应该使用 <code class="docutils literal notranslate"><span class="pre">master</span></code>（或者 <code class="docutils literal notranslate"><span class="pre">main</span></code>） 作为它们的主分支。这个分支在 GitHub 上应该是“受保护的”，并且在合并之前需要 PR 审查和状态检查（参见 <a class="reference external" href="https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches">GitHub 分支配置</a>）。</p>
 <p>添加到 <code class="docutils literal notranslate"><span class="pre">master</span></code> 应该遵循以下简单的概念：</p>
 <ul class="simple">
@@ -726,6 +846,242 @@ Out [1]: &quot;hi&quot;
 <li><p>保持一个高质量，最新的主分支。</p></li>
 </ul>
 </div>
+<div class="section" id="id9">
+<h2>打开拉请求<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>Pull 请求应该尽早和经常提交给 <code class="docutils literal notranslate"><span class="pre">master</span></code>！</p>
+<p>为了提高对拉请求“一眼就能看出来”的理解，鼓励使用几个标准化的标题前缀：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[BRK]</span></code> for changes which break existing builds or tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[DOC]</span></code> for new or updated documentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ENH]</span></code> for enhancements</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[FIX]</span></code> for bug fixes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[REF]</span></code> for refactoring existing code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[STY]</span></code> for stylistic changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[TST]</span></code> for new or updated tests, and</p></li>
+</ul>
+<p>您还可以组合上面的标记，例如，如果您同时更新一个测试和文档：<code class="docutils literal notranslate"><span class="pre">[TST,</span> <span class="pre">DOC]</span></code>。</p>
+<p>PRs 通常还应该对一个或多个未决问题作出回应。你可以将 pull 请求链接到某个议题，以显示修复正在进行中，并在 pull 请求合并时自动关闭该问题；参见将 <a class="reference external" href="https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue">pull 请求链接到一个议题</a>。</p>
+<p>如果您的 pull 请求还没有准备好合并，请打开您的 pull 请求作为 draft。更多信息可以在<a class="reference external" href="https://help.github.com/articles/about-pull-requests/#draft-pull-requests"> GitHub 的文档中找到</a>。这告诉开发团队拉请求是一个“work-in-progress”，并且您计划继续处理它。</p>
+<p>当您的 pull 请求为“Ready for Review”时，您可以在 PR 页面上选择此选项，该选项将通知项目维护者审查您提出的更改。</p>
+</div>
+<div class="section" id="pull-request-reviews">
+<h2>Pull Request Reviews<a class="headerlink" href="#pull-request-reviews" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h3>源<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="https://github.com/aiidateam/aiida-core/wiki/Best-practises-for-code-review">https://github.com/aiidateam/aiida-core/wiki/Best-practises-for-code-review</a></p>
+<p><a class="reference external" href="https://google.github.io/eng-practices/review/reviewer/standard.html">https://google.github.io/eng-practices/review/reviewer/standard.html</a></p>
+<p><a class="reference external" href="https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html">https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html</a></p>
+<p><a class="reference external" href="https://phauer.com/2018/code-review-guidelines/">https://phauer.com/2018/code-review-guidelines/</a></p>
+</div>
+<div class="section" id="id11">
+<h3>批准变更<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>技术事实和数据优于个人偏好</p></li>
+<li><p>如果 PR 确实能够改善代码的整体健康状况，那么就应该批准 PR，即使它并不完美</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>警惕<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>对评审请求做出反应。那些付出努力并做出回馈的用户最值得我们关注，而 PRs 的及时审核便是一大激励因素。</p></li>
+<li><p>查看正在修改的每一行代码。</p></li>
+<li><p>使用清单，特别是如果您是代码审查新手。</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>交流<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>对做得好的事情给予鼓励，不要只是指出错误。</p></li>
+<li><p>可以提到哪些地方需要改进，但不是强制性的（在注释前加上 “Nit:” 代替 “nitpick”）。</p></li>
+<li><p>分享知识有助于提交者提高他们对代码的理解（(明确你希望/不希望在什么地方采取行动）</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="check-list-what-to-look-for">
+<h2>Check-list - What to look for<a class="headerlink" href="#check-list-what-to-look-for" title="永久链接至标题">¶</a></h2>
+<div class="section" id="scope">
+<h3>Scope<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#scope">¶</a><a class="headerlink" href="#scope" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Are you being asked to review more than 200 lines of code? Then don’t be shy to ask the submitter to split the PR - review effectiveness <a class="reference external" href="https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html">drops substantially beyond 200 lines of code</a>.</p></li>
+<li><p>Are there parts of the codebase that have not been modified, but <em>should</em> be adapted to the changes? Does the code change require an update of the documentation?</p></li>
+</ul>
+</div>
+<div class="section" id="design">
+<h3>Design<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#design">¶</a><a class="headerlink" href="#design" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Does this change belong in the codebase?</p></li>
+<li><p>Is it integrated well?</p></li>
+</ul>
+</div>
+<div class="section" id="functionality">
+<h3>Functionality<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#functionality">¶</a><a class="headerlink" href="#functionality" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Does the code do what the developer intended?</p></li>
+<li><p>Are there edge cases, where it could break?</p></li>
+<li><p>For UI changes: give it a try yourself! (difficult to grasp from reading code)</p></li>
+</ul>
+</div>
+<div class="section" id="complexity">
+<h3>Complexity<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#complexity">¶</a><a class="headerlink" href="#complexity" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Any complex lines, functions, classes that are not easy to understand?</p></li>
+<li><p>Over-engineering: is the code too complex for the problem at hand?</p></li>
+</ul>
+</div>
+<div class="section" id="tests">
+<h3>Tests<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#tests">¶</a><a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Are there tests for new functionality?
+Are bugs covered by a test that breaks if the bug resurfaces?</p></li>
+<li><p>Are the tests correct and useful?
+Do they make simple and useful assertions?</p></li>
+</ul>
+</div>
+<div class="section" id="naming">
+<h3>Naming<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#naming">¶</a><a class="headerlink" href="#naming" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>A good name is long enough to communicate what the item does, without being so long that it becomes hard to read</p></li>
+</ul>
+</div>
+<div class="section" id="comments">
+<h3>Comments<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#comments">¶</a><a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Do comments explain <em>why</em> code exists (rather than <em>what</em> it is doing)?</p></li>
+</ul>
+</div>
+<div class="section" id="style-consistency">
+<h3>Style &amp; Consistency<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#style-consistency">¶</a><a class="headerlink" href="#style-consistency" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Does the contribution follow generic coding style (mostly enforced automatically)?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="merging-pull-requests">
+<h2>Merging Pull Requests<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#merging-pull-requests">¶</a><a class="headerlink" href="#merging-pull-requests" title="永久链接至标题">¶</a></h2>
+<p>A pull request should be opened only once you consider it ready for review. Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.</p>
+<p>There are three ways of ‘merging’ pull requests on GitHub. <strong>Squash and merge</strong> is the favoured method, applicable to the majority of PRs, but there are some use cases where the other two apply:</p>
+<ul class="simple">
+<li><p><strong>Squash and merge</strong>: take all commits, squash them into a single one and put it on top of the base branch.</p>
+<ul>
+<li><p>Choose this by default for pull requests that address a single issue and are well represented by a single commit.</p></li>
+<li><p>The person merging the PR should choose a <a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#dev-commits">clear commit message</a> when merging (via the GitHub UI)</p></li>
+</ul>
+</li>
+<li><p><strong>Rebase and merge</strong>: take all commits and ‘recreate’ them on top of the base branch. All commits will be recreated with new hashes.</p>
+<ul>
+<li><p>Choose this for pull requests that require more than a single commit.</p></li>
+<li><p>Make sure <a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#dev-commits">the commits have clear commit messages</a>.</p></li>
+<li><p>Examples: PRs that contain multiple commits with individually significant changes; PRs that have commits from different authors (squashing commits would remove attribution)</p></li>
+</ul>
+</li>
+<li><p><strong>Merge with merge commit</strong>: put all commits as they are on the base branch, with a merge commit on top</p>
+<ul>
+<li><p>Choose for collaborative PRs with many commits. Here, the merge commit provides actual benefits.</p></li>
+</ul>
+</li>
+</ul>
+<p>One drawback of squash-merging is that it combines multiple commits into a single one. This is usually fine, as PRs have many commits like “fixing typo”, and “addressing comments”. Squashing these into one message allows the PR merger to create <a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#dev-commits">a commit message that is clear and concise</a>. However, sometimes a PR is best-represented by <em>multiple</em> commits. In this case, it’s fine to rebase-merge or merge-commit.</p>
+<blockquote>
+<div><p><strong>How can I rename my commits locally?</strong></p>
+<p>If you’d like to rename commits locally (e.g., if you’d like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use <a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#dev-commits">commit messages that are clear and concise</a>), you can try an <a class="reference external" href="https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history"><strong>interactive rebase</strong></a>. This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one. However, this is an advanced git technique so only do this if you know what you’re doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id14">
+<h2>提交信息<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>提交信息：</p>
+<ul class="simple">
+<li><p>应该理想地解决一个问题吗</p></li>
+<li><p>应该是对代码库的自包含更改吗</p></li>
+<li><p>一定不能把不相关的变化混为一谈吗</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;EMOJI&gt; &lt;KEYWORD&gt;: Summarize changes in 72 characters or less (#&lt;PR number&gt;)
+
+More detailed explanatory text, if necessary.
+The blank line separating the summary from the body is
+critical (unless you omit the body entirely); various tools like `log`,
+`shortlog` and `rebase` can get confused if you run the two together.
+
+Explain the problem that this commit is solving. Focus on why you are
+making this change as opposed to how (the code explains that).  Are
+there side effects or other unintuitive consequences of this change?
+Here&#39;s the place to explain them to someone else reading your message in
+the future. Make sure to include some necessary context for difficult
+concepts that might change in the future.
+
+There is no need to mention you also added unit tests when adding a new feature. The code diff already makes this clear.
+</pre></div>
+</div>
+<p>关键词/表情符号改编自  <a class="reference external" href="https://github.com/ahmadawais/Emoji-Log">Emoji-Log</a> 和 <a class="reference external" href="https://github.com/carloscuesta/gitmoji">gitmoji</a>，应该是以下其中之一（括号中包含 <a class="reference external" href="https://gist.github.com/rxaviers/7360908">GitHub 表情符号标记</a> 供参考）：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">‼️</span> <span class="pre">BREAKING:</span></code> (<code class="docutils literal notranslate"><span class="pre">:bangbang:</span></code>) — to introduce a back-incompatible change(s) (and/or remove deprecated code).</p></li>
+<li><p>✨ <code class="docutils literal notranslate"><span class="pre">NEW:</span></code> (<code class="docutils literal notranslate"><span class="pre">:sparkles:</span></code>) — to introduce a new feature(s).</p></li>
+<li><p>👌 <code class="docutils literal notranslate"><span class="pre">IMPROVE:</span></code> (<code class="docutils literal notranslate"><span class="pre">:ok_hand:</span></code>) — to improve an existing code/feature (with no breaking changes).</p></li>
+<li><p>🐛 <code class="docutils literal notranslate"><span class="pre">FIX:</span></code> (<code class="docutils literal notranslate"><span class="pre">:bug:</span></code>) — to fix a code bug.</p></li>
+<li><p>📚 <code class="docutils literal notranslate"><span class="pre">DOCS:</span></code> (<code class="docutils literal notranslate"><span class="pre">:books:</span></code>) — to add new documentation.</p></li>
+<li><p>🔧 <code class="docutils literal notranslate"><span class="pre">MAINTAIN:</span></code> (<code class="docutils literal notranslate"><span class="pre">:wrench:</span></code>) — to make minor changes (like fixing typos) which should not appear in a changelog.</p></li>
+<li><p>🧪 <code class="docutils literal notranslate"><span class="pre">TEST:</span></code> (<code class="docutils literal notranslate"><span class="pre">:test_tube:</span></code>) — to add additional testing only.</p></li>
+<li><p>🚀 <code class="docutils literal notranslate"><span class="pre">RELEASE:</span></code> (<code class="docutils literal notranslate"><span class="pre">:rocket:</span></code>) — to bump the package version for release.</p></li>
+<li><p>⬆️ <code class="docutils literal notranslate"><span class="pre">UPGRADE:</span></code> (<code class="docutils literal notranslate"><span class="pre">:arrow_up:</span></code>) — for upgrading a dependency pinning.</p></li>
+<li><p>♻️ <code class="docutils literal notranslate"><span class="pre">REFACTOR:</span></code> (<code class="docutils literal notranslate"><span class="pre">:recycle:</span></code>) — for refactoring existing code (with no specific improvements).</p></li>
+<li><p>🗑️ <code class="docutils literal notranslate"><span class="pre">DEPRECATE:</span></code> (<code class="docutils literal notranslate"><span class="pre">:wastebasket:</span></code>) — mark some code as deprecated (for removal in a later release). The future version when it will be removed should also be specified, and (if applicable) what will replace it.</p></li>
+<li><p>🔀<code class="docutils literal notranslate"> <span class="pre">MERGE:</span></code> (<code class="docutils literal notranslate"><span class="pre">:twisted_rightwards_arrows:</span></code>) — for a merge commit (then all commits within the merge should be categorised)</p></li>
+<li><p>❓ <code class="docutils literal notranslate"><span class="pre">OTHER:</span></code> (<code class="docutils literal notranslate"><span class="pre">:question:</span></code>) — anything not covered above (use as a last resort!).</p></li>
+</ul>
+<p>这个列表是松散的优先级顺序，例如，一个既修复了 bug 又不兼容的提交应该被归类为 <code class="docutils literal notranslate"><span class="pre">BREAKING</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">FIX</span></code>。</p>
+</div>
+<div class="section" id="id15">
+<h2>发布和变更日志<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<p>发布应该通过 <a class="reference external" href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">GitHub releases</a>，从主分支和使用语义版本标记，例如 <code class="docutils literal notranslate"><span class="pre">v1.2.1</span></code>，对于 <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> 以上的版本。对于低于 <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> 的版本，可以理解为破坏性的更改更频繁（即 repo 处于 beta 版），因此放宽了语义版本控制，因此 MINOR 版本更改也意味着向后不兼容的版本。</p>
+<p>变更日志应该便于用户和开发人员理解关键的变更，并且应该以以下格式反映上面描述的提交类别：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## 1.1.0 - 2020-06-25
+
+### Added
+- List of `NEW` commits
+
+### Improved
+- List of `IMPROVE` commits
+
+### Fixed
+- List of `FIX` commits
+
+### Breaking
+- List of `BREAKING` and `UPGRADE` commits
+
+### Deprecated
+- List of `DEPRECATE` commits
+
+### Documented
+- List of `DOCS` commits
+</pre></div>
+</div>
+<p>没有内容的副标题可以被跳过，贡献者的提交应该被忽略（例如 “, thanks to &#64;chrisjsewell”）</p>
+<p>包发布应该通过 GitHub Action 工作流自动化，在创建标签时触发。例如：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pypa/gh-action-pypi-publish">https://github.com/pypa/gh-action-pypi-publish</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pascalgn/npm-publish-action">https://github.com/pascalgn/npm-publish-action</a></p></li>
+</ul>
+<p>使用<a class="reference external" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds"><code class="docutils literal notranslate"><span class="pre">needs</span></code> 键</a> 来确保这些操作只在 pre-commit 和单元测试成功通过后才运行。</p>
+<div class="section" id="id16">
+<h3>创建一个版本的过程<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>下面是创建一个版本的完整工作流：</p>
+<ul class="simple">
+<li><p>进行发布提交 🚀 <code class="docutils literal notranslate"><span class="pre">RELEASE:</span> <span class="pre">...</span></code> 在 master 上（通过 PR）将版本转换为 M.m.p（例如更改 Python 包的 <code class="docutils literal notranslate"><span class="pre">__version__</span></code>），并在 <code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code> 中添加一节在上面的格式。</p></li>
+<li><p>为该提交创建一个 GitHub 版本，标签为 vM.m.p 版本（可以在正文中包括 changelog 部分）。</p></li>
+<li><p>检查自动发布工作流是否成功完成。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="deprecations">
+<h2>Deprecations<a class="headerlink" href="#deprecations" title="永久链接至标题">¶</a></h2>
+<p>在存储库退出 beta 开发之后（即 <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1.0.0</span></code>），API（函数，类等）的弃用应该在更改日志和代码中显示出来，例如在 Python 包中使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated">Sphinx deprecated 指令</a> 和/或 <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning">DeprecationWarning</a>：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>理想情况下，应该在实际从代码库中删除它们之前添加一个或两个主要版本。还应该指定将在何时删除它们的未来版本，以及（如果适用）将被替换的内容。</p>
+<p>在可能的情况下，还应该维护弃用项列表，例如：<a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/deprecated.html">https://www.sphinx-doc.org/en/master/extdev/deprecated.html</a>。</p>
 </div>
 </div>
 
@@ -755,7 +1111,7 @@ Out [1]: &quot;hi&quot;
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">Executable Book Project</a>
-    <a class='right-next' id="next-link" href="../about/index.html" title="next page">关于</a>
+    <a class='right-next' id="next-link" href="01_developer.html" title="next page">开发提示和技巧</a>
 
         </div>
         
