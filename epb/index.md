@@ -28,3 +28,7 @@ EBP 的目标是使用开源工具构建，以促进创建专业的计算性叙�
 - **为未来设计**。虽然现在有一些资金，但它不会永远持续下去。这意味着该技术应该易于潜在的开发人员阅读、理解和修改/改进。
 - **用户不需要了解构建系统的任何信息**。如果他们想深入研究我们的基础设施，他们可以，但是 Sphinx、Latex 等知识不应该是必需的。他们应该只需要使用一个简单的工具来控制过程。
 - **不要试图做所有的事情**。将我们的工具集中在发布计算文档，并为用户做出合理的选择。
+
+## Gallery of Jupyter Books
+
+具体见：[Gallery of Jupyter Books — The Executable Book Project (executablebooks.org)](https://executablebooks.org/en/latest/gallery.html)。
