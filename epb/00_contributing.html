@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python</title>
+    <title>EPB 开发规范</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -92,12 +92,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/wiki/python/index.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/wiki/epb/00_contributing.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Sphinx" href="00_sphinx.html" />
-    <link rel="prev" title="快速入门" href="../web/start.html" />
+    <link rel="next" title="关于" href="../about/index.html" />
+    <link rel="prev" title="Executable Book Project" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -178,29 +178,29 @@ commentsRunWhenDOMLoaded(addUtterances);
   编程
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/index.html">
    Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="00_sphinx.html">
+    <a class="reference internal" href="../python/00_sphinx.html">
      Sphinx
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="docutils.html">
+    <a class="reference internal" href="../python/docutils.html">
      Docutils
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ipython.html">
+    <a class="reference internal" href="../python/ipython.html">
      IPython
     </a>
    </li>
@@ -236,7 +236,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   叙述
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../sanstyle/index.html">
    上善若水
@@ -259,18 +259,18 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../epb/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Executable Book Project
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../epb/00_contributing.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      EPB 开发规范
     </a>
    </li>
@@ -483,7 +483,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/epb/00_contributing.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -503,7 +503,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Fpython/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Fepb/00_contributing.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -531,8 +531,57 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   导航
+   行为准则
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   问题或反馈
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ebp">
+   EBP 存储库的结构
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   设计哲学
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   编程风格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   命名规范
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     指令
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   测试
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   文档
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git">
+     Git 分支
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -545,16 +594,136 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="python">
-<h1>Python<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h1>
-<p>参考：<a class="reference external" href="https://wiki.python.org/moin/">Python Wiki</a></p>
+  <div class="section" id="epb">
+<span id="wiki-epb-contributing"></span><h1>EPB 开发规范<a class="headerlink" href="#epb" title="永久链接至标题">¶</a></h1>
+<p>参考：<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html">Development Conventions — The Executable Book Project (executablebooks.org)</a></p>
+<p><strong>EPB 开发规范</strong>旨在帮助您尽可能高效地作出贡献，而不是制定必须始终遵守的严格规则。认为这些都是可以遵循的合理模式，EBP 也试图尽可能地遵循它们。但如果你喜欢做其他的事情，这通常是好的👍。</p>
 <div class="section" id="id1">
-<h2>导航<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="00_sphinx.html">Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docutils.html">Docutils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ipython.html">IPython</a></li>
+<h2>行为准则<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>本项目及其所有参与人员均受 <a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md">EBP 行为准则</a> 管辖。通过参与，你将被期望维护这一准则。请向 <a class="reference external" href="mailto:executablebooks&#37;&#52;&#48;gmail&#46;com">executablebooks<span>&#64;</span>gmail<span>&#46;</span>com</a> 报告不可接受的行为。</p>
+</div>
+<div class="section" id="id2">
+<h2>问题或反馈<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>可执行书籍项目使用一个 <a class="reference external" href="https://github.com/executablebooks/meta/discussions">GitHub 讨论板</a> 来提供社区问题、讨论和帮助。请在这里加入：<a class="reference external" href="https://github.com/executablebooks/meta/discussions">https://github.com/executablebooks/meta/discussions</a>。</p>
+<p>此外，如果你想看到一个新功能的实现，查看 EPB 的 <a class="reference external" href="https://executablebooks.org/en/latest/feature-vote.html">功能投票</a> 页面。</p>
+</div>
+<div class="section" id="ebp">
+<h2>EBP 存储库的结构<a class="headerlink" href="#ebp" title="永久链接至标题">¶</a></h2>
+<p>EBP 是一个大型开源项目；它由许多包组成，以保持单个组件的模块化和可重用性。当您考虑为 EBP 做出贡献时，您可能不确定哪些存储库实现了您想要更改的功能或报告错误。这部分应该可以帮助你。</p>
+<p>以下是一些大的列表：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a> 是 EPB 的 Markdown 解析器。它是非常流行的 <a class="reference external" href="https://github.com/markdown-it/markdown-it">markdown-it</a> 包的 Python 端口，该包与 CommonMark 兼容、快速且可扩展。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/MyST-Parser">MyST-Parser</a> 是 markdown-it-py 和 <a class="reference external" href="https://github.com/sphinx-doc/sphinx">sphinx</a> 之间的桥梁。它在 Markdown 文件上调用 markdown-it-py，并将创建的解析令牌（tokens）转换为 sphinx 内部使用的 docutils 抽象语法树（Abstact Syntax Tree，简称AST）。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/MyST-NB">MyST-NB</a> 构建于 MyST-Parser 之上，允许解析和执行 <a class="reference external" href="https://jupyter.org/">Jupyter Notebooks</a> 及其<a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/markdown.html">基于文本的表示</a>。</p></li>
+<li><p>MyST-NB 使用 <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a> 来执行笔记本并缓存它们的结果，这样，只有当代码单元发生变化时，它们才会在文档构建期间重新执行。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/sphinx-book-theme">sphinx-book-theme</a> 是一个 sphinx HTML 主题，为可执行书籍的表示而设计。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/sphinx-copybutton">sphinx-copybutton</a>, <a class="reference external" href="https://github.com/executablebooks/sphinx-togglebutton">sphinx-togglebutton</a>, <a class="reference external" href="https://github.com/executablebooks/sphinx-panels">sphinx-panels</a> 和 <a class="reference external" href="https://github.com/executablebooks/sphinx-thebe">sphinx-thebe</a> 提供 sphinx 扩展以允许在文档中包含特殊特性。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/jupyter-book">jupyter-book</a> 利用上述组件，提供了一个用户友好的界面，以建立美丽的，出版质量的书籍和文件。</p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/myst-language-support">myst-language-support</a> 提供了 aTextmate 语法和 VS Code 扩展，用于编辑 MyST 标记。</p></li>
+</ul>
+<p>下面是适用于所有存储库的约定文档，但单个存储库也可能包含针对特定代码库的额外贡献指南。</p>
+</div>
+<div class="section" id="id3">
+<h2>设计哲学<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在做出技术和社区决策时，EPB 项目尝试遵循一些高级原则。他们的目标是要争取的，并且可能不是所有的时间都被完美地遵循。以下是其中一些原则：</p>
+<dl class="simple myst">
+<dt>文档第一</dt><dd><p>当决定是否需要一个新特性时，首先要考虑改进文档是否可以为其他人解决同样的问题。新特性（尤其是新 API）的开发和维护成本很高。有时候，通过文档向人们展示如何手动完成复杂的事情，比扩展 API 更好。如果需要新的特性/API，首先要确保这条途径已经用完，这样做是有意的。</p>
+</dd>
+<dt>规范开发实践</dt><dd><p>我们应该在所有的 EBP 知识库中保持开发者/发布/社区实践的一致性。在可能的情况下，在他们之间共享基础架构和文档在所有核心存储库中保持相同的质量控制级别，无论它们有多小。</p>
+</dd>
+<dt>保持语义文档模型的一致性</dt><dd><p>有一些地方 Markdown 语法/文件结构映射到一本书的结构上。发生这种情况的两个最明显的地方是 Jupyter Book <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 文件和底层的 Sphinx <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 结构。这两个模型应该非常相似。尽量不要包含面向用户的结构（例如，在 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>，必须在 Sphinx 中转换为不同的文档结构）。</p>
+</dd>
+<dt>尽早并经常发布</dt><dd><p>我们应该强调更小、更迭代的发布，而不是更大、更复杂的发布。这将使我们的文档与最新版本保持一致，并将与大更改相关的中断（以及随后的维护负担）降至最低。<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#releases-and-change-logs">创建一个发布版本的过程</a> 是相对简单和快速的，所以发布适当的补丁版本（或小版本）时不要犹豫。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h2>编程风格<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>编码风格在很大程度上是自动执行的，使用 <a class="reference external" href="https://pre-commit.com/">pre-commit hooks</a>。对于 Python 包，预提交应该包括通过 <a class="reference external" href="https://black.readthedocs.io/">Black</a> 实现的自动代码格式化和通过 <a class="reference external" href="https://flake8.pycqa.org/">flake8</a> 实现的代码检测。</p>
+</div>
+<div class="section" id="id5">
+<h2>命名规范<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>应该使用以下命名约定。</p>
+<div class="section" id="id6">
+<h3>指令<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>指令的名称应该是：</p>
+<ul class="simple">
+<li><p>简短、简明和描述性</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">-</span></code> 将单词连接在一起</p></li>
+</ul>
+<p>例如，对 <code class="docutils literal notranslate"><span class="pre">rst</span></code> 语法求值的指令可以命名为 <code class="docutils literal notranslate"><span class="pre">eval-rst</span></code>，它将在使用该 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html#directives-a-block-level-extension-point">指令语法</a> 的文档中使用。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
+&lt;rst&gt;
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>测试<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>所有的包都应该包含一个测试基础设施，通常是通过 <a class="reference external" href="https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow">GitHub Actions 工作流</a> 自动化的 PRs 和提交。</p>
+<p>测试哲学：</p>
+<ul class="simple">
+<li><p>当您遇到一个错误时，为它添加一个 (failing) 测试。然后修复错误。</p></li>
+<li><p>当你修改或添加一个特性时，为它编写一个测试！<a class="reference external" href="http://en.wikipedia.org/wiki/Test_Driven_Development">在编写实际实现之前</a> 编写测试有助于保持 API 的整洁。</p></li>
+<li><p>使 <a class="reference external" href="https://en.wikipedia.org/wiki/Software_testing#Testing_levels">单元测试</a> 尽可能的原子化。单元测试应该在眨眼之间运行。</p></li>
+<li><p>记录编写测试的原因：一旦测试失败，开发人员会感谢你的。</p></li>
+</ul>
+<p>对于 Python 包，测试基础设施应该通过 <a class="reference external" href="https://docs.pytest.org/">pytest</a> 实现。</p>
+</div>
+<div class="section" id="id8">
+<h2>文档<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>项目的最小描述应该包含在 <a class="reference external" href="http://readme.md/">README.md</a> 中，那么大多数文档通常应该包含在 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 文件夹中，使用 <a class="reference internal" href="../python/00_sphinx.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a>（直接或通过 jupyter book）作为文档生成器。</p>
+<p>Markdown 风格通常应该遵循 <a class="reference external" href="https://github.com/markdownlint/markdownlint">markdownlint</a> 中列出的规则，rST 也应该类似地遵循 <a class="reference external" href="https://github.com/myint/rstcheck">rstcheck</a>，这两者都可以添加到 pre-commit 配置中。</p>
+<p>此外，在编写文档时，作者应该遵循以下准则：</p>
+<ul class="simple">
+<li><p><strong>每行写一个句子</strong>，否则<strong>不需要手动换行</strong>，以方便创建和检查差异。所有标准编辑器都允许动态换行，并且行长与呈现的文档（例如 HTML 或 PDF 格式）无关。</p></li>
+<li><p><strong>文件和目录名应该由字母和数字组成</strong>，并且所有的小写字母和下划线作为单词分隔符。例如：<code class="docutils literal notranslate"><span class="pre">entry_points.md</span></code>。</p></li>
+<li><p><strong>标题必须以句子为单位设置</strong>。例如，“Entry points”。</p></li>
+<li><p>用空行分隔段落，但不要多。</p></li>
+<li><p>对逐项列出的清单使用 <code class="docutils literal notranslate"><span class="pre">-</span></code> 符号。</p></li>
+<li><p>正确地在代码栏/代码块指令前加上前缀以指示它们的用法，例如：</p></li>
+<li><p>Bash shell 脚本应该使用 <code class="docutils literal notranslate"><span class="pre">bash</span></code>：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```bash
+echo &quot;hi&quot;
+```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Bash shell 会话（即交互式）应该使用 <code class="docutils literal notranslate"><span class="pre">console</span></code>：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```console
+$ echo &quot;hi&quot;
+```
+</pre></div>
+</div>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">#</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">$</span></code> 来表示根提示。</p>
+<ul class="simple">
+<li><p>Python 脚本应该使用 <code class="docutils literal notranslate"><span class="pre">python</span></code>：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+print(&quot;hi&quot;)
+```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Python 会话（例如通过 ipython）应该使用 <code class="docutils literal notranslate"><span class="pre">ipython</span></code>：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```ipython
+In  [1]: print(&quot;hi&quot;)
+Out [1]: &quot;hi&quot;
+```
+</pre></div>
+</div>
+<div class="section" id="git">
+<h3>Git 分支<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h3>
+<p>存储库应该使用 <code class="docutils literal notranslate"><span class="pre">master</span></code>（或者 <code class="docutils literal notranslate"><span class="pre">main</span></code>） 作为它们的主分支。这个分支在 GitHub 上应该是“受保护的”，并且在合并之前需要 PR 审查和状态检查（参见 <a class="reference external" href="https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches">GitHub 分支配置</a>）。</p>
+<p>添加到 <code class="docutils literal notranslate"><span class="pre">master</span></code> 应该遵循以下简单的概念：</p>
+<ul class="simple">
+<li><p>对所有新特性和 bug 修复使用 features 分支。</p></li>
+<li><p>使用拉请求将特性分支合并到主分支中。</p></li>
+<li><p>保持一个高质量，最新的主分支。</p></li>
 </ul>
 </div>
 </div>
@@ -573,7 +742,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./python"
+            path: "./epb"
         },
         predefinedOutput: true
     }
@@ -585,8 +754,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../web/start.html" title="previous page">快速入门</a>
-    <a class='right-next' id="next-link" href="00_sphinx.html" title="next page">Sphinx</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Executable Book Project</a>
+    <a class='right-next' id="next-link" href="../about/index.html" title="next page">关于</a>
 
         </div>
         
