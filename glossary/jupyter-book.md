@@ -6,9 +6,6 @@
 [CommonMark](https://commonmark.org/)
     Markdown 的标准语法可在许多社区和项目中使用。它是 Jupyter Notebook 的 Markdown 基本风格，也是 {term}`MyST Markdown <MyST>` 和 Jupyter Book 的基本风格。
 
-[ExecutableBookProject](https://executablebooks.org/en/latest/)
-    该项目支持和开发 Jupyter Book 使用的许多核心工具。
-
 [MyST Markdown](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
 [MyST](https://myst-parser.readthedocs.io/en/latest/using/syntax.html)
     专为 {term}`Sphinx` 项目使用而设计的 Markdown 风格。它是 {term}`CommonMark Markdown <CommonMark>` 和一些额外的语法片段的组合，以支持 Sphinx 的功能，因此您可以用纯 Markdown 编写 Sphinx 文档。它是 Jupyter Book 使用的核心技术之一。

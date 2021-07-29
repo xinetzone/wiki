@@ -25,23 +25,27 @@ parts:
     sections:
     - glob: math/**
 
-- caption: 书籍
+- caption: 叙述
   chapters:
   - file: sanstyle/index
     sections:
     - glob: sanstyle/**
+  - file: epb/index
+    sections:
+    - glob: epb/**
 
 - caption: 混沌
   chapters:
   - file: about/index
     sections:
       - glob: about/**
-      - file: glossary/index
-        sections:
-        - glob: glossary/**
       - file: CHANGELOG
   - url: https://xinetzone.github.io/sanstyle-book/
     title: Sanstyle Book
+  - file: glossary/index
+    sections:
+    - glob: glossary/**
   - file: other/index
     sections:
     - glob: other/**
+    
