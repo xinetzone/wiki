@@ -7,11 +7,14 @@ parts:
     sections:
     - glob: life/**
 
-- caption: 网络
+- caption: 学习
   chapters:
   - file: web/index
     sections:
     - glob: web/**
+  - file: study/index
+    sections:
+    - glob: study/**
 
 - caption: 编程
   chapters:
