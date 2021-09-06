@@ -23,18 +23,18 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -85,7 +85,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -123,7 +123,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
@@ -207,13 +207,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/00_sphinx.html">
-     Sphinx
+    <a class="reference internal" href="../python/00_docutils.html">
+     Docutils
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/docutils.html">
-     Docutils
+    <a class="reference internal" href="../python/01_sphinx.html">
+     Sphinx
     </a>
    </li>
    <li class="toctree-l2">
@@ -373,6 +373,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/en.html">
+     英语名词
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../glossary/html.html">
      HTML
     </a>
@@ -436,7 +441,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../other/index.html">
-   外部资源
+   其他
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -444,6 +449,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/documentation_generator.html">
+     文档生成器
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../other/emoji.html">
      图标
@@ -559,7 +569,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#epb">
@@ -592,7 +602,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p><strong>将它们的内容写在 Markdown 文本文件或 Jupyter 笔记本中</strong>。这些文件包含丰富的内容：运行代码的输出、引用和交叉引用、方程等。</p></li>
 <li><p><strong>执行内容并缓存结果</strong>。智能缓存意味着只有修改过的代码单元才会重新运行。</p></li>
-<li><p><strong>将缓存的输出与文档模型的内容文件结合起来</strong>。使用出色的 <a class="reference internal" href="../python/00_sphinx.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 文档堆栈，文档可以包含许多用于发布的特性，如方程、交叉引用和引用。</p></li>
+<li><p><strong>将缓存的输出与文档模型的内容文件结合起来</strong>。使用出色的 <a class="reference internal" href="../python/01_sphinx.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 文档堆栈，文档可以包含许多用于发布的特性，如方程、交叉引用和引用。</p></li>
 <li><p><strong>构建交互式 HTML 或具有发布质量的 PDF 输出</strong>。有时用户希望创建丰富的交互式网站，有时他们希望向发布者发送高质量的 PDF。这个系统将把两者视为平等的公民。</p></li>
 <li><p><strong>用一个简单的命令行界面控制上面的一切</strong>。大多数用户不需要知道任何关于 Sphinx、缓存等内容。一个简单的用户界面将隐藏这个过程的大部分复杂性。</p></li>
 </ul>
@@ -642,12 +652,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../sanstyle/01_book.html" title="previous page">Stanstyle Book</a>
-    <a class='right-next' id="next-link" href="00_contributing.html" title="next page">EPB 开发规范</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../sanstyle/01_book.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Stanstyle Book</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="00_contributing.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">EPB 开发规范</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

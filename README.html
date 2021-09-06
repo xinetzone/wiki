@@ -23,18 +23,18 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/page.css" />
-    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
-    <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -85,7 +85,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -122,7 +122,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
@@ -206,13 +206,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="python/00_sphinx.html">
-     Sphinx
+    <a class="reference internal" href="python/00_docutils.html">
+     Docutils
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="python/docutils.html">
-     Docutils
+    <a class="reference internal" href="python/01_sphinx.html">
+     Sphinx
     </a>
    </li>
    <li class="toctree-l2">
@@ -372,6 +372,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="glossary/en.html">
+     英语名词
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="glossary/html.html">
      HTML
     </a>
@@ -435,7 +440,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="other/index.html">
-   外部资源
+   其他
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -443,6 +448,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="other/documentation_generator.html">
+     文档生成器
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="other/emoji.html">
      图标
@@ -597,8 +607,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="caption"><span class="caption-text">编程</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python/00_sphinx.html">Sphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/docutils.html">Docutils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/00_docutils.html">Docutils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/01_sphinx.html">Sphinx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="python/ipython.html">IPython</a></li>
 </ul>
 </li>
@@ -631,6 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="glossary/css.html">CSS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="glossary/dash.html">Dash</a></li>
 <li class="toctree-l2"><a class="reference internal" href="glossary/dataset.html">数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary/en.html">英语名词</a></li>
 <li class="toctree-l2"><a class="reference internal" href="glossary/html.html">HTML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="glossary/http.html">HTTP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="glossary/javascript.html">JavaScript</a></li>
@@ -645,10 +656,73 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l2"><a class="reference internal" href="glossary/svg.html">SVG</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="other/index.html">外部资源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/index.html">其他</a></li>
 </ul>
 </div>
 </div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>缩略语</p></th>
+<th class="text-align:left head"><p>全名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>RBM Restricted Boltzmann Machines</p></td>
+<td class="text-align:left"><p>限制性波尔兹曼机</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>DBN Deep Belief Network</p></td>
+<td class="text-align:left"><p>深度置信网络</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>DL Deep Learning</p></td>
+<td class="text-align:left"><p>深度学习</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>CNN Convolutional Neural Network</p></td>
+<td class="text-align:left"><p>卷积神经网络</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>SVM Support Vector Machine</p></td>
+<td class="text-align:left"><p>支持向量机</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>PS Photoshop</p></td>
+<td class="text-align:left"><p>图像处理软件</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>RBF Radial Basis Function</p></td>
+<td class="text-align:left"><p>径向基函数</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>HOG Histogram of Oriented Gradient</p></td>
+<td class="text-align:left"><p>方向梯度直方图</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>VS Microsoft Visual Studio</p></td>
+<td class="text-align:left"><p>编程软件</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>ANN Artificial Neural Network</p></td>
+<td class="text-align:left"><p>人工神经网络</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>NN Neural Network</p></td>
+<td class="text-align:left"><p>神经网络</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>CUDA Compute Unified Device Architecture</p></td>
+<td class="text-align:left"><p>通用并行计算架构</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>SGD Stochastic gradient descent</p></td>
+<td class="text-align:left"><p>随机梯度下降</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>VGG Visual Geometric Group</p></td>
+<td class="text-align:left"><p>视觉几何组</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>LMDB Symas Lightning Memory-Mapped Database</p></td>
+<td class="text-align:left"><p>快速内存映射库</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>HDF5 Hierarchical data file</p></td>
+<td class="text-align:left"><p>分层数据文件</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>GPU Graphics Processing Unit</p></td>
+<td class="text-align:left"><p>图像处理器</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>ICIP</p></td>
+<td class="text-align:left"><p>The International Conference on Image Processing</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
     <script type="text/x-thebe-config">
@@ -674,11 +748,23 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="life/index.html" title="next page">生活</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+     <div id="next">
+        <a class="right-next" href="life/index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">生活</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

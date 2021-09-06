@@ -23,18 +23,18 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/page.css" />
-    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
-    <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -85,13 +85,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/genindex.html" />
     <link rel="shortcut icon" href="_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="#" />
@@ -121,7 +114,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
@@ -205,13 +198,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="python/00_sphinx.html">
-     Sphinx
+    <a class="reference internal" href="python/00_docutils.html">
+     Docutils
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="python/docutils.html">
-     Docutils
+    <a class="reference internal" href="python/01_sphinx.html">
+     Sphinx
     </a>
    </li>
    <li class="toctree-l2">
@@ -371,6 +364,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="glossary/en.html">
+     英语名词
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="glossary/html.html">
      HTML
     </a>
@@ -434,7 +432,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="other/index.html">
-   外部资源
+   其他
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -442,6 +440,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="other/documentation_generator.html">
+     文档生成器
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="other/emoji.html">
      图标
@@ -567,6 +570,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  | <a href="#V"><strong>V</strong></a>
  | <a href="#X"><strong>X</strong></a>
  | <a href="#并"><strong>并</strong></a>
+ | <a href="#文"><strong>文</strong></a>
  
 </div>
 <h2 id="符号">符号</h2>
@@ -654,7 +658,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="python/docutils.html#term-Docutils"><strong>Docutils</strong></a>
+      <li><a href="python/00_docutils.html#term-Docutils"><strong>Docutils</strong></a>
 </li>
       <li><a href="glossary/html.html#term-DOM"><strong>DOM</strong></a>
 </li>
@@ -794,7 +798,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="python/docutils.html#term-reStructuredText"><strong>reStructuredText</strong></a>
+      <li><a href="python/00_docutils.html#term-reStructuredText"><strong>reStructuredText</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -810,7 +814,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
       <li><a href="glossary/html.html#term-SMIL"><strong>SMIL</strong></a>
 </li>
-      <li><a href="python/00_sphinx.html#term-Sphinx"><strong>Sphinx</strong></a>
+      <li><a href="python/01_sphinx.html#term-Sphinx"><strong>Sphinx</strong></a>
 </li>
       <li><a href="glossary/jupyter-book.html#term-Sphinx-Book-Theme"><strong>Sphinx Book Theme</strong></a>
 </li>
@@ -861,15 +865,27 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul></td>
 </tr></table>
 
+<h2 id="文">文</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="other/documentation_generator.html#term-0"><strong>文档生成器</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
 
 
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>
