@@ -33,6 +33,9 @@ parts:
   - file: sanstyle/index
     sections:
     - glob: sanstyle/**
+  - file: rst/index
+    sections:
+    - glob: rst/**
   - file: epb/index
     sections:
     - glob: epb/**
