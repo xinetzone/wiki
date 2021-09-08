@@ -1,0 +1,1003 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>角色</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/wiki");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/wiki/rst/02_roles.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="指令" href="03_directives.html" />
+    <link rel="prev" title="字段列表" href="01_field-lists.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  哲学
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../life/index.html">
+   生活
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../life/topic.html">
+     小窍门
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  学习
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   基础
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../web/start.html">
+     快速入门
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../study/index.html">
+   终身学习
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../study/information-literacy.html">
+     信息素养
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  编程
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/index.html">
+   Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/00_docutils.html">
+     Docutils
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/01_sphinx.html">
+     Sphinx
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/ipython.html">
+     IPython
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  学科
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../math/index.html">
+   数学
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/analysis.html">
+     分析
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  叙述
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sanstyle/index.html">
+   上善若水
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sanstyle/00_template.html">
+     Sanstyle GitHub 模板
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sanstyle/01_book.html">
+     Stanstyle Book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   reStructuredText
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_start.html">
+     reStructuredText 快速上手
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_field-lists.html">
+     字段列表
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     角色
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_directives.html">
+     指令
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_domains.html">
+     域（raw）
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../epb/index.html">
+   Executable Book Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../epb/00_contributing.html">
+     EPB 开发规范
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../epb/01_developer.html">
+     开发提示和技巧
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../epb/02_tools.html">
+     EPB 工具
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../epb/about.html">
+     关于 EBP
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  混沌
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
+   关于
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../about/zreferences.html">
+     参考文献
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../CHANGELOG.html">
+     变更日志
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
+   Sanstyle Book
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../glossary/index.html">
+   术语表
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/canvas.html">
+     Canvas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/css.html">
+     CSS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/dash.html">
+     Dash
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/dataset.html">
+     数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/en.html">
+     英语名词
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/html.html">
+     HTML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/http.html">
+     HTTP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/javascript.html">
+     JavaScript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/jupyter.html">
+     Jupyter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/jupyter-book.html">
+     Jupyter Nook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/jupyter-widgets.html">
+     ipywidgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/plotly.html">
+     Plotly Python 开源图形库
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/plotly-figure.html">
+     Python 图参考
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/python.html">
+     Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/ros.html">
+     ROS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/soft.html">
+     常用软件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/svg.html">
+     SVG
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../other/index.html">
+   其他
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/documentation_generator.html">
+     文档生成器
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/emoji.html">
+     图标
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/rst/02_roles.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/wiki"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Frst/02_roles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   交叉引用语法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#any">
+     交叉引用任何东西
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :any:
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     交叉引用对象
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ref">
+     交叉引用任意位置
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :ref:
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#doc">
+     交叉引用文档
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :doc:
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download">
+     引用可下载文件
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :download:
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numref">
+     按图号交叉引用图像
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       :numref:
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     交叉引用其他感兴趣的项目
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#math">
+   Math
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   其他语义标记
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   替换
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>角色<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成 <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>默认角色（<code class="docutils literal notranslate"><span class="pre">content</span></code>）默认没有特殊含义。您可以随意使用它，例如：变量名；使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role">default_role</a> 配置值将其设置为已知角色 - <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any">any</a> 角色可以找到任何东西，或者 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-py-obj">py:obj</a> 角色来查找 Python 对象对此非常有用。</p>
+</div>
+<p>请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">域</a> ，了解域添加的角色。</p>
+<div class="section" id="id2">
+<h2>交叉引用语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>交叉引用由许多语义解释的文本角色生成。基本上，您只需要编写 <code class="docutils literal notranslate"><span class="pre">:role:`target`</span></code> ，并且将为 <em>role</em> 指示的类型 <em>target</em> 项创建一个链接。链接的文本将与 <em>target</em> 相同。</p>
+<p>但是，还有一些额外的功能可以使交叉引用角色更加通用：</p>
+<ul>
+<li><p>你可以提供一个明确的标题和引用目标，比如在reST直接超链接中: <code class="docutils literal notranslate"><span class="pre">:role:`title</span> <span class="pre">&lt;target&gt;`</span></code> 将引用 <em>target</em> ，但是链接文本将是 <em>title</em> 。</p></li>
+<li><p>如果在内容前加上 <code class="docutils literal notranslate"><span class="pre">!</span></code> ，则不会创建引用/超链接。</p></li>
+<li><p>如果在内容前面添加 <code class="docutils literal notranslate"><span class="pre">~</span></code> ，则链接文本将只是目标的最后一个组件。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`~Queue.Queue.get`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">Queue.Queue.get</span></code> 但仅显示 <code class="docutils literal notranslate"><span class="pre">get</span></code> 作为链接文本。这不适用于所有交叉引用角色，但是特定于域。</p>
+<p>在 HTML 输出中，链接的 <code class="docutils literal notranslate"><span class="pre">title</span></code> 属性（例如在鼠标悬停时显示为工具提示）将始终是完整的目标名称。</p>
+</li>
+</ul>
+<div class="section" id="any">
+<h3>交叉引用任何东西 <code class="docutils literal notranslate"><span class="pre">:any:</span></code><a class="headerlink" href="#any" title="永久链接至标题">¶</a></h3>
+<p>这个便利角色试图尽力为其引用文本找到有效的目标。</p>
+<ul>
+<li><p>首先，它尝试引用的标准交叉引用目标 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-doc"><code class="docutils literal notranslate"><span class="pre">doc</span></code></a>，<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 或 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 。</p>
+<p>还会搜索通过扩展添加到标准域的自定义对象(请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_object_type"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_object_type()</span></code></a> )。</p>
+</li>
+<li><p>然后，它在所有加载的域中查找对象(目标)。这取决于匹配必须具体的域。例如，在 Python 域中，<code class="docutils literal notranslate"><span class="pre">:any:`Builder`</span></code> 的引用将匹配 <code class="docutils literal notranslate"><span class="pre">sphinx.builders.Builder</span></code> 类。</p></li>
+</ul>
+<p>如果未找到任何目标或多个目标，则会发出警告。对于多个目标，您可以将 “any” 更改为特定角色。</p>
+<p>这个角色是设置的好方法 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role"><code class="docutils literal notranslate"><span class="pre">default_role</span></code></a> 。如果这样做，您可以编写交叉引用，而不会产生大量的标记开销。例如，在这个 Python 函数文档:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> install()
+
+   This function installs a <span class="nv">`handler`</span> for every signal known by the
+   <span class="nv">`signal`</span> module.  See the section <span class="nv">`about-signals`</span> for more information.
+</pre></div>
+</div>
+<p>可以引用词汇表术语(通常是 <code class="docutils literal notranslate"><span class="pre">:term:`handler`</span></code> )，一个 Python 模块（通常是 <code class="docutils literal notranslate"><span class="pre">:py:mod:`signal`</span></code> 或 <code class="docutils literal notranslate"><span class="pre">:mod:`signal`</span></code>）和一节（通常是 <code class="docutils literal notranslate"><span class="pre">:ref:`about-signals`</span></code>）。</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any"><code class="docutils literal notranslate"><span class="pre">any</span></code></a> 角色也与 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx"><code class="docutils literal notranslate"><span class="pre">intersphinx</span></code></a> 扩展一起使用：当没有找到本地交叉引用时，也会搜索所有对象类型的 intersphinx 库存。</p>
+</div>
+<div class="section" id="id3">
+<h3>交叉引用对象<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>这些角色用各自的域描述:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#python-roles">Python</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#c-roles">C</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cpp-roles">C++</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#js-roles">JavaScript</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#rst-roles">ReST</a></p></li>
+</ul>
+</div>
+<div class="section" id="ref">
+<h3>交叉引用任意位置 <code class="docutils literal notranslate"><span class="pre">:ref:</span></code><a class="headerlink" href="#ref" title="永久链接至标题">¶</a></h3>
+<p>为了支持对任何文档中任意位置的交叉引用，使用标准reST标签。为此，标签名称在整个文档中必须是唯一的。您可以通过两种方式引用标签:</p>
+<ul>
+<li><p>如果在标题之前直接放置标签，可以用 <code class="docutils literal notranslate"><span class="pre">:ref:`label-name`</span></code> 引用它。例如:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-reference-label:</span>
+
+<span class="gh">Section to cross-reference</span>
+<span class="gh">--------------------------</span>
+
+This is the text of the section.
+
+It refers to the section itself, see <span class="na">:ref:</span><span class="nv">`my-reference-label`</span>.
+</pre></div>
+</div>
+<p>然后 <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> 角色将生成一个指向该部分的链接，链接标题为 “Section to cross-reference”。当 section 和 reference 在不同的源文件中时，这也可以正常工作。
+自动标签也适用于数字。例如:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-figure:</span>
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> whatever
+
+   Figure caption
+</pre></div>
+</div>
+<p>在这种情况下，引用 <code class="docutils literal notranslate"><span class="pre">:ref:`my-figure`</span></code> 将插入带有链接文本”Figure caption” 的图形的引用。
+对于使用 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table">table</a> 指令给出显式标题的表，同样适用。</p>
+</li>
+<li><p>仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: <code class="docutils literal notranslate"><span class="pre">:ref:`Link</span> <span class="pre">title</span> <span class="pre">&lt;label-name&gt;`</span></code> 。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>参考标签必须以下划线开头。引用标签时，必须省略下划线(参见上面的示例)。</p>
+</div>
+<p>使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 被建议通过标准的 reStructuredText 链接到部分（比如 <code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code>），因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。</p>
+</div>
+<div class="section" id="doc">
+<h3>交叉引用文档 <code class="docutils literal notranslate"><span class="pre">:doc:</span></code><a class="headerlink" href="#doc" title="永久链接至标题">¶</a></h3>
+<p>还有一种方法可以直接链接到文档，文档名称可以绝对或相对方式指定。例如，如果引用 <code class="docutils literal notranslate"><span class="pre">:doc:`parrot`</span></code> 出现在文档 <code class="docutils literal notranslate"><span class="pre">sketches/index</span></code> 中，则链接引用 <code class="docutils literal notranslate"><span class="pre">sketches/parrot</span></code>。 如果引用是 <code class="docutils literal notranslate"><span class="pre">:doc:`/people`</span></code> 或 <code class="docutils literal notranslate"><span class="pre">:doc:`../people`</span></code>，则链接引用 <code class="docutils literal notranslate"><span class="pre">people</span></code>。</p>
+<p>如果没有给出明确的链接文本（比如通常: <code class="docutils literal notranslate"><span class="pre">:doc:`Monty</span> <span class="pre">Python</span> <span class="pre">members</span> <span class="pre">&lt;/people&gt;`</span></code>），链接标题将是给定文档的标题。</p>
+</div>
+<div class="section" id="download">
+<h3>引用可下载文件 <code class="docutils literal notranslate"><span class="pre">:download:</span></code><a class="headerlink" href="#download" title="永久链接至标题">¶</a></h3>
+<p>此角色允许您链接到源树中的文件，这些文件不是可以查看的 reST 文档，而是可以下载的文件。</p>
+<p>使用此角色时，引用的文件会在构建时自动标记为包含在输出中（显然，仅适用于 HTML 输出）。所有可下载的文件都放在输出目录的 <code class="docutils literal notranslate"><span class="pre">_downloads</span></code> 子目录中；处理重复的文件名。</p>
+<p>一个例子:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:download:</span><span class="nv">`this example script &lt;../example.py&gt;`</span>.
+</pre></div>
+</div>
+<p>给定的文件名通常是相对于当前源文件所包含的目录，但如果它是绝对的（以 <code class="docutils literal notranslate"><span class="pre">/</span></code> 开头），则它被视为相对于顶级源目录。</p>
+<p><code class="docutils literal notranslate"><span class="pre">example.py</span></code> 文件将被复制到输出目录，并生成一个合适的链接。</p>
+<p>不显示不可用的下载链接，您应该包含具有此角色的整个段落：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">only</span><span class="p">::</span> builder_html
+
+   See <span class="na">:download:</span><span class="nv">`this example script &lt;../example.py&gt;`</span>.
+</pre></div>
+</div>
+</div>
+<div class="section" id="numref">
+<h3>按图号交叉引用图像 <code class="docutils literal notranslate"><span class="pre">:numref:</span></code><a class="headerlink" href="#numref" title="永久链接至标题">¶</a></h3>
+<p><strong>在 1.5 版更改:</strong> <code class="docutils literal notranslate"><span class="pre">numref</span></code> 角色也可以参考段落。并且 <code class="docutils literal notranslate"><span class="pre">numref</span></code> 允许链接文本使用 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。</p>
+<p>链接到指定的图像，表格，代码块和节；使用标准的 reST 标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1” 。</p>
+<p>如果给出了明确的链接文本（像往常一样: <code class="docutils literal notranslate"><span class="pre">:numref:`Image</span> <span class="pre">of</span> <span class="pre">Sphinx</span> <span class="pre">(Fig.</span> <span class="pre">%s)</span> <span class="pre">&lt;my-figure&gt;`</span></code>），链接标题将作为引用的标题。作为占位符， ％s 和 {number} 被图形标题替换为图形编号和 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。如果没有给出明确的链接文本，则 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-numfig_format"><code class="docutils literal notranslate"><span class="pre">numfig_format</span></code></a> 设置用作后备默认值。</p>
+<p>如果 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-numfig"><code class="docutils literal notranslate"><span class="pre">numfig</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">False</span></code>，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。</p>
+</div>
+<div class="section" id="id4">
+<h3>交叉引用其他感兴趣的项目<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>以下角色可能会创建交叉引用，但不引用对象:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:envvar:</span></code></dt><dd><p>环境变量。生成索引条目。还会生成匹配的链接 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar"><code class="docutils literal notranslate"><span class="pre">envvar</span></code></a> 指令(如果存在)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:token:</span></code></dt><dd><p>语法标记的名称(用于创建 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist"><code class="docutils literal notranslate"><span class="pre">productionlist</span></code></a> 指令之间的链接)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:keyword:</span></code></dt><dd><p>Python 中关键字的名称。这将创建一个指向具有该名称的引用标签的链接(如果存在)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:option:</span></code></dt><dd><p>可执行程序的命令行选项。这会生成一个指向 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 指令的链接(如果存在)。</p>
+</dd>
+</dl>
+<p>以下角色在以下内容中创建对术语的交叉引用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#glossary-directive">glossary</a> :</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:term:</span></code></dt><dd><p>参考词汇表中的术语。使用 <code class="docutils literal notranslate"><span class="pre">glossary</span></code> 指令创建词汇表，该指令包含带有术语和定义的定义列表。它不必与 <code class="docutils literal notranslate"><span class="pre">term</span></code> 标记在同一个文件中，例如Python文档在 <code class="docutils literal notranslate"><span class="pre">glossary.rst</span></code> 文件中有一个全局词汇表。</p>
+</dd>
+</dl>
+<p>如果您使用术语表中未解释的术语，您将在构建期间收到警告。</p>
+</div>
+</div>
+<div class="section" id="math">
+<h2>Math<a class="headerlink" href="#math" title="永久链接至标题">¶</a></h2>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:math:</span></code></dt><dd><p>内联数学的作用。像这样使用：</p>
+</dd>
+</dl>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Since Pythagoras, we know that <span class="na">:math:</span><span class="nv">`a^2 + b^2 = c^2`</span>.
+</pre></div>
+</div>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:eq:</span></code></dt><dd><p>同样 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-math-numref"><code class="docutils literal notranslate"><span class="pre">math:numref</span></code></a> 类似。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2>其他语义标记<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>除了以不同的样式格式化文本之外，以下角色不会做任何特殊操作:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:abbr:</span></code></dt><dd><p>缩写。如果角色内容包含带括号的解释，则将对其进行特殊处理:它将以HTML格式显示在工具提示中，并在 LaTeX 中仅输出一次。</p>
+<p>例: <code class="docutils literal notranslate"><span class="pre">:abbr:`LIFO</span> <span class="pre">(last-in,</span> <span class="pre">first-out)`</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:command:</span></code></dt><dd><p>操作系统级命令的名称，例如 <code class="docutils literal notranslate"><span class="pre">rm</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:dfn:</span></code></dt><dd><p>在文本中标记术语的定义实例。 (不生成索引条目。)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:file:</span></code></dt><dd><p>文件或目录的名称。在内容中，您可以使用花括号来表示 “变量” 部分，例如：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">... is installed in :file:`/usr/lib/python2.{x}/site-packages` ...</span>
+</pre></div>
+</div>
+<p>在构建的文档中， <code class="docutils literal notranslate"><span class="pre">x</span></code> 将以不同的方式显示，表示它将被Python次要版本替换。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:guilabel:</span></code></dt><dd><p>作为交互式用户界面的一部分呈现的标签应使用 “guilabel” 标记。这包括来自基于文本的界面的标签，例如使用 <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses"><code class="docutils literal notranslate"><span class="pre">curses</span></code></a> 或其他基于文本的库创建的界面。界面中使用的任何标签都应标记为此角色，包括按钮标签，窗口标题，字段名称，菜单和菜单选择名称，甚至选择列表中的值。</p>
+<p><strong>在 1.0 版更改:</strong> 可以使用＆符号来包括GUI标签的加速键。这将被剥离并在输出中以下划线显示(例如: <code class="docutils literal notranslate"><span class="pre">:guilabel:`&amp;Cancel`</span></code>)。要包括文字＆符号，请加倍。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:kbd:</span></code></dt><dd><p>标记一系列击键。密钥序列采用何种形式可能取决于平台或特定于应用程序的约定。如果没有相关约定，则应拼写修饰键的名称，以提高新用户和非母语人士的可访问性。例如，<em>xemacs</em> 键序列可以标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`C-x</span> <span class="pre">C-f`</span></code>，但是没有引用特定的应用程序或平台，相同的序列应该标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`Control-x</span> <span class="pre">Control-f`</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:mailheader:</span></code></dt><dd><p>RFC 822样式邮件头的名称。此标记并不意味着标题正在电子邮件消息中使用，但可用于引用相同 “样式” 的任何标题。这也用于各种 MIME 规范定义的标头。标题名称的输入方式应与通常在实践中找到的方式相同，在有多种常用用法的情况下，首选的是驼峰套管约定。例如: <code class="docutils literal notranslate"><span class="pre">:mailheader:`Content-Type`</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:makevar:</span></code></dt><dd><p><strong>make</strong> 变量的名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:manpage:</span></code></dt><dd><p>对 Unix 手册页的引用，包括例如 <code class="docutils literal notranslate"><span class="pre">:manpage:`ls(1)`</span></code>。如果 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-manpages_url"><code class="docutils literal notranslate"><span class="pre">manpages_url</span></code></a> 已定义，则创建指向外部站点的超链接，呈现联机帮助页。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:menuselection:</span></code></dt><dd><p>应使用 <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> 角色标记菜单选择。这用于标记完整的菜单选择序列，包括选择子菜单和选择特定操作，或此类序列的任何子序列。各个选择的名称应该用 <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code> 分隔。</p>
+<p>例如，要标记选择 “Start &gt; Programs”，请使用此标记:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:menuselection:</span><span class="nv">`Start --&gt; Programs`</span>
+</pre></div>
+</div>
+<p>当包括一些包含一些尾随指示符的选择时，例如某些操作系统用来指示命令打开对话框的省略号时，应从选择名称中省略该指示符。</p>
+<p><code class="docutils literal notranslate"><span class="pre">menuselection</span></code> 也支持＆符加速器，如: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-guilabel"><code class="docutils literal notranslate"><span class="pre">guilabel</span></code></a>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:mimetype:</span></code></dt><dd><p>MIME 类型的名称，或 MIME 类型的组件(主要或次要部分，单独使用)。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:newsgroup:</span></code></dt><dd><p>Usenet 新闻组的名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:program:</span></code></dt><dd><p>可执行程序的名称。这可能与某些平台的可执行文件的文件名不同。特别是，对于Windows程序，应省略 <code class="docutils literal notranslate"><span class="pre">.exe</span></code> (或其他)扩展名。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:regexp:</span></code></dt><dd><p>正则表达式。Quotes 不应包括在内。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:samp:</span></code></dt><dd><p>一段文字文本，例如代码。在内容中，您可以使用花括号来表示 “变量” 部分，如 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-file"><code class="docutils literal notranslate"><span class="pre">file</span></code></a> 。例如，在 <code class="docutils literal notranslate"><span class="pre">:samp:`print</span> <span class="pre">1+{variable}`</span></code> 中，将强调部分 <code class="docutils literal notranslate"><span class="pre">variable</span></code>。</p>
+<p>如果您不需要 “variable 部分” 指示，请使用标准的 <code class="docutils literal notranslate"><span class="pre">``code``</span> </code> 。</p>
+<p><strong>在 1.8 版更改:</strong> 允许用反斜杠转义花括号</p>
+</dd>
+</dl>
+<p>还有一个 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#role-index"><code class="docutils literal notranslate"><span class="pre">index</span></code></a> 角色来生成索引条目。</p>
+<p>以下角色生成外部链接：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:pep:</span></code></dt><dd><p>对 Python Enhancement Proposal 的引用。这会生成适当的索引条目。生成文本 “PEP  <em>number</em> ” ;在HTML输出中，此文本是指向指定PEP的联机副本的超链接。你可以通过说 <code class="docutils literal notranslate"><span class="pre">:pep:`number#anchor`</span></code> 链接到特定的部分。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:rfc:</span></code></dt><dd><p>对 Internet 请求注释的引用。这会生成适当的索引条目。生成文本 “RFC  <em>number</em> ” ; 在HTML输出中，此文本是指向指定RFC的联机副本的超链接。你可以通过说 <code class="docutils literal notranslate"><span class="pre">:rfc:`number#anchor`</span></code> 链接到特定的部分。</p>
+</dd>
+</dl>
+<p>请注意，包含超链接没有特殊角色，因为您可以使用标准 reST 标记来实现此目的。</p>
+</div>
+<div class="section" id="id6">
+<h2>替换<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>文档系统提供默认定义的三个替换。它们在构建配置文件中设置。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">|release|</span></code></dt><dd><p>替换为项目发布的文档引用。这意味着是完整版本字符串，包括 alpha/beta/release 候选标签，例如 <code class="docutils literal notranslate"><span class="pre">2.5.2b3</span></code>。设置 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a> 。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">|version|</span></code></dt><dd><p>由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如 <code class="docutils literal notranslate"><span class="pre">2.5</span></code>，即使是版本 2.5.1。设置方 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a> 。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">|today|</span></code></dt><dd><p>替换为今天的日期（读取文档的日期）或构建配置文件中设置的日期。通常格式为 <code class="docutils literal notranslate"><span class="pre">April</span> <span class="pre">14,</span> <span class="pre">2007</span></code>。设置方式 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today_fmt"><code class="docutils literal notranslate"><span class="pre">today_fmt</span></code></a> 和 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today"><code class="docutils literal notranslate"><span class="pre">today</span></code></a>。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/wiki",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rst"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="01_field-lists.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">字段列表</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="03_directives.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">指令</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://sanstylelab.github.io/">SanstyleLab</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
