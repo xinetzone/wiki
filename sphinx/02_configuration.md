@@ -80,14 +80,14 @@
 `source_parsers`
 :   如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 `docutils.parsers.Parser` 或 [`sphinx.parsers.Parser`](https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser)。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。
 
-    ```{deprecated} 1.8 版后已移除
-    现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
-    ```
-
     例如:
 
     ```python
     source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
+    ```
+
+    ```{deprecated} 1.8 版后已移除
+    现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
     ```
 
 `root_doc`
@@ -113,23 +113,21 @@
 
 `rst_epilog`
 :   reStructuredText 字符串，它将包含在每个被读取的源文件的末尾。这是一个可以添加每个文件中都应该有的替换的地方（另一个是 `rst_prolog`）。一个例子：
-``python rst_epilog = """ .. |psf| replace:: Python Software Foundation """ ``
 
-
-```python
-rst_epilog = """
-.. |psf| replace:: Python Software Foundation
-"""
-```
+    ```python
+    rst_epilog = """
+    .. |psf| replace:: Python Software Foundation
+    """
+    ```
 
 `rst_prolog`
 :   reStructuredText 字符串，它将包含在每个被读取的源文件的开头。这是一个可以添加应该在每个文件中可用的替换的地方（另一个是 `rst_epilog`）。 一个例子：
 
-```python
-rst_prolog = """
-.. |psf| replace:: Python Software Foundation
-"""
-```
+    ```python
+    rst_prolog = """
+    .. |psf| replace:: Python Software Foundation
+    """
+    ```
 
 `primary_domain`
 :   默认[域](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html)的名称。也可以用 `None` 来禁用默认域。默认是 `'py'`。那些在其他域中的对象（无论域名是明确给出的，还是由 `default-domain` 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 "Python function"，而不仅仅是 "function"）。
@@ -144,30 +142,31 @@ rst_prolog = """
 
 `suppress_warnings`
 :   一个警告类型的列表，用于抑制任意的警告信息。
-Sphinx 支持以下警告类型：
 
-* `app.add_node`
-* `app.add_directive`
-* `app.add_role`
-* `app.add_generic_role`
-* `app.add_source_parser`
-* `download.not_readable`
-* `image.not_readable`
-* `ref.term`
-* `ref.ref`
-* `ref.numref`
-* `ref.keyword`
-* `ref.option`
-* `ref.citation`
-* `ref.footnote`
-* `ref.doc`
-* `ref.python`
-* `misc.highlighting_failure`
-* `toc.circular`
-* `toc.secnum`
-* `epub.unknown_project_files`
-* `epub.duplicated_toc_entry`
-* `autosectionlabel.*`
+    Sphinx 支持以下警告类型：
+
+    * `app.add_node`
+    * `app.add_directive`
+    * `app.add_role`
+    * `app.add_generic_role`
+    * `app.add_source_parser`
+    * `download.not_readable`
+    * `image.not_readable`
+    * `ref.term`
+    * `ref.ref`
+    * `ref.numref`
+    * `ref.keyword`
+    * `ref.option`
+    * `ref.citation`
+    * `ref.footnote`
+    * `ref.doc`
+    * `ref.python`
+    * `misc.highlighting_failure`
+    * `toc.circular`
+    * `toc.secnum`
+    * `epub.unknown_project_files`
+    * `epub.duplicated_toc_entry`
+    * `autosectionlabel.*`
 
 
 `needs_sphinx`
