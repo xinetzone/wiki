@@ -1,3 +1,4 @@
+(rst:directives)=
 # 指令
 
 [如前所述](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-directives)，指令是显式标记的通用块。虽然Docutils提供了许多指令, 但 Sphinx 提供了更多指令, 并使用指令作为主要的扩展机制之一。

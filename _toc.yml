@@ -36,6 +36,9 @@ parts:
   - file: rst/index
     sections:
     - glob: rst/**
+  - file: sphinx/index
+    sections:
+    - glob: sphinx/**
   - file: epb/index
     sections:
     - glob: epb/**

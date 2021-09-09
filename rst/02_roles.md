@@ -1,4 +1,7 @@
+(rst:roles)=
 # 角色
+
+参考：[角色](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html)
 
 Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成 `` :rolename:`content` ``。
 
