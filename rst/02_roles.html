@@ -335,7 +335,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../sphinx/02_configuration.html">
-     配置(raw)
+     配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -769,17 +769,17 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成 <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>默认角色（<code class="docutils literal notranslate"><span class="pre">content</span></code>）默认没有特殊含义。您可以随意使用它，例如：变量名；使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role">default_role</a> 配置值将其设置为已知角色 - <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any">any</a> 角色可以找到任何东西，或者 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-py-obj">py:obj</a> 角色来查找 Python 对象对此非常有用。</p>
+<p>默认的角色（<code class="docutils literal notranslate"><span class="pre">`content`</span></code>）在默认情况下没有特殊含义。你可以自由地将它用于任何你喜欢的地方，例如变量名；使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role">default_role</a> 配置值将它设置为一个已知的角色 - <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any"><code class="docutils literal notranslate"><span class="pre">:any:</span></code></a> 角色用于查找任何东西，或者 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-py-obj"><code class="docutils literal notranslate"><span class="pre">py:obj</span></code></a> 角色用于查找 Python 对象，在这方面非常有用。</p>
 </div>
-<p>请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">域</a> ，了解域添加的角色。</p>
+<p>请参阅 <a class="reference internal" href="04_domains.html#rst-domains"><span class="std std-ref">域</span></a>，了解域添加的角色。</p>
 <div class="section" id="id2">
 <h2>交叉引用语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>交叉引用由许多语义解释的文本角色生成。基本上，您只需要编写 <code class="docutils literal notranslate"><span class="pre">:role:`target`</span></code> ，并且将为 <em>role</em> 指示的类型 <em>target</em> 项创建一个链接。链接的文本将与 <em>target</em> 相同。</p>
+<p>交叉引用由许多语义解释的文本角色生成。基本上，您只需要编写 <code class="docutils literal notranslate"><span class="pre">:role:`target`</span></code>，并且将为 <em>role</em> 指示的类型 <em>target</em> 项创建一个链接。链接的文本将与 <em>target</em> 相同。</p>
 <p>但是，还有一些额外的功能可以使交叉引用角色更加通用：</p>
 <ul>
-<li><p>你可以提供一个明确的标题和引用目标，比如在reST直接超链接中: <code class="docutils literal notranslate"><span class="pre">:role:`title</span> <span class="pre">&lt;target&gt;`</span></code> 将引用 <em>target</em> ，但是链接文本将是 <em>title</em> 。</p></li>
+<li><p>你可以提供一个明确的标题和引用目标，比如在 reST 直接超链接中: <code class="docutils literal notranslate"><span class="pre">:role:`title</span> <span class="pre">&lt;target&gt;`</span></code> 将引用 <em>target</em> ，但是链接文本将是 <em>title</em>。</p></li>
 <li><p>如果在内容前加上 <code class="docutils literal notranslate"><span class="pre">!</span></code> ，则不会创建引用/超链接。</p></li>
-<li><p>如果在内容前面添加 <code class="docutils literal notranslate"><span class="pre">~</span></code> ，则链接文本将只是目标的最后一个组件。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`~Queue.Queue.get`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">Queue.Queue.get</span></code> 但仅显示 <code class="docutils literal notranslate"><span class="pre">get</span></code> 作为链接文本。这不适用于所有交叉引用角色，但是特定于域。</p>
+<li><p>如果在内容前面添加 <code class="docutils literal notranslate"><span class="pre">~</span></code>，则链接文本将只是目标的最后一个组件。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`~Queue.Queue.get`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">Queue.Queue.get</span></code> 但仅显示 <code class="docutils literal notranslate"><span class="pre">get</span></code> 作为链接文本。这不适用于所有交叉引用角色，但是特定于域。</p>
 <p>在 HTML 输出中，链接的 <code class="docutils literal notranslate"><span class="pre">title</span></code> 属性（例如在鼠标悬停时显示为工具提示）将始终是完整的目标名称。</p>
 </li>
 </ul>
@@ -793,7 +793,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>然后，它在所有加载的域中查找对象(目标)。这取决于匹配必须具体的域。例如，在 Python 域中，<code class="docutils literal notranslate"><span class="pre">:any:`Builder`</span></code> 的引用将匹配 <code class="docutils literal notranslate"><span class="pre">sphinx.builders.Builder</span></code> 类。</p></li>
 </ul>
 <p>如果未找到任何目标或多个目标，则会发出警告。对于多个目标，您可以将 “any” 更改为特定角色。</p>
-<p>这个角色是设置的好方法 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role"><code class="docutils literal notranslate"><span class="pre">default_role</span></code></a> 。如果这样做，您可以编写交叉引用，而不会产生大量的标记开销。例如，在这个 Python 函数文档:</p>
+<p>这个角色是设置 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role"><code class="docutils literal notranslate"><span class="pre">default_role</span></code></a> 的良好候选者。如果你这样做，你就可以在没有大量标记开销的情况下编写交叉引用。例如，在这个 Python 函数文档中：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> install()
 
    This function installs a <span class="nv">`handler`</span> for every signal known by the
@@ -805,7 +805,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="id3">
 <h3>交叉引用对象<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>这些角色用各自的域描述:</p>
+<p>这些角色用各自的域描述：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#python-roles">Python</a></p></li>
 <li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#c-roles">C</a></p></li>
@@ -816,7 +816,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="ref">
 <h3>交叉引用任意位置 <code class="docutils literal notranslate"><span class="pre">:ref:</span></code><a class="headerlink" href="#ref" title="永久链接至标题">¶</a></h3>
-<p>为了支持对任何文档中任意位置的交叉引用，使用标准reST标签。为此，标签名称在整个文档中必须是唯一的。您可以通过两种方式引用标签:</p>
+<p>为了支持对任何文档中任意位置的交叉引用，使用标准 reST 标签。为此，标签名称在整个文档中必须是唯一的。您可以通过两种方式引用标签：</p>
 <ul>
 <li><p>如果在标题之前直接放置标签，可以用 <code class="docutils literal notranslate"><span class="pre">:ref:`label-name`</span></code> 引用它。例如:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-reference-label:</span>
@@ -830,7 +830,7 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 </pre></div>
 </div>
 <p>然后 <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> 角色将生成一个指向该部分的链接，链接标题为 “Section to cross-reference”。当 section 和 reference 在不同的源文件中时，这也可以正常工作。
-自动标签也适用于数字。例如:</p>
+自动标签也适用于图像。例如：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-figure:</span>
 
 <span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> whatever
@@ -838,14 +838,14 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
    Figure caption
 </pre></div>
 </div>
-<p>在这种情况下，引用 <code class="docutils literal notranslate"><span class="pre">:ref:`my-figure`</span></code> 将插入带有链接文本”Figure caption” 的图形的引用。
-对于使用 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table">table</a> 指令给出显式标题的表，同样适用。</p>
+<p>在这种情况下，引用 <code class="docutils literal notranslate"><span class="pre">:ref:`my-figure`</span></code> 将插入带有链接文本”Figure caption” 的图形的引用。</p>
+<p>对于使用 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table">table</a> 指令给出显式标题的表，同样适用。</p>
 </li>
-<li><p>仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: <code class="docutils literal notranslate"><span class="pre">:ref:`Link</span> <span class="pre">title</span> <span class="pre">&lt;label-name&gt;`</span></code> 。</p></li>
+<li><p>仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: <code class="docutils literal notranslate"><span class="pre">:ref:`Link</span> <span class="pre">title</span> <span class="pre">&lt;label-name&gt;`</span></code>。</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>参考标签必须以下划线开头。引用标签时，必须省略下划线(参见上面的示例)。</p>
+<p>参考标签必须以下划线开头。引用标签时，必须省略下划线（参见上面的示例）。</p>
 </div>
 <p>使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 被建议通过标准的 reStructuredText 链接到部分（比如 <code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code>），因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。</p>
 </div>
@@ -873,22 +873,22 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 </div>
 <div class="section" id="numref">
 <h3>按图号交叉引用图像 <code class="docutils literal notranslate"><span class="pre">:numref:</span></code><a class="headerlink" href="#numref" title="永久链接至标题">¶</a></h3>
-<p><strong>在 1.5 版更改:</strong> <code class="docutils literal notranslate"><span class="pre">numref</span></code> 角色也可以参考段落。并且 <code class="docutils literal notranslate"><span class="pre">numref</span></code> 允许链接文本使用 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。</p>
-<p>链接到指定的图像，表格，代码块和节；使用标准的 reST 标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1” 。</p>
-<p>如果给出了明确的链接文本（像往常一样: <code class="docutils literal notranslate"><span class="pre">:numref:`Image</span> <span class="pre">of</span> <span class="pre">Sphinx</span> <span class="pre">(Fig.</span> <span class="pre">%s)</span> <span class="pre">&lt;my-figure&gt;`</span></code>），链接标题将作为引用的标题。作为占位符， ％s 和 {number} 被图形标题替换为图形编号和 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。如果没有给出明确的链接文本，则 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-numfig_format"><code class="docutils literal notranslate"><span class="pre">numfig_format</span></code></a> 设置用作后备默认值。</p>
+<p><strong>在 1.5 版更改:</strong> <code class="docutils literal notranslate"><span class="pre">numref</span></code> 角色也可以引用段落。并且 <code class="docutils literal notranslate"><span class="pre">numref</span></code> 允许链接文本使用 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。</p>
+<p>链接到指定的图像，表格，代码块和节；使用标准的 reST 标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1”。</p>
+<p>如果给出了明确的链接文本（像往常一样: <code class="docutils literal notranslate"><span class="pre">:numref:`Image</span> <span class="pre">of</span> <span class="pre">Sphinx</span> <span class="pre">(Fig.</span> <span class="pre">%s)</span> <span class="pre">&lt;my-figure&gt;`</span></code>），链接标题将作为引用的标题。作为占位符，<code class="docutils literal notranslate"><span class="pre">%s</span></code> 和 {number} 被图形标题替换为图形编号和 <code class="docutils literal notranslate"><span class="pre">{name}</span></code>。如果没有给出明确的链接文本，则 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-numfig_format"><code class="docutils literal notranslate"><span class="pre">numfig_format</span></code></a> 设置用作后备默认值。</p>
 <p>如果 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-numfig"><code class="docutils literal notranslate"><span class="pre">numfig</span></code></a> 是 <code class="docutils literal notranslate"><span class="pre">False</span></code>，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。</p>
 </div>
 <div class="section" id="id4">
 <h3>交叉引用其他感兴趣的项目<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>以下角色可能会创建交叉引用，但不引用对象:</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:envvar:</span></code></dt><dd><p>环境变量。生成索引条目。还会生成匹配的链接 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar"><code class="docutils literal notranslate"><span class="pre">envvar</span></code></a> 指令(如果存在)。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:envvar:</span></code></dt><dd><p>环境变量。生成索引条目。还会生成匹配的链接 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar"><code class="docutils literal notranslate"><span class="pre">envvar</span></code></a> 指令（如果存在）。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:token:</span></code></dt><dd><p>语法标记的名称(用于创建 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist"><code class="docutils literal notranslate"><span class="pre">productionlist</span></code></a> 指令之间的链接)。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:token:</span></code></dt><dd><p>语法标记的名称（用于创建 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist"><code class="docutils literal notranslate"><span class="pre">productionlist</span></code></a> 指令之间的链接）。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:keyword:</span></code></dt><dd><p>Python 中关键字的名称。这将创建一个指向具有该名称的引用标签的链接(如果存在)。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:keyword:</span></code></dt><dd><p>Python 中关键字的名称。这将创建一个指向具有该名称的引用标签的链接（如果存在）。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:option:</span></code></dt><dd><p>可执行程序的命令行选项。这会生成一个指向 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 指令的链接(如果存在)。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:option:</span></code></dt><dd><p>可执行程序的命令行选项。这会生成一个指向 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 指令的链接（如果存在）。</p>
 </dd>
 </dl>
 <p>以下角色在以下内容中创建对术语的交叉引用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#glossary-directive">glossary</a> :</p>
@@ -928,38 +928,42 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">... is installed in :file:`/usr/lib/python2.{x}/site-packages` ...</span>
 </pre></div>
 </div>
-<p>在构建的文档中， <code class="docutils literal notranslate"><span class="pre">x</span></code> 将以不同的方式显示，表示它将被Python次要版本替换。</p>
+<p>在构建的文档中， <code class="docutils literal notranslate"><span class="pre">x</span></code> 将以不同的方式显示，表示它将被 Python 次要版本替换。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:guilabel:</span></code></dt><dd><p>作为交互式用户界面的一部分呈现的标签应使用 “guilabel” 标记。这包括来自基于文本的界面的标签，例如使用 <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses"><code class="docutils literal notranslate"><span class="pre">curses</span></code></a> 或其他基于文本的库创建的界面。界面中使用的任何标签都应标记为此角色，包括按钮标签，窗口标题，字段名称，菜单和菜单选择名称，甚至选择列表中的值。</p>
-<p><strong>在 1.0 版更改:</strong> 可以使用＆符号来包括GUI标签的加速键。这将被剥离并在输出中以下划线显示(例如: <code class="docutils literal notranslate"><span class="pre">:guilabel:`&amp;Cancel`</span></code>)。要包括文字＆符号，请加倍。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版更改: </span>GUI 标签的快捷键可以用 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>（ampersand） 来包含；这将被剥离并在输出中显示为下划线（例如：<code class="docutils literal notranslate"><span class="pre">:guilabel:`&amp;Cancel`</span></code>）。要包括一个字段的 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>，请将其加倍。</p>
+</div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:kbd:</span></code></dt><dd><p>标记一系列击键。密钥序列采用何种形式可能取决于平台或特定于应用程序的约定。如果没有相关约定，则应拼写修饰键的名称，以提高新用户和非母语人士的可访问性。例如，<em>xemacs</em> 键序列可以标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`C-x</span> <span class="pre">C-f`</span></code>，但是没有引用特定的应用程序或平台，相同的序列应该标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`Control-x</span> <span class="pre">Control-f`</span></code>。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:kbd:</span></code></dt><dd><p>标记一系列击键。密钥序列采用何种形式可能取决于平台或特定于应用程序的约定。如果没有相关约定，则应拼写修饰键的名称，以提高新用户和非母语人士的可访问性。例如，<em>xemacs</em> 键序列可以标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`C-x</span> <span class="pre">C-f`</span></code>，但是没有引用特定的应用程序或平台，相同的序列应该标记为 <code class="docutils literal notranslate"><span class="pre">:kbd:`Control-x</span> <span class="pre">Control-f`</span></code>（渲染：<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">x</kbd> <kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">f</kbd></kbd>）。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:mailheader:</span></code></dt><dd><p>RFC 822样式邮件头的名称。此标记并不意味着标题正在电子邮件消息中使用，但可用于引用相同 “样式” 的任何标题。这也用于各种 MIME 规范定义的标头。标题名称的输入方式应与通常在实践中找到的方式相同，在有多种常用用法的情况下，首选的是驼峰套管约定。例如: <code class="docutils literal notranslate"><span class="pre">:mailheader:`Content-Type`</span></code>。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:mailheader:</span></code></dt><dd><p>RFC 822 样式邮件头的名称。此标记并不意味着标题正在电子邮件消息中使用，但可用于引用相同 “样式” 的任何标题。这也用于各种 MIME 规范定义的标头。标题名称的输入方式应与通常在实践中找到的方式相同，在有多种常用用法的情况下，首选的是驼峰套管约定。例如: <code class="docutils literal notranslate"><span class="pre">:mailheader:`Content-Type`</span></code>。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:makevar:</span></code></dt><dd><p><strong>make</strong> 变量的名称。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:manpage:</span></code></dt><dd><p>对 Unix 手册页的引用，包括例如 <code class="docutils literal notranslate"><span class="pre">:manpage:`ls(1)`</span></code>。如果 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-manpages_url"><code class="docutils literal notranslate"><span class="pre">manpages_url</span></code></a> 已定义，则创建指向外部站点的超链接，呈现联机帮助页。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:menuselection:</span></code></dt><dd><p>应使用 <code class="docutils literal notranslate"><span class="pre">menuselection</span></code> 角色标记菜单选择。这用于标记完整的菜单选择序列，包括选择子菜单和选择特定操作，或此类序列的任何子序列。各个选择的名称应该用 <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code> 分隔。</p>
-<p>例如，要标记选择 “Start &gt; Programs”，请使用此标记:</p>
+<p>例如，要标记选择 “<span class="menuselection">Start ‣ Programs</span>”，请使用此标记：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:menuselection:</span><span class="nv">`Start --&gt; Programs`</span>
 </pre></div>
 </div>
 <p>当包括一些包含一些尾随指示符的选择时，例如某些操作系统用来指示命令打开对话框的省略号时，应从选择名称中省略该指示符。</p>
-<p><code class="docutils literal notranslate"><span class="pre">menuselection</span></code> 也支持＆符加速器，如: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-guilabel"><code class="docutils literal notranslate"><span class="pre">guilabel</span></code></a>。</p>
+<p><code class="docutils literal notranslate"><span class="pre">menuselection</span></code> 也支持＆符快捷键，如：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-guilabel"><code class="docutils literal notranslate"><span class="pre">guilabel</span></code></a>。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:mimetype:</span></code></dt><dd><p>MIME 类型的名称，或 MIME 类型的组件(主要或次要部分，单独使用)。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:mimetype:</span></code></dt><dd><p>MIME 类型的名称，或 MIME 类型的组件（主要或次要部分，单独使用）。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:newsgroup:</span></code></dt><dd><p>Usenet 新闻组的名称。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:program:</span></code></dt><dd><p>可执行程序的名称。这可能与某些平台的可执行文件的文件名不同。特别是，对于Windows程序，应省略 <code class="docutils literal notranslate"><span class="pre">.exe</span></code> (或其他)扩展名。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:program:</span></code></dt><dd><p>可执行程序的名称。这可能与某些平台的可执行文件的文件名不同。特别是，对于Windows程序，应省略 <code class="docutils literal notranslate"><span class="pre">.exe</span></code>（或其他）扩展名。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:regexp:</span></code></dt><dd><p>正则表达式。Quotes 不应包括在内。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">:samp:</span></code></dt><dd><p>一段文字文本，例如代码。在内容中，您可以使用花括号来表示 “变量” 部分，如 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-file"><code class="docutils literal notranslate"><span class="pre">file</span></code></a> 。例如，在 <code class="docutils literal notranslate"><span class="pre">:samp:`print</span> <span class="pre">1+{variable}`</span></code> 中，将强调部分 <code class="docutils literal notranslate"><span class="pre">variable</span></code>。</p>
 <p>如果您不需要 “variable 部分” 指示，请使用标准的 <code class="docutils literal notranslate"><span class="pre">``code``</span> </code> 。</p>
-<p><strong>在 1.8 版更改:</strong> 允许用反斜杠转义花括号</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.8 版更改: </span>允许用反斜杠转义花括号</p>
+</div>
 </dd>
 </dl>
 <p>还有一个 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#role-index"><code class="docutils literal notranslate"><span class="pre">index</span></code></a> 角色来生成索引条目。</p>
@@ -978,7 +982,7 @@ It refers to the section itself, see <span class="na">:ref:</span><span class="n
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">|release|</span></code></dt><dd><p>替换为项目发布的文档引用。这意味着是完整版本字符串，包括 alpha/beta/release 候选标签，例如 <code class="docutils literal notranslate"><span class="pre">2.5.2b3</span></code>。设置 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a> 。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">|version|</span></code></dt><dd><p>由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如 <code class="docutils literal notranslate"><span class="pre">2.5</span></code>，即使是版本 2.5.1。设置方 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a> 。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">|version|</span></code></dt><dd><p>由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如 <code class="docutils literal notranslate"><span class="pre">2.5</span></code>，即使是版本 <code class="docutils literal notranslate"><span class="pre">2.5.1</span></code>。设置方 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a> 。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">|today|</span></code></dt><dd><p>替换为今天的日期（读取文档的日期）或构建配置文件中设置的日期。通常格式为 <code class="docutils literal notranslate"><span class="pre">April</span> <span class="pre">14,</span> <span class="pre">2007</span></code>。设置方式 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today_fmt"><code class="docutils literal notranslate"><span class="pre">today_fmt</span></code></a> 和 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today"><code class="docutils literal notranslate"><span class="pre">today</span></code></a>。</p>
 </dd>

@@ -1,6 +1,8 @@
 (rst:domains)=
 # 域
 
+参考：[域](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html) 
+
 最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。不久之后，它作为一个文档工具被提供给所有人，但 Python 模块的文档仍然被深深地嵌入其中--最基本的指令，比如 `function`，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，人们对将其用于许多不同的目的产生了兴趣。C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。
 
 虽然这总是可行的，但现在通过为每个此类目的提供 **domain**，可以更轻松地支持使用不同编程语言的项目文档，甚至是主要 Sphinx 发行版不支持的项目文档。
@@ -13,7 +15,7 @@
 
 ## 基本标记
 
-大多数域提供了许多 *object description directives*，用于描述模块提供的特定对象。每个指令都需要一个或多个签名来提供有关所描述内容的基本信息，内容应该是描述。基本版本在一般索引中生成条目；如果不需要索引条目，可以给出指令选项标志 `:noindex:` 。使用Python域指令的示例：
+大多数域提供了许多 *object description directives*，用于描述模块提供的特定对象。每个指令都需要一个或多个签名来提供有关所描述内容的基本信息，内容应该是描述。基本版本在一般索引中生成条目；如果不需要索引条目，可以给出指令选项标志 `:noindex:` 。使用 Python 域指令的示例：
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -40,7 +42,7 @@ RST
 ```
 ````
 
-这描述了两个Python函数 `spam` 和 `ham` 。 (请注意，当签名变得太长时，如果向下一行中继续的行添加反斜杠，则可以将其分解。示例：
+这描述了两个 Python 函数 `spam` 和 `ham` 。 (请注意，当签名变得太长时，如果向下一行中继续的行添加反斜杠，则可以将其分解。示例：
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -75,7 +77,7 @@ The function :py:func:`spam` does a similar thing.
 
 如您所见，指令和角色名称都包含域名和指令名称。
 
-默认域
+### 默认域
 
 对于仅从一个域描述对象的文档，作者在指定默认值后，不必再在每个指令，角色等处再次声明其名称。这可以通过配置值 [`primary_domain`](https://www.sphinx.org.cn/usage/configuration.html#confval-primary_domain) 或通过此指令来完成:
 
@@ -103,6 +105,7 @@ Reference to :func:`pyfunc`.
 * 如果在内容前加上 `!` ，则不会创建引用/超链接。
 * 如果在内容前面添加 `~` ，则链接文本将只是目标的最后一个组件。例如，`` :py:meth:`~Queue.Queue.get` `` 将引用 `Queue.Queue.get` 但仅显示 `get` 作为链接文本。
 
+(rst:domains/python)=
 ## Python 域
 
 Python 域（名称 **py**）为模块声明提供以下指令：
@@ -115,11 +118,11 @@ Python 域（名称 **py**）为模块声明提供以下指令：
 
 该指令还将导致全局模块索引中的条目。
 
-`:platform:` 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符；正在使用的示例包括 “IRIX” ，”Mac” ， “Windows” 和 “Unix” 。使用已适用的密钥非常重要。
+`:platform: platforms (comma separated list)` 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符；正在使用的示例包括 “IRIX” ，”Mac” ， “Windows” 和 “Unix” 。使用已适用的密钥非常重要。
 
-`:synopsis:` 选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。
+`:synopsis: purpose (text)` 选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。
 
-可以给出 `deprecated` 选项(没有值)将模块标记为已弃用；它将在各个地点被指定。
+可以给出 `:deprecated: (no argument)` 选项(没有值)将模块标记为已弃用；它将在各个地点被指定。
 
 #### `` .. py:currentmodule:: name ``
 
@@ -129,7 +132,7 @@ Python 域（名称 **py**）为模块声明提供以下指令：
 
 #### `` .. py:function:: name(parameters) ``
 
-描述模块级功能。签名应该包含Python函数定义中给出的参数，请参阅 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures)。例如：
+描述模块级函数。签名应该包含 Python 函数定义中给出的参数，请参阅 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures)。例如：
 
 ```rst
 .. py:function:: Timer.repeat(repeat=3, number=1000000)
@@ -427,6 +430,7 @@ def setnewname(name):
 
 请注意，您可以组合使用 `~` 和 `.` 前缀: `` :py:meth:`~.TarFile.close` `` 将引用 `tarfile.TarFile.close()` 方法，但可见的链接标题只是 `close()`。
 
+(rst:domains/c)=
 ## C 域
 
 C 域（名称  **c**）适用于 C API 的文档。
@@ -484,6 +488,7 @@ C 域（名称  **c**）适用于 C API 的文档。
 
 `:c:data:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:data "永久链接至目标")引用C语言变量。
 
+(rst:domains/cpp)=
 ## C++ 域
 
 C++ 域(名称  **cpp** )支持记录C++ 项目。
@@ -1084,6 +1089,7 @@ template<typename `T`>
    You can set this variable to select a paper size.
 ```
 
+(rst:domains/javascript)=
 ## JavaScript域
 
 JavaScript域(名称  **js** )提供以下指令:
@@ -1148,9 +1154,10 @@ JavaScript域(名称  **js** )提供以下指令:
 
 `:js:mod:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:mod "永久链接至目标")`:js:func:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:func "永久链接至目标")`:js:meth:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:meth "永久链接至目标")`:js:class:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:class "永久链接至目标")`:js:data:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:data "永久链接至目标")`:js:attr:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:attr "永久链接至目标")
 
-## reStructuredText域
+(rst:domains/rst)=
+## reStructuredText 域
 
-reStructuredText域(名称  **rst** )提供以下指令:
+reStructuredText域(名称 **rst** )提供以下指令:
 
 `.. rst:directive::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-rst:directive "永久链接至目标")描述reST指令。 *name* 可以是单个指令名称或实际指令语法(.. 前缀和 :: 后缀)，其参数将以不同方式呈现。例如:
 
@@ -1186,6 +1193,7 @@ reStructuredText域(名称  **rst** )提供以下指令:
 
 `:rst:dir:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:dir "永久链接至目标")`:rst:role:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:role "永久链接至目标")
 
+(rst:domains/math)=
 ## 数学域
 
 数学域(名称  **math** )提供以下角色:

@@ -105,7 +105,7 @@
       *
    ```
 
-   这首先包括所有名称以 `intro` 开头的文件, 然后是 `recipe` 文件夹中的所有文件, 然后是所有剩余的文件(当然包含该指令的文件除外)。[2](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#id7)
+   这首先包括所有名称以 `intro` 开头的文件, 然后是 `recipe` 文件夹中的所有文件, 然后是所有剩余的文件(当然包含该指令的文件除外)。[^2]
 
    特殊条目名称 `self` 代表包含toctree指令的文档。如果要从toctree生成”站点地图”, 这非常有用。
 
@@ -129,9 +129,9 @@
       doc_2
    ```
 
-   这仍将通知 Sphinx 文档层次结构, 但不会在指令的位置插入文档中的链接 - 如果您打算自己, 以不同的样式或HTML侧边栏插入这些链接, 这是有意义的。
+   这仍将通知 Sphinx 文档层次结构, 但不会在指令的位置插入文档中的链接 - 如果您打算自己, 以不同的样式或 HTML 侧边栏插入这些链接, 这是有意义的。
 
-   如果您只想拥有一个顶级toctree并隐藏所有其他较低级别的 toctree, 则可以将”includehidden”选项添加到顶级toctree条目:
+   如果您只想拥有一个顶级toctree并隐藏所有其他较低级别的 toctree, 则可以将”includehidden”选项添加到顶级 `toctree` 条目:
 
    ```rst
    .. toctree::
@@ -149,17 +149,29 @@
 
    “master document” (由 [`master_doc`](https://www.sphinx.org.cn/usage/configuration.html#confval-master_doc) 选择)是TOC树层次结构的 “root” 。如果你没有给出 `maxdepth` 选项, 它可以用作文档的主页面, 也可以用作 “完整的目录”。
 
-   **在 0.3 版更改:** 添加了 “globbing” 选项。
+   ```{versionchanged} 0.3
+   添加了 “globbing” 选项。
+   ```
 
-   **在 0.6 版更改:** 添加了 “numbered” 和 “hidden” 选项以及外部链接和对 “self” 引用的支持。
+   ```{versionchanged} 0.6
+   添加了 “numbered” 和 “hidden” 选项以及外部链接和对 “self” 引用的支持。
+   ```
 
-   **在 1.0 版更改:** 添加了 “titlesonly” 选项。
+   ```{versionchanged} 1.0
+   添加了 “titlesonly” 选项。
+   ```
 
-   **在 1.1 版更改:** 在 “numbered” 中添加了数字参数。
+   ```{versionchanged} 1.1
+   在 “numbered” 中添加了数字参数。
+   ```
 
-   **在 1.2 版更改:** 添加了 “includehidden” 选项。
+   ```{versionchanged} 1.2
+   添加了 “includehidden” 选项。
+   ```
 
-   **在 1.3 版更改:** 添加了 “caption” 和 “name” 选项。
+   ```{versionchanged} 1.3
+   添加了 “caption” 和 “name” 选项。
+   ```
 
 ### 特别的名字
 

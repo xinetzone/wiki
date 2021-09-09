@@ -335,7 +335,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../sphinx/02_configuration.html">
-     配置(raw)
+     配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -676,54 +676,54 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
+    <a class="reference internal nav-link" href="#id5">
      特别的名字
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
+  <a class="reference internal nav-link" href="#id6">
    段落级标记
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
+  <a class="reference internal nav-link" href="#id7">
    代码高亮
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id8">
+  <a class="reference internal nav-link" href="#id9">
    术语
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id9">
+  <a class="reference internal nav-link" href="#id10">
    元信息标记
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id10">
+  <a class="reference internal nav-link" href="#id11">
    索引生成标记
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id11">
+  <a class="reference internal nav-link" href="#id12">
    引用基于标签的内容
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id13">
+  <a class="reference internal nav-link" href="#id14">
    表格
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id14">
+  <a class="reference internal nav-link" href="#id15">
    数学
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id15">
+  <a class="reference internal nav-link" href="#id16">
    语法制作显示
   </a>
  </li>
@@ -755,7 +755,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>要为当前文件（<code class="docutils literal notranslate"><span class="pre">.rst</span></code> 文件）创建目录，请使用标准的 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents">reST 内容指令</a>。</p>
 </div>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code></dt><dd><p>该指令使用指令体中给出的文档的各个 TOC（包括 “sub-TOC tree”）在当前位置插入 “TOC tree”。相对文档名称（不以斜杠开头）与指令所在的文档相关, 绝对名称相对于源目录。可以给出数字”maxdepth”选项以指示树的深度；默认情况下, 包括所有级别。<a class="footnote-reference brackets" href="#id16" id="id3">1</a></p>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree::</span></code></dt><dd><p>该指令使用指令体中给出的文档的各个 TOC（包括 “sub-TOC tree”）在当前位置插入 “TOC tree”。相对文档名称（不以斜杠开头）与指令所在的文档相关, 绝对名称相对于源目录。可以给出数字”maxdepth”选项以指示树的深度；默认情况下, 包括所有级别。<a class="footnote-reference brackets" href="#id17" id="id3">1</a></p>
 <p>考虑这个例子（取自 Python docs 的库引用索引）：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:maxdepth:</span> 2
@@ -820,7 +820,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    *
 </pre></div>
 </div>
-<p>这首先包括所有名称以 <code class="docutils literal notranslate"><span class="pre">intro</span></code> 开头的文件, 然后是 <code class="docutils literal notranslate"><span class="pre">recipe</span></code> 文件夹中的所有文件, 然后是所有剩余的文件(当然包含该指令的文件除外)。<a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/directives.html#id7">2</a></p>
+<p>这首先包括所有名称以 <code class="docutils literal notranslate"><span class="pre">intro</span></code> 开头的文件, 然后是 <code class="docutils literal notranslate"><span class="pre">recipe</span></code> 文件夹中的所有文件, 然后是所有剩余的文件(当然包含该指令的文件除外)。<a class="footnote-reference brackets" href="#id18" id="id4">2</a></p>
 <p>特殊条目名称 <code class="docutils literal notranslate"><span class="pre">self</span></code> 代表包含toctree指令的文档。如果要从toctree生成”站点地图”, 这非常有用。</p>
 <p>您可以使用 <code class="docutils literal notranslate"><span class="pre">reversed</span></code> 标志选项来反转列表中条目的顺序。当使用 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 标志选项来反转文件的顺序时, 这非常有用。例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
@@ -838,8 +838,8 @@ commentsRunWhenDOMLoaded(addUtterances);
    doc_2
 </pre></div>
 </div>
-<p>这仍将通知 Sphinx 文档层次结构, 但不会在指令的位置插入文档中的链接 - 如果您打算自己, 以不同的样式或HTML侧边栏插入这些链接, 这是有意义的。</p>
-<p>如果您只想拥有一个顶级toctree并隐藏所有其他较低级别的 toctree, 则可以将”includehidden”选项添加到顶级toctree条目:</p>
+<p>这仍将通知 Sphinx 文档层次结构, 但不会在指令的位置插入文档中的链接 - 如果您打算自己, 以不同的样式或 HTML 侧边栏插入这些链接, 这是有意义的。</p>
+<p>如果您只想拥有一个顶级toctree并隐藏所有其他较低级别的 toctree, 则可以将”includehidden”选项添加到顶级 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 条目:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:includehidden:</span>
 
@@ -851,16 +851,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>最后, <a class="reference external" href="https://www.sphinx.org.cn/glossary.html#term-source-directory">source directory</a> (或子目录)中的所有文档必须出现在某些 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令中;如果Sphinx找到未包含的文件, 它将发出警告, 因为这意味着无法通过标准导航访问此文件。</p>
 <p>使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a> 可以完全排除文档或目录。使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/field-lists.html#metadata">“orphan” 元数据</a> 来构建文档, 但通知Sphinx它是无法通过toctree访问的。</p>
 <p>“master document” (由 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-master_doc"><code class="docutils literal notranslate"><span class="pre">master_doc</span></code></a> 选择)是TOC树层次结构的 “root” 。如果你没有给出 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项, 它可以用作文档的主页面, 也可以用作 “完整的目录”。</p>
-<p><strong>在 0.3 版更改:</strong> 添加了 “globbing” 选项。</p>
-<p><strong>在 0.6 版更改:</strong> 添加了 “numbered” 和 “hidden” 选项以及外部链接和对 “self” 引用的支持。</p>
-<p><strong>在 1.0 版更改:</strong> 添加了 “titlesonly” 选项。</p>
-<p><strong>在 1.1 版更改:</strong> 在 “numbered” 中添加了数字参数。</p>
-<p><strong>在 1.2 版更改:</strong> 添加了 “includehidden” 选项。</p>
-<p><strong>在 1.3 版更改:</strong> 添加了 “caption” 和 “name” 选项。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 0.3 版更改: </span>添加了 “globbing” 选项。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 0.6 版更改: </span>添加了 “numbered” 和 “hidden” 选项以及外部链接和对 “self” 引用的支持。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版更改: </span>添加了 “titlesonly” 选项。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.1 版更改: </span>在 “numbered” 中添加了数字参数。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.2 版更改: </span>添加了 “includehidden” 选项。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.3 版更改: </span>添加了 “caption” 和 “name” 选项。</p>
+</div>
 </dd>
 </dl>
-<div class="section" id="id4">
-<h3>特别的名字<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id5">
+<h3>特别的名字<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称创建文档 - 这将导致问题。</p>
 <p>特殊文档名称（以及为它们生成的页面）是：</p>
 <dl class="simple myst">
@@ -882,8 +894,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>段落级标记<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h2>段落级标记<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>这些指令创建短段落, 可以在内部信息单元和普通文本中使用。</p>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code></dt><dd><p>关于 API 的一个特别重要的信息, 用户在使用该注释所涉及的任何 API 时应该注意这些信息。指令的内容应以完整的句子写成, 并包括所有适当的标点符号。</p>
@@ -1126,8 +1138,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 </dl>
 </div>
-<div class="section" id="id6">
-<h2>代码高亮<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h2>代码高亮<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>有多种方法可以在 Sphinx 中显示语法高亮的文字代码块：</p>
 <ul class="simple">
 <li><p>使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-doctest-blocks">reST doctest blocks</a></p></li>
@@ -1332,7 +1344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><strong>在 1.6.6 版更改:</strong> LaTeX支持 <code class="docutils literal notranslate"><span class="pre">emphasisize-lines</span></code> 选项。</p>
 <p><strong>在 2.0 版更改:</strong> <code class="docutils literal notranslate"><span class="pre">language</span></code> 参数变为可选参数。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">literalinclude::</span> <span class="pre">filename</span></code></dt><dd><p>通过将示例文本存储在仅包含纯文本的外部文件中, 可以包括更长的逐字文本显示。可以使用 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 指令包含该文件。 <a class="footnote-reference brackets" href="#id17" id="id7">3</a></p>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">literalinclude::</span> <span class="pre">filename</span></code></dt><dd><p>通过将示例文本存储在仅包含纯文本的外部文件中, 可以包括更长的逐字文本显示。可以使用 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 指令包含该文件。 <a class="footnote-reference brackets" href="#id19" id="id8">3</a></p>
 <p>例如, 要包含Python源文件 <code class="docutils literal notranslate"><span class="pre">example.py</span></code>，使用:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> example.py
 </pre></div>
@@ -1409,8 +1421,8 @@ var_in_third=true
 </dd>
 </dl>
 </div>
-<div class="section" id="id8">
-<h2>术语<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id9">
+<h2>术语<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">glossary::</span></code></dt><dd><p>该指令必须包含带有术语和定义的 reST 定义列表标记。然后, 这些定义可以引用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-term"><code class="docutils literal notranslate"><span class="pre">term</span></code></a> 角色。例：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1509,8 +1521,8 @@ source files for one Sphinx project.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="id9">
-<h2>元信息标记<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h2>元信息标记<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">sectionauthor::</span> <span class="pre">name</span> <span class="pre">&lt;email&gt;</span></code></dt><dd><p>标识当前部分的作者。该论点应包括作者的姓名, 以便它可用于演示文稿和电子邮件地址。地址的域名部分应为小写。例：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">sectionauthor</span><span class="p">::</span> Guido van Rossum &lt;guido@python.org&gt;
@@ -1522,8 +1534,8 @@ source files for one Sphinx project.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="id10">
-<h2>索引生成标记<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id11">
+<h2>索引生成标记<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <p>Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条目, 如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html">域</a> 中所述。</p>
 <p>但是, 还有明确的标记可用, 以使索引更加全面, 并在文档中启用索引条目, 其中信息不主要包含在信息单元中, 例如语言参考。</p>
 <dl class="simple myst">
@@ -1593,15 +1605,15 @@ source files for one Sphinx project.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="id11">
-<h2>引用基于标签的内容<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id12">
+<h2>引用基于标签的内容<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">only::</span> <span class="pre">&lt;expression&gt;</span></code></dt><dd><p>仅当 <em>expression</em> 为 true 时才包含指令的内容。表达式应该包含标签, 例如：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">only</span><span class="p">::</span> html and draft
 </pre></div>
 </div>
 <p>未定义的标签是假的, 定义的标签(通过 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 命令行选项或在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中, 参见 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#conf-tags">here</a>)是真的。支持布尔表达式, 也使用括号(如 <code class="docutils literal notranslate"><span class="pre">html</span></code> 和 (<code class="docutils literal notranslate"><span class="pre">latex</span></code> or <code class="docutils literal notranslate"><span class="pre">draft</span></code>))。</p>
-<p><em>format</em> 和当前构建器的 <em>name</em> (<code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">latex</span></code> 或 <code class="docutils literal notranslate"><span class="pre">text</span></code>)始终设置为标签 <a class="footnote-reference brackets" href="#id18" id="id12">4</a>。为了明确区分格式和名称, 它们还添加了前缀 <code class="docutils literal notranslate"><span class="pre">format_</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_</span></code>，例如: epub 构建器定义了标签 <code class="docutils literal notranslate"><span class="pre">html</span></code>，<code class="docutils literal notranslate"><span class="pre">epub</span></code>，<code class="docutils literal notranslate"><span class="pre">format_html</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_epub</span></code> 。</p>
+<p><em>format</em> 和当前构建器的 <em>name</em> (<code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">latex</span></code> 或 <code class="docutils literal notranslate"><span class="pre">text</span></code>)始终设置为标签 <a class="footnote-reference brackets" href="#id20" id="id13">4</a>。为了明确区分格式和名称, 它们还添加了前缀 <code class="docutils literal notranslate"><span class="pre">format_</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_</span></code>，例如: epub 构建器定义了标签 <code class="docutils literal notranslate"><span class="pre">html</span></code>，<code class="docutils literal notranslate"><span class="pre">epub</span></code>，<code class="docutils literal notranslate"><span class="pre">format_html</span></code> 和 <code class="docutils literal notranslate"><span class="pre">builder_epub</span></code> 。</p>
 <p>读取配置文件 <em>后</em>，将设置这些标准标记, 因此它们不可用。</p>
 <p>所有标记必须遵循标识符语法, 如 <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">标识符和关键字</a> 文档中所述。即, 标记表达式可能只包含标记符合Python变量的语法。在ASCII中, 它由大写和小写字母 <code class="docutils literal notranslate"><span class="pre">A</span></code> 到 <code class="docutils literal notranslate"><span class="pre">Z</span></code> 和下划线 <code class="docutils literal notranslate"><span class="pre">_</span></code> 组成, 除了第一个字符可以使用数字 <code class="docutils literal notranslate"><span class="pre">0</span></code> 到 <code class="docutils literal notranslate"><span class="pre">9</span></code>。</p>
 <p><strong>0.6 新版功能.</strong></p>
@@ -1613,8 +1625,8 @@ source files for one Sphinx project.</p>
 <p>该指令旨在仅控制文档的内容。它无法控制部分, 标签等。</p>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>表格<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id14">
+<h2>表格<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <p>使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-tables">reStructuredText tables</a>，即</p>
 <ul class="simple">
 <li><p>网格表语法 (<a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#grid-tables">ref</a>),</p></li>
@@ -1677,8 +1689,8 @@ source files for one Sphinx project.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="id14">
-<h2>数学<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h2>数学<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
 <p>数学的输入语言是LaTeX标记。这是纯文本数学符号的事实上的标准, 并且具有额外的优点, 即在构建LaTeX输出时不需要进一步的转换。</p>
 <p>请记住, 当你将数学标记放在 <strong>Python文档字符串</strong> 中读取 <a class="reference external" href="https://www.sphinx.org.cn/usage/extensions/autodoc.html#module-sphinx.ext.autodoc"><code class="docutils literal notranslate"><span class="pre">autodoc</span></code></a> 时, 你要么必须加倍所有的反斜杠, 要么使用Python原始字符串(<code class="docutils literal notranslate"><span class="pre">r&quot;raw&quot;</span></code>)。</p>
 <dl class="simple myst">
@@ -1722,8 +1734,8 @@ source files for one Sphinx project.</p>
 <p><a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-latex_engine"><code class="docutils literal notranslate"><span class="pre">latex_engine</span></code></a>说明如何配置LaTeX构建器以在数学标记中支持Unicode文字。</p>
 </div>
 </div>
-<div class="section" id="id15">
-<h2>语法制作显示<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id16">
+<h2>语法制作显示<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
 <p>特殊标记可用于显示正式语法的制作。标记很简单, 不会尝试对 BNF（或任何派生形式）的所有方面进行建模, 但提供的足够允许以一种方式显示无上下文的语法, 使得符号的使用呈现为定义的超链接符号。有这个指令：</p>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">productionlist::</span> <span class="pre">[productionGroup]</span></code></dt><dd><p>这条指令是用来包围一组产品的。每个产品都在一行中给出，由一个名称组成，用一个冒号与下面的定义隔开。如果定义跨越多行，每一个延续行必须以冒号开始，并与第一行中的冒号放置在同一列。生产列表指令参数中不允许有空行。</p>
@@ -1747,13 +1759,16 @@ source files for one Sphinx project.</p>
 </dl>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>LaTeX 编写器只引用文档中第一个 toctree 指令的 <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 选项。</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>关于可用的globbing语法的注释:你可以使用标准shell构造 <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">[...]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">[!...]</span></code> 这些都不匹配斜杠。双星 <code class="docutils literal notranslate"><span class="pre">**</span></code> 可用于匹配任何字符序列 <em>including</em> 斜杠。</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
 <dd><p>有一个标准的 <code class="docutils literal notranslate"><span class="pre">.. include</span></code> 指令, 但如果找不到该文件, 则会引发错误。这只发出警告。</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id12">4</a></span></dt>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
 <dd><p>对于大多数构建器, 名称和格式是相同的。目前, 只有从html构建器派生的构建器才能区分构建器格式和构建器名称。</p>
 <p>请注意, 当前构建器标记在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中不可用, 它仅在构建器初始化后可用。</p>
 </dd>

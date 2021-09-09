@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>配置(raw)</title>
+    <title>配置</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -335,7 +335,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     配置(raw)
+     配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -671,12 +671,12 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#id2">
    项目信息
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
+  <a class="reference internal nav-link" href="#id3">
    一般配置项
   </a>
  </li>
@@ -691,8 +691,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="raw">
-<h1>配置(raw)<a class="headerlink" href="#raw" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="sphinx-configuration">
+<span id="id1"></span><h1>配置<a class="headerlink" href="#sphinx-configuration" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">Configuration — Sphinx documentation (sphinx-doc.org)</a></p>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory">配置目录</a> 必须包含一个名为 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 的文件。这个文件（包含 Python 代码）被称为 “构建配置文件”，包含（几乎）所有自定义 Sphinx 输入和输出行为所需的配置。</p>
 <blockquote>
@@ -702,16 +702,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <ul class="simple">
-<li><p>如果没有其他文件规定，值必须是字符串，其默认值是空字符串。</p></li>
+<li><p>如果没有其他文件规定，值必须是<strong>字符串</strong>，其默认值是空字符串。</p></li>
 <li><p>术语 “fully-qualified name” 指的是在一个模块中命名可导入的 Python 对象的字符串；例如，FQN “<code class="docutils literal notranslate"><span class="pre">sphinx.builders.Builder</span></code>” 表示 <code class="docutils literal notranslate"><span class="pre">sphinx.builders</span></code> 模块中的 <code class="docutils literal notranslate"><span class="pre">Builder</span></code> 类。</p></li>
 <li><p>请记住，文档名称使用 <code class="docutils literal notranslate"><span class="pre">/</span></code> 作为路径分隔符，并且不包含文件扩展名。</p></li>
 <li><p>由于 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 是作为一个 Python 文件被读取的，通常的规则适用于编码和 Unicode 支持。</p></li>
-<li><p>挑选 config 命名空间的内容(以便 Sphinx 可以在配置更改时找到)，因此它可能不包含不可删除的值 - 如果合适，可以使用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 <code class="docutils literal notranslate"><span class="pre">del</span></code> 导入。</p></li>
+<li><p>挑选 config 命名空间的内容（以便 Sphinx 可以在配置更改时找到），因此它可能不包含不可删除的值 - 如果合适，可以使用 <code class="docutils literal notranslate"><span class="pre">del</span></code> 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 <code class="docutils literal notranslate"><span class="pre">del</span></code> 导入。</p></li>
 <li><p>配置文件中有一个名为 <code class="docutils literal notranslate"><span class="pre">tags</span></code> 的特殊对象。它可用于查询和更改标记（请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tags">引用基于标签的内容</a>）。使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 来查询，<code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tags.remove('tag')</span></code> 来改变。只有通过 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 命令行选项或 <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 设置的标签可以使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 进行查询。请注意，当前构建器标记在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中不可用，因为它是在初始化构建器 <em>之后</em> 创建的。</p></li>
 </ul>
 </div>
-<div class="section" id="id1">
-<h2>项目信息<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h2>项目信息<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">project</span></code></dt><dd><p>记录的项目名称。</p>
 </dd>
@@ -727,12 +727,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 </dl>
 </div>
-<div class="section" id="id2">
-<h2>一般配置项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h2>一般配置项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/index.html"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></dt><dd><p>模块名称为 <code class="docutils literal notranslate"><span class="pre">extensions</span></code> 的字符串列表。这些可以是 Sphinx（名为 <code class="docutils literal notranslate"><span class="pre">sphinx.ext.*</span></code>）或自定义的扩展。</p>
-</dd>
-</dl>
 <p>请注意, 如果扩展名位于另一个目录中, 则可以在 <code class="docutils literal notranslate"><span class="pre">conf</span></code> 文件中扩展 <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.path">sys.path</a> - 但请确保使用绝对路径。如果您的扩展路径是相对于 <a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory">configuration directory</a>，请使用 <code class="docutils literal notranslate"><span class="pre">os.path.abspath()</span></code> 之类的：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
 
@@ -743,10 +741,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>这样, 你可以从子目录 <code class="docutils literal notranslate"><span class="pre">sphinxext</span></code> 加载一个名为 <code class="docutils literal notranslate"><span class="pre">extname</span> </code>的扩展名。</p>
 <p>配置文件本身可以是扩展名；为此, 你只需要提供一个 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 函数。</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">source_suffix</span></code></dt><dd><p>源文件的文件扩展名。Sphinx 认为有这个后缀的文件是源文件。这个值可以是一个映射文件扩展名和文件类型的字典。比如：</p>
 </dd>
-</dl>
+<dt><code class="docutils literal notranslate"><span class="pre">source_suffix</span></code></dt><dd><p>源文件的文件扩展名。Sphinx 认为有这个后缀的文件是源文件。这个值可以是一个映射文件扩展名和文件类型的字典。比如：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
     <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
@@ -757,33 +753,31 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>默认情况下, Sphinx 仅支持 <code class="docutils literal notranslate"><span class="pre">'restructuredtext'</span></code> 文件类型。 您可以使用源解析器扩展添加新文件类型。请阅读扩展文档以了解扩展程序支持的文件类型。</p>
 <p>该值也可以是文件扩展名列表：然后 Sphinx 会认为它们都映射到 ‘restructuredtext’ 文件类型。</p>
 <p>默认是 <code class="docutils literal notranslate"><span class="pre">{'.rst':</span> <span class="pre">'restructuredtext'}</span></code>。</p>
-<dl class="simple myst">
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">source_encoding</span></code></dt><dd><p>所有 reST 源文件的编码。推荐的编码和默认值是 <code class="docutils literal notranslate"><span class="pre">'utf-8-sig'</span></code>。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">source_parsers</span></code></dt><dd><p>如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code> 或 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser"><code class="docutils literal notranslate"><span class="pre">sphinx.parsers.Parser</span></code></a>。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。
-1.8 版后已移除: 现在, Sphinx 提供了一个 API <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 来注册一个源解析器。请改用它。</p>
-</dd>
-</dl>
+<dt><code class="docutils literal notranslate"><span class="pre">source_parsers</span></code></dt><dd><p>如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code> 或 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser"><code class="docutils literal notranslate"><span class="pre">sphinx.parsers.Parser</span></code></a>。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">1.8 版后已移除: </span>版后已移除</p>
+<p>现在, Sphinx 提供了一个 API <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 来注册一个源解析器。请改用它。</p>
+</div>
 <p>例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;recommonmark.parser.CommonMarkParser&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
-<dl class="simple myst">
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">root_doc</span></code></dt><dd><p>&quot;根&quot;文档的名称，即包含根 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令的文档。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;index&quot;</span></code>。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></dt><dd><p>查找源文件时应排除的 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 样式模式列表<a class="footnote-reference brackets" href="#id4" id="id3">1</a>。 它们与源目录相对于源目录进行匹配, 在所有平台上使用斜杠作为目录分隔符。</p>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>示例模式:
-
-* `&#39;library/xml.rst&#39;` – 忽略 `library/xml.rst` 文件（替换条目 `unused_docs`）
-* `&#39;library/xml&#39;` – 忽略 `library/xml` 目录
-* `&#39;library/xml*&#39;` – 忽略以 `library/xml` 开头的所有文件和目录
-* `&#39;**/.svn&#39;` – 忽略所有 `.svn` 目录
-</pre></div>
-</div>
+<dt><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></dt><dd><p>查找源文件时应排除的 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 样式模式列表<a class="footnote-reference brackets" href="#id5" id="id4">1</a>。 它们与源目录相对于源目录进行匹配, 在所有平台上使用斜杠作为目录分隔符。</p>
+<p>示例模式:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'library/xml.rst'</span></code> – 忽略 <code class="docutils literal notranslate"><span class="pre">library/xml.rst</span></code> 文件（替换条目 <code class="docutils literal notranslate"><span class="pre">unused_docs</span></code>）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'library/xml'</span></code> – 忽略 <code class="docutils literal notranslate"><span class="pre">library/xml</span></code> 目录</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'library/xml*'</span></code> – 忽略以 <code class="docutils literal notranslate"><span class="pre">library/xml</span></code> 开头的所有文件和目录</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'**/.svn'</span></code> – 忽略所有 <code class="docutils literal notranslate"><span class="pre">.svn</span></code> 目录</p></li>
+</ul>
 <p>在 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a> 和 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-html_extra_path"><code class="docutils literal notranslate"><span class="pre">html_extra_path</span></code></a> 中查找静态文件时也会查询 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></p>
-<dl class="simple myst">
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></dt><dd><p>包含额外模板（或覆盖内置/特定主题模板）的路径列表。相对路径被认为是相对于配置目录的。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">template_bridge</span></code></dt><dd><p>一个字符串，包含一个可调用（或简单的类）的全称，它返回一个 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.TemplateBridge">TemplateBridge</a> 的实例。这个实例然后被用来渲染 HTML 文档，也可能是其他构建器的输出（目前是变化构建器）。（注意，如果要使用 HTML 主题，模板桥必须具有主题感知能力。）</p>
@@ -809,7 +803,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">primary_domain</span></code></dt><dd><p>默认<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">域</a>的名称。也可以用 <code class="docutils literal notranslate"><span class="pre">None</span></code> 来禁用默认域。默认是 <code class="docutils literal notranslate"><span class="pre">'py'</span></code>。那些在其他域中的对象（无论域名是明确给出的，还是由 <code class="docutils literal notranslate"><span class="pre">default-domain</span></code> 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 “Python function”，而不仅仅是 “function”）。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">default_role</span></code></dt><dd><p>一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 <code class="docutils literal notranslate"><span class="pre">like</span> <span class="pre">this</span></code> 的文本。这可以设置为 <code class="docutils literal notranslate"><span class="pre">'py:obj'</span></code>，使 <code class="docutils literal notranslate"><span class="pre">filter</span></code> 成为 Python 函数 “filter” 的交叉引用。默认是 <code class="docutils literal notranslate"><span class="pre">None</span></code>，它不会重新分配默认的角色。默认的角色总是可以在个别文件中使用标准的 reST 默认角色指令来设置。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">default_role</span></code></dt><dd><p>一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 <code class="docutils literal notranslate"><span class="pre">`like</span> <span class="pre">this`</span></code> 的文本。这可以设置为 <code class="docutils literal notranslate"><span class="pre">'py:obj'</span></code>，使 <code class="docutils literal notranslate"><span class="pre">`filter`</span></code> 成为 Python 函数 “filter” 的交叉引用。默认是 <code class="docutils literal notranslate"><span class="pre">None</span></code>，它不会重新分配默认的角色。</p>
+<p>默认的角色总是可以在个别文件中使用标准的 reST <code class="docutils literal notranslate"><span class="pre">default-role</span></code> 指令来设置。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">keep_warnings</span></code></dt><dd><p>如果为真，在构建的文档中保留警告为 “系统消息” 段落。不管这个设置如何，警告总是在 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 运行时被写入标准错误流。</p>
 </dd>
@@ -853,7 +848,7 @@ Sphinx 支持以下警告类型：</p>
 </div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>A note on available globbing syntax: you can use the standard shell constructs *, ?, […] and [!..] with the feature that these all don’t match slashes. A double star ** can be used to match any sequence of characters including slashes.</p>
 </dd>
 </dl>
