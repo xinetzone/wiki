@@ -757,13 +757,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dt><code class="docutils literal notranslate"><span class="pre">source_encoding</span></code></dt><dd><p>所有 reST 源文件的编码。推荐的编码和默认值是 <code class="docutils literal notranslate"><span class="pre">'utf-8-sig'</span></code>。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">source_parsers</span></code></dt><dd><p>如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 <code class="docutils literal notranslate"><span class="pre">docutils.parsers.Parser</span></code> 或 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser"><code class="docutils literal notranslate"><span class="pre">sphinx.parsers.Parser</span></code></a>。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。</p>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">1.8 版后已移除: </span>版后已移除</p>
-<p>现在, Sphinx 提供了一个 API <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 来注册一个源解析器。请改用它。</p>
-</div>
 <p>例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;recommonmark.parser.CommonMarkParser&#39;</span><span class="p">}</span>
 </pre></div>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">1.8 版后已移除: </span>版后已移除</p>
+<p>现在, Sphinx 提供了一个 API <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 来注册一个源解析器。请改用它。</p>
 </div>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">root_doc</span></code></dt><dd><p>&quot;根&quot;文档的名称，即包含根 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令的文档。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;index&quot;</span></code>。</p>
@@ -782,25 +782,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">template_bridge</span></code></dt><dd><p>一个字符串，包含一个可调用（或简单的类）的全称，它返回一个 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.TemplateBridge">TemplateBridge</a> 的实例。这个实例然后被用来渲染 HTML 文档，也可能是其他构建器的输出（目前是变化构建器）。（注意，如果要使用 HTML 主题，模板桥必须具有主题感知能力。）</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rst_epilog</span></code></dt><dd><p>reStructuredText 字符串，它将包含在每个被读取的源文件的末尾。这是一个可以添加每个文件中都应该有的替换的地方（另一个是 <code class="docutils literal notranslate"><span class="pre">rst_prolog</span></code>）。一个例子：
-<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">rst_epilog</span> <span class="pre">=</span> <span class="pre">&quot;&quot;&quot;</span> <span class="pre">..</span> <span class="pre">|psf|</span> <span class="pre">replace::</span> <span class="pre">Python</span> <span class="pre">Software</span> <span class="pre">Foundation</span> <span class="pre">&quot;&quot;&quot;</span> </code></p>
-</dd>
-</dl>
+<dt><code class="docutils literal notranslate"><span class="pre">rst_epilog</span></code></dt><dd><p>reStructuredText 字符串，它将包含在每个被读取的源文件的末尾。这是一个可以添加每个文件中都应该有的替换的地方（另一个是 <code class="docutils literal notranslate"><span class="pre">rst_prolog</span></code>）。一个例子：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rst_epilog</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">.. |psf| replace:: Python Software Foundation</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">rst_prolog</span></code></dt><dd><p>reStructuredText 字符串，它将包含在每个被读取的源文件的开头。这是一个可以添加应该在每个文件中可用的替换的地方（另一个是 <code class="docutils literal notranslate"><span class="pre">rst_epilog</span></code>）。 一个例子：</p>
 </dd>
-</dl>
+<dt><code class="docutils literal notranslate"><span class="pre">rst_prolog</span></code></dt><dd><p>reStructuredText 字符串，它将包含在每个被读取的源文件的开头。这是一个可以添加应该在每个文件中可用的替换的地方（另一个是 <code class="docutils literal notranslate"><span class="pre">rst_epilog</span></code>）。 一个例子：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rst_prolog</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">.. |psf| replace:: Python Software Foundation</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<dl class="simple myst">
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">primary_domain</span></code></dt><dd><p>默认<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">域</a>的名称。也可以用 <code class="docutils literal notranslate"><span class="pre">None</span></code> 来禁用默认域。默认是 <code class="docutils literal notranslate"><span class="pre">'py'</span></code>。那些在其他域中的对象（无论域名是明确给出的，还是由 <code class="docutils literal notranslate"><span class="pre">default-domain</span></code> 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 “Python function”，而不仅仅是 “function”）。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">default_role</span></code></dt><dd><p>一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 <code class="docutils literal notranslate"><span class="pre">`like</span> <span class="pre">this`</span></code> 的文本。这可以设置为 <code class="docutils literal notranslate"><span class="pre">'py:obj'</span></code>，使 <code class="docutils literal notranslate"><span class="pre">`filter`</span></code> 成为 Python 函数 “filter” 的交叉引用。默认是 <code class="docutils literal notranslate"><span class="pre">None</span></code>，它不会重新分配默认的角色。</p>
@@ -808,10 +803,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">keep_warnings</span></code></dt><dd><p>如果为真，在构建的文档中保留警告为 “系统消息” 段落。不管这个设置如何，警告总是在 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 运行时被写入标准错误流。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">suppress_warnings</span></code></dt><dd><p>一个警告类型的列表，用于抑制任意的警告信息。
-Sphinx 支持以下警告类型：</p>
-</dd>
-</dl>
+<dt><code class="docutils literal notranslate"><span class="pre">suppress_warnings</span></code></dt><dd><p>一个警告类型的列表，用于抑制任意的警告信息。</p>
+<p>Sphinx 支持以下警告类型：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">app.add_node</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">app.add_directive</span></code></p></li>
@@ -836,7 +829,7 @@ Sphinx 支持以下警告类型：</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">epub.duplicated_toc_entry</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autosectionlabel.*</span></code></p></li>
 </ul>
-<dl class="simple myst">
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">needs_sphinx</span></code></dt><dd><p>如果设置为 <code class="docutils literal notranslate"><span class="pre">major.minor</span></code> 版本字符串, 如 ‘1.1’ , Sphinx 会将其与版本进行比较, 如果它太旧则拒绝构建。默认是没有要求的。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">needs_extensions</span></code></dt><dd><p>这个值可以是一个字典，指定扩展中对扩展的版本要求，例如，<code class="docutils literal notranslate"><span class="pre">needs_extensions</span> <span class="pre">=</span> <span class="pre">{'sphinxcontrib.something':</span> <span class="pre">'1.5'}</span></code>。版本字符串的形式应该是 <code class="docutils literal notranslate"><span class="pre">major.minor</span></code>。不需要为所有扩展指定要求，只需要为那些你想检查的扩展指定。</p>

@@ -112,65 +112,78 @@ Python 域（名称 **py**）为模块声明提供以下指令：
 
 ### 常用指令
 
-#### `` .. py:module:: name`` 
-
+````{panels}
+:container: w3-card-4 w3-pale-green w3-padding
+:column: col-lg-12 px-2 py-1
+:header: w3-pale-blue w3-large
+---
+`` .. py:module:: name`` 
+^^^
 该指令标志着模块（或包的子模块）描述的开始，在这种情况下，名称应该是完全限定的，包括包名称。它不会创建内容（例如 [`py:class`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class "py:class directive") 确实如此）。
 
-该指令还将导致全局模块索引中的条目。
+该指令还将导致全局模块索引中的条目变化。
 
 `:platform: platforms (comma separated list)` 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符；正在使用的示例包括 “IRIX” ，”Mac” ， “Windows” 和 “Unix” 。使用已适用的密钥非常重要。
 
 `:synopsis: purpose (text)` 选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。
 
 可以给出 `:deprecated: (no argument)` 选项(没有值)将模块标记为已弃用；它将在各个地点被指定。
-
-#### `` .. py:currentmodule:: name ``
-
+---
+`` .. py:currentmodule:: name `` 
+^^^
 该指令告诉 Sphinx，这里记录的类，函数等都在给定的模块中(如 [`py:module`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module "py:module directive"))，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 [`py:mod`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:mod "py:mod role") 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 [`py:module`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module "py:module directive") 指令，其他只有 [`py:currentmodule`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule "py:currentmodule directive") 。
+````
 
-为模块和类内容提供以下指令:
+为模块和类内容提供以下指令：
 
-#### `` .. py:function:: name(parameters) ``
-
+````{panels}
+:container: w3-card-4 w3-pale-green w3-padding
+:column: col-lg-12 px-2 py-1
+:header: w3-pale-blue w3-large
+---
+`` .. py:function:: name(parameters) ``
+^^^
 描述模块级函数。签名应该包含 Python 函数定义中给出的参数，请参阅 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures)。例如：
 
 ```rst
 .. py:function:: Timer.repeat(repeat=3, number=1000000)
 ```
 
-对于你应该使用的方法 [`py:method`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "py:method directive") 。
+对于方法你应该使用 [`py:method`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "py:method directive") 。
 
 描述通常包括有关所需参数及其使用方式的信息(特别是是否修改了作为参数传递的可变对象)，副作用和可能的异常。
 
 这个信息可以(在任何 `py` 指令中)可选地以结构化形式给出，参见 [信息字段列表](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists) 。
 
-`:async:` (no value)
-:  Indicate the function is an async function.
+`:async:` (无值)
+:  表示该函数是一个异步函数。
 
-`:canonical:` (full qualified name including module name)
-:  Describe the location where the object is defined if the object is imported from other modules
-
-#### `` .. py:data:: name ``
-
+`:canonical:` (包括模块名称在内的全限定名称)
+:  如果该对象是从其他模块导入的，描述该对象的定义位置
+---
+`` .. py:data:: name ``
+^^^
 描述模块中的全局数据，包括用作“定义的常量”的变量和值。使用此环境不记录类和对象属性。
 
-`:type:` type of the variable (text)
+`:type:` 变量的类型 (文本)
 
-`:value:` initial value of the variable (text)
+`:value:` 变量的初始值 (文本)
 
 
-`:canonical:` (full qualified name including module name)
-:  Describe the location where the object is defined if the object is imported from other modules
+`:canonical:` (包括模块名称在内的全限定名称)
+:  如果该对象是从其他模块导入的，描述该对象的定义位置
 
-#### `` .. py:exception:: name ``
-
+---
+`` .. py:exception:: name ``
+^^^
 描述异常类。签名可以，但不必包括带有构造函数参数的括号。
 
-`:final:` (no value)
-:  Indicate the class is a final class.
+`:final:` (无值)
+:  表明该类是一个 final 类。
 
-#### `` .. py:class:: name `` & `` .. py:class:: name(parameters) ``
-
+---
+`` .. py:class:: name `` & `` .. py:class:: name(parameters) ``
+^^^
 描述一个类。签名可以选择包括带有参数的括号，这些参数将显示为构造函数参数。另见 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures) 。
 
 属于该类的方法和属性应放在此指令的主体中。如果将它们放在外面，则提供的名称应包含类名，以便交叉引用仍然有效。例:
@@ -189,79 +202,81 @@ Python 域（名称 **py**）为模块声明提供以下指令：
 
 第一种方式是首选方式。
 
-`:canonical:` (full qualified name including module name)¶
-:  Describe the location where the object is defined if the object is imported from other modules
+`:canonical:` (包括模块名称在内的全限定名称)
+:  如果该对象是从其他模块导入的，描述该对象的定义位置
 
 
-`:final:` (no value)
+`:final:` (无值)
 :  Indicate the class is a final class.
 
-#### `` .. py:attribute:: name ``
-
+---
+`` .. py:attribute:: name ``
+^^^
 描述对象数据属性。描述应包括有关预期数据类型的信息以及是否可以直接更改。
 
-`:abstractmethod:` (no value)
-:  Indicate the property is abstract.
+`:type:` 属性的类型 (文本)
 
-`:classmethod:` (no value)
-:  Indicate the property is a classmethod.
+`:value:` 属性的初始值 (文本)
 
-`:type:` type of the property (text)
+`:canonical:` (包括模块名称在内的全限定名称)
+:  如果该对象是从其他模块导入的，描述该对象的定义位置
 
-`.. py:method::``<span> name(parameters)`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "永久链接至目标")描述对象方法。参数不应包含 `self` 参数。描述应该包括与 `function` 描述的类似的信息。另见 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures) 和 [信息字段列表](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists) 。
+---
+`` .. py:property:: name ``
+^^^
+描述了一个对象的属性。
 
-#### `` .. py:method:: name(parameters) ``
+`:abstractmethod:` (无值)
+:  表示该属性是抽象的。
 
-像 [`py:method`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "py:method directive") ，但表示该方法是静态方法。
+`:classmethod:` (无值)
+:  表示该属性是一个类方法。
 
-`:abstractmethod:` (no value)
-:  Indicate the method is an abstract method.
+`:type:` 属性的类型 (文本)
 
-New in version 2.1.
+---
+`` .. py:method:: name(parameters) ``
+^^^
+描述对象方法。参数不应包含 `self` 参数。描述应该包括与 `function` 描述的类似的信息。另见 [Python签名](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures) 和 [信息字段列表](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists) 。
 
-`:async:` (no value)
-:  Indicate the method is an async method.
+`:abstractmethod:` (无值)
+:  表示该方法是一个抽象的方法。
 
-New in version 2.1.
+`:async:` (无值)
+:  表明该方法是一个异步方法。
 
-`:canonical:` (full qualified name including module name)
-:  Describe the location where the object is defined if the object is imported from other modules
+`:canonical:` (包括模块名称在内的全称)
+:  如果该对象是从其他模块导入的，描述该对象的定义位置
 
-New in version 4.0.
+`:classmethod:` (无值)
+:  表明该方法是一个类方法。
 
-`:classmethod:` (no value)
-:  Indicate the method is a class method.
+`:final:` (无值)
+:  表示该类是一个 final 方法。
 
-New in version 2.1.
+`:property:` (无值)
+:  表示该方法是一个属性。
 
-`:final:` (no value)
-:  Indicate the class is a final method.
+   ```{deprecated} 4.0
+   使用 [`py:property`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-py-property "py:property directive") 代替。
+   ```
 
-New in version 3.1.
+`:staticmethod:` (无值)
+:  表明该方法是一个静态方法。
 
-`:property:` (no value)
-:  Indicate the method is a property.
-
-New in version 2.1.
-
-Deprecated since version 4.0: Use py:property instead.
-
-`:staticmethod:` (no value)
-:  Indicate the method is a static method.
-
-#### `` .. py:staticmethod:: name(parameters) ``
-
+---
+`` .. py:staticmethod:: name(parameters) ``
+^^^
 像 [`py:method`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "py:method directive") ，但表示该方法是一个静态方法。
-
-#### `` .. py:classmethod:: name(parameters) ``
-
+---
+`` .. py:classmethod:: name(parameters) ``
+^^^
 像 [`py:method`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method "py:method directive") ，但表示该方法是一个类方法。
 
-**0.6 新版功能.**
-
-#### `` .. py:decorator:: name `` & `` .. py:decorator:: name(parameters) ``
-
-描述装饰器功能。签名应表示作为装饰者的用法。例如，给定功能
+---
+`` .. py:decorator:: name `` & `` .. py:decorator:: name(parameters) ``
+^^^
+描述装饰器功能。签名应表示作为装饰器的用法。例如，给定函数：
 
 ```python
 def removename(func):
@@ -291,9 +306,15 @@ def setnewname(name):
 
 没有 `py:deco` 角色链接到用这个指令标记的装饰器；相反，使用 [`py:func`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:func "py:func role") 角色。
 
-`.. py:decoratormethod::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decoratormethod "永久链接至目标")`.. py:decoratormethod::``<span> name(signature)`与 [`py:decorator`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decorator "py:decorator directive") 相同，但对于作为方法的装饰器。
+---
+`` .. py:decoratormethod:: name ``
+
+`` .. py:decoratormethod:: name(signature) ``
+^^^
+与 [`py:decorator`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decorator "py:decorator directive") 相同，但对于作为方法的装饰器。
 
 使用 [`py:meth`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:meth "py:meth role") 角色引用装饰器方法。
+````
 
 ### Python 签名
 
@@ -315,23 +336,21 @@ def setnewname(name):
 
 ### 信息字段列表
 
-**0.4 新版功能.**
+在 Python 对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化：
 
-在Python对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化:
-
-* `param`, `parameter`, `arg`, `argument`, `key`, `keyword`: Description of a parameter.
-* `type`:参数的类型。如果可能，创建一个链接。
-* `raises`，`raise`，`except`，`exception`:那个(和什么时候)引发了一个特定的异常。
-* `var`, `ivar`, `cvar`: 变量的描述。
-* `vartype`: Type of a variable. 如果可能，创建一个链接。
-* `returns`, `return`: 返回值的描述。
-* `rtype`: Return type. 如果可能，创建一个链接。
+* `param`, `parameter`, `arg`, `argument`, `key`, `keyword`: 描述参数。
+* `type`：参数的类型。如果可能，创建一个链接。
+* `raises`，`raise`，`except`，`exception`：那（以及什么时候）会出现一个特定的异常。
+* `var`, `ivar`, `cvar`：变量的描述。
+* `vartype`: 变量类型。如果可能，创建一个链接。
+* `returns`, `return`：返回值的描述。
+* `rtype`：返回值类型。如果可能，创建一个链接。
 
 ```{note}
 在 4.1.2 版本中，所有 `var` ， `ivar` 和 `cvar` 都表示为 “Variable” 。完全没有区别。
 ```
 
-字段名称必须包含这些关键字之一和参数(除了 `returns` 和 `rtype` ，它们不需要参数)。这可以用一个例子来解释：
+字段名称必须包含这些关键字之一和参数（除了 `returns` 和 `rtype` ，它们不需要参数）。这可以用一个例子来解释：
 
 ```rst
 .. py:function:: send_message(sender, recipient, message_body, [priority=1])
@@ -375,9 +394,7 @@ def setnewname(name):
 :param int priority: The priority of the message, can be a number 1-5
 ```
 
-**1.5 新版功能.**
-
-可以使用以下语法自动链接容器类型(如列表和词典):
+可以使用以下语法自动链接容器类型（如列表和词典）:
 
 ```rst
 :type priorities: list(int)
@@ -398,27 +415,41 @@ def setnewname(name):
 
 ### 交叉引用 Python 对象
 
-以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接:
+以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接：
 
-`:py:mod:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:mod "永久链接至目标")参考模块；可以使用虚线名称。这也应该用于包名称。
+````{div} w3-card-4 w3-padding w3-pale-green
 
-`:py:func:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:func "永久链接至目标")引用Python函数；可以使用点名。角色文本不需要包括尾随括号以增强可读性；如果 [`add_function_parentheses`](https://www.sphinx.org.cn/usage/configuration.html#confval-add_function_parentheses) 配置值为 `True` (默认值)，它们将由Sphinx自动添加。
+`:py:mod:`
+:  引用模块；可以使用点名称。这也应该用于包名称。
 
-`:py:data:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:data "永久链接至目标")引用模块级变量。
+`:py:func:`
+:  引用 Python 函数；可以使用点名称。角色文本不需要包括尾随括号以增强可读性；如果 [`add_function_parentheses`](https://www.sphinx.org.cn/usage/configuration.html#confval-add_function_parentheses) 配置值为 `True` (默认值)，它们将由 Sphinx 自动添加。
 
-`:py:const:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:const "永久链接至目标")引用一个“定义的”常量。这可能是一个不打算更改的Python变量。
+`:py:data:`
+:   引用模块级变量。
 
-`:py:class:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:class "永久链接至目标")引用一个类；可以使用虚线名称。
+`:py:const:`
+:   引用一个“定义的”常量。这可能是一个不打算更改的 Python 变量。
 
-`:py:meth:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:meth "永久链接至目标")引用对象的方法。角色文本可以包括类型名称和方法名称；如果它出现在类型的描述中，则可以省略类型名称。可以使用点状名称。
+`:py:class:`
+:   引用一个类；可以使用点名称。
 
-`:py:attr:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:attr "永久链接至目标")引用对象的数据属性。
+`:py:meth:`
+:   引用对象的方法。角色文本可以包括类型名称和方法名称；如果它出现在类型的描述中，则可以省略类型名称。可以使用点状名称。
 
-`:py:exc:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:exc "永久链接至目标")引用异常。可以使用点状名称。
+`:py:attr:`
+:   引用对象的数据属性。
 
-`:py:obj:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:obj "永久链接至目标")引用未指定类型的对象。例如有用as [`default_role`](https://www.sphinx.org.cn/usage/configuration.html#confval-default_role) 。
+   ```{note}
+   这个角色也能够指的是属性。
+   ```
 
-**0.4 新版功能.**
+`:py:exc:`
+:   引用异常。可以使用点状名称。
+
+`:py:obj:`
+:  引用未指定类型的对象。例如，作为 [`default_role`](https://www.sphinx.org.cn/usage/configuration.html#confval-default_role) 有用。
+````
 
 此标记中包含的名称可以包括模块名称和/或类名称。例如，`` :py:func:`filter`  `` 可以引用当前模块中名为 `filter` 的函数，或者该名称的内置函数。相比之下，`` :py:func:`foo.filter` `` 清楚地引用了 `foo` 模块中的 `filter` 函数。
 
@@ -426,18 +457,17 @@ def setnewname(name):
 
 类似的启发式方法用于确定名称是否是当前记录的类的属性。
 
-此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，`` :py:meth:`.TarFile.close` `` 引用 `tarfile.TarFile.close()` 函数，即使当前模块不是 `tarfile` 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到Sphinx的警告。
+此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，`` :py:meth:`.TarFile.close` `` 引用 `tarfile.TarFile.close()` 函数，即使当前模块不是 `tarfile` 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到 Sphinx 的警告。
 
 请注意，您可以组合使用 `~` 和 `.` 前缀: `` :py:meth:`~.TarFile.close` `` 将引用 `tarfile.TarFile.close()` 方法，但可见的链接标题只是 `close()`。
 
 (rst:domains/c)=
-## C 域
+## C 域（待更）
 
 C 域（名称  **c**）适用于 C API 的文档。
 
-`` .. c:member:: ` 声明
-`` .. c:var:: `` 声明
-:  描述了一个C结构的成员或变量。签名示例：
+`` .. c:member:: declaration `` & `` .. c:var:: declaration ``
+:  描述了一个 C 结构的成员或变量。签名示例：
 
    ```rst
    .. c:member:: PyObject *PyTypeObject.tp_bases
@@ -445,7 +475,7 @@ C 域（名称  **c**）适用于 C API 的文档。
 
    这两个指令之间的区别只是表面上的。
 
-`` .. c:function:: `` 函数声明
+`` .. c:function:: function prototype ``
 :  描述 C 函数。签名应如 C 所示，例如：
 
    ```rst
@@ -454,48 +484,51 @@ C 域（名称  **c**）适用于 C API 的文档。
 
    这也用于描述类似函数的预处理器宏。应该给出参数的名称，以便它们可以在描述中使用。
 
-请注意，签名中不必使用反斜杠转义星号，因为reST内联器不会对其进行解析。
+请注意，签名中不必使用反斜杠转义星号，因为 reST 内联器不会对其进行解析。
 
-`.. c:member::``<span> declaration`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:member "永久链接至目标")描述C结构成员。签名示例:
+`` .. c:macro:: name `` & `` .. c:macro:: name(arg list) ``
+:  描述一个 C 语言的宏，即一个 C 语言的`#define`，没有替换文本。
 
-```
-.. c:member:: PyObject* PyTypeObject.tp_bases
-```
+`` .. c:struct:: name ``
+:  描述 C 结构。
 
-描述文本应包括允许的值范围，应如何解释值以及是否可以更改值。对文本中结构成员的引用应使用 `member` 角色。
+`` .. c:union:: name ``
+:  描述 C union.
 
-`.. c:macro::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:macro "永久链接至目标")描述一个 “simple” 的C宏。简单宏是用于代码扩展的宏，但不带参数，因此不能将其描述为函数。这是一个简单的C语言 `#define` 。它在Python文档中的使用示例包括 `PyObject_HEAD` 和 `Py_BEGIN_ALLOW_THREADS` 。
+`` .. c:enum:: name ``
+:  描述 C enum.
 
-`.. c:type::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:type "永久链接至目标")描述C类型(无论是由 typedef 还是 struct 定义)。签名应该只是类型名称。
+`` .. c:enumerator:: name ``
+:  描述 C enumerator.
 
-`.. c:var::``<span> declaration`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:var "永久链接至目标")描述全局C变量。签名应包括类型，例如:
+`` .. c:type:: typedef-like declaration `` & `` .. c:type:: name ``
+:  描述一个 C 类型，可以是一个 typedef，也可以是一个未指定的类型的别名。
 
-```
-.. c:var:: PyObject* PyClass_Type
-```
-
-### 交叉引用C构造
+### 交叉引用 C 构造
 
 如果在文档中定义了以下角色，则会创建对C语言构造的交叉引用:
 
-`:c:func:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:func "永久链接至目标")引用C语言函数。应该包括尾随括号。
+- `:c:member:`
+- `:c:data:`
+- `:c:var:`
+- `:c:func:`
+- `:c:macro:`
+- `:c:struct:`
+- `:c:union:`
+- `:c:enum:`
+- `:c:enumerator:`
+- `:c:type:`
 
-`:c:member:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:member "永久链接至目标")引用结构的C语言成员。
-
-`:c:macro:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:macro "永久链接至目标")引用一个 “simple” 的C宏，如上所述。
-
-`:c:type:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:type "永久链接至目标")引用C语言类型。
-
-`:c:data:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:data "永久链接至目标")引用C语言变量。
+引用一个 C 语言声明，如上定义。请注意，`c:member`、`c:data`和 `c:var` 是等同的。
 
 (rst:domains/cpp)=
-## C++ 域
+## C++ 域（待更）
 
-C++ 域(名称  **cpp** )支持记录C++ 项目。
+C++ 域（名称  **cpp**）支持记录 C++ 项目。
 
 ### 声明实体的指令
 
-以下指令可用。所有声明都可以从可见性声明开始(`public` ，`private` 或 `protected`)
+以下指令可用。所有声明都可以从可见性声明开始（`public` ，`private` 或 `protected`）：
 
 `.. cpp:class::``<span> class specifier`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-cpp:class "永久链接至目标")`.. cpp:struct::``<span> class specifier`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-cpp:struct "永久链接至目标")描述一个类/结构，可能带有继承规范，例如:
 
@@ -1033,186 +1066,278 @@ template<typename `T`>
 
 所谓的“标准”域收集所有不保证自己域名的标记。其指令和角色不以域名为前缀。
 
-标准域也是使用 [`add_object_type()`](https://www.sphinx.org.cn/extdev/appapi.html#sphinx.application.Sphinx.add_object_type "sphinx.application.Sphinx.add_object_type") API添加的自定义对象描述的位置。“
+标准域也是使用 [`add_object_type()`](https://www.sphinx.org.cn/extdev/appapi.html#sphinx.application.Sphinx.add_object_type "sphinx.application.Sphinx.add_object_type") API 添加的自定义对象描述的位置。
 
 有一组指令允许记录命令行程序:
 
-`.. option::``<span> name args, name args, ...`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option "永久链接至目标")描述命令行参数或开关。选项参数名称应括在尖括号中。例子:
+`` .. option:: name args, name args, ... ``
+:  描述命令行参数或开关。选项参数名称应括在尖括号中。例子：
 
-```
-.. option:: dest_dir
+   ```rst
+   .. option:: dest_dir
 
-   Destination directory.
+      Destination directory.
 
-.. option:: -m <module>, --module <module>
+   .. option:: -m <module>, --module <module>
 
-   Run a module as a script.
-```
+      Run a module as a script.
+   ```
 
-该指令将为给定的选项创建交叉引用目标，可通过以下方式引用 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option "option role") (在示例中，您将使用类似 `:option:`dest_dir `` , `:option:`-m `` , 要么 `:option:`--module ``)。
+   该指令将为给定的选项创建交叉引用目标，可通过以下方式引用 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option "option role") (在示例中，您将使用类似 `` :option:`dest_dir` ``, `` :option:`-m` ``, 要么 `` :option:`--module` ``)。
 
-`cmdoption` 指令是 `option` 指令的弃用别名。
+   `cmdoption` 指令是 `option` 指令的弃用别名。
 
-`.. envvar::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-envvar "永久链接至目标")描述文档化代码或程序使用或定义的环境变量。可引用者 [`envvar`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-envvar "envvar role") 。
+`` .. envvar:: name ``
+:  描述文档化代码或程序使用或定义的环境变量。可引用者 [`envvar`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-envvar "envvar role") 。
 
-`.. program::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program "永久链接至目标")像 [`py:currentmodule`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule "py:currentmodule directive") ，这个指令不产生输出。相反，它用于通知Sphinx所有以下内容 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option "option directive") 指令文件选项称为 *name* 。
+`` .. program:: name ``
+:  像 [`py:currentmodule`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule "py:currentmodule directive") ，这个指令不产生输出。相反，它用于通知Sphinx所有以下内容 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option "option directive") 指令文件选项称为 *name* 。
 
-如果你使用 [`program`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program "program directive") ，你必须通过程序名来限定你的 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option "option role") 角色中的引用，所以如果你有以下情况:
+   如果你使用 [`program`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program "program directive") ，你必须通过程序名来限定你的 [`option`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option "option role") 角色中的引用，所以如果你有以下情况：
 
-```
-.. program:: rm
+   ```rst
+   .. program:: rm
 
-.. option:: -r
+   .. option:: -r
 
-   Work recursively.
+      Work recursively.
 
-.. program:: svn
+   .. program:: svn
 
-.. option:: -r revision
+   .. option:: -r revision
 
-   Specify the revision to work upon.
-```
+      Specify the revision to work upon.
+   ```
 
-然后 `:option:`rm`<span>` ``-r `` 将引用第一个选项，而 `:option:`svn`<span>` ``-r `` 将引用第二个选项。
+   然后 `` :option:`rm -r` `` 将引用第一个选项，而 `` :option:`svn -r` `` 将引用第二个选项。
 
-程序名称可能包含空格(如果你想分别记录 `svn<span> add` 和 `svn<span> commit` 这样的子命令)。
+   如果参数传递的是 `None`，该指令将重置当前的程序名称。
 
-**0.5 新版功能.**
+   程序名称可能包含空格（如果你想分别记录 `svn` 和 `svn commit` 这样的子命令）。
 
-还有一个非常通用的对象描述指令，它不依赖于任何域:
+还有一个非常通用的对象描述指令，它不依赖于任何域：
 
-`.. describe::``<span> text`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-describe "永久链接至目标")`.. object::``<span> text`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-object "永久链接至目标")此伪指令生成与域提供的特定格式相同的格式，但不创建索引条目或交叉引用目标。例:
+`` .. describe:: text `` & `` .. object:: text ``
+:  此伪指令生成与域提供的特定格式相同的格式，但不创建索引条目或交叉引用目标。例：
 
-```
-.. describe:: PAPER
+   ```rst
+   .. describe:: PAPER
 
-   You can set this variable to select a paper size.
-```
+      You can set this variable to select a paper size.
+   ```
 
 (rst:domains/javascript)=
 ## JavaScript域
 
 JavaScript域(名称  **js** )提供以下指令:
 
-`.. js:module::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:module "永久链接至目标")该指令设置后面的对象声明的模块名称。 模块名称用于全局模块索引和交叉引用中。 该指令不会创建如下的对象标题 [`py:class`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class "py:class directive") 。
+`` .. js:module:: name ``
+:  该指令设置后面的对象声明的模块名称。 模块名称用于全局模块索引和交叉引用中。 该指令不会创建如下的对象标题 [`py:class`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class "py:class directive") 。
 
-默认情况下，此指令将创建一个可链接的实体，并将在全局模块索引中生成一个条目，除非指定了 `noindex` 选项。如果指定了此选项，则该指令将仅更新当前模块名称。
+   默认情况下，此指令将创建一个可链接的实体，并将在全局模块索引中生成一个条目，除非指定了 `noindex` 选项。如果指定了此选项，则该指令将仅更新当前模块名称。
 
-**1.6 新版功能.**
+`` .. js:function:: name(signature) ``
+:  描述 JavaScript 函数或方法。如果要将参数描述为可选，请使用方括号 [documented](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures) 用于 Python 签名。
 
-`.. js:function::``<span> name(signature)`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function "永久链接至目标")描述JavaScript函数或方法。如果要将参数描述为可选，请使用方括号 [documented](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures) 用于Python签名。
+   您可以使用字段来提供有关参数及其预期类型的更多详细信息，函数可能抛出的错误以及返回的值：
 
-您可以使用字段来提供有关参数及其预期类型的更多详细信息，函数可能抛出的错误以及返回的值:
+   ```rst
+   .. js:function:: $.getJSON(href, callback[, errback])
 
-```
-.. js:function:: $.getJSON(href, callback[, errback])
+      :param string href: An URI to the location of the resource.
+      :param callback: Gets called with the object.
+      :param errback:
+         Gets called in case the request fails. And a lot of other
+         text so we need multiple lines.
+      :throws SomeError: For whatever reason in that case.
+      :returns: Something.
+   ```
 
-   :param string href: An URI to the location of the resource.
-   :param callback: Gets called with the object.
-   :param errback:
-       Gets called in case the request fails. And a lot of other
-       text so we need multiple lines.
-   :throws SomeError: For whatever reason in that case.
-   :returns: Something.
-```
+   这表现为：
 
-这表现为:
+   ```{eval-rst}
+   .. js:function:: $.getJSON(href, callback[, errback])
 
-> `$.``getJSON`( *href* ,  *callback* **[**,  *errback* **]**)[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#_S_.getJSON "永久链接至目标")参数* **href** ( *string* ) – 资源位置的URI。
->
-> * **callback** – 使用对象调用。
-> * **errback** – 在请求失败的情况下调用。还有很多其他文字，所以我们需要多行。
->
-> 抛出**SomeError** – 无论出于何种原因。
->
-> 返回某物.
+      :param string href: An URI to the location of the resource.
+      :param callback: Gets called with the object.
+      :param errback:
+         Gets called in case the request fails. And a lot of other
+         text so we need multiple lines.
+      :throws SomeError: For whatever reason in that case.
+      :returns: Something.
+   ```
 
-`.. js:method::``<span> name(signature)`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:method "永久链接至目标")该指令是以下的别名 [`js:function`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function "js:function directive") ，但是它描述了一个作为类对象上的方法实现的函数。
+`` .. js:method:: name(signature) ``
+:  该指令是以下的别名 [`js:function`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function "js:function directive") ，但是它描述了一个作为类对象上的方法实现的函数。
 
-**1.6 新版功能.**
+`` .. js:class:: name ``
+:  描述创建对象的构造函数。这基本上就像一个函数，但会出现一个 `class` 前缀:
 
-`.. js:class::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:class "永久链接至目标")描述创建对象的构造函数。这基本上就像一个函数，但会出现一个 class 前缀:
+   ```rst
+   .. js:class:: MyAnimal(name[, age])
 
-```
-.. js:class:: MyAnimal(name[, age])
+      :param string name: The name of the animal
+      :param number age: an optional age for the animal
+   ```
 
-   :param string name: The name of the animal
-   :param number age: an optional age for the animal
-```
+   这表现为：
 
-这表现为:
+   ```{eval-rst}
+   .. js:class:: MyAnimal(name[, age])
 
-> *class *`MyAnimal`( *name* **[**,  *age* **]**)[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#MyAnimal "永久链接至目标")参数* **name** ( *string* ) – 动物的名字
->
-> * **age** ( *number* ) – 动物的选择年龄
+      :param string name: The name of the animal
+      :param number age: an optional age for the animal
+   ```
 
-`.. js:data::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:data "永久链接至目标")描述全局变量或常量。
+`` .. js:data:: name ``
+:  描述全局变量或常量。
 
-`.. js:attribute::``<span> object.name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:attribute "永久链接至目标")描述 *object* 的属性  *name* 。
+`` .. js:attribute:: object.name ``
+:  描述 *object* 的属性 *name*。
 
 提供这些角色是为了引用所描述的对象:
 
-`:js:mod:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:mod "永久链接至目标")`:js:func:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:func "永久链接至目标")`:js:meth:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:meth "永久链接至目标")`:js:class:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:class "永久链接至目标")`:js:data:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:data "永久链接至目标")`:js:attr:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:attr "永久链接至目标")
+- `:js:mod:`
+- `:js:func:`
+- `:js:meth:`
+- `:js:class:`
+- `:js:data:`
+- `:js:attr:`
 
 (rst:domains/rst)=
 ## reStructuredText 域
 
-reStructuredText域(名称 **rst** )提供以下指令:
+reStructuredText域（名称 **rst**）提供以下指令:
 
-`.. rst:directive::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-rst:directive "永久链接至目标")描述reST指令。 *name* 可以是单个指令名称或实际指令语法(.. 前缀和 :: 后缀)，其参数将以不同方式呈现。例如:
+`` .. rst:directive:: name ``
+:  描述 reST 指令。*name* 可以是单个指令名称或实际指令语法（`..` 前缀和 `::` 后缀），其参数将以不同方式呈现。例如：
 
-```
-.. rst:directive:: foo
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. rst:directive:: foo
 
-   Foo description.
+      Foo description.
 
-.. rst:directive:: .. bar:: baz
+   .. rst:directive:: .. bar:: baz
 
-   Bar description.
-```
+      Bar description.
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. rst:directive:: foo
 
-将呈现为:
+      Foo description.
 
-> `.. foo::`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-foo "永久链接至目标")Foo描述。
->
-> `.. bar::``<span> baz`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-bar "永久链接至目标")Bar 描述.
+   .. rst:directive:: .. bar:: baz
 
-`.. rst:role::``<span> name`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-rst:role "永久链接至目标")描述reST角色。例如:
+      Bar description.
+   ```
+   ````
 
-```
-.. rst:role:: foo
+`` .. rst:directive:option:: name ``:
+:  描述 reST 角色。例如：
 
-   Foo description.
-```
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. rst:role:: foo
 
-将呈现为:
+      Foo description.
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. rst:role:: foo
 
-> `:foo:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-foo "永久链接至目标")Foo描述。
+      Foo description.
+   ```
+   ````
 
-提供这些角色是为了引用所描述的对象:
+   **选项**
+   `:type:` 描述参数 (文本)
 
-`:rst:dir:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:dir "永久链接至目标")`:rst:role:`[](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:role "永久链接至目标")
+   例子：
+
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. rst:directive:: toctree
+
+   .. rst:directive:option:: maxdepth
+      :type: integer or no value
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. rst:directive:: toctree
+
+   .. rst:directive:option:: maxdepth
+      :type: integer or no value
+   ```
+   ````
+
+提供这些角色是为了引用所描述的对象：
+
+- `:rst:dir:`
+- `:rst:role:`
 
 (rst:domains/math)=
 ## 数学域
 
-数学域(名称  **math** )提供以下角色:
+数学域（名称  **math**）提供以下角色：
 
-```
-.. rst:role:: math:numref
-```
+`` :math:numref: ``
+:  作用是通过数学指令的标签来交叉引用数学指令所定义的方程。例子：
 
-> 交叉引用方程的作用由以下定义 [`math`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-math "math directive") 指令通过其标签定义。例:
->
-> ```
-> .. math:: e^{i\pi} + 1 = 0
->    :label: euler
->
-> Euler's identity, equation :math:numref:`euler`, was elected one of the
-> most beautiful mathematical formulas.
-> ```
->
-> **1.8 新版功能.**
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. math:: e^{i\pi} + 1 = 0
+      :label: euler
+
+   Euler's identity, equation :math:numref:`euler`, was elected one of the
+   most beautiful mathematical formulas.
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. math:: e^{i\pi} + 1 = 0
+      :label: euler
+
+   Euler's identity, equation :math:numref:`euler`, was elected one of the
+   most beautiful mathematical formulas.
+   ```
+   ````
 
 ## 更多域
 

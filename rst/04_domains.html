@@ -85,6 +85,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -696,197 +698,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal nav-link" href="#id5">
      常用指令
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-module-name">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:module::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-currentmodule-name">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:currentmodule::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-function-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:function::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-data-name">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:data::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-exception-name">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:exception::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-class-name-py-class-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:class::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-       &amp;
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:class::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-attribute-name">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:attribute::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-method-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:method::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-staticmethod-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:staticmethod::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-classmethod-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:classmethod::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#py-decorator-name-py-decorator-name-parameters">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:decorator::
-        </span>
-        <span class="pre">
-         name
-        </span>
-       </code>
-       &amp;
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ..
-        </span>
-        <span class="pre">
-         py:decorator::
-        </span>
-        <span class="pre">
-         name(parameters)
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id6">
@@ -907,19 +718,19 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c">
-   C 域
+   C 域（待更）
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id9">
-     交叉引用C构造
+     交叉引用 C 构造
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rst-domains-cpp">
-   C++ 域
+   C++ 域（待更）
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1167,57 +978,97 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <p>Python 域（名称 <strong>py</strong>）为模块声明提供以下指令：</p>
 <div class="section" id="id5">
 <h3>常用指令<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-<div class="section" id="py-module-name">
-<h4><code class="docutils literal notranslate"> <span class="pre">..</span> <span class="pre">py:module::</span> <span class="pre">name</span></code><a class="headerlink" href="#py-module-name" title="永久链接至标题">¶</a></h4>
-<p>该指令标志着模块（或包的子模块）描述的开始，在这种情况下，名称应该是完全限定的，包括包名称。它不会创建内容（例如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 确实如此）。</p>
-<p>该指令还将导致全局模块索引中的条目。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:platform:</span> <span class="pre">platforms</span> <span class="pre">(comma</span> <span class="pre">separated</span> <span class="pre">list)</span></code> 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符；正在使用的示例包括 “IRIX” ，”Mac” ， “Windows” 和 “Unix” 。使用已适用的密钥非常重要。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:synopsis:</span> <span class="pre">purpose</span> <span class="pre">(text)</span></code> 选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。</p>
-<p>可以给出 <code class="docutils literal notranslate"><span class="pre">:deprecated:</span> <span class="pre">(no</span> <span class="pre">argument)</span></code> 选项(没有值)将模块标记为已弃用；它将在各个地点被指定。</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"> <span class="pre">..</span> <span class="pre">py:module::</span> <span class="pre">name</span></code></p>
 </div>
-<div class="section" id="py-currentmodule-name">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:currentmodule::</span> <span class="pre">name</span></code><a class="headerlink" href="#py-currentmodule-name" title="永久链接至标题">¶</a></h4>
-<p>该指令告诉 Sphinx，这里记录的类，函数等都在给定的模块中(如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module"><code class="docutils literal notranslate"><span class="pre">py:module</span></code></a>)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:mod"><code class="docutils literal notranslate"><span class="pre">py:mod</span></code></a> 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module"><code class="docutils literal notranslate"><span class="pre">py:module</span></code></a> 指令，其他只有 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule"><code class="docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> 。</p>
-<p>为模块和类内容提供以下指令:</p>
+<div class="card-body docutils">
+<p class="card-text">该指令标志着模块（或包的子模块）描述的开始，在这种情况下，名称应该是完全限定的，包括包名称。它不会创建内容（例如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 确实如此）。</p>
+<p class="card-text">该指令还将导致全局模块索引中的条目变化。</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:platform:</span> <span class="pre">platforms</span> <span class="pre">(comma</span> <span class="pre">separated</span> <span class="pre">list)</span></code> 选项(如果存在)是一个逗号分隔的模块可用平台列表(如果它在所有平台上都可用，则应省略该选项)。密钥是短标识符；正在使用的示例包括 “IRIX” ，”Mac” ， “Windows” 和 “Unix” 。使用已适用的密钥非常重要。</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:synopsis:</span> <span class="pre">purpose</span> <span class="pre">(text)</span></code> 选项应包含一个描述模块用途的句子 - 它目前仅用于全局模块索引。</p>
+<p class="card-text">可以给出 <code class="docutils literal notranslate"><span class="pre">:deprecated:</span> <span class="pre">(no</span> <span class="pre">argument)</span></code> 选项(没有值)将模块标记为已弃用；它将在各个地点被指定。</p>
 </div>
-<div class="section" id="py-function-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:function::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-function-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>描述模块级函数。签名应该包含 Python 函数定义中给出的参数，请参阅 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a>。例如：</p>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:currentmodule::</span> <span class="pre">name</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">该指令告诉 Sphinx，这里记录的类，函数等都在给定的模块中(如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module"><code class="docutils literal notranslate"><span class="pre">py:module</span></code></a>)，但它不会创建索引条目，全局模块索引中的条目，或者一个链接目标 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:mod"><code class="docutils literal notranslate"><span class="pre">py:mod</span></code></a> 。这在模块中的事物文档分布在多个文件或部分的情况下很有用 - 一个位置具有 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module"><code class="docutils literal notranslate"><span class="pre">py:module</span></code></a> 指令，其他只有 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule"><code class="docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> 。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>为模块和类内容提供以下指令：</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:function::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述模块级函数。签名应该包含 Python 函数定义中给出的参数，请参阅 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a>。例如：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> Timer.repeat(repeat=3, number=1000000)
 </pre></div>
 </div>
-<p>对于你应该使用的方法 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> 。</p>
-<p>描述通常包括有关所需参数及其使用方式的信息(特别是是否修改了作为参数传递的可变对象)，副作用和可能的异常。</p>
-<p>这个信息可以(在任何 <code class="docutils literal notranslate"><span class="pre">py</span></code> 指令中)可选地以结构化形式给出，参见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists">信息字段列表</a> 。</p>
+<p class="card-text">对于方法你应该使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> 。</p>
+<p class="card-text">描述通常包括有关所需参数及其使用方式的信息(特别是是否修改了作为参数传递的可变对象)，副作用和可能的异常。</p>
+<p class="card-text">这个信息可以(在任何 <code class="docutils literal notranslate"><span class="pre">py</span></code> 指令中)可选地以结构化形式给出，参见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists">信息字段列表</a> 。</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:async:</span></code> (no value)</dt><dd><p>Indicate the function is an async function.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:async:</span></code> (无值)</dt><dd><p class="card-text">表示该函数是一个异步函数。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (full qualified name including module name)</dt><dd><p>Describe the location where the object is defined if the object is imported from other modules</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (包括模块名称在内的全限定名称)</dt><dd><p class="card-text">如果该对象是从其他模块导入的，描述该对象的定义位置</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="py-data-name">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:data::</span> <span class="pre">name</span></code><a class="headerlink" href="#py-data-name" title="永久链接至标题">¶</a></h4>
-<p>描述模块中的全局数据，包括用作“定义的常量”的变量和值。使用此环境不记录类和对象属性。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:type:</span></code> type of the variable (text)</p>
-<p><code class="docutils literal notranslate"><span class="pre">:value:</span></code> initial value of the variable (text)</p>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:data::</span> <span class="pre">name</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述模块中的全局数据，包括用作“定义的常量”的变量和值。使用此环境不记录类和对象属性。</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:type:</span></code> 变量的类型 (文本)</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:value:</span></code> 变量的初始值 (文本)</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (full qualified name including module name)</dt><dd><p>Describe the location where the object is defined if the object is imported from other modules</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (包括模块名称在内的全限定名称)</dt><dd><p class="card-text">如果该对象是从其他模块导入的，描述该对象的定义位置</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="py-exception-name">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:exception::</span> <span class="pre">name</span></code><a class="headerlink" href="#py-exception-name" title="永久链接至标题">¶</a></h4>
-<p>描述异常类。签名可以，但不必包括带有构造函数参数的括号。</p>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:exception::</span> <span class="pre">name</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述异常类。签名可以，但不必包括带有构造函数参数的括号。</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (no value)</dt><dd><p>Indicate the class is a final class.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (无值)</dt><dd><p class="card-text">表明该类是一个 final 类。</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="py-class-name-py-class-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:class::</span> <span class="pre">name</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:class::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-class-name-py-class-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>描述一个类。签名可以选择包括带有参数的括号，这些参数将显示为构造函数参数。另见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a> 。</p>
-<p>属于该类的方法和属性应放在此指令的主体中。如果将它们放在外面，则提供的名称应包含类名，以便交叉引用仍然有效。例:</p>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:class::</span> <span class="pre">name</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:class::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述一个类。签名可以选择包括带有参数的括号，这些参数将显示为构造函数参数。另见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a> 。</p>
+<p class="card-text">属于该类的方法和属性应放在此指令的主体中。如果将它们放在外面，则提供的名称应包含类名，以便交叉引用仍然有效。例:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:class</span><span class="p">::</span> Foo
 
 <span class="p">   ..</span> <span class="ow">py:method</span><span class="p">::</span> quux()
@@ -1229,77 +1080,105 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <span class="p">..</span> <span class="ow">py:method</span><span class="p">::</span> Bar.quux()
 </pre></div>
 </div>
-<p>第一种方式是首选方式。</p>
+<p class="card-text">第一种方式是首选方式。</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (full qualified name including module name)¶</dt><dd><p>Describe the location where the object is defined if the object is imported from other modules</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (包括模块名称在内的全限定名称)</dt><dd><p class="card-text">如果该对象是从其他模块导入的，描述该对象的定义位置</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (no value)</dt><dd><p>Indicate the class is a final class.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (无值)</dt><dd><p class="card-text">Indicate the class is a final class.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="py-attribute-name">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:attribute::</span> <span class="pre">name</span></code><a class="headerlink" href="#py-attribute-name" title="永久链接至标题">¶</a></h4>
-<p>描述对象数据属性。描述应包括有关预期数据类型的信息以及是否可以直接更改。</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> (no value)</dt><dd><p>Indicate the property is abstract.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> (no value)</dt><dd><p>Indicate the property is a classmethod.</p>
-</dd>
-</dl>
-<p><code class="docutils literal notranslate"><span class="pre">:type:</span></code> type of the property (text)</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:method::``&lt;span&gt; name(parameters)</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"></a>描述对象方法。参数不应包含 <code class="docutils literal notranslate"><span class="pre">self</span></code> 参数。描述应该包括与 <code class="docutils literal notranslate"><span class="pre">function</span></code> 描述的类似的信息。另见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a> 和 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists">信息字段列表</a> 。</p>
 </div>
-<div class="section" id="py-method-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:method::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-method-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> ，但表示该方法是静态方法。</p>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:attribute::</span> <span class="pre">name</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述对象数据属性。描述应包括有关预期数据类型的信息以及是否可以直接更改。</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:type:</span></code> 属性的类型 (文本)</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:value:</span></code> 属性的初始值 (文本)</p>
 <dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> (no value)</dt><dd><p>Indicate the method is an abstract method.</p>
-</dd>
-</dl>
-<p>New in version 2.1.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:async:</span></code> (no value)</dt><dd><p>Indicate the method is an async method.</p>
-</dd>
-</dl>
-<p>New in version 2.1.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (full qualified name including module name)</dt><dd><p>Describe the location where the object is defined if the object is imported from other modules</p>
-</dd>
-</dl>
-<p>New in version 4.0.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> (no value)</dt><dd><p>Indicate the method is a class method.</p>
-</dd>
-</dl>
-<p>New in version 2.1.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (no value)</dt><dd><p>Indicate the class is a final method.</p>
-</dd>
-</dl>
-<p>New in version 3.1.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:property:</span></code> (no value)</dt><dd><p>Indicate the method is a property.</p>
-</dd>
-</dl>
-<p>New in version 2.1.</p>
-<p>Deprecated since version 4.0: Use py:property instead.</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">:staticmethod:</span></code> (no value)</dt><dd><p>Indicate the method is a static method.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (包括模块名称在内的全限定名称)</dt><dd><p class="card-text">如果该对象是从其他模块导入的，描述该对象的定义位置</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="py-staticmethod-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:staticmethod::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-staticmethod-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> ，但表示该方法是一个静态方法。</p>
 </div>
-<div class="section" id="py-classmethod-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:classmethod::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-classmethod-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> ，但表示该方法是一个类方法。</p>
-<p><strong>0.6 新版功能.</strong></p>
 </div>
-<div class="section" id="py-decorator-name-py-decorator-name-parameters">
-<h4><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">name</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">name(parameters)</span></code><a class="headerlink" href="#py-decorator-name-py-decorator-name-parameters" title="永久链接至标题">¶</a></h4>
-<p>描述装饰器功能。签名应表示作为装饰者的用法。例如，给定功能</p>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:property::</span> <span class="pre">name</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述了一个对象的属性。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> (无值)</dt><dd><p class="card-text">表示该属性是抽象的。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> (无值)</dt><dd><p class="card-text">表示该属性是一个类方法。</p>
+</dd>
+</dl>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">:type:</span></code> 属性的类型 (文本)</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:method::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述对象方法。参数不应包含 <code class="docutils literal notranslate"><span class="pre">self</span></code> 参数。描述应该包括与 <code class="docutils literal notranslate"><span class="pre">function</span></code> 描述的类似的信息。另见 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">Python签名</a> 和 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#info-field-lists">信息字段列表</a> 。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> (无值)</dt><dd><p class="card-text">表示该方法是一个抽象的方法。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:async:</span></code> (无值)</dt><dd><p class="card-text">表明该方法是一个异步方法。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:canonical:</span></code> (包括模块名称在内的全称)</dt><dd><p class="card-text">如果该对象是从其他模块导入的，描述该对象的定义位置</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> (无值)</dt><dd><p class="card-text">表明该方法是一个类方法。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:final:</span></code> (无值)</dt><dd><p class="card-text">表示该类是一个 final 方法。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:property:</span></code> (无值)</dt><dd><p class="card-text">表示该方法是一个属性。</p>
+<div class="deprecated">
+<p class="card-text"><span class="versionmodified deprecated">4.0 版后已移除: </span>使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-py-property"><code class="docutils literal notranslate"><span class="pre">py:property</span></code></a> 代替。</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:staticmethod:</span></code> (无值)</dt><dd><p class="card-text">表明该方法是一个静态方法。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:staticmethod::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> ，但表示该方法是一个静态方法。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:classmethod::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a> ，但表示该方法是一个类方法。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">name</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">name(parameters)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">描述装饰器功能。签名应表示作为装饰器的用法。例如，给定函数：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">removename</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">return</span> <span class="n">func</span>
@@ -1311,7 +1190,7 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
     <span class="k">return</span> <span class="n">decorator</span>
 </pre></div>
 </div>
-<p>描述应如下所示:</p>
+<p class="card-text">描述应如下所示:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:decorator</span><span class="p">::</span> removename
 
    Remove name of the decorated function.
@@ -1321,10 +1200,24 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
    Set name of the decorated function to <span class="ge">*name*</span>.
 </pre></div>
 </div>
-<p>(而不是 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">removename(func)</span></code>。)</p>
-<p>没有 <code class="docutils literal notranslate"><span class="pre">py:deco</span></code> 角色链接到用这个指令标记的装饰器；相反，使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:func"><code class="docutils literal notranslate"><span class="pre">py:func</span></code></a> 角色。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decoratormethod::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decoratormethod"></a><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decoratormethod::``&lt;span&gt; name(signature)</span></code>与 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decorator"><code class="docutils literal notranslate"><span class="pre">py:decorator</span></code></a> 相同，但对于作为方法的装饰器。</p>
-<p>使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:meth"><code class="docutils literal notranslate"><span class="pre">py:meth</span></code></a> 角色引用装饰器方法。</p>
+<p class="card-text">(而不是 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decorator::</span> <span class="pre">removename(func)</span></code>。)</p>
+<p class="card-text">没有 <code class="docutils literal notranslate"><span class="pre">py:deco</span></code> 角色链接到用这个指令标记的装饰器；相反，使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:func"><code class="docutils literal notranslate"><span class="pre">py:func</span></code></a> 角色。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 px-2 py-1 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue w3-large docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decoratormethod::</span> <span class="pre">name</span></code></p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py:decoratormethod::</span> <span class="pre">name(signature)</span></code></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">与 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:decorator"><code class="docutils literal notranslate"><span class="pre">py:decorator</span></code></a> 相同，但对于作为方法的装饰器。</p>
+<p class="card-text">使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:meth"><code class="docutils literal notranslate"><span class="pre">py:meth</span></code></a> 角色引用装饰器方法。</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="id6">
@@ -1344,22 +1237,21 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </div>
 <div class="section" id="id7">
 <h3>信息字段列表<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
-<p><strong>0.4 新版功能.</strong></p>
-<p>在Python对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化:</p>
+<p>在 Python 对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">param</span></code>, <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, <code class="docutils literal notranslate"><span class="pre">arg</span></code>, <code class="docutils literal notranslate"><span class="pre">argument</span></code>, <code class="docutils literal notranslate"><span class="pre">key</span></code>, <code class="docutils literal notranslate"><span class="pre">keyword</span></code>: Description of a parameter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>:参数的类型。如果可能，创建一个链接。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raises</span></code>，<code class="docutils literal notranslate"><span class="pre">raise</span></code>，<code class="docutils literal notranslate"><span class="pre">except</span></code>，<code class="docutils literal notranslate"><span class="pre">exception</span></code>:那个(和什么时候)引发了一个特定的异常。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">ivar</span></code>, <code class="docutils literal notranslate"><span class="pre">cvar</span></code>: 变量的描述。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vartype</span></code>: Type of a variable. 如果可能，创建一个链接。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">returns</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code>: 返回值的描述。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rtype</span></code>: Return type. 如果可能，创建一个链接。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">param</span></code>, <code class="docutils literal notranslate"><span class="pre">parameter</span></code>, <code class="docutils literal notranslate"><span class="pre">arg</span></code>, <code class="docutils literal notranslate"><span class="pre">argument</span></code>, <code class="docutils literal notranslate"><span class="pre">key</span></code>, <code class="docutils literal notranslate"><span class="pre">keyword</span></code>: 描述参数。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>：参数的类型。如果可能，创建一个链接。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raises</span></code>，<code class="docutils literal notranslate"><span class="pre">raise</span></code>，<code class="docutils literal notranslate"><span class="pre">except</span></code>，<code class="docutils literal notranslate"><span class="pre">exception</span></code>：那（以及什么时候）会出现一个特定的异常。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">ivar</span></code>, <code class="docutils literal notranslate"><span class="pre">cvar</span></code>：变量的描述。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vartype</span></code>: 变量类型。如果可能，创建一个链接。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">returns</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code>：返回值的描述。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rtype</span></code>：返回值类型。如果可能，创建一个链接。</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>在 4.1.2 版本中，所有 <code class="docutils literal notranslate"><span class="pre">var</span></code> ， <code class="docutils literal notranslate"><span class="pre">ivar</span></code> 和 <code class="docutils literal notranslate"><span class="pre">cvar</span></code> 都表示为 “Variable” 。完全没有区别。</p>
 </div>
-<p>字段名称必须包含这些关键字之一和参数(除了 <code class="docutils literal notranslate"><span class="pre">returns</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rtype</span></code> ，它们不需要参数)。这可以用一个例子来解释：</p>
+<p>字段名称必须包含这些关键字之一和参数（除了 <code class="docutils literal notranslate"><span class="pre">returns</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rtype</span></code> ，它们不需要参数）。这可以用一个例子来解释：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> send_message(sender, recipient, message_body, [priority=1])
 
    Send a message to a recipient
@@ -1410,8 +1302,7 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:param int priority:</span> The priority of the message, can be a number 1-5
 </pre></div>
 </div>
-<p><strong>1.5 新版功能.</strong></p>
-<p>可以使用以下语法自动链接容器类型(如列表和词典):</p>
+<p>可以使用以下语法自动链接容器类型（如列表和词典）:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:type priorities:</span> list(int)
 <span class="nc">:type priorities:</span> list[int]
 <span class="nc">:type mapping:</span> dict(str, int)
@@ -1429,69 +1320,96 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </div>
 <div class="section" id="id8">
 <h3>交叉引用 Python 对象<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
-<p>以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接:</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:mod:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:mod"></a>参考模块；可以使用虚线名称。这也应该用于包名称。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:func:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:func"></a>引用Python函数；可以使用点名。角色文本不需要包括尾随括号以增强可读性；如果 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-add_function_parentheses"><code class="docutils literal notranslate"><span class="pre">add_function_parentheses</span></code></a> 配置值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> (默认值)，它们将由Sphinx自动添加。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:data:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:data"></a>引用模块级变量。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:const:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:const"></a>引用一个“定义的”常量。这可能是一个不打算更改的Python变量。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:class:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:class"></a>引用一个类；可以使用虚线名称。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:meth"></a>引用对象的方法。角色文本可以包括类型名称和方法名称；如果它出现在类型的描述中，则可以省略类型名称。可以使用点状名称。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:attr:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:attr"></a>引用对象的数据属性。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:exc:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:exc"></a>引用异常。可以使用点状名称。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:py:obj:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-py:obj"></a>引用未指定类型的对象。例如有用as <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-default_role"><code class="docutils literal notranslate"><span class="pre">default_role</span></code></a> 。</p>
-<p><strong>0.4 新版功能.</strong></p>
+<p>以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接：</p>
+<div class="w3-card-4 w3-padding w3-pale-green docutils">
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:py:mod:</span></code></dt><dd><p>引用模块；可以使用点名称。这也应该用于包名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:func:</span></code></dt><dd><p>引用 Python 函数；可以使用点名称。角色文本不需要包括尾随括号以增强可读性；如果 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-add_function_parentheses"><code class="docutils literal notranslate"><span class="pre">add_function_parentheses</span></code></a> 配置值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> (默认值)，它们将由 Sphinx 自动添加。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:data:</span></code></dt><dd><p>引用模块级变量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:const:</span></code></dt><dd><p>引用一个“定义的”常量。这可能是一个不打算更改的 Python 变量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:class:</span></code></dt><dd><p>引用一个类；可以使用点名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:meth:</span></code></dt><dd><p>引用对象的方法。角色文本可以包括类型名称和方法名称；如果它出现在类型的描述中，则可以省略类型名称。可以使用点状名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:attr:</span></code></dt><dd><p>引用对象的数据属性。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>这个角色也能够指的是属性。</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:exc:</span></code></dt><dd><p>引用异常。可以使用点状名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">:py:obj:</span></code></dt><dd><p>引用未指定类型的对象。例如，作为 <a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#confval-default_role"><code class="docutils literal notranslate"><span class="pre">default_role</span></code></a> 有用。</p>
+</dd>
+</dl>
+</div>
 <p>此标记中包含的名称可以包括模块名称和/或类名称。例如，<code class="docutils literal notranslate"><span class="pre">:py:func:`filter`</span> </code> 可以引用当前模块中名为 <code class="docutils literal notranslate"><span class="pre">filter</span></code> 的函数，或者该名称的内置函数。相比之下，<code class="docutils literal notranslate"><span class="pre">:py:func:`foo.filter`</span></code> 清楚地引用了 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 模块中的 <code class="docutils literal notranslate"><span class="pre">filter</span></code> 函数。</p>
 <p>通常，首先搜索这些角色中的名称而不进一步限定，然后将当前模块名称添加到前面，然后使用当前模块和类名(如果有)作为前缀。如果您在名称前加一个点，则此顺序相反。例如，在 Python 的文档 <code class="docutils literal notranslate"><span class="pre">codecs</span></code> 模块中，<code class="docutils literal notranslate"><span class="pre">:py:func:`open`</span></code> 总是引用内置函数，而 <code class="docutils literal notranslate"><span class="pre">:py:func:`.open`</span></code> 指 <code class="docutils literal notranslate"><span class="pre">codecs.open()</span></code> 。</p>
 <p>类似的启发式方法用于确定名称是否是当前记录的类的属性。</p>
-<p>此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`.TarFile.close`</span></code> 引用 <code class="docutils literal notranslate"><span class="pre">tarfile.TarFile.close()</span></code> 函数，即使当前模块不是 <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到Sphinx的警告。</p>
+<p>此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`.TarFile.close`</span></code> 引用 <code class="docutils literal notranslate"><span class="pre">tarfile.TarFile.close()</span></code> 函数，即使当前模块不是 <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到 Sphinx 的警告。</p>
 <p>请注意，您可以组合使用 <code class="docutils literal notranslate"><span class="pre">~</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.</span></code> 前缀: <code class="docutils literal notranslate"><span class="pre">:py:meth:`~.TarFile.close`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">tarfile.TarFile.close()</span></code> 方法，但可见的链接标题只是 <code class="docutils literal notranslate"><span class="pre">close()</span></code>。</p>
 </div>
 </div>
 <div class="section" id="c">
-<span id="rst-domains-c"></span><h2>C 域<a class="headerlink" href="#c" title="永久链接至标题">¶</a></h2>
+<span id="rst-domains-c"></span><h2>C 域（待更）<a class="headerlink" href="#c" title="永久链接至标题">¶</a></h2>
 <p>C 域（名称  <strong>c</strong>）适用于 C API 的文档。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:member::</span> <span class="pre">`</span> <span class="pre">声明</span></code> … c:var:: `` 声明
-:  描述了一个C结构的成员或变量。签名示例：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:member::</span> <span class="pre">declaration</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:var::</span> <span class="pre">declaration</span></code></dt><dd><p>描述了一个 C 结构的成员或变量。签名示例：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">c:member</span><span class="p">::</span> PyObject *PyTypeObject.tp_bases
 </pre></div>
 </div>
 <p>这两个指令之间的区别只是表面上的。</p>
-<dl class="simple myst">
-<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:function::</span></code> 函数声明</dt><dd><p>描述 C 函数。签名应如 C 所示，例如：</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:function::</span> <span class="pre">function</span> <span class="pre">prototype</span></code></dt><dd><p>描述 C 函数。签名应如 C 所示，例如：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">c:function</span><span class="p">::</span> PyObject<span class="ge">* PyType_GenericAlloc(PyTypeObject *</span>type, Py_ssize_t nitems)
 </pre></div>
 </div>
 <p>这也用于描述类似函数的预处理器宏。应该给出参数的名称，以便它们可以在描述中使用。</p>
 </dd>
 </dl>
-<p>请注意，签名中不必使用反斜杠转义星号，因为reST内联器不会对其进行解析。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:member::``&lt;span&gt; declaration</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:member"></a>描述C结构成员。签名示例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">c</span><span class="p">:</span><span class="n">member</span><span class="p">::</span> <span class="n">PyObject</span><span class="o">*</span> <span class="n">PyTypeObject</span><span class="o">.</span><span class="n">tp_bases</span>
-</pre></div>
-</div>
-<p>描述文本应包括允许的值范围，应如何解释值以及是否可以更改值。对文本中结构成员的引用应使用 <code class="docutils literal notranslate"><span class="pre">member</span></code> 角色。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:macro"></a>描述一个 “simple” 的C宏。简单宏是用于代码扩展的宏，但不带参数，因此不能将其描述为函数。这是一个简单的C语言 <code class="docutils literal notranslate"><span class="pre">#define</span></code> 。它在Python文档中的使用示例包括 <code class="docutils literal notranslate"><span class="pre">PyObject_HEAD</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Py_BEGIN_ALLOW_THREADS</span></code> 。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:type"></a>描述C类型(无论是由 typedef 还是 struct 定义)。签名应该只是类型名称。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:var::``&lt;span&gt; declaration</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-c:var"></a>描述全局C变量。签名应包括类型，例如:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">c</span><span class="p">:</span><span class="n">var</span><span class="p">::</span> <span class="n">PyObject</span><span class="o">*</span> <span class="n">PyClass_Type</span>
-</pre></div>
-</div>
+<p>请注意，签名中不必使用反斜杠转义星号，因为 reST 内联器不会对其进行解析。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::</span> <span class="pre">name</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:macro::</span> <span class="pre">name(arg</span> <span class="pre">list)</span></code></dt><dd><p>描述一个 C 语言的宏，即一个 C 语言的<code class="docutils literal notranslate"><span class="pre">#define</span></code>，没有替换文本。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:struct::</span> <span class="pre">name</span></code></dt><dd><p>描述 C 结构。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:union::</span> <span class="pre">name</span></code></dt><dd><p>描述 C union.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enum::</span> <span class="pre">name</span></code></dt><dd><p>描述 C enum.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:enumerator::</span> <span class="pre">name</span></code></dt><dd><p>描述 C enumerator.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span> <span class="pre">typedef-like</span> <span class="pre">declaration</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span> <span class="pre">name</span></code></dt><dd><p>描述一个 C 类型，可以是一个 typedef，也可以是一个未指定的类型的别名。</p>
+</dd>
+</dl>
 <div class="section" id="id9">
-<h3>交叉引用C构造<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<h3>交叉引用 C 构造<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>如果在文档中定义了以下角色，则会创建对C语言构造的交叉引用:</p>
-<p><code class="docutils literal notranslate"><span class="pre">:c:func:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:func"></a>引用C语言函数。应该包括尾随括号。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:c:member:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:member"></a>引用结构的C语言成员。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:c:macro:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:macro"></a>引用一个 “simple” 的C宏，如上所述。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:c:type:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:type"></a>引用C语言类型。</p>
-<p><code class="docutils literal notranslate"><span class="pre">:c:data:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-c:data"></a>引用C语言变量。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:member:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:data:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:var:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:func:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:macro:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:struct:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:union:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:enum:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:enumerator:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:c:type:</span></code></p></li>
+</ul>
+<p>引用一个 C 语言声明，如上定义。请注意，<code class="docutils literal notranslate"><span class="pre">c:member</span></code>、<code class="docutils literal notranslate"><span class="pre">c:data</span></code>和 <code class="docutils literal notranslate"><span class="pre">c:var</span></code> 是等同的。</p>
 </div>
 </div>
 <div class="section" id="rst-domains-cpp">
-<span id="id10"></span><h2>C++ 域<a class="headerlink" href="#rst-domains-cpp" title="永久链接至标题">¶</a></h2>
-<p>C++ 域(名称  <strong>cpp</strong> )支持记录C++ 项目。</p>
+<span id="id10"></span><h2>C++ 域（待更）<a class="headerlink" href="#rst-domains-cpp" title="永久链接至标题">¶</a></h2>
+<p>C++ 域（名称  <strong>cpp</strong>）支持记录 C++ 项目。</p>
 <div class="section" id="id11">
 <h3>声明实体的指令<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
-<p>以下指令可用。所有声明都可以从可见性声明开始(<code class="docutils literal notranslate"><span class="pre">public</span></code> ，<code class="docutils literal notranslate"><span class="pre">private</span></code> 或 <code class="docutils literal notranslate"><span class="pre">protected</span></code>)</p>
+<p>以下指令可用。所有声明都可以从可见性声明开始（<code class="docutils literal notranslate"><span class="pre">public</span></code> ，<code class="docutils literal notranslate"><span class="pre">private</span></code> 或 <code class="docutils literal notranslate"><span class="pre">protected</span></code>）：</p>
 <p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:class::``&lt;span&gt; class</span> <span class="pre">specifier</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-cpp:class"></a><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">cpp:struct::``&lt;span&gt; class</span> <span class="pre">specifier</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-cpp:struct"></a>描述一个类/结构，可能带有继承规范，例如:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">cpp</span><span class="p">:</span><span class="n">class</span><span class="p">::</span> <span class="n">MyClass</span> <span class="p">:</span> <span class="n">public</span> <span class="n">MyBase</span><span class="p">,</span> <span class="n">MyOtherBase</span>
 </pre></div>
@@ -1927,145 +1845,309 @@ template&lt;&gt;
 <div class="section" id="id28">
 <h2>标准域<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
 <p>所谓的“标准”域收集所有不保证自己域名的标记。其指令和角色不以域名为前缀。</p>
-<p>标准域也是使用 <a class="reference external" href="https://www.sphinx.org.cn/extdev/appapi.html#sphinx.application.Sphinx.add_object_type"><code class="docutils literal notranslate"><span class="pre">add_object_type()</span></code></a> API添加的自定义对象描述的位置。“</p>
+<p>标准域也是使用 <a class="reference external" href="https://www.sphinx.org.cn/extdev/appapi.html#sphinx.application.Sphinx.add_object_type"><code class="docutils literal notranslate"><span class="pre">add_object_type()</span></code></a> API 添加的自定义对象描述的位置。</p>
 <p>有一组指令允许记录命令行程序:</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">option::``&lt;span&gt; name</span> <span class="pre">args,</span> <span class="pre">name</span> <span class="pre">args,</span> <span class="pre">...</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option"></a>描述命令行参数或开关。选项参数名称应括在尖括号中。例子:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">option</span><span class="p">::</span> <span class="n">dest_dir</span>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">option::</span> <span class="pre">name</span> <span class="pre">args,</span> <span class="pre">name</span> <span class="pre">args,</span> <span class="pre">...</span></code></dt><dd><p>描述命令行参数或开关。选项参数名称应括在尖括号中。例子：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">option</span><span class="p">::</span> dest_dir
 
-   <span class="n">Destination</span> <span class="n">directory</span><span class="o">.</span>
+   Destination directory.
 
-<span class="o">..</span> <span class="n">option</span><span class="p">::</span> <span class="o">-</span><span class="n">m</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">--</span><span class="n">module</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="p">..</span> <span class="ow">option</span><span class="p">::</span> -m &lt;module&gt;, --module &lt;module&gt;
 
-   <span class="n">Run</span> <span class="n">a</span> <span class="n">module</span> <span class="k">as</span> <span class="n">a</span> <span class="n">script</span><span class="o">.</span>
+   Run a module as a script.
 </pre></div>
 </div>
-<p>该指令将为给定的选项创建交叉引用目标，可通过以下方式引用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> (在示例中，您将使用类似 <code class="docutils literal notranslate"><span class="pre">:option:</span></code>dest_dir <code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">`:option:`-m</span></code> , 要么 <code class="docutils literal notranslate"><span class="pre">:option:</span></code>–module ``)。</p>
+<p>该指令将为给定的选项创建交叉引用目标，可通过以下方式引用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> (在示例中，您将使用类似 <code class="docutils literal notranslate"><span class="pre">:option:`dest_dir`</span></code>, <code class="docutils literal notranslate"><span class="pre">:option:`-m`</span></code>, 要么 <code class="docutils literal notranslate"><span class="pre">:option:`--module`</span></code>)。</p>
 <p><code class="docutils literal notranslate"><span class="pre">cmdoption</span></code> 指令是 <code class="docutils literal notranslate"><span class="pre">option</span></code> 指令的弃用别名。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">envvar::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-envvar"></a>描述文档化代码或程序使用或定义的环境变量。可引用者 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-envvar"><code class="docutils literal notranslate"><span class="pre">envvar</span></code></a> 。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">program::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program"></a>像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule"><code class="docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> ，这个指令不产生输出。相反，它用于通知Sphinx所有以下内容 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 指令文件选项称为 <em>name</em> 。</p>
-<p>如果你使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program"><code class="docutils literal notranslate"><span class="pre">program</span></code></a> ，你必须通过程序名来限定你的 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 角色中的引用，所以如果你有以下情况:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">program</span><span class="p">::</span> <span class="n">rm</span>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">envvar::</span> <span class="pre">name</span></code></dt><dd><p>描述文档化代码或程序使用或定义的环境变量。可引用者 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-envvar"><code class="docutils literal notranslate"><span class="pre">envvar</span></code></a> 。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">program::</span> <span class="pre">name</span></code></dt><dd><p>像 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:currentmodule"><code class="docutils literal notranslate"><span class="pre">py:currentmodule</span></code></a> ，这个指令不产生输出。相反，它用于通知Sphinx所有以下内容 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 指令文件选项称为 <em>name</em> 。</p>
+<p>如果你使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-program"><code class="docutils literal notranslate"><span class="pre">program</span></code></a> ，你必须通过程序名来限定你的 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-option"><code class="docutils literal notranslate"><span class="pre">option</span></code></a> 角色中的引用，所以如果你有以下情况：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">program</span><span class="p">::</span> rm
 
-<span class="o">..</span> <span class="n">option</span><span class="p">::</span> <span class="o">-</span><span class="n">r</span>
+<span class="p">..</span> <span class="ow">option</span><span class="p">::</span> -r
 
-   <span class="n">Work</span> <span class="n">recursively</span><span class="o">.</span>
+   Work recursively.
 
-<span class="o">..</span> <span class="n">program</span><span class="p">::</span> <span class="n">svn</span>
+<span class="p">..</span> <span class="ow">program</span><span class="p">::</span> svn
 
-<span class="o">..</span> <span class="n">option</span><span class="p">::</span> <span class="o">-</span><span class="n">r</span> <span class="n">revision</span>
+<span class="p">..</span> <span class="ow">option</span><span class="p">::</span> -r revision
 
-   <span class="n">Specify</span> <span class="n">the</span> <span class="n">revision</span> <span class="n">to</span> <span class="n">work</span> <span class="n">upon</span><span class="o">.</span>
+   Specify the revision to work upon.
 </pre></div>
 </div>
-<p>然后 <code class="docutils literal notranslate"><span class="pre">:option:</span></code>rm<code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">-r</span> </code> 将引用第一个选项，而 <code class="docutils literal notranslate"><span class="pre">:option:</span></code>svn<code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">-r</span> </code> 将引用第二个选项。</p>
-<p>程序名称可能包含空格(如果你想分别记录 <code class="docutils literal notranslate"><span class="pre">svn&lt;span&gt; add</span></code> 和 <code class="docutils literal notranslate"><span class="pre">svn&lt;span&gt; commit</span></code> 这样的子命令)。</p>
-<p><strong>0.5 新版功能.</strong></p>
-<p>还有一个非常通用的对象描述指令，它不依赖于任何域:</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">describe::``&lt;span&gt; text</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-describe"></a><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">object::``&lt;span&gt; text</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-object"></a>此伪指令生成与域提供的特定格式相同的格式，但不创建索引条目或交叉引用目标。例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">describe</span><span class="p">::</span> <span class="n">PAPER</span>
+<p>然后 <code class="docutils literal notranslate"><span class="pre">:option:`rm</span> <span class="pre">-r`</span></code> 将引用第一个选项，而 <code class="docutils literal notranslate"><span class="pre">:option:`svn</span> <span class="pre">-r`</span></code> 将引用第二个选项。</p>
+<p>如果参数传递的是 <code class="docutils literal notranslate"><span class="pre">None</span></code>，该指令将重置当前的程序名称。</p>
+<p>程序名称可能包含空格（如果你想分别记录 <code class="docutils literal notranslate"><span class="pre">svn</span></code> 和 <code class="docutils literal notranslate"><span class="pre">svn commit</span></code> 这样的子命令）。</p>
+</dd>
+</dl>
+<p>还有一个非常通用的对象描述指令，它不依赖于任何域：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">describe::</span> <span class="pre">text</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">object::</span> <span class="pre">text</span></code></dt><dd><p>此伪指令生成与域提供的特定格式相同的格式，但不创建索引条目或交叉引用目标。例：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">describe</span><span class="p">::</span> PAPER
 
-   <span class="n">You</span> <span class="n">can</span> <span class="nb">set</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">select</span> <span class="n">a</span> <span class="n">paper</span> <span class="n">size</span><span class="o">.</span>
+   You can set this variable to select a paper size.
 </pre></div>
 </div>
+</dd>
+</dl>
 </div>
 <div class="section" id="javascript">
 <span id="rst-domains-javascript"></span><h2>JavaScript域<a class="headerlink" href="#javascript" title="永久链接至标题">¶</a></h2>
 <p>JavaScript域(名称  <strong>js</strong> )提供以下指令:</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:module::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:module"></a>该指令设置后面的对象声明的模块名称。 模块名称用于全局模块索引和交叉引用中。 该指令不会创建如下的对象标题 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:module::</span> <span class="pre">name</span></code></dt><dd><p>该指令设置后面的对象声明的模块名称。 模块名称用于全局模块索引和交叉引用中。 该指令不会创建如下的对象标题 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 。</p>
 <p>默认情况下，此指令将创建一个可链接的实体，并将在全局模块索引中生成一个条目，除非指定了 <code class="docutils literal notranslate"><span class="pre">noindex</span></code> 选项。如果指定了此选项，则该指令将仅更新当前模块名称。</p>
-<p><strong>1.6 新版功能.</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::``&lt;span&gt; name(signature)</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function"></a>描述JavaScript函数或方法。如果要将参数描述为可选，请使用方括号 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">documented</a> 用于Python签名。</p>
-<p>您可以使用字段来提供有关参数及其预期类型的更多详细信息，函数可能抛出的错误以及返回的值:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. js:function:: $.getJSON(href, callback[, errback])
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:function::</span> <span class="pre">name(signature)</span></code></dt><dd><p>描述 JavaScript 函数或方法。如果要将参数描述为可选，请使用方括号 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#signatures">documented</a> 用于 Python 签名。</p>
+<p>您可以使用字段来提供有关参数及其预期类型的更多详细信息，函数可能抛出的错误以及返回的值：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">js:function</span><span class="p">::</span> $.getJSON(href, callback[, errback])
 
-   :param string href: An URI to the location of the resource.
-   :param callback: Gets called with the object.
-   :param errback:
-       Gets called in case the request fails. And a lot of other
-       text so we need multiple lines.
-   :throws SomeError: For whatever reason in that case.
-   :returns: Something.
+   <span class="nc">:param string href:</span> An URI to the location of the resource.
+   <span class="nc">:param callback:</span> Gets called with the object.
+   <span class="nc">:param errback:</span>
+      Gets called in case the request fails. And a lot of other
+      text so we need multiple lines.
+   <span class="nc">:throws SomeError:</span> For whatever reason in that case.
+   <span class="nc">:returns:</span> Something.
 </pre></div>
 </div>
-<p>这表现为:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">$.``getJSON</span></code>( <em>href</em> ,  <em>callback</em> <strong>[</strong>,  <em>errback</em> <strong>]</strong>)<a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#_S_.getJSON"></a>参数* <strong>href</strong> ( <em>string</em> ) – 资源位置的URI。</p>
-<ul class="simple">
-<li><p><strong>callback</strong> – 使用对象调用。</p></li>
-<li><p><strong>errback</strong> – 在请求失败的情况下调用。还有很多其他文字，所以我们需要多行。</p></li>
+<p>这表现为：</p>
+<dl class="js function">
+<dt id="getJSON">
+<span id="_S_.getJSON"></span><code class="sig-prename descclassname"><span class="pre">$.</span></code><code class="sig-name descname"><span class="pre">getJSON</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">href</span></em>, <em class="sig-param"><span class="pre">callback</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">errback</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getJSON" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>href</strong> (<em>string</em>) -- An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> -- Gets called with the object.</p></li>
+<li><p><strong>errback</strong> -- Gets called in case the request fails. And a lot of other
+text so we need multiple lines.</p></li>
 </ul>
-<p>抛出<strong>SomeError</strong> – 无论出于何种原因。</p>
-<p>返回某物.</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::``&lt;span&gt; name(signature)</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:method"></a>该指令是以下的别名 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function"><code class="docutils literal notranslate"><span class="pre">js:function</span></code></a> ，但是它描述了一个作为类对象上的方法实现的函数。</p>
-<p><strong>1.6 新版功能.</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:class"></a>描述创建对象的构造函数。这基本上就像一个函数，但会出现一个 class 前缀:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">js</span><span class="p">:</span><span class="n">class</span><span class="p">::</span> <span class="n">MyAnimal</span><span class="p">(</span><span class="n">name</span><span class="p">[,</span> <span class="n">age</span><span class="p">])</span>
+</dd>
+<dt class="field-even">抛出</dt>
+<dd class="field-even"><p><strong>SomeError</strong> -- For whatever reason in that case.</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>Something.</p>
+</dd>
+</dl>
+</dd></dl>
 
-   <span class="p">:</span><span class="n">param</span> <span class="n">string</span> <span class="n">name</span><span class="p">:</span> <span class="n">The</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">animal</span>
-   <span class="p">:</span><span class="n">param</span> <span class="n">number</span> <span class="n">age</span><span class="p">:</span> <span class="n">an</span> <span class="n">optional</span> <span class="n">age</span> <span class="k">for</span> <span class="n">the</span> <span class="n">animal</span>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:method::</span> <span class="pre">name(signature)</span></code></dt><dd><p>该指令是以下的别名 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:function"><code class="docutils literal notranslate"><span class="pre">js:function</span></code></a> ，但是它描述了一个作为类对象上的方法实现的函数。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:class::</span> <span class="pre">name</span></code></dt><dd><p>描述创建对象的构造函数。这基本上就像一个函数，但会出现一个 <code class="docutils literal notranslate"><span class="pre">class</span></code> 前缀:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">js:class</span><span class="p">::</span> MyAnimal(name[, age])
+
+   <span class="nc">:param string name:</span> The name of the animal
+   <span class="nc">:param number age:</span> an optional age for the animal
 </pre></div>
 </div>
-<p>这表现为:</p>
-<blockquote>
-<div><p>*class <em><code class="docutils literal notranslate"><span class="pre">MyAnimal</span></code>( <em>name</em> <strong>[</strong>,  <em>age</em> <strong>]</strong>)<a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#MyAnimal"></a>参数</em> <strong>name</strong> ( <em>string</em> ) – 动物的名字</p>
-<ul class="simple">
-<li><p><strong>age</strong> ( <em>number</em> ) – 动物的选择年龄</p></li>
+<p>这表现为：</p>
+<dl class="js class">
+<dt id="MyAnimal">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">MyAnimal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">age</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyAnimal" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) -- The name of the animal</p></li>
+<li><p><strong>age</strong> (<em>number</em>) -- an optional age for the animal</p></li>
 </ul>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:data"></a>描述全局变量或常量。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::``&lt;span&gt; object.name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-js:attribute"></a>描述 <em>object</em> 的属性  <em>name</em> 。</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:data::</span> <span class="pre">name</span></code></dt><dd><p>描述全局变量或常量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">js:attribute::</span> <span class="pre">object.name</span></code></dt><dd><p>描述 <em>object</em> 的属性 <em>name</em>。</p>
+</dd>
+</dl>
 <p>提供这些角色是为了引用所描述的对象:</p>
-<p><code class="docutils literal notranslate"><span class="pre">:js:mod:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:mod"></a><code class="docutils literal notranslate"><span class="pre">:js:func:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:func"></a><code class="docutils literal notranslate"><span class="pre">:js:meth:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:meth"></a><code class="docutils literal notranslate"><span class="pre">:js:class:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:class"></a><code class="docutils literal notranslate"><span class="pre">:js:data:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:data"></a><code class="docutils literal notranslate"><span class="pre">:js:attr:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-js:attr"></a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:mod:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:func:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:meth:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:class:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:data:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:js:attr:</span></code></p></li>
+</ul>
 </div>
 <div class="section" id="restructuredtext">
 <span id="rst-domains-rst"></span><h2>reStructuredText 域<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h2>
-<p>reStructuredText域(名称 <strong>rst</strong> )提供以下指令:</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-rst:directive"></a>描述reST指令。 <em>name</em> 可以是单个指令名称或实际指令语法(… 前缀和 :: 后缀)，其参数将以不同方式呈现。例如:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rst</span><span class="p">:</span><span class="n">directive</span><span class="p">::</span> <span class="n">foo</span>
+<p>reStructuredText域（名称 <strong>rst</strong>）提供以下指令:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive::</span> <span class="pre">name</span></code></dt><dd><p>描述 reST 指令。<em>name</em> 可以是单个指令名称或实际指令语法（<code class="docutils literal notranslate"><span class="pre">..</span></code> 前缀和 <code class="docutils literal notranslate"><span class="pre">::</span></code> 后缀），其参数将以不同方式呈现。例如：</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">rst:directive</span><span class="p">::</span> foo
 
-   <span class="n">Foo</span> <span class="n">description</span><span class="o">.</span>
+   Foo description.
 
-<span class="o">..</span> <span class="n">rst</span><span class="p">:</span><span class="n">directive</span><span class="p">::</span> <span class="o">..</span> <span class="n">bar</span><span class="p">::</span> <span class="n">baz</span>
+<span class="p">..</span> <span class="ow">rst:directive</span><span class="p">::</span> .. bar:: baz
 
-   <span class="n">Bar</span> <span class="n">description</span><span class="o">.</span>
+   Bar description.
 </pre></div>
 </div>
-<p>将呈现为:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">foo::</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-foo"></a>Foo描述。</p>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">bar::``&lt;span&gt; baz</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-bar"></a>Bar 描述.</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:role::``&lt;span&gt; name</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-rst:role"></a>描述reST角色。例如:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rst</span><span class="p">:</span><span class="n">role</span><span class="p">::</span> <span class="n">foo</span>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
+<dl class="rst directive">
+<dt id="directive-foo">
+<code class="sig-name descname"><span class="pre">..</span> <span class="pre">foo::</span></code><a class="headerlink" href="#directive-foo" title="永久链接至目标">¶</a></dt>
+<dd><p class="card-text">Foo description.</p>
+</dd></dl>
 
-   <span class="n">Foo</span> <span class="n">description</span><span class="o">.</span>
+<dl class="rst directive">
+<dt id="directive-bar">
+<code class="sig-name descname"><span class="pre">..</span> <span class="pre">bar::</span></code><code class="sig-prename descclassname"> <span class="pre">baz</span></code><a class="headerlink" href="#directive-bar" title="永久链接至目标">¶</a></dt>
+<dd><p class="card-text">Bar description.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rst:directive:option::</span> <span class="pre">name</span></code>:</dt><dd><p>描述 reST 角色。例如：</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">rst:role</span><span class="p">::</span> foo
+
+   Foo description.
 </pre></div>
 </div>
-<p>将呈现为:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">:foo:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-foo"></a>Foo描述。</p>
-</div></blockquote>
-<p>提供这些角色是为了引用所描述的对象:</p>
-<p><code class="docutils literal notranslate"><span class="pre">:rst:dir:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:dir"></a><code class="docutils literal notranslate"><span class="pre">:rst:role:</span></code><a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#role-rst:role"></a></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
+<dl class="rst role">
+<dt id="role-foo">
+<code class="sig-name descname"><span class="pre">:foo:</span></code><a class="headerlink" href="#role-foo" title="永久链接至目标">¶</a></dt>
+<dd><p class="card-text">Foo description.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>选项</strong>
+<code class="docutils literal notranslate"><span class="pre">:type:</span></code> 描述参数 (文本)</p>
+<p>例子：</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">rst:directive</span><span class="p">::</span> toctree
+
+<span class="p">..</span> <span class="ow">rst:directive:option</span><span class="p">::</span> maxdepth
+   <span class="nc">:type:</span> integer or no value
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
+<dl class="rst directive">
+<dt id="directive-toctree">
+<code class="sig-name descname"><span class="pre">..</span> <span class="pre">toctree::</span></code><a class="headerlink" href="#directive-toctree" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="rst directive:option">
+<dt id="directive-option-maxdepth">
+<span id="directive:option--maxdepth"></span><code class="sig-name descname"><span class="pre">:maxdepth:</span></code><em class="property"> <span class="pre">(integer</span> <span class="pre">or</span> <span class="pre">no</span> <span class="pre">value)</span></em><a class="headerlink" href="#directive-option-maxdepth" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<p>提供这些角色是为了引用所描述的对象：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:rst:dir:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:rst:role:</span></code></p></li>
+</ul>
 </div>
 <div class="section" id="rst-domains-math">
 <span id="id29"></span><h2>数学域<a class="headerlink" href="#rst-domains-math" title="永久链接至标题">¶</a></h2>
-<p>数学域(名称  <strong>math</strong> )提供以下角色:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rst</span><span class="p">:</span><span class="n">role</span><span class="p">::</span> <span class="n">math</span><span class="p">:</span><span class="n">numref</span>
-</pre></div>
+<p>数学域（名称  <strong>math</strong>）提供以下角色：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">:math:numref:</span></code></dt><dd><p>作用是通过数学指令的标签来交叉引用数学指令所定义的方程。例子：</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
 </div>
-<blockquote>
-<div><p>交叉引用方程的作用由以下定义 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-math"><code class="docutils literal notranslate"><span class="pre">math</span></code></a> 指令通过其标签定义。例:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">math</span><span class="p">::</span> <span class="n">e</span><span class="o">^</span><span class="p">{</span><span class="n">i</span>\<span class="n">pi</span><span class="p">}</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">0</span>
-   <span class="p">:</span><span class="n">label</span><span class="p">:</span> <span class="n">euler</span>
+<div class="card-body docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span> e^{i\pi} + 1 = 0
+   <span class="nc">:label:</span> euler
 
-<span class="n">Euler</span><span class="s1">&#39;s identity, equation :math:numref:`euler`, was elected one of the</span>
-<span class="n">most</span> <span class="n">beautiful</span> <span class="n">mathematical</span> <span class="n">formulas</span><span class="o">.</span>
+Euler&#39;s identity, equation <span class="na">:math:numref:</span><span class="nv">`euler`</span>, was elected one of the
+most beautiful mathematical formulas.
 </pre></div>
 </div>
-<p><strong>1.8 新版功能.</strong></p>
-</div></blockquote>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight" id="equation-euler">
+<span class="eqno">(1)<a class="headerlink" href="#equation-euler" title="公式的永久链接">¶</a></span>\[e^{i\pi} + 1 = 0\]</div>
+<p class="card-text">Euler's identity, equation <a class="reference internal" href="#equation-euler">(1)</a>, was elected one of the
+most beautiful mathematical formulas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
 </div>
 <div class="section" id="id30">
 <h2>更多域<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
