@@ -1,12 +1,13 @@
-# 域（raw）
+(rst:domains)=
+# 域
 
-最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。不久之后，它作为一个文档工具被提供给所有人，但 Python 模块的文档仍然被深深地嵌入其中--最基本的指令，比如函数，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，人们对将其用于许多不同的目的产生了兴趣。C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。
+最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。不久之后，它作为一个文档工具被提供给所有人，但 Python 模块的文档仍然被深深地嵌入其中--最基本的指令，比如 `function`，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，人们对将其用于许多不同的目的产生了兴趣。C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。
 
 虽然这总是可行的，但现在通过为每个此类目的提供 **domain**，可以更轻松地支持使用不同编程语言的项目文档，甚至是主要 Sphinx 发行版不支持的项目文档。
 
 域是一组标签(reStructuredText [directive](https://www.sphinx.org.cn/glossary.html#term-directive) 和 [role](https://www.sphinx.org.cn/glossary.html#term-role)s)，用于描述和链接 [object](https://www.sphinx.org.cn/glossary.html#term-object)，例如编程语言的元素。域中的指令和角色名称具有诸如 `domain:name` 之类的名称，例如 `py:function`。域还可以提供自定义索引(例如Python模块索引)。
 
-拥有域意味着当一组文档想要引用时，没有命名问题，如 C++ 和 Python 类。这也意味着支持全新语言文档的扩展更容易编写。
+拥有域意味着当一组文档想要引用如 C++ 和 Python 类时，没有命名问题。这也意味着支持全新语言文档的扩展更容易编写。
 
 本节介绍 Sphinx 提供的域名。域 API 也在以下部分中记录 [域 API](https://www.sphinx.org.cn/extdev/domainapi.html#domain-api) 。
 

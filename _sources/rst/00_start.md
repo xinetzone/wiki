@@ -239,7 +239,7 @@ Doctree 元素：[field_list](https://docutils.sourceforge.io/docs/ref/doctree.h
 :fieldname: Field content
 ```
 
-字段列表是字段名到字段体的映射，以 [RFC822](http://www.rfc-editor.org/rfc/rfc822.txt) 头文件为模型。字段名可以由任何字符组成，但字段名内的冒号（":"）在后面有空白时必须进行反斜线 escaped。内联标记在字段名中被解析，但在字段名中使用带有明确角色的[解释文本](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#interpreted-text)时必须注意：角色必须是解释文本的后缀。在进一步处理或转换时，字段名是不分大小写的。字段名与单冒号前缀和后缀一起构成字段标记。字段标记之后是空白和字段主体。字段主体可以包含多个主体元素，相对于字段标记缩进。字段名标记后的第一行决定了字段主体的缩进。比如说：
+字段列表是字段名到字段体的映射，以 [RFC822](http://www.rfc-editor.org/rfc/rfc822.txt) 头文件为模型。字段名可以由任何字符组成，但字段名内的冒号（":"）在后面有空白时必须进行反斜线转义。内联标记在字段名中被解析，但在字段名中使用带有明确角色的[解释文本](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#interpreted-text)时必须注意：角色必须是解释文本的后缀。在进一步处理或转换时，字段名是不分大小写的。字段名与单冒号前缀和后缀一起构成字段标记。字段标记之后是空白和字段主体。字段主体可以包含多个主体元素，相对于字段标记缩进。字段名标记后的第一行决定了字段主体的缩进。比如说：
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -413,6 +413,31 @@ reStructuredText 识别的选项有几种类型：
 - 旧的 GNU 风格的 "加号 "选项由一个加号和一个选项字母组成（"加号 "选项现在已经废弃，不鼓励使用）。
 - DOS/VMS 的选项由一个斜线和一个选项字母或单词组成。
 
+请注意，POSIX 风格和 DOS/VMS 风格的选项都可以被 DOS 或 Windows 软件使用。这些和其他的变化有时会混在一起使用。上面的名称只是为了方便而选择的。
+
+短和长 POSIX 选项的语法是基于 Python 的 [`getopt.py`](http://www.python.org/doc/current/lib/module-getopt.html) 模块所支持的语法，该模块实现了一个与 [GNU libc getopt_long()](http://www.gnu.org/software/libc/manual/html_node/Getopt-Long-Options.html) 函数类似的选项解析器，但有一些限制。有许多不同的选项系统，reStructuredText 的选项列表并不支持所有这些系统。
+
+尽管在命令行上使用长的 POSIX 和 DOS/VMS 选项词时，操作系统或应用程序可能允许截断，但 reStructuredText 的选项列表并不显示或支持任何特殊的语法。应该给出完整的选项词，并在适用的情况下辅以截断的说明。
+
+选项后面可以有一个参数占位符，其作用和语法应该在描述文本中解释。空格或等号可以作为选项和参数占位符之间的分隔符；简短的选项（只有"`-`"或 "`+`"前缀）可以省略分隔符。选项参数可以采取两种形式之一：
+
+- 以字母（`[a-zA-Z]`）开头，随后由字母、数字、下划线和连字符组成（`[a-zA-Z0-9_-]`）。
+- 以开角括号（`<`）开始，以闭角括号（`>`）结束；除开角括号外，内部允许任何字符。
+
+可以列出多个选项 "同义词"，共享一个描述。它们必须用逗号分隔。
+
+选项和描述之间必须至少有两个空格。描述可以包含多个主体元素。选项标记后的第一行决定了描述的缩进。与其他类型的列表一样，在第一个选项列表项之前和最后一个选项列表项之后必须有空行，但在选项条目之间是可选的。
+
+简化语法图：
+
+```rst
++----------------------------+-------------+
+| option [" " argument] "  " | description |
++-------+--------------------+             |
+        | (body elements)+                 |
+        +----------------------------------+
+```
+
 ## Literal 块
 
 通过使用特殊标记 `::` 结束段落来引入文字代码块([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks))。文字块必须缩进(和所有段落一样，用空行与周围的段分开)：
@@ -519,7 +544,7 @@ Python-specific usage examples; begun with ">>>"
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
-:column: col-lg-8 px-2 py-2
+:column: col-lg-12 px-2 py-2
 ---
 :header: w3-pale-blue
 RST
@@ -593,7 +618,7 @@ True   True   True
 
 ### 外部链接
 
-使用  `Link text <https://domain.invalid/>`_ 用于内联网络链接。如果链接文本应该是网络地址，你根本不需要特殊的标记，解析器会在普通文本中找到链接和邮件地址。
+使用  `` `Link text <https://domain.invalid/>`_ `` 用于内联网络链接。如果链接文本应该是网络地址，你根本不需要特殊的标记，解析器会在普通文本中找到链接和邮件地址。
 
 ```{important}
 在链接文本和 URL 的开头 `<` 之间必须有一个空格。
@@ -632,32 +657,33 @@ This is a heading
 
 当然，您可以自由使用自己的标记字符(请参阅 reST 文档)，并使用更深层次的嵌套级别，但请记住，大多数目标格式（HTML，LaTeX）具有有限的支持嵌套深度。
 
-## Roles
+## 角色
 
 角色或 "自定义解释的文本角色"（[ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#roles)）是一个内联的明确标记。它标志着封闭的文本应该以一种特定的方式被解释。Sphinx 用它来提供语义标记和标识符的交叉引用，如在适当的章节中描述。一般的语法是 `` :rolename:`content` ``。
 
 Docutils 支持以下角色：
 
-* [emphasis](https://docutils.sourceforge.io/docs/ref/rst/roles.html#emphasis) – equivalent of `*emphasis*`
-* [strong](https://docutils.sourceforge.io/docs/ref/rst/roles.html#strong) – equivalent of `**strong**`
-* [literal](https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal) – equivalent of ` ``literal`` `
-* [subscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#subscript) – subscript text
-* [superscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#superscript) – superscript text
-* [title-reference](https://docutils.sourceforge.io/docs/ref/rst/roles.html#title-reference) – for titles of books, periodicals, and other materials
+* [emphasis](https://docutils.sourceforge.io/docs/ref/rst/roles.html#emphasis) – 相当于 `*emphasis*`
+* [strong](https://docutils.sourceforge.io/docs/ref/rst/roles.html#strong) – 相当于 `**strong**`
+* [literal](https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal) – 相当于 ` ``literal`` `
+* [subscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#subscript) – 下标文本
+* [superscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#superscript) – 上标文本
+* [title-reference](https://docutils.sourceforge.io/docs/ref/rst/roles.html#title-reference) – 书籍、期刊和其他材料的标题
 
-请参阅 [角色](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html)，了解 Sphinx 添加的角色。
+请参阅 [角色](rst:roles)，了解 Sphinx 添加的角色。
 
 ## 显式标记
 
-“显式标记”([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#explicit-markup-blocks))在 reST 中用于大多数需要特殊处理的构造，例如脚注，特别突出显示的段落，注释和泛型指令。
+“显式标记”（[ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#explicit-markup-blocks)）在 reST 中用于大多数需要特殊处理的构造，例如脚注，特别突出显示的段落，注释和泛型指令。
 
 显式标记块以 ”空行+`..`” 开头，后跟空格，并在相同的缩进级别由下一段终止。（显式标记和普通段落之间需要有一个空行。这可能听起来有点复杂，但是当你写它时它足够直观。）
 
-## Directives
 
-A directive ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives)) is a generic block of explicit markup. Along with roles, it is one of the extension mechanisms of reST, and Sphinx makes heavy use of it.
+### 指令
 
-Docutils supports the following directives:
+指令（[ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives)）是一个通用的显式标记块。和角色一样，它是 reST 的扩展机制之一，Sphinx 也大量使用它。
+
+Docutils 支持以下指令：
 
 * Admonitions: [attention](https://docutils.sourceforge.io/docs/ref/rst/directives.html#attention), [caution](https://docutils.sourceforge.io/docs/ref/rst/directives.html#caution), [danger](https://docutils.sourceforge.io/docs/ref/rst/directives.html#danger), [error](https://docutils.sourceforge.io/docs/ref/rst/directives.html#error), [hint](https://docutils.sourceforge.io/docs/ref/rst/directives.html#hint), [important](https://docutils.sourceforge.io/docs/ref/rst/directives.html#important), [note](https://docutils.sourceforge.io/docs/ref/rst/directives.html#note), [tip](https://docutils.sourceforge.io/docs/ref/rst/directives.html#tip), [warning](https://docutils.sourceforge.io/docs/ref/rst/directives.html#warning) and the generic [admonition](https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions). (Most themes style only “note” and “warning” specially.)
 * Images:
@@ -701,7 +727,7 @@ Docutils supports the following directives:
 不要使用指令 [sectnum](https://docutils.sourceforge.io/docs/ref/rst/directives.html#sectnum), [header](https://docutils.sourceforge.io/docs/ref/rst/directives.html#header) 和 [footer](https://docutils.sourceforge.io/docs/ref/rst/directives.html#footer)。
 ```
 
-Sphinx 添加的指令描述于 [Directives](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html)。
+Sphinx 添加的指令描述于 [](rst:directives)。
 
 基本上，一个指令由名称、参数、选项和内容组成。（请记住这个术语，它将在下一章描述自定义指令时使用））看一下这个例子：
 
@@ -716,6 +742,72 @@ Sphinx 添加的指令描述于 [Directives](https://www.sphinx-doc.org/en/maste
 `function` 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项 `module`（如你所见，选项在紧跟在参数后面的行中给出并由冒号表示）。选项必须缩进到与指令内容相同的级别。
 
 指令内容在空白行后面，并相对于指令开始缩进。
+
+### 脚注
+
+对于脚注([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes))，使用 `[#name]_` 标记脚注位置，并在 “Footnotes” 标题后添加脚注主体在文档底部，像这样：
+
+```rst
+Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
+
+.. rubric:: Footnotes
+
+.. [#f1] Text of the first footnote.
+.. [#f2] Text of the second footnote.
+```
+
+您还可以明确编号脚注(`[1]_`)或使用不带名字的自动编号脚注(`[#]_`)。
+
+### 引文
+
+支持标准 reST 引用([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations))，其附加功能是 “global” ，即所有引用都可以从所有文件引用。像这样使用它们：
+
+```rst
+Lorem ipsum [Ref]_ dolor sit amet.
+
+.. [Ref] Book or article reference, URL or whatever.
+```
+
+引用用法类似于脚注用法，但标签不是数字或以”`#`”开头。
+
+### 替换
+
+reST支持 “substitutions” ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions))，它们是文本中按 `` |name| `` 引用的文本和/或标记。它们被定义为带有显式标记块的脚注，如下：
+
+```rst
+.. |name| replace:: replacement *text*
+```
+
+或者
+
+```rst
+.. |caution| image:: warning.png
+             :alt: Warning!
+```
+
+有关详细信息，请参阅 [reST 参考替换](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions)。
+
+如果要对所有文档使用一些替换，请将它们放入 [rst_prolog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_prolog) 或 [rst_epilog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_epilog) 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 `include` 指令。（确保为 `include` 文件提供与其他源文件不同的文件扩展名，以避免 Sphinx 将其作为独立文档发现。）
+
+Sphinx 定义了一些默认替换，请参阅 [替换](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#default-substitutions)。
+
+### 评论
+
+每个显式标记块都不是有效的标记结构（如上面的脚注），它被视为注释([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#comments))。例如：
+
+```rst
+.. This is a comment.
+```
+
+您可以在评论开始后缩进文本以形成多行注释：
+
+```rst
+..
+   This whole indented block
+   is a comment.
+
+   Still in the comment.
+```
 
 ## 图片
 
@@ -741,72 +833,6 @@ Sphinx 通过允许扩展名的星号来扩展标准的 docutils 行为：
 然后，Sphinx 搜索与提供的模式匹配的所有图像并确定其类型。然后，每个构建器从这些候选者中选择最佳图像。例如，如果给出了文件名 `gnu.*` 并且源树中存在两个文件 `gnu.pdf` 和 `gnu.png`，则 LaTeX 构建器将选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级定义在 [构建器](https://www.sphinx-doc.org/en/master/usage/builders/index.html)。
 
 请注意，图像文件名不应包含空格。
-
-## 脚注
-
-对于脚注([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes))，使用 `[#name]_` 标记脚注位置，并在 “Footnotes” 标题后添加脚注主体在文档底部，像这样：
-
-```rst
-Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
-
-.. rubric:: Footnotes
-
-.. [#f1] Text of the first footnote.
-.. [#f2] Text of the second footnote.
-```
-
-您还可以明确编号脚注(`[1]_`)或使用不带名字的自动编号脚注(`[#]_`)。
-
-## 引文
-
-支持标准 reST 引用([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations))，其附加功能是 “global” ，即所有引用都可以从所有文件引用。像这样使用它们：
-
-```rst
-Lorem ipsum [Ref]_ dolor sit amet.
-
-.. [Ref] Book or article reference, URL or whatever.
-```
-
-引用用法类似于脚注用法，但标签不是数字或以”`#`”开头。
-
-## 替换
-
-reST支持 “substitutions” ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions))，它们是文本中按 `` |name| `` 引用的文本和/或标记。它们被定义为带有显式标记块的脚注，如下：
-
-```rst
-.. |name| replace:: replacement *text*
-```
-
-或者
-
-```rst
-.. |caution| image:: warning.png
-             :alt: Warning!
-```
-
-有关详细信息，请参阅 [reST 参考替换](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions)。
-
-如果要对所有文档使用一些替换，请将它们放入 [rst_prolog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_prolog) 或 [rst_epilog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_epilog) 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 `include` 指令。（确保为 `include` 文件提供与其他源文件不同的文件扩展名，以避免 Sphinx 将其作为独立文档发现。）
-
-Sphinx 定义了一些默认替换，请参阅 [替换](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#default-substitutions)。
-
-## 评论
-
-每个显式标记块都不是有效的标记结构（如上面的脚注），它被视为注释([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#comments))。例如：
-
-```rst
-.. This is a comment.
-```
-
-您可以在评论开始后缩进文本以形成多行注释：
-
-```rst
-..
-   This whole indented block
-   is a comment.
-
-   Still in the comment.
-```
 
 ## HTML Metadata
 
