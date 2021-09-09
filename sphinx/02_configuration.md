@@ -1,4 +1,5 @@
-# 配置(raw)
+(sphinx:configuration)=
+# 配置
 
 参考：[Configuration — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/en/master/usage/configuration.html)
 
@@ -6,14 +7,14 @@
 
 > 一个可选的文件 [docutils.conf](https://docutils.sourceforge.io/docs/user/config.html) 可以被添加到配置目录，以调整 [Docutils](https://docutils.sourceforge.io/) 配置，如果没有被 Sphinx 覆盖或设置的话。
 
-配置文件在构建时作为 Python 代码执行（使用 ``execfile()``，并且当前目录设置为其包含目录），因此可以执行任意复杂的代码。然后，Sphinx 从文件命名空间中读取简单名称作为其配置。
+配置文件在构建时作为 Python 代码执行（使用 `execfile()`，并且当前目录设置为其包含目录），因此可以执行任意复杂的代码。然后，Sphinx 从文件命名空间中读取简单名称作为其配置。
 
 ```{important}
-* 如果没有其他文件规定，值必须是字符串，其默认值是空字符串。
+* 如果没有其他文件规定，值必须是**字符串**，其默认值是空字符串。
 * 术语 “fully-qualified name” 指的是在一个模块中命名可导入的 Python 对象的字符串；例如，FQN "`sphinx.builders.Builder`" 表示 `sphinx.builders` 模块中的 `Builder` 类。
 * 请记住，文档名称使用 `/` 作为路径分隔符，并且不包含文件扩展名。
 * 由于 `conf.py` 是作为一个 Python 文件被读取的，通常的规则适用于编码和 Unicode 支持。
-* 挑选 config 命名空间的内容(以便 Sphinx 可以在配置更改时找到)，因此它可能不包含不可删除的值 - 如果合适，可以使用 `del` 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 `del` 导入。
+* 挑选 config 命名空间的内容（以便 Sphinx 可以在配置更改时找到），因此它可能不包含不可删除的值 - 如果合适，可以使用 `del` 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 `del` 导入。
 * 配置文件中有一个名为 `tags` 的特殊对象。它可用于查询和更改标记（请参阅 [引用基于标签的内容](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tags)）。使用 `tags.has('tag')` 来查询，`tags.add('tag')` 和 `tags.remove('tag')` 来改变。只有通过 `-t` 命令行选项或 `tags.add('tag')` 设置的标签可以使用 `tags.has('tag')` 进行查询。请注意，当前构建器标记在 `conf.py` 中不可用，因为它是在初始化构建器 *之后* 创建的。
 ```
 
@@ -42,49 +43,52 @@
 [`extensions`](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
 :   模块名称为 `extensions` 的字符串列表。这些可以是 Sphinx（名为 `sphinx.ext.*`）或自定义的扩展。
 
-请注意, 如果扩展名位于另一个目录中, 则可以在 `conf` 文件中扩展 [sys.path](https://docs.python.org/3/library/sys.html#sys.path) - 但请确保使用绝对路径。如果您的扩展路径是相对于 [configuration directory](https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory)，请使用 `os.path.abspath()` 之类的：
+    请注意, 如果扩展名位于另一个目录中, 则可以在 `conf` 文件中扩展 [sys.path](https://docs.python.org/3/library/sys.html#sys.path) - 但请确保使用绝对路径。如果您的扩展路径是相对于 [configuration directory](https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory)，请使用 `os.path.abspath()` 之类的：
 
-```python
-import sys, os
+    ```python
+    import sys, os
 
-sys.path.append(os.path.abspath('sphinxext'))
+    sys.path.append(os.path.abspath('sphinxext'))
 
-extensions = ['extname']
-```
+    extensions = ['extname']
+    ```
 
-这样, 你可以从子目录 `sphinxext` 加载一个名为 `extname `的扩展名。
+    这样, 你可以从子目录 `sphinxext` 加载一个名为 `extname `的扩展名。
 
-配置文件本身可以是扩展名；为此, 你只需要提供一个 `setup()` 函数。
+    配置文件本身可以是扩展名；为此, 你只需要提供一个 `setup()` 函数。
 
 `source_suffix`
 :   源文件的文件扩展名。Sphinx 认为有这个后缀的文件是源文件。这个值可以是一个映射文件扩展名和文件类型的字典。比如：
 
-```python
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'restructuredtext',
-    '.md': 'markdown',
-}
-```
+    ```python
+    source_suffix = {
+        '.rst': 'restructuredtext',
+        '.txt': 'restructuredtext',
+        '.md': 'markdown',
+    }
+    ```
 
-默认情况下, Sphinx 仅支持 `'restructuredtext'` 文件类型。 您可以使用源解析器扩展添加新文件类型。请阅读扩展文档以了解扩展程序支持的文件类型。
+    默认情况下, Sphinx 仅支持 `'restructuredtext'` 文件类型。 您可以使用源解析器扩展添加新文件类型。请阅读扩展文档以了解扩展程序支持的文件类型。
 
-该值也可以是文件扩展名列表：然后 Sphinx 会认为它们都映射到 'restructuredtext' 文件类型。
+    该值也可以是文件扩展名列表：然后 Sphinx 会认为它们都映射到 'restructuredtext' 文件类型。
 
-默认是 `{'.rst': 'restructuredtext'}`。
+    默认是 `{'.rst': 'restructuredtext'}`。
 
 `source_encoding`
 :   所有 reST 源文件的编码。推荐的编码和默认值是 `'utf-8-sig'`。
 
 `source_parsers`
 :   如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 `docutils.parsers.Parser` 或 [`sphinx.parsers.Parser`](https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser)。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。
-1.8 版后已移除: 现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
 
-例如:
+    ```{deprecated} 1.8 版后已移除
+    现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
+    ```
 
-```python
-source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
-```
+    例如:
+
+    ```python
+    source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
+    ```
 
 `root_doc`
 :   "根"文档的名称，即包含根 `toctree` 指令的文档。默认为 `"index"`。
@@ -92,16 +96,14 @@ source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
 `exclude_patterns`
 :   查找源文件时应排除的 `glob` 样式模式列表[^1]。 它们与源目录相对于源目录进行匹配, 在所有平台上使用斜杠作为目录分隔符。
 
-```
-示例模式:
+    示例模式:
 
-* `'library/xml.rst'` – 忽略 `library/xml.rst` 文件（替换条目 `unused_docs`）
-* `'library/xml'` – 忽略 `library/xml` 目录
-* `'library/xml*'` – 忽略以 `library/xml` 开头的所有文件和目录
-* `'**/.svn'` – 忽略所有 `.svn` 目录
-```
+    * `'library/xml.rst'` – 忽略 `library/xml.rst` 文件（替换条目 `unused_docs`）
+    * `'library/xml'` – 忽略 `library/xml` 目录
+    * `'library/xml*'` – 忽略以 `library/xml` 开头的所有文件和目录
+    * `'**/.svn'` – 忽略所有 `.svn` 目录
 
-在 [`html_static_path`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path) 和 [`html_extra_path`](https://www.sphinx.org.cn/usage/configuration.html#confval-html_extra_path) 中查找静态文件时也会查询 [`exclude_patterns`](https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns)
+    在 [`html_static_path`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path) 和 [`html_extra_path`](https://www.sphinx.org.cn/usage/configuration.html#confval-html_extra_path) 中查找静态文件时也会查询 [`exclude_patterns`](https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns)
 
 `templates_path`
 :   包含额外模板（或覆盖内置/特定主题模板）的路径列表。相对路径被认为是相对于配置目录的。
@@ -133,7 +135,9 @@ rst_prolog = """
 :   默认[域](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html)的名称。也可以用 `None` 来禁用默认域。默认是 `'py'`。那些在其他域中的对象（无论域名是明确给出的，还是由 `default-domain` 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 "Python function"，而不仅仅是 "function"）。
 
 `default_role`
-:   一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 `like this` 的文本。这可以设置为 `'py:obj'`，使 `filter` 成为 Python 函数 "filter" 的交叉引用。默认是 `None`，它不会重新分配默认的角色。默认的角色总是可以在个别文件中使用标准的 reST 默认角色指令来设置。
+:   一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 `` `like this` `` 的文本。这可以设置为 `'py:obj'`，使 `` `filter` `` 成为 Python 函数 "filter" 的交叉引用。默认是 `None`，它不会重新分配默认的角色。
+
+    默认的角色总是可以在个别文件中使用标准的 reST `default-role` 指令来设置。
 
 `keep_warnings`
 :   如果为真，在构建的文档中保留警告为 "系统消息" 段落。不管这个设置如何，警告总是在 `sphinx-build` 运行时被写入标准错误流。
