@@ -1,5 +1,5 @@
 (sphinx:configuration)=
-# 配置（待更）
+# 配置
 
 参考：[Configuration — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html)
 
@@ -180,3 +180,5 @@
 ```
 
 [^1]: A note on available globbing syntax: you can use the standard shell constructs *, ?, [...] and [!...] with the feature that these all don’t match slashes. A double star ** can be used to match any sequence of characters including slashes.
+
+更多内容请阅读：[配置 — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html)。
