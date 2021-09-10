@@ -1,6 +1,6 @@
 # reStructuredText 快速上手
 
-参考：[reStructuredText Primer — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) & [reStructuredText Markup Specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
+参考：[reStructuredText Primer — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html) & [reStructuredText Markup Specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
 
 reStructuredText 是 Sphinx 使用的默认纯文本标记语言。本节是对 reStructuredText(reST) 概念和语法的简要介绍，旨在为作者提供足够的信息来有效地编写文档。由于 reST 被设计成一种简单的、不显眼的标记语言，这不会花费太多时间。下面介绍 Doctree Body 元素。
 
@@ -86,7 +86,7 @@ Block quotes consist of indented body elements:
 
 在将来的 docutils 版本中可能会取消这些限制。
 
-也可以使用 role 替换或扩展此行内标记。有关更多信息，请参阅 [角色](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-roles-alt)。
+也可以使用 role 替换或扩展此行内标记。有关更多信息，请参阅 [角色](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-roles-alt)。
 
 ## 列表和引用样块
 
@@ -305,7 +305,7 @@ def my_function(my_arg, my_other_arg):
     """
 ```
 
-Sphinx 扩展了标准的 docutils 行为，并拦截了文档开头指定的字段列表。有关更多信息，请参阅 [Field Lists](https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html)。
+Sphinx 扩展了标准的 docutils 行为，并拦截了文档开头指定的字段列表。有关更多信息，请参阅 [Field Lists](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/field-lists.html)。
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -501,11 +501,11 @@ preceding paragraph (right here -->)::
 
 这样，上面例子的第一段中的第二句将呈现为 “The next paragraph is a code sample:”。
 
-可以使用 [highlight](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-highlight) 指令在文档范围内为这些文字块启用代码突出显示，并在项目范围内使用 [highlight_language](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-highlight_language) 配置选项。[code-block](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block) 指令可用于逐块设置突出显示。这些指令将在后面讨论。
+可以使用 [highlight](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-highlight) 指令在文档范围内为这些文字块启用代码突出显示，并在项目范围内使用 [highlight_language](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-highlight_language) 配置选项。[code-block](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-code-block) 指令可用于逐块设置突出显示。这些指令将在后面讨论。
 
 ## Doctest 块
 
-Doctest 块([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks))是剪切并粘贴到文档字符串中的交互式 Python 会话。它们不需要 [literal blocks](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-literal-blocks) 语法。doctest 块必须以空行结束，并且 不 以未使用的 prompt 结束：
+Doctest 块([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks))是剪切并粘贴到文档字符串中的交互式 Python 会话。它们不需要 [literal blocks](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-literal-blocks) 语法。doctest 块必须以空行结束，并且 不 以未使用的 prompt 结束：
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -612,7 +612,7 @@ True   True   True
 ```
 ````
 
-支持另外两种语法: CSV 表 和 List 表。他们使用 显式标记块。有关更多信息，请参阅 [表格](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-directives)。
+支持另外两种语法: CSV 表 和 List 表。他们使用 显式标记块。有关更多信息，请参阅 [表格](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#table-directives)。
 
 ## 超链接
 
@@ -634,7 +634,7 @@ This is a paragraph that contains `a link`_.
 
 ### 内部链接
 
-内部链接是通过 Sphinx 提供的特殊 reST 角色完成的，请参阅特定标记部分 [交叉引用任意位置](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role)。
+内部链接是通过 Sphinx 提供的特殊 reST 角色完成的，请参阅特定标记部分 [交叉引用任意位置](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#ref-role)。
 
 ## 章节
 
@@ -688,7 +688,7 @@ Docutils 支持以下指令：
 * Admonitions: [attention](https://docutils.sourceforge.io/docs/ref/rst/directives.html#attention), [caution](https://docutils.sourceforge.io/docs/ref/rst/directives.html#caution), [danger](https://docutils.sourceforge.io/docs/ref/rst/directives.html#danger), [error](https://docutils.sourceforge.io/docs/ref/rst/directives.html#error), [hint](https://docutils.sourceforge.io/docs/ref/rst/directives.html#hint), [important](https://docutils.sourceforge.io/docs/ref/rst/directives.html#important), [note](https://docutils.sourceforge.io/docs/ref/rst/directives.html#note), [tip](https://docutils.sourceforge.io/docs/ref/rst/directives.html#tip), [warning](https://docutils.sourceforge.io/docs/ref/rst/directives.html#warning) and the generic [admonition](https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions). (Most themes style only “note” and “warning” specially.)
 * Images:
 
-  * [image](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image) (see also [Images](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images) below)
+  * [image](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image) (see also [Images](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#images) below)
   * [figure](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure) (an image with caption and optional legend)
 * Additional body elements:
 
@@ -712,14 +712,14 @@ Docutils 支持以下指令：
   * [class](https://docutils.sourceforge.io/docs/ref/rst/directives.html#class) (assign a class attribute to the next element) [^1]
 * HTML specifics:
 
-  * [meta](https://docutils.sourceforge.io/docs/ref/rst/directives.html#meta) (generation of HTML `<meta>` tags, see also [HTML Metadata](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#html-meta) below)
+  * [meta](https://docutils.sourceforge.io/docs/ref/rst/directives.html#meta) (generation of HTML `<meta>` tags, see also [HTML Metadata](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#html-meta) below)
   * [title](https://docutils.sourceforge.io/docs/ref/rst/directives.html#metadata-document-title) (override document title)
 * Influencing markup:
 
   * [default-role](https://docutils.sourceforge.io/docs/ref/rst/directives.html#default-role) (set a new default role)
   * [role](https://docutils.sourceforge.io/docs/ref/rst/directives.html#role) (create a new role)
 
-  Since these are only per-file, better use Sphinx’s facilities for setting the [`default_role`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role).
+  Since these are only per-file, better use Sphinx’s facilities for setting the [`default_role`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-default_role).
 
 [^1]: When the default domain contains a class directive, this directive will be shadowed. Therefore, Sphinx re-exports it as rst-class.
 
@@ -787,9 +787,9 @@ reST支持 “substitutions” ([ref](https://docutils.sourceforge.io/docs/ref/r
 
 有关详细信息，请参阅 [reST 参考替换](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions)。
 
-如果要对所有文档使用一些替换，请将它们放入 [rst_prolog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_prolog) 或 [rst_epilog](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-rst_epilog) 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 `include` 指令。（确保为 `include` 文件提供与其他源文件不同的文件扩展名，以避免 Sphinx 将其作为独立文档发现。）
+如果要对所有文档使用一些替换，请将它们放入 [rst_prolog](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-rst_prolog) 或 [rst_epilog](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-rst_epilog) 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 `include` 指令。（确保为 `include` 文件提供与其他源文件不同的文件扩展名，以避免 Sphinx 将其作为独立文档发现。）
 
-Sphinx 定义了一些默认替换，请参阅 [替换](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#default-substitutions)。
+Sphinx 定义了一些默认替换，请参阅 [替换](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#default-substitutions)。
 
 ### 评论
 
@@ -830,7 +830,7 @@ Sphinx 通过允许扩展名的星号来扩展标准的 docutils 行为：
 .. image:: gnu.*
 ```
 
-然后，Sphinx 搜索与提供的模式匹配的所有图像并确定其类型。然后，每个构建器从这些候选者中选择最佳图像。例如，如果给出了文件名 `gnu.*` 并且源树中存在两个文件 `gnu.pdf` 和 `gnu.png`，则 LaTeX 构建器将选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级定义在 [构建器](https://www.sphinx-doc.org/en/master/usage/builders/index.html)。
+然后，Sphinx 搜索与提供的模式匹配的所有图像并确定其类型。然后，每个构建器从这些候选者中选择最佳图像。例如，如果给出了文件名 `gnu.*` 并且源树中存在两个文件 `gnu.pdf` 和 `gnu.png`，则 LaTeX 构建器将选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级定义在 [构建器](https://www.sphinx-doc.org/zh_CN/master/usage/builders/index.html)。
 
 请注意，图像文件名不应包含空格。
 
@@ -868,7 +868,7 @@ Sphinx 通过允许扩展名的星号来扩展标准的 docutils 行为：
 
 ## 源编码
 
-由于在 reST 中包含特殊字符如 em 破折号或版权标志的最简单方法是直接把它们写成 Unicode 字符，所以必须指定一个编码。Sphinx 假设源文件默认为 UTF-8 编码；你可以用 [`source_encoding`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-source_encoding) 配置值来改变它。
+由于在 reST 中包含特殊字符如 em 破折号或版权标志的最简单方法是直接把它们写成 Unicode 字符，所以必须指定一个编码。Sphinx 假设源文件默认为 UTF-8 编码；你可以用 [`source_encoding`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-source_encoding) 配置值来改变它。
 
 ## 陷阱
 

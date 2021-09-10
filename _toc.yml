@@ -27,9 +27,6 @@ parts:
   - file: math/index
     sections:
     - glob: math/**
-
-- caption: 叙述
-  chapters:
   - file: sanstyle/index
     sections:
     - glob: sanstyle/**
