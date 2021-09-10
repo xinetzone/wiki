@@ -1,5 +1,5 @@
 (sphinx:configuration)=
-# 配置
+# 配置（待更）
 
 参考：[Configuration — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/en/master/usage/configuration.html)
 

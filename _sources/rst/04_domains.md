@@ -1,5 +1,5 @@
 (rst:domains)=
-# 域
+# 域（raw）
 
 参考：[域](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html) 
 

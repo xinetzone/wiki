@@ -1,6 +1,6 @@
 # 快速上手
 
-{term}`Sphinx` 是一个 **文档生成器工具** ，使创建智能和美丽的文档变得很容易。Sphinx 支持许多科学和学术出版所必需的功能。它也是 Jupyter Book 使用的核心技术之一。Sphinx 使用 {term}`reStructuredText` 作为它的标记语言，它的许多优势来自 reStructuredText 及其解析和翻译套件 {term}`Docutils` 的强大和直接。Sphinx 专注于文档，特别是手写文档，然而，Sphinx 也可以用来生成博客、 homepages 甚至书籍。
+{term}`Sphinx` 是一个**文档创建工具**，它可以方便地创建智能而美观的文档，作者是 Georg Brandl，发布的协议是 BSD 协议。Sphinx 支持许多科学和学术出版所必需的功能。它也是 Jupyter Book 使用的核心技术之一。Sphinx 使用 {term}`reStructuredText` 作为它的标记语言，它的许多优势来自 reStructuredText 及其解析和翻译套件 {term}`Docutils` 的强大和直接。Sphinx 专注于文档，特别是手写文档，然而，Sphinx 也可以用来生成博客、 homepages 甚至书籍。
 
 安装（详细见：[Installing Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)）：
 
@@ -9,10 +9,8 @@ pip install -U Sphinx
 ```
 
 ```{note}
-Sphinx 4.1.2 
+当前 Sphinx 版本 4.1.2。
 ```
-
-关于写文档的一般 "介绍"--为什么和怎么做，也可以参见 Eric Holscher 写的《[写文档](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)》。
 
 ## 设置文档源
 
