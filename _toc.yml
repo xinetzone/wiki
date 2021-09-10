@@ -1,5 +1,5 @@
 format: jb-book
-root: README
+root: index
 parts:
 - caption: 哲学
   chapters:
@@ -33,20 +33,21 @@ parts:
   - file: sanstyle/index
     sections:
     - glob: sanstyle/**
-  - file: rst/index
-    sections:
-    - glob: rst/**
-  - file: sphinx/index
-    sections:
-    - glob: sphinx/**
-  - file: epb/index
-    sections:
-    - glob: epb/**
+    - file: rst/index
+      sections:
+      - glob: rst/**
+    - file: sphinx/index
+      sections:
+      - glob: sphinx/**
+    - file: epb/index
+      sections:
+      - glob: epb/**
 
 - caption: 混沌
   chapters:
   - file: about/index
     sections:
+      - file: README
       - glob: about/**
       - file: CHANGELOG
   - url: https://xinetzone.github.io/sanstyle-book/

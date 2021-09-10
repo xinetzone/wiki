@@ -1,4 +1,4 @@
-# Bibtex 格式说明
+# Bibtex 格式说明（raw）
 
 参考：
 
