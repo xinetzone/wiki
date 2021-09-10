@@ -1,4 +1,4 @@
-# reStructuredText 快速上手
+# 快速上手
 
 参考：[reStructuredText Primer — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html) & [reStructuredText Markup Specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
 

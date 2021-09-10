@@ -3,7 +3,11 @@
 
 参考：[角色](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html)
 
-Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成 `` :rolename:`content` ``。
+Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成：
+
+```rst
+:rolename:`content`
+```
 
 ```{note}
 默认的角色（`` `content` ``）在默认情况下没有特殊含义。你可以自由地将它用于任何你喜欢的地方，例如变量名；使用 [default_role](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-default_role) 配置值将它设置为一个已知的角色 - [`:any:`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-any) 角色用于查找任何东西，或者 [`py:obj`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-py-obj) 角色用于查找 Python 对象，在这方面非常有用。
@@ -93,11 +97,10 @@ Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被�
 * 仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: `` :ref:`Link title <label-name>` ``。
 
 ```{note}
-参考标签必须以下划线开头。引用标签时，必须省略下划线（参见上面的示例）。
+引用标签必须以下划线开头。引用标签时，必须省略下划线（参见上面的示例）。
 ```
 
 使用 [`ref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref "ref role") 被建议通过标准的 reStructuredText 链接到部分（比如 `` `Section title`_ ``），因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。
-
 
 ### 交叉引用文档 `:doc:`
 
@@ -131,7 +134,9 @@ See :download:`this example script <../example.py>`.
 
 ### 按图号交叉引用图像 `:numref:`
 
-**在 1.5 版更改:** `numref` 角色也可以引用段落。并且 `numref` 允许链接文本使用 `{name}`。
+```{versionchanged} 1.5
+`numref` 角色也可以引用段落。并且 `numref` 允许链接文本使用 `{name}`。
+```
 
 链接到指定的图像，表格，代码块和节；使用标准的 reST 标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1”。
 

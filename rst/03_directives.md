@@ -9,6 +9,13 @@
 有关 Docutils 提供的指令的概述, 请参阅 [reStructuredText Primer](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-directives) 。
 ```
 
+```rst
+.. directivename:: argument ...
+   :option: value
+
+   Content of the directive.
+```
+
 ```{panels}
 :container: +full-width
 :column: col-lg-9 px-2 py-2
@@ -191,7 +198,7 @@ reStructuredText 指令
 
 ### 特别的名字
 
-Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称创建文档 - 这将导致问题。
+Sphinx 保留一些文件名供自己使用；您不应该尝试使用这些名称创建文档 - 这将导致问题。
 
 特殊文档名称（以及为它们生成的页面）是：
 
@@ -365,7 +372,9 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ```
    ````
 
-   **0.5 新版功能:** 短式。
+   ```{versionchanged} 0.5
+   短式。
+   ```
 
 `` .. rubric:: title ``
 :  该指令创建一个段落标题, 不用于创建目录节点。
@@ -381,7 +390,9 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    .. centered:: LICENSE AGREEMENT
    ```
 
-   **1.1 版后已移除:** 此演示文稿指令是旧版本的遗留代码。使用 `rst-class` 指令代替并添加适当的样式。
+   ```{deprecated} 1.1
+   此演示文稿指令是旧版本的遗留代码。使用 `rst-class` 指令代替并添加适当的样式。
+   ```
 
 `` .. hlist:: ``
 :  该指令必须包含项目符号列表。它会通过水平分布多个项目或减少项目间距来将其转换为更紧凑的列表, 具体取决于构建器。
@@ -420,8 +431,6 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
       * horizontally
    ```
    ````
-
-   **0.6 新版功能.**
 
 ## 代码高亮
 

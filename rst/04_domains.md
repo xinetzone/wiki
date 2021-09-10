@@ -1,5 +1,5 @@
 (rst:domains)=
-# 域（raw）
+# 域
 
 参考：[域](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html) 
 
@@ -462,7 +462,7 @@ def setnewname(name):
 请注意，您可以组合使用 `~` 和 `.` 前缀: `` :py:meth:`~.TarFile.close` `` 将引用 `tarfile.TarFile.close()` 方法，但可见的链接标题只是 `close()`。
 
 (rst:domains/c)=
-## C 域（待更）
+## C 域
 
 C 域（名称  **c**）适用于 C API 的文档。
 
@@ -521,546 +521,188 @@ C 域（名称  **c**）适用于 C API 的文档。
 
 引用一个 C 语言声明，如上定义。请注意，`c:member`、`c:data`和 `c:var` 是等同的。
 
-(rst:domains/cpp)=
-## C++ 域（待更）
-
-C++ 域（名称  **cpp**）支持记录 C++ 项目。
-
-### 声明实体的指令
-
-以下指令可用。所有声明都可以从可见性声明开始（`public` ，`private` 或 `protected`）：
-
-`.. cpp:class::``<span> class specifier`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:class "永久链接至目标")`.. cpp:struct::``<span> class specifier`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:struct "永久链接至目标")描述一个类/结构，可能带有继承规范，例如:
-
-```
-.. cpp:class:: MyClass : public MyBase, MyOtherBase
-```
-
-区别 [`cpp:class`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:class "cpp:class directive") 和 [`cpp:struct`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:struct "cpp:struct directive") 只是装饰:输出中呈现的前缀，以及索引中显示的说明符。
-
-该类可以直接在嵌套范围内声明，例如:
-
-```
-.. cpp:class:: OuterScope::MyClass : public MyBase, MyOtherBase
-```
-
-可以声明一个类模板:
-
-```
-.. cpp:class:: template<typename T, std::size_t N> std::array
-```
-
-或者换行:
-
-```
-.. cpp:class:: template<typename T, std::size_t N> \
-               std::array
-```
-
-可以声明完整和部分模板特化:
-
-```
-.. cpp:class:: template<> \
-               std::array<bool, 256>
-
-.. cpp:class:: template<typename T> \
-               std::array<T, 42>
-```
-
-**2.0 新版功能:** [`cpp:struct`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:struct "cpp:struct directive") 指令。
-
-`.. cpp:function::``<span> (member) function prototype`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:function "永久链接至目标")描述一个函数或成员函数，例如:
-
-```
-.. cpp:function:: bool myMethod(int arg1, std::string arg2)
-
-   A function with parameters and types.
-
-.. cpp:function:: bool myMethod(int, double)
-
-   A function with unnamed parameters.
-
-.. cpp:function:: const T &MyClass::operator[](std::size_t i) const
-
-   An overload for the indexing operator.
-
-.. cpp:function:: operator bool() const
-
-   A casting operator.
-
-.. cpp:function:: constexpr void foo(std::string &bar[2]) noexcept
-
-   A constexpr function.
-
-.. cpp:function:: MyClass::MyClass(const MyClass&) = default
-
-   A copy constructor with default implementation.
-```
-
-函数模板也可以描述:
-
-```
-.. cpp:function:: template<typename U> \
-                  void print(U &&u)
-```
-
-和函数模板专业化:
-
-```
-.. cpp:function:: template<> \
-                  void print(int i)
-```
-
-`.. cpp:member::``<span> (member) variable declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:member "永久链接至目标")`.. cpp:var::``<span> (member) variable declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:var "永久链接至目标")描述变量或成员变量，例如:
-
-```
-.. cpp:member:: std::string MyClass::myMember
-
-.. cpp:var:: std::string MyClass::myOtherMember[N][M]
-
-.. cpp:member:: int a = 42
-```
-
-变量模板也可以描述:
-
-```
-.. cpp:member:: template<class T> \
-                constexpr T pi = T(3.1415926535897932385)
-```
-
-`.. cpp:type::``<span> typedef declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:type "永久链接至目标")`.. cpp:type::``<span> name``.. cpp:type::``<span> type alias declaration`描述typedef声明中的类型，类型别名声明，或者只是具有未指定类型的类型的名称，例如:
-
-```
-.. cpp:type:: std::vector<int> MyList
-
-   A typedef-like declaration of a type.
-
-.. cpp:type:: MyContainer::const_iterator
-
-   Declaration of a type alias with unspecified type.
-
-.. cpp:type:: MyType = std::unordered_map<int, std::string>
-
-   Declaration of a type alias.
-```
-
-类型别名也可以模板化:
-
-```
-.. cpp:type:: template<typename T> \
-              MyContainer = std::vector<T>
-```
-
-该示例呈现如下。
-
-*typedef *std::vector`<int>` `MyList`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv46MyList "永久链接至目标")
-类型的typedef式声明。
-
-*type *`MyContainer<code class="sig-prename descclassname">::</code>``const_iterator`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N11MyContainer14const_iteratorE "永久链接至目标")
-声明具有未指定类型的类型别名。
-
-*using *`MyType` = std::unordered_map<int, std::string>[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv46MyType "永久链接至目标")
-声明类型别名。
-
-template<typename `T`>
-*using *`MyContainer` = std::vector<[T](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E11MyContainer "MyContainer::T")>[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E11MyContainer "永久链接至目标")
-`.. cpp:enum::``<span> unscoped enum declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:enum "永久链接至目标")`.. cpp:enum-struct::``<span> scoped enum declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:enum-struct "永久链接至目标")`.. cpp:enum-class::``<span> scoped enum declaration`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:enum-class "永久链接至目标")描述(范围)枚举，可能具有指定的基础类型。在unscoped枚举中声明的任何枚举器都将在枚举范围和父范围内声明。例子:
-
-```
-.. cpp:enum:: MyEnum
-
-   An unscoped enum.
-
-.. cpp:enum:: MySpecificEnum : long
-
-   An unscoped enum with specified underlying type.
-
-.. cpp:enum-class:: MyScopedEnum
-
-   A scoped enum.
-
-.. cpp:enum-struct:: protected MyScopedVisibilityEnum : std::underlying_type<MySpecificEnum>::type
-
-   A scoped enum with non-default visibility, and with a specified underlying type.
-```
-
-`.. cpp:enumerator::``<span> name`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:enumerator "永久链接至目标")`.. cpp:enumerator::``<span> name = constant`描述一个枚举器，可选择定义其值，例如:
-
-```
-.. cpp:enumerator:: MyEnum::myEnumerator
-
-.. cpp:enumerator:: MyEnum::myOtherEnumerator = 42
-```
-
-`.. cpp:union::``<span> name`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:union "永久链接至目标")描述一个联盟。
-
-**1.8 新版功能.**
-
-`.. cpp:concept::``<span> template-parameter-list name`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:concept "永久链接至目标")警告
-
-对概念的支持是实验性的。它基于当前的标准草案和概念技术规范。这些功能可能随着它们的发展而变化。
-
-描述一个概念。它必须有1个模板参数列表。名称可以是嵌套名称。例:
-
-```
-.. cpp:concept:: template<typename It> std::Iterator
-
-   Proxy to an element of a notional sequence that can be compared,
-   indirected, or incremented.
-
-   **Notation**
-
-   .. cpp:var:: It r
-
-      An lvalue.
-
-   **Valid Expressions**
-
-   - :cpp:expr:`*r`, when :cpp:expr:`r` is dereferenceable.
-   - :cpp:expr:`++r`, with return type :cpp:expr:`It&`, when :cpp:expr:`r` is incrementable.
-```
-
-这将呈现如下:
-
-template<typename `It`>
-*concept *`std<code class="sig-prename descclassname">::</code>``Iterator`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0ENSt8IteratorE "永久链接至目标")
-代理到可以比较，间接或增量的有理序列的元素。
-
-**Notation**
-
-[It](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0ENSt8IteratorE "std::Iterator::It") `r`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NSt8Iterator1rE "永久链接至目标")
-一个左值。
-
-**Valid Expressions**
-
-* `*<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NSt8Iterator1rE" title="std::Iterator::r">r</a>`, 当 `<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NSt8Iterator1rE" title="std::Iterator::r">r</a>` 是可解除引用的。
-* `++<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NSt8Iterator1rE" title="std::Iterator::r">r</a>` ，返回类型 `<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0ENSt8IteratorE" title="std::Iterator::It">It</a>&`, when `<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NSt8Iterator1rE" title="std::Iterator::r">r</a>` 是可递增的。
-
-**1.5 新版功能.**
-
-#### 选项
-
-一些指令支持选项:
-
-* `:noindex:` , 看到 [基本标记](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#basic-domain-markup).
-* `:tparam-line-spec:` ，用于模板化声明。如果指定，则每个模板参数将在单独的行上呈现。**1.6 新版功能.**
-
 ### 匿名实体
 
-C++ 支持匿名命名空间，类，枚举和联合。为了文档起见，必须给它们一些以 `@` 开头的名字，例如 `@42` 或 `@data` 。这些名称也可用于交叉引用和(类型)表达式，但即使省略也会找到嵌套符号。 `@<span> ...` 名称将始终显示为 **[anonymous]** (可能作为链接)。
+C 语言支持匿名结构、枚举和联合体。为了便于记录，它们必须被赋予一些以 `@` 开头的名称，例如 `@42` 或 `@data`。这些名字也可以在交叉引用中使用，尽管即使省略了嵌套符号也会被发现。`@...` 的名字将总是被呈现为 `[anonymous]`（可能是一个链接）。
 
-例:
+例子：
 
+````{panels}
+:container: w3-card-4 w3-pale-green w3-padding
+:column: col-lg-6 px-2 py-2
+---
+:header: w3-pale-blue
+RST
+^^^
+```rst
+.. c:struct:: Data
+
+   .. c:union:: @data
+
+      .. c:var:: int a
+
+      .. c:var:: double b
+
+Explicit ref: :c:var:`Data.@data.a`. Short-hand ref: :c:var:`Data.a`.
 ```
-.. cpp:class:: Data
+---
+:header: w3-pale-red
+渲染：
+^^^
+```{eval-rst}
+.. c:struct:: Data
 
-   .. cpp:union:: @data
+   .. c:union:: @data
 
-      .. cpp:var:: int a
+      .. c:var:: int a
 
-      .. cpp:var:: double b
+      .. c:var:: double b
 
-Explicit ref: :cpp:var:`Data::@data::a`. Short-hand ref: :cpp:var:`Data::a`.
+Explicit ref: :c:var:`Data.@data.a`. Short-hand ref: :c:var:`Data.a`.
 ```
-
-这将呈现为:
-
-*class *`Data`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv44Data "永久链接至目标")
-*union * **[anonymous]**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_dataE "永久链接至目标")
-int `a`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_data1aE "永久链接至目标")
-double `b`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_data1bE "永久链接至目标")
-显式ref: [`Data::[anonymous]::a`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_data1aE "Data::[anonymous]::a") 。简写ref: [`Data::a`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_data1aE "Data::[anonymous]::a") 。
-
-**1.8 新版功能.**
+````
 
 ### 别名声明
 
-有时，除了主要文档之外，它可能是有用的列表声明，例如，在创建类接口的概要时。以下指令可用于此目的。
+有时，将声明列在主要文档以外的地方可能会有帮助，例如，在创建一个接口的概要时。以下指令可用于此目的。
 
-`.. cpp:alias::``<span> name or function signature`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:alias "永久链接至目标")插入一个或多个别名声明。可以在 [`cpp:any`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:any "cpp:any role") 角色中指定每个实体。如果给出了函数的名称(而不是完整的签名)，那么将列出函数的所有重载。
+`` .. c:alias:: name ``
+:  插入一个或多个别名声明。每个实体都可以像他们在 `c:any` 角色中那样被指定。例如：
 
-例如:
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. c:var:: int data2
+   .. c:function:: int  f2(double k)
 
-```
-.. cpp:alias:: Data::a
-               overload_example::C::f
-```
+   .. c:alias:: data2
+               f2
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. c:var:: int data2
+   .. c:function:: int  f2(double k)
 
-becomes
+   .. c:alias:: data2
+               f2
+   ```
+   ````
 
-int [a](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N4DataUt4_data1aE "Data::[anonymous]::a")
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(double d**)** *const*
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(double d**)**
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(int i**)**
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(**)**
-whereas:
+   **选项**
 
-```
-.. cpp:alias:: void overload_example::C::f(double d) const
-               void overload_example::C::f(double d)
-```
+   `` :maxdepth: int ``
+   :  也可以插入嵌套的声明，但要达到给定的总深度。使用0表示无限的深度，使用1表示只有提到的声明。默认为1。
 
-becomes
-
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(double d**)** *const*
-void [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")(double d**)**
-**2.0 新版功能.**
-
-### 约束模板
-
-警告
-
-对概念的支持是实验性的。它基于当前的标准草案和概念技术规范。这些功能可能随着它们的发展而变化。
-
-注解
-
-Sphinx目前不支持 `requires` 条款。
-
-#### 占位符
-
-声明可以使用概念的名称来引入受约束的模板参数，或者使用关键字“auto”来引入无约束的模板参数:
-
-```
-.. cpp:function:: void f(auto &&arg)
-
-   A function template with a single unconstrained template parameter.
-
-.. cpp:function:: void f(std::Iterator it)
-
-   A function template with a single template parameter, constrained by the
-   Iterator concept.
-```
-
-#### 模板介绍
-
-可以使用 template introduction 而不是模板参数列表声明简单约束函数或类模板:
-
-```
-.. cpp:function:: std::Iterator{It} void advance(It &it)
-
-    A function template with a template parameter constrained to be an
-    Iterator.
-
-.. cpp:class:: std::LessThanComparable{T} MySortedContainer
-
-    A class template with a template parameter constrained to be
-    LessThanComparable.
-```
-
-它们呈现如下。
-
-std::[Iterator](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0ENSt8IteratorE "std::Iterator"){`It`}
-void `advance`([It](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EXNSt8IteratorEI2ItEE7advancevR2It "advance::It") & *it* **)**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EXNSt8IteratorEI2ItEE7advancevR2It "永久链接至目标")
-具有模板参数的函数模板被约束为迭代器。
-
-std::LessThanComparable{`T`}
-*class *`MySortedContainer`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EXNSt18LessThanComparableEI1TEE17MySortedContainer "永久链接至目标")
-具有模板参数的类模板约束为 LessThanComparable。
-
-但请注意，不会对参数兼容性进行检查。例如，`Iterator{A，B，C}` 将被接受作为介绍，即使它不是有效的 C++。
+   `` :noroot: ``
+   :  跳过提到的声明，只渲染嵌套的声明。要求 `maxdepth` 为 0 或至少为 2。
 
 ### 内联表达式和类型
 
-`:cpp:expr:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:expr "永久链接至目标")`:cpp:texpr:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:texpr "永久链接至目标")插入C++ 表达式或键入内联代码 (`cpp:expr`) 或内联文本 (`cpp:texpr`) 。例如:
+`:c:expr:` & `:c:texpr:`
+:  插入一个 C 语言表达式或类型，可以是内联代码（`cpp:expr`）或内联文本（`cpp:texpr`）。比如说：
 
-```
-.. cpp:var:: int a = 42
+   ````{panels}
+   :container: w3-card-4 w3-pale-green w3-padding
+   :column: col-lg-6 px-2 py-2
+   ---
+   :header: w3-pale-blue
+   RST
+   ^^^
+   ```rst
+   .. c:var:: int b = 42
 
-.. cpp:function:: int f(int i)
+   .. c:function:: int f(int i)
 
-An expression: :cpp:expr:`a * f(a)` (or as text: :cpp:texpr:`a * f(a)`).
+   An expression: :c:expr:`b * f(b)` (or as text: :c:texpr:`b * f(b)`).
 
-A type: :cpp:expr:`const MySortedContainer<int>&`
-(or as text :cpp:texpr:`const MySortedContainer<int>&`).
-```
+   A type: :c:expr:`const Data*`
+   (or as text :c:texpr:`const Data*`).
+   ```
+   ---
+   :header: w3-pale-red
+   渲染：
+   ^^^
+   ```{eval-rst}
+   .. c:var:: int b = 42
 
-将呈现如下:
+   .. c:function:: int f(int i)
 
-int `a` = 42[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41a "永久链接至目标")
-int `f`(int  *i* **)**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41fi "永久链接至目标")
-表达式: `<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41a" title="a">a</a><span> *<span> <a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41fi" title="f">f</a>(<a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41a" title="a">a</a>)` (或文本: [a](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41a "a") ***** [f](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41fi "f")([a](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv41a "a")))。
+   An expression: :c:expr:`b * f(b)` (or as text: :c:texpr:`b * f(b)`).
 
-类型: `<em class="property">const</em><span> <a class="reference internal" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EXNSt18LessThanComparableEI1TEE17MySortedContainer" title="MySortedContainer">MySortedContainer</a><int>&` (或作为文本 *const* [MySortedContainer](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EXNSt18LessThanComparableEI1TEE17MySortedContainer "MySortedContainer")`<int>`&)。
+   A type: :c:expr:`const Data*`
+   (or as text :c:texpr:`const Data*`).
+   ```
+   ````
 
-**1.7 新版功能:** [`cpp:expr`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:expr "cpp:expr role") 角色。
+### 名称空间
 
-**1.8 新版功能:** [`cpp:texpr`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:texpr "cpp:texpr role") 角色。
+C 语言本身并不支持命名，但有时在文档中模仿它是很有用的，例如，显示备用的声明。该功能也可用于记录结构体/联合体/枚举体的成员，与它们的父声明分开。
 
-### 命名空间
+当前的作用域可以通过三个命名空间指令来改变。它们管理一个堆栈声明，其中 `c:namespace` 重置了堆栈并改变了一个给定的作用域。
 
-C++ 域中的声明默认放在全局范围内。可以使用三个命名空间指令更改当前范围。他们管理堆栈声明，其中 `cpp:namespace` 重置堆栈并更改给定的范围。“
+`c:namespace-push` 指令将作用域改变为当前作用域的一个给定的内部作用域。
 
-`cpp:namespace-push` 指令将范围更改为当前范围的给定内部范围。
+`c:namespace-pop` 指令撤销最近的 `c:namespace-push` 指令。
 
-`cpp:namespace-pop` 指令撤消了最新的 `cpp:namespace-push` 指令。
+`` .. c:namespace:: scope specification ``
+:  将后续对象的当前作用域改为给定的作用域，并重置命名空间指令栈。注意，嵌套的作用域可以用点来分隔，例如：
 
-`.. cpp:namespace::``<span> scope specification`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:namespace "永久链接至目标")将后续对象的当前范围更改为给定范围，并重置命名空间指令堆栈。请注意，命名空间不需要与C++ 命名空间相对应，但可以以类的名称结尾，例如:
+   ```rst
+   .. c:namespace:: Namespace1.Namespace2.SomeStruct.AnInnerStruct
+   ```
 
-```
-.. cpp:namespace:: Namespace1::Namespace2::SomeClass::AnInnerClass
-```
+   所有后续的对象都将被定义，就像它们的名字在声明时被预加了作用域一样。随后的交叉引用将从当前作用域开始搜索。
 
-将定义所有后续对象，就好像它们的名称是在前置范围的情况下声明的一样。将在当前范围中搜索后续交叉引用。
+   使用 NULL 或 0 作为作用域将改变为全局作用域。
 
-使用 `NULL` ， `0` 或 `nullptr` 作为范围将变为全局范围。
+`` .. c:namespace-push:: scope specification ``
+:  相对于当前的范围，改变范围。例如：
 
-命名空间声明也可以模板化，例如:
+   ```rst
+   .. c:namespace:: A.B
 
-```
-.. cpp:class:: template<typename T> \
-               std::vector
+   .. c:namespace-push:: C.D
+   ```
 
-.. cpp:namespace:: template<typename T> std::vector
+   目前的范围将是 `A.B.C.D`。
 
-.. cpp:function:: std::size_t size() const
-```
+`` .. c:namespace-pop:: ``
+:  撤销之前的 `c:namespace-push` 指令（不只是弹出一个范围）。例如：
 
-将 `size` 声明为类模板 `std<span> ::<span> vector` 的成员函数。等价地，这可以使用:
+   ```rst
+   .. c:namespace:: A.B
 
-```
-.. cpp:class:: template<typename T> \
-               std::vector
+   .. c:namespace-push:: C.D
 
-   .. cpp:function:: std::size_t size() const
-```
+   .. c:namespace-pop::
+   ```
 
-要么:
+   当前的作用域将是 `A.B`（而不是 `A.B.C`）。
 
-```
-.. cpp:class:: template<typename T> \
-               std::vector
-```
+   如果之前没有使用 `c:namespace-push` 指令，而只是使用了 `c:namespace` 指令，那么当前作用域将被重置为全局作用域。也就是说，`` .. c:namespace:: A.B `` 相当于：
 
-`.. cpp:namespace-push::``<span> scope specification`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:namespace-push "永久链接至目标")相对于当前范围更改范围。例如，之后:
+   ```rst
+   .. c:namespace:: NULL
 
-```
-.. cpp:namespace:: A::B
-
-.. cpp:namespace-push:: C::D
-```
-
-the current scope will be `A::B::C::D` .
-
-**1.4 新版功能.**
-
-`.. cpp:namespace-pop::`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-cpp:namespace-pop "永久链接至目标")撤消之前的 `cpp:namespace-push` 指令(*not* 只是弹出作用域)。例如，之后:
-
-```
-.. cpp:namespace:: A::B
-
-.. cpp:namespace-push:: C::D
-
-.. cpp:namespace-pop::
-```
-
-当前范围将是 `A<span> ::<span> B` (*not* `A::B::C`)。
-
-如果没有使用先前的 `cpp:namespace-push` 指令，但只使用 `cpp:namespace` 指令，则当前作用域将重置为全局作用域。也就是说，`cpp:namespace<span> ::<span> A<span> ::<span> B` 相当于:
-
-```
-.. cpp:namespace:: nullptr
-
-.. cpp:namespace-push:: A::B
-```
-
-**1.4 新版功能.**
-
-### 信息字段列表
-
-C++ 指令支持以下信息字段(另请参阅 [信息字段列表](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#info-field-lists) ):
-
-* param, parameter, arg, argument: 参数说明。
-* tparam:模板参数的描述。
-* returns, return:返回值的描述。
-* throws, throw, exception: 可能抛出的异常的描述。
-
-### 交叉引用
-
-这些角色链接到给定的声明类型:
-
-`:cpp:any:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:any "永久链接至目标")`:cpp:class:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:class "永久链接至目标")`:cpp:struct:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:struct "永久链接至目标")`:cpp:func:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:func "永久链接至目标")`:cpp:member:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:member "永久链接至目标")`:cpp:var:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:var "永久链接至目标")`:cpp:type:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:type "永久链接至目标")`:cpp:concept:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:concept "永久链接至目标")`:cpp:enum:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:enum "永久链接至目标")`:cpp:enumerator:`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:enumerator "永久链接至目标")按名称引用C++ 声明(有关详细信息，请参见下文)。名称必须相对于链接的位置适当限定。
-
-**2.0 新版功能:** [`cpp:struct`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:struct "cpp:struct role") 角色充当 [`cpp:class`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:class "cpp:class role") 角色的别名。
-
-有关模板参数/参数的引用的注释
-
-这些角色遵循Sphinx [交叉引用语法](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#xref-syntax) 规则。这意味着在引用(部分)模板专业化时必须小心，例如:如果链接看起来像这样: `:cpp:class:`MyClass`<span>` `<int>``` 。这被解释为 `int` 的链接，标题为 `MyClass` 。在这种情况下，用反斜杠转义开口尖括号，如下所示: `:cpp:class:`MyClass\<int>`` 。
-
-当不需要自定义标题时，使用内联表达式的角色可能很有用 [`cpp:expr`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:expr "cpp:expr role") 和 [`cpp:texpr`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:texpr "cpp:texpr role") ，其中尖括号不需要转义。
-
-#### 没有模板参数和模板参数的声明
-
-对于链接到非模板化声明，名称必须是嵌套名称，例如 `f` 或 `MyClass::f` 。
-
-#### 重载(成员)函数
-
-当仅使用其名称引用(成员)函数时，引用将指向任意匹配的重载。 [`cpp:any`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:any "cpp:any role") 和 [`cpp:func`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:func "cpp:func role") roles 使用另一种格式，它只是一个完整的函数声明。这将解决完全匹配的重载。例如，请考虑以下类声明:
-
-*class *`C`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1CE "永久链接至目标")
-void `f`(double  *d* **)** *const*[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "永久链接至目标")
-void `f`(double  *d* **)**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEd "永久链接至目标")
-void `f`(int  *i* **)**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEi "永久链接至目标")
-void `f`(**)**[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEv "永久链接至目标")
-引用使用 [`cpp:func`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-cpp:func "cpp:func role") 角色:
-
-* 任意重载: `C::f` ， [`C::f()`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")
-* Also arbitrary overload: `C::f()`, [`C::f()`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "overload_example::C::f")
-* 特定的重载: `void<span> C::f()` ， [`void<span> C::f()`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEv "void C::f()")
-* 具体超负荷: `void<span> C::f(int)`, [`void<span> C::f(int)`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEi "void C::f(int)")
-* 具体超负荷: `void<span> C::f(double)` , [`void<span> C::f(double)`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4N16overload_example1C1fEd "void C::f(double)")
-* 具体超负荷: `void<span> C::f(double)<span> const` , [`void<span> C::f(double)<span> const`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4NK16overload_example1C1fEd "void C::f(double) const")
-
-请注意 [`add_function_parentheses`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-add_function_parentheses) 配置变量不会影响特定的重载引用。
-
-#### 模板化的声明
-
-假设以下声明。
-
-*class *`Wrapper`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv47Wrapper "永久链接至目标")
-template<typename `TOuter`>
-*class *`Outer`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5OuterE "永久链接至目标")
-template<typename `TInner`>
-*class *`Inner`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5Outer5InnerE "永久链接至目标")
-通常，引用必须包含模板参数声明和限定名称前缀的模板参数。例如:
-
-* `template\<typename<span> TOuter><span> Wrapper::Outer` ([`template<typename<span> TOuter><span> Wrapper::Outer`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5OuterE "Wrapper::Outer"))
-* `template\<typename<span> TOuter><span> template\<typename<span> TInner><span> Wrapper::Outer<TOuter>::Inner` (`template<typename<span> TOuter><span> template<typename<span> TInner><span> Wrapper::Outer<TOuter>::Inner`)
-
-目前，如果模板参数标识符是相等的字符串，则查找仅成功。也就是说，`template\<typename<span> UOuter><span> Wrapper<span> ::<span> Outer` 将不起作用。
-
-作为简写表示法，如果省略模板参数列表，则查找将采用主模板或非模板，而不是部分模板特化。这意味着以下参考资料也有效:“
-
-* `Wrapper::Outer` ([`Wrapper::Outer`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5OuterE "Wrapper::Outer"))
-* `Wrapper::Outer::Inner` ([`Wrapper::Outer::Inner`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5Outer5InnerE "Wrapper::Outer::Inner"))
-* `template\<typename<span> TInner><span> Wrapper::Outer::Inner` ([`template<typename<span> TInner><span> Wrapper::Outer::Inner`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN7Wrapper5Outer5InnerE "Wrapper::Outer::Inner"))
-
-#### (完整)模板专业化
-
-假设以下声明。
-
-template<typename `TOuter`>
-*class *`Outer`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E5Outer "永久链接至目标")
-template<typename `TInner`>
-*class *`Inner`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN5Outer5InnerE "永久链接至目标")
-template<>
-*class *`Outer<int>`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IE5OuterIiE "永久链接至目标")
-template<typename `TInner`>
-*class *`Inner`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0EN5OuterIiE5InnerE "永久链接至目标")
-template<>
-*class *`Inner<bool>`[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IEN5OuterIiE5InnerIbEE "永久链接至目标")
-通常，引用必须包含每个模板参数列表的模板参数列表。 因此可以参考上面的完整专业化 `template\<><span> Outer\<int>` ([`template<><span> Outer<int>`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IE5OuterIiE "Outer<int>")) and `template\<><span> template\<><span> Outer\<int>::Inner\<bool>` ([`template<><span> template<><span> Outer<int>::Inner<bool>`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IEN5OuterIiE5InnerIbEE "Outer<int>::Inner<bool>")). 作为简写，可以省略空模板参数列表，例如， `Outer\<int>` ([`Outer<int>`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IE5OuterIiE "Outer<int>")) and `Outer\<int>::Inner\<bool>` ([`Outer<int>::Inner<bool>`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4IEN5OuterIiE5InnerIbEE "Outer<int>::Inner<bool>")).
-
-#### 部分模板专业化
-
-假设以下声明。
-
-template<typename `T`>
-*class *`Outer`<[T](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E5OuterIP1TE "Outer<T *>::T") *>[](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E5OuterIP1TE "永久链接至目标")
-对部分特化的引用必须始终包含模板参数列表，例如 `template\<typename<span> T><span> Outer\<T<span> *>` ([`template<typename<span> T><span> Outer<<span> T<span> *>`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#_CPPv4I0E5OuterIP1TE "Outer<T *>"))。目前，只有当模板参数标识符是相等的字符串时，查找才会成功。“
+   .. c:namespace-push:: A.B
+   ```
 
 ### 配置变量
 
-请参阅 [C++ 域选项](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#cpp-config) 。
+参考：[Options for the C domain](https://www.sphinx-doc.org/en/master/usage/configuration.html#c-config)。
+
+(rst:domains/cpp)=
+## C++ 域
+
+参见：[CPP Domains — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#cpp-domain)。
 
 ## 标准域
 

@@ -154,13 +154,13 @@ The :py:func:`enumerate` function can be used for ...
 
 之前我们提到过 `conf.py` 文件控制着 Sphinx 处理文档的方式。在该文件中，它作为 Python 源文件执行，您可以分配配置值。对于高级用户：由于它是由 Sphinx 执行的，因此您可以在其中执行非平凡的任务，例如扩展 `sys.path` 或导入模块以找出您正在记录的版本。
 
-您可能想要更改的配置值已经放入 `conf.py` 由 `sphinx-quickstart` 并且最初被注释掉（使用标准的 Python 语法: `#` 注释其余的这条线）。要更改默认值，请删除哈希符号并修改该值。要自定义一个不会自动添加的配置值 `sphinx-quickstart`，只需添加一个额外的赋值。
+您可能想要更改的配置值已经放入 `conf.py` 由 `sphinx-quickstart` 并且最初被注释掉（使用标准的 Python 语法: `#` 注释其余的这行）。要更改默认值，请删除 `#` 并修改该值。要自定义一个不会自动添加的配置值 `sphinx-quickstart`，只需添加一个额外的赋值。
 
 请记住，该文件使用 Python 语法来表示字符串，数字，列表等。默认情况下，文件以 UTF-8 保存，如第一行中的编码声明所示。如果在任何字符串值中使用非 ASCII 字符，则需要使用 Python Unicode 字符串（如 `project =u'Exposé'`）。
 
 有关所有可用配置值的文档，请参阅 [配置](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html)。
 
-## Autodoc
+## 使用 `autodoc` 自动生成文档
 
 在记录 Python 代码时，通常会在文档字符串中的源文件中放入大量文档。Sphinx 支持在模块中包含 docstrings extension（扩展名是为 Sphinx 项目提供附加功能的 Python 模块），称为 `autodoc`。
 
@@ -189,7 +189,7 @@ The :py:func:`enumerate` function can be used for ...
 
 有关 `autodoc` 功能的完整描述，请参阅 [`sphinx.ext.autodoc`](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc)。
 
-## Intersphinx
+## 跨 Sphinx 引用
 
 包括 [Python documentation](https://docs.python.org/3) 在内的许多 Sphinx 文档都在 Internet 上发布。如果要从文档中链接到此类文档，可以使用 [`sphinx.ext.intersphinx`](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx)。
 

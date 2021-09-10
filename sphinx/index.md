@@ -21,7 +21,7 @@ Sphinx 特点如下：
 - **三方扩展**：[用户贡献](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html#third-party-extensions)的几十个扩展；大多数都可以从 PyPI 安装
 
 ```{admonition} 参考：
-- 官方文档：[Sphinx documentation](https://www.sphinx-doc.org/zh_CN/master/)
+- 官方文档：[Sphinx documentation](https://www.sphinx-doc.org/en/master/)
 - 官方中文文档：[Sphinx 中文](https://www.sphinx-doc.org/zh_CN/master/)
 - [sphinx-doc/sphinx-doc-translations](https://github.com/sphinx-doc/sphinx-doc-translations)：一个在 Read The Docs 网站上提供多版本和多语言的 Sphinx 官方文档的项目。
 ```
