@@ -1,12 +1,16 @@
 (rst:roles)=
 # 角色
 
-参考：[角色](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html)
+参考：[角色](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html)
 
-Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成 `` :rolename:`content` ``。
+Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被写成：
+
+```rst
+:rolename:`content`
+```
 
 ```{note}
-默认的角色（`` `content` ``）在默认情况下没有特殊含义。你可以自由地将它用于任何你喜欢的地方，例如变量名；使用 [default_role](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role) 配置值将它设置为一个已知的角色 - [`:any:`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any) 角色用于查找任何东西，或者 [`py:obj`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-py-obj) 角色用于查找 Python 对象，在这方面非常有用。
+默认的角色（`` `content` ``）在默认情况下没有特殊含义。你可以自由地将它用于任何你喜欢的地方，例如变量名；使用 [default_role](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-default_role) 配置值将它设置为一个已知的角色 - [`:any:`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-any) 角色用于查找任何东西，或者 [`py:obj`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-py-obj) 角色用于查找 Python 对象，在这方面非常有用。
 ```
 
 请参阅 [域](rst:domains)，了解域添加的角色。
@@ -27,15 +31,15 @@ Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被�
 
 这个便利角色试图尽力为其引用文本找到有效的目标。
 
-* 首先，它尝试引用的标准交叉引用目标 [`doc`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-doc "doc role")，[`ref`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref "ref role") 或 [`option`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-option "option role") 。
+* 首先，它尝试引用的标准交叉引用目标 [`doc`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-doc "doc role")，[`ref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref "ref role") 或 [`option`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-option "option role") 。
 
-  还会搜索通过扩展添加到标准域的自定义对象(请参阅 [`Sphinx.add_object_type()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_object_type "sphinx.application.Sphinx.add_object_type") )。
+  还会搜索通过扩展添加到标准域的自定义对象(请参阅 [`Sphinx.add_object_type()`](https://www.sphinx-doc.org/zh_CN/master/extdev/appapi.html#sphinx.application.Sphinx.add_object_type "sphinx.application.Sphinx.add_object_type") )。
 
 * 然后，它在所有加载的域中查找对象(目标)。这取决于匹配必须具体的域。例如，在 Python 域中，`` :any:`Builder` `` 的引用将匹配 `sphinx.builders.Builder` 类。
 
 如果未找到任何目标或多个目标，则会发出警告。对于多个目标，您可以将 “any” 更改为特定角色。
 
-这个角色是设置 [`default_role`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-default_role) 的良好候选者。如果你这样做，你就可以在没有大量标记开销的情况下编写交叉引用。例如，在这个 Python 函数文档中：
+这个角色是设置 [`default_role`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-default_role) 的良好候选者。如果你这样做，你就可以在没有大量标记开销的情况下编写交叉引用。例如，在这个 Python 函数文档中：
 
 ```rst
 .. function:: install()
@@ -46,17 +50,17 @@ Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被�
 
 可以引用词汇表术语(通常是 `` :term:`handler` `` )，一个 Python 模块（通常是 `` :py:mod:`signal` `` 或 `` :mod:`signal` ``）和一节（通常是 `` :ref:`about-signals` ``）。
 
-[`any`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any "any role") 角色也与 [`intersphinx`](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx "sphinx.ext.intersphinx: Link to other Sphinx documentation.") 扩展一起使用：当没有找到本地交叉引用时，也会搜索所有对象类型的 intersphinx 库存。
+[`any`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-any "any role") 角色也与 [`intersphinx`](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx "sphinx.ext.intersphinx: Link to other Sphinx documentation.") 扩展一起使用：当没有找到本地交叉引用时，也会搜索所有对象类型的 intersphinx 库存。
 
 ### 交叉引用对象
 
 这些角色用各自的域描述：
 
-* [Python](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#python-roles)
-* [C](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#c-roles)
-* [C++](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cpp-roles)
-* [JavaScript](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#js-roles)
-* [ReST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#rst-roles)
+* [Python](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#python-roles)
+* [C](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#c-roles)
+* [C++](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#cpp-roles)
+* [JavaScript](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#js-roles)
+* [ReST](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#rst-roles)
 
 ### 交叉引用任意位置 `:ref:`
 
@@ -93,11 +97,10 @@ Sphinx 使用解释型文本角色将语义标记插入到文档中。它们被�
 * 仍未引用未放置在节标题之前的标签，但您必须使用以下语法为链接指定显式标题: `` :ref:`Link title <label-name>` ``。
 
 ```{note}
-参考标签必须以下划线开头。引用标签时，必须省略下划线（参见上面的示例）。
+引用标签必须以下划线开头。引用标签时，必须省略下划线（参见上面的示例）。
 ```
 
-使用 [`ref`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref "ref role") 被建议通过标准的 reStructuredText 链接到部分（比如 `` `Section title`_ ``），因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。
-
+使用 [`ref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref "ref role") 被建议通过标准的 reStructuredText 链接到部分（比如 `` `Section title`_ ``），因为它适用于文件，当部分标题发生变化时，如果不正确则会发出警告，并且适用于所有支持交叉引用的构建器。
 
 ### 交叉引用文档 `:doc:`
 
@@ -131,31 +134,33 @@ See :download:`this example script <../example.py>`.
 
 ### 按图号交叉引用图像 `:numref:`
 
-**在 1.5 版更改:** `numref` 角色也可以引用段落。并且 `numref` 允许链接文本使用 `{name}`。
+```{versionchanged} 1.5
+`numref` 角色也可以引用段落。并且 `numref` 允许链接文本使用 `{name}`。
+```
 
 链接到指定的图像，表格，代码块和节；使用标准的 reST 标签。当您使用此角色时，它将插入带有链接文本的图形的引用，其图形编号如 “图1.1”。
 
-如果给出了明确的链接文本（像往常一样: `` :numref:`Image of Sphinx (Fig. %s) <my-figure>` ``），链接标题将作为引用的标题。作为占位符，`%s` 和 {number} 被图形标题替换为图形编号和 `{name}`。如果没有给出明确的链接文本，则 [`numfig_format`](https://www.sphinx.org.cn/usage/configuration.html#confval-numfig_format) 设置用作后备默认值。
+如果给出了明确的链接文本（像往常一样: `` :numref:`Image of Sphinx (Fig. %s) <my-figure>` ``），链接标题将作为引用的标题。作为占位符，`%s` 和 {number} 被图形标题替换为图形编号和 `{name}`。如果没有给出明确的链接文本，则 [`numfig_format`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-numfig_format) 设置用作后备默认值。
 
-如果 [`numfig`](https://www.sphinx.org.cn/usage/configuration.html#confval-numfig) 是 `False`，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。
+如果 [`numfig`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-numfig) 是 `False`，数字没有编号，所以这个角色不插入引用，而是插入标签或链接文本。
 
 ### 交叉引用其他感兴趣的项目
 
 以下角色可能会创建交叉引用，但不引用对象:
 
 `:envvar:`
-: 环境变量。生成索引条目。还会生成匹配的链接 [`envvar`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-envvar "envvar directive") 指令（如果存在）。
+: 环境变量。生成索引条目。还会生成匹配的链接 [`envvar`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-envvar "envvar directive") 指令（如果存在）。
 
 `:token:`
-: 语法标记的名称（用于创建 [`productionlist`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist "productionlist directive") 指令之间的链接）。
+: 语法标记的名称（用于创建 [`productionlist`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-productionlist "productionlist directive") 指令之间的链接）。
 
 `:keyword:`
 : Python 中关键字的名称。这将创建一个指向具有该名称的引用标签的链接（如果存在）。
 
 `:option:`
-: 可执行程序的命令行选项。这会生成一个指向 [`option`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#directive-option "option directive") 指令的链接（如果存在）。
+: 可执行程序的命令行选项。这会生成一个指向 [`option`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-option "option directive") 指令的链接（如果存在）。
 
-以下角色在以下内容中创建对术语的交叉引用 [glossary](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#glossary-directive) :
+以下角色在以下内容中创建对术语的交叉引用 [glossary](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#glossary-directive) :
 
 `:term:`
 : 参考词汇表中的术语。使用 `glossary` 指令创建词汇表，该指令包含带有术语和定义的定义列表。它不必与 `term` 标记在同一个文件中，例如Python文档在 `glossary.rst` 文件中有一个全局词汇表。
@@ -172,7 +177,7 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 ```
 
 `:eq:`
-: 同样 [`math:numref`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#role-math-numref) 类似。
+: 同样 [`math:numref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#role-math-numref) 类似。
 
 ## 其他语义标记
 
@@ -215,7 +220,7 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 : **make** 变量的名称。
 
 `:manpage:`
-: 对 Unix 手册页的引用，包括例如 `` :manpage:`ls(1)` ``。如果 [`manpages_url`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-manpages_url) 已定义，则创建指向外部站点的超链接，呈现联机帮助页。
+: 对 Unix 手册页的引用，包括例如 `` :manpage:`ls(1)` ``。如果 [`manpages_url`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-manpages_url) 已定义，则创建指向外部站点的超链接，呈现联机帮助页。
 
 `:menuselection:`
 : 应使用 `menuselection` 角色标记菜单选择。这用于标记完整的菜单选择序列，包括选择子菜单和选择特定操作，或此类序列的任何子序列。各个选择的名称应该用 `-->` 分隔。
@@ -228,7 +233,7 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 
   当包括一些包含一些尾随指示符的选择时，例如某些操作系统用来指示命令打开对话框的省略号时，应从选择名称中省略该指示符。
 
-  `menuselection` 也支持＆符快捷键，如：[`guilabel`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-guilabel "guilabel role")。
+  `menuselection` 也支持＆符快捷键，如：[`guilabel`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-guilabel "guilabel role")。
 
 `:mimetype:`
 : MIME 类型的名称，或 MIME 类型的组件（主要或次要部分，单独使用）。
@@ -243,7 +248,7 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 : 正则表达式。Quotes 不应包括在内。
 
 `:samp:`
-: 一段文字文本，例如代码。在内容中，您可以使用花括号来表示 “变量” 部分，如 [`file`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-file "file role") 。例如，在 `` :samp:`print 1+{variable}` `` 中，将强调部分 `variable`。
+: 一段文字文本，例如代码。在内容中，您可以使用花括号来表示 “变量” 部分，如 [`file`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-file "file role") 。例如，在 `` :samp:`print 1+{variable}` `` 中，将强调部分 `variable`。
 
   如果您不需要 “variable 部分” 指示，请使用标准的 ` ``code``  ` 。
 
@@ -251,7 +256,7 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
   允许用反斜杠转义花括号
   ```
 
-还有一个 [`index`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#role-index "index role") 角色来生成索引条目。
+还有一个 [`index`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#role-index "index role") 角色来生成索引条目。
 
 以下角色生成外部链接：
 
@@ -268,10 +273,10 @@ Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
 文档系统提供默认定义的三个替换。它们在构建配置文件中设置。
 
 `|release|`
-: 替换为项目发布的文档引用。这意味着是完整版本字符串，包括 alpha/beta/release 候选标签，例如 `2.5.2b3`。设置 [`release`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-release) 。
+: 替换为项目发布的文档引用。这意味着是完整版本字符串，包括 alpha/beta/release 候选标签，例如 `2.5.2b3`。设置 [`release`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-release) 。
 
 `|version|`
-: 由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如 ``2.5``，即使是版本 `2.5.1`。设置方 [`version`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-version) 。
+: 由文档引用的项目版本替换。这仅仅包括主要和次要版本部分，例如 ``2.5``，即使是版本 `2.5.1`。设置方 [`version`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-version) 。
 
 `|today|`
-: 替换为今天的日期（读取文档的日期）或构建配置文件中设置的日期。通常格式为 `April 14, 2007`。设置方式 [`today_fmt`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today_fmt) 和 [`today`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-today)。
+: 替换为今天的日期（读取文档的日期）或构建配置文件中设置的日期。通常格式为 `April 14, 2007`。设置方式 [`today_fmt`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-today_fmt) 和 [`today`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-today)。

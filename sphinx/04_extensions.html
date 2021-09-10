@@ -224,7 +224,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   学科
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../math/index.html">
    数学
@@ -242,13 +242,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  叙述
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../sanstyle/index.html">
    上善若水
@@ -281,7 +274,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/00_start.html">
-       reStructuredText 快速上手
+       快速上手
       </a>
      </li>
      <li class="toctree-l3">
@@ -301,7 +294,7 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/04_domains.html">
-       域（raw）
+       域
       </a>
      </li>
     </ul>
@@ -703,98 +696,98 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="sphinx-extensions">
 <span id="id1"></span><h1>扩展<a class="headerlink" href="#sphinx-extensions" title="永久链接至标题">¶</a></h1>
-<p>参考：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/index.html">Extensions — Sphinx documentation (sphinx-doc.org)</a></p>
+<p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html">Extensions — Sphinx documentation (sphinx-doc.org)</a></p>
 <p>由于许多项目在文件中需要特殊功能，Sphinx 允许在构建过程中添加 “扩展”，每个扩展都可以修改文件处理的几乎任何方面。</p>
-<p>本章描述了与 Sphinx 捆绑的扩展。关于编写你自己的扩展的 API 文档，请参考为 <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/index.html#dev-extensions">Sphinx 开发扩展</a>。</p>
+<p>本章描述了与 Sphinx 捆绑的扩展。关于编写你自己的扩展的 API 文档，请参考为 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/extdev/index.html#dev-extensions">Sphinx 开发扩展</a>。</p>
 <div class="section" id="id2">
 <h2>内置扩展<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>这些扩展是内置的，可以通过扩展配置值中各自的条目激活：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – Include documentation from docstrings</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> – Include documentation from docstrings</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#directives">Directives</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration">Configuration</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#docstring-preprocessing">Docstring preprocessing</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#skipping-members">Skipping members</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#directives">Directives</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#docstring-preprocessing">Docstring preprocessing</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#skipping-members">Skipping members</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosectionlabel.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosectionlabel</span></code> – Allow reference sections using its title</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosectionlabel.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosummary.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code> – Generate autodoc summaries</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#sphinx-autogen-generate-autodoc-stub-pages"><strong>sphinx-autogen</strong> – generate autodoc stub pages</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#generating-stub-pages-automatically">Generating stub pages automatically</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#customizing-templates">Customizing templates</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosummary.html#sphinx-autogen-generate-autodoc-stub-pages"><strong>sphinx-autogen</strong> – generate autodoc stub pages</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosummary.html#generating-stub-pages-automatically">Generating stub pages automatically</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autosummary.html#customizing-templates">Customizing templates</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/coverage.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/coverage.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.coverage</span></code> – Collect doc coverage stats</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/doctest.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.doctest</span></code> – Test snippets in the documentation</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html#directives">Directives</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html#skipping-tests-conditionally">Skipping tests conditionally</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/doctest.html#directives">Directives</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/doctest.html#skipping-tests-conditionally">Skipping tests conditionally</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/doctest.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/duration.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.duration</span></code> – Measure durations of Sphinx processing</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – Markup to shorten external links</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – Publish HTML docs in GitHub Pages</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – Add Graphviz graphs</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/ifconfig.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.ifconfig</span></code> – Include content based on configuration</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – A reference image converter using Imagemagick</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/duration.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.duration</span></code> – Measure durations of Sphinx processing</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/extlinks.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.extlinks</span></code> – Markup to shorten external links</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/githubpages.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.githubpages</span></code> – Publish HTML docs in GitHub Pages</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/graphviz.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.graphviz</span></code> – Add Graphviz graphs</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/ifconfig.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.ifconfig</span></code> – Include content based on configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/imgconverter.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.imgconverter</span></code> – A reference image converter using Imagemagick</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/imgconverter.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/imgconverter.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – Include inheritance diagrams</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/inheritance.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.inheritance_diagram</span></code> – Include inheritance diagrams</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html#examples">Examples</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/inheritance.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/inheritance.html#examples">Examples</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/inheritance.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code> – Link to other projects’ documentation</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration">Configuration</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file">Showing all links of an Intersphinx mapping file</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#using-intersphinx-with-inventory-file-under-basic-authorization">Using Intersphinx with inventory file under Basic Authorization</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file">Showing all links of an Intersphinx mapping file</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#using-intersphinx-with-inventory-file-under-basic-authorization">Using Intersphinx with inventory file under Basic Authorization</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/linkcode.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – Add external links to source code</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/linkcode.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.linkcode</span></code> – Add external links to source code</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/linkcode.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/linkcode.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html">Math support for HTML outputs in Sphinx</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/math.html">Math support for HTML outputs in Sphinx</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.imgmath"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.imgmath</span></code> – Render math as images</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code> – Render math via JavaScript</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.jsmath"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.jsmath</span></code> – Render math via JavaScript</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/math.html#module-sphinx.ext.imgmath"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.imgmath</span></code> – Render math as images</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/math.html#module-sphinx.ext.mathjax"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code> – Render math via JavaScript</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/math.html#module-sphinx.ext.jsmath"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.jsmath</span></code> – Render math via JavaScript</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – Support for NumPy and Google style docstrings</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> – Support for NumPy and Google style docstrings</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#overview">Overview</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#overview">Overview</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#getting-started">Getting Started</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#id1">Docstrings</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#docstring-sections">Docstring Sections</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#google-vs-numpy">Google vs NumPy</a></p></li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#type-annotations">Type Annotations</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#getting-started">Getting Started</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#id1">Docstrings</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#docstring-sections">Docstring Sections</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#google-vs-numpy">Google vs NumPy</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#type-annotations">Type Annotations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/napoleon.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/todo.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – Support for todo items</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/todo.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> – Support for todo items</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/todo.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – Add links to highlighted source code</a></p>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/viewcode.html"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> – Add links to highlighted source code</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html#configuration">Configuration</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/viewcode.html#configuration">Configuration</a></p></li>
 </ul>
 </li>
 </ul>

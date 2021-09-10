@@ -224,7 +224,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   学科
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../math/index.html">
    数学
@@ -242,13 +242,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  叙述
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../sanstyle/index.html">
    上善若水
@@ -281,7 +274,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/00_start.html">
-       reStructuredText 快速上手
+       快速上手
       </a>
      </li>
      <li class="toctree-l3">
@@ -301,7 +294,7 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/04_domains.html">
-       域（raw）
+       域
       </a>
      </li>
     </ul>
@@ -707,12 +700,18 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#autodoc">
-   Autodoc
+   使用
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     autodoc
+    </span>
+   </code>
+   自动生成文档
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#intersphinx">
-   Intersphinx
+  <a class="reference internal nav-link" href="#sphinx">
+   跨 Sphinx 引用
   </a>
  </li>
 </ul>
@@ -729,7 +728,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <div class="section" id="id1">
 <h1>快速上手<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p><a class="reference internal" href="index.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 是一个<strong>文档创建工具</strong>，它可以方便地创建智能而美观的文档，作者是 Georg Brandl，发布的协议是 BSD 协议。Sphinx 支持许多科学和学术出版所必需的功能。它也是 Jupyter Book 使用的核心技术之一。Sphinx 使用 <a class="reference internal" href="../rst/index.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> 作为它的标记语言，它的许多优势来自 reStructuredText 及其解析和翻译套件 <a class="reference internal" href="../python/00_docutils.html#term-Docutils"><span class="xref std std-term">Docutils</span></a> 的强大和直接。Sphinx 专注于文档，特别是手写文档，然而，Sphinx 也可以用来生成博客、 homepages 甚至书籍。</p>
-<p>安装（详细见：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Installing Sphinx</a>）：</p>
+<p>安装（详细见：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/installation.html">Installing Sphinx</a>）：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -U Sphinx
 </pre></div>
 </div>
@@ -739,7 +738,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="id2">
 <h2>设置文档源<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>Sphinx 的纯文本文件源集合的根目录被称为<strong>源目录</strong>（<a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-source-directory">source directory</a>）。该目录还包含 Sphinx 配置文件 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>，您可以在其中配置 Sphinx 如何读取源代码和构建文档的所有方面。<a class="footnote-reference brackets" href="#id9" id="id3">1</a></p>
+<p>Sphinx 的纯文本文件源集合的根目录被称为<strong>源目录</strong>（<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-source-directory">source directory</a>）。该目录还包含 Sphinx 配置文件 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>，您可以在其中配置 Sphinx 如何读取源代码和构建文档的所有方面。<a class="footnote-reference brackets" href="#id9" id="id3">1</a></p>
 <p>Sphinx 附带一个名为 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 的脚本，它设置一个源目录并创建一个默认的 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>，其中包含几个问题中最有用的配置值。要使用它，请运行：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart
 </pre></div>
@@ -750,7 +749,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>定义文档结构<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 生成的源目录结构如下：</p>
 <p><img alt="img" src="../_images/1630898095902.png" /></p>
-<p>它创建了一个带有 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 的源目录和一个根文件 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>。<a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-root-document">根文件</a>的主要功能是作为一个欢迎页，并包含 “目录树”（或 <code class="docutils literal notranslate"><span class="pre">toctree</span></code>）的根。这是 Sphinx 为 reStructuredText 增加的主要内容之一，这是一种将多个文件连接到单一层次的文件的方法。</p>
+<p>它创建了一个带有 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 的源目录和一个根文件 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>。<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-root-document">根文件</a>的主要功能是作为一个欢迎页，并包含 “目录树”（或 <code class="docutils literal notranslate"><span class="pre">toctree</span></code>）的根。这是 Sphinx 为 reStructuredText 增加的主要内容之一，这是一种将多个文件连接到单一层次的文件的方法。</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令最初是空的，看起来像这样：</p>
@@ -767,33 +766,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="cp">   ...</span>
 </pre></div>
 </div>
-<p>这正是这个文档的 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 的样子。要包括的文件是以<a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-document-name">文件名</a>的形式给出的，简而言之，这意味着你省去了文件名的扩展名，用正斜杠（<code class="docutils literal notranslate"><span class="pre">/</span></code>）作为目录分隔符。</p>
+<p>这正是这个文档的 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 的样子。要包括的文件是以<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-document-name">文件名</a>的形式给出的，简而言之，这意味着你省去了文件名的扩展名，用正斜杠（<code class="docutils literal notranslate"><span class="pre">/</span></code>）作为目录分隔符。</p>
 </div>
-<div class="sphinx-bs container pb-4 full-width docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-9 px-2 py-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header w3-light-blue docutils">
-<p class="card-text">reStructuredText 指令</p>
-</div>
-<div class="card-body docutils">
-<p class="card-text"><code class="docutils literal notranslate"><span class="pre">toctree</span></code> 是一个 reStructuredText 指令，一个非常通用的标记。指令可以有<strong>参数</strong>（arguments）、<strong>选项</strong>（options）和<strong>内容</strong>（content）。</p>
-<ul class="simple">
-<li><p class="card-text"><strong>参数</strong>在指令名称后面的双冒号后直接给出。每个指令决定它是否可以有参数，以及参数的数量。</p></li>
-<li><p class="card-text"><strong>选项</strong>是在参数之后以 “字段列表” 的形式给出的。<code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> 就是 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令的这样一个选项。</p></li>
-<li><p class="card-text"><strong>内容</strong>跟在选项或参数之后的空行。每个指令都决定是否允许内容，以及如何处理它。</p></li>
-</ul>
-<p class="card-text">指令的一个常见问题是，<strong>内容</strong>的第一行必须缩进到与<strong>选项</strong>相同的水平。</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>你现在可以在 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 中创建你列出的文件并添加内容，他们的章节标题将被插入（最大深度级别）在 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令放置的地方。另外，Sphinx 现在知道了你的文件的顺序和层次结构（它们本身可能包含 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令，这意味着你可以在必要时创建深度嵌套的层次结构）。</p>
+<p><code class="docutils literal notranslate"><span class="pre">toctree</span></code> 是一个 reStructuredText 指令，一个非常通用的标记。你现在可以在 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 中创建你列出的文件并添加内容，他们的章节标题将被插入（最大深度级别）在 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令放置的地方。另外，Sphinx 现在知道了你的文件的顺序和层次结构（它们本身可能包含 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令，这意味着你可以在必要时创建深度嵌套的层次结构）。</p>
 </div>
 <div class="section" id="id5">
 <h2>添加内容<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p>在 Sphinx 源文件中，您可以使用标准的大多数功能 reStructuredText 。Sphinx 还增加了一些功能。例如，您可以使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 角色以可移植的方式（适用于所有输出类型）添加跨文件引用。</p>
+<p>在 Sphinx 源文件中，您可以使用标准的大多数功能 reStructuredText 。Sphinx 还增加了一些功能。例如，您可以使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 角色以可移植的方式（适用于所有输出类型）添加跨文件引用。</p>
 </div>
 <div class="section" id="id6">
 <h2>运行构建<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
@@ -803,7 +782,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>其中 <code class="docutils literal notranslate"><span class="pre">sourcedir</span></code> 是源目录，<code class="docutils literal notranslate"><span class="pre">builddir</span></code> 是您要在其中放置构建文档的目录。<code class="docutils literal notranslate"><span class="pre">-b</span></code> 选项选择一个构建器；在这个例子中，<code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> 将构建 HTML 文件。</p>
 <p><img alt="" src="../_images/1630904290239.png" /></p>
-<p>请参考 <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html"><code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 手册</a>，了解 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 支持的所有选项。</p>
+<p>请参考 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/man/sphinx-build.html"><code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 手册</a>，了解 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 支持的所有选项。</p>
 <p>但是，<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 脚本创建了一个 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 和一个 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code>，它让你的生活更加轻松。这些可以通过运行 <code class="docutils literal notranslate"><span class="pre">make</span></code> 来执行，其中包含构建器的名称。例如：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ make html
 </pre></div>
@@ -813,20 +792,41 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>文档对象<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>Sphinx 的主要目标之一是方便记录任何<strong>域</strong>中的对象（在一个非常普遍的意义上）。一个<strong>域</strong>是属于一起的对象类型的集合，有完整的标记来创建和引用这些对象的描述。</p>
 <p>最突出的域是 Python 域。例如，要记录 Python 的内置函数 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code>，可以将其添加到您的一个源文件中。</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> enumerate(sequence[, start=0])
 
    Return an iterator that yields tuples of an index and an item of the
    <span class="ge">*sequence*</span>. (And so on.)
 </pre></div>
 </div>
-<p>渲染的效果是：</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
 <dl class="py function">
 <dt id="enumerate">
 <code class="sig-name descname"><span class="pre">enumerate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sequence</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">start=0</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#enumerate" title="永久链接至目标">¶</a></dt>
-<dd><p>Return an iterator that yields tuples of an index and an item of the
+<dd><p class="card-text">Return an iterator that yields tuples of an index and an item of the
 <em>sequence</em>. (And so on.)</p>
 </dd></dl>
 
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>该指令的参数是你描述的对象的 signature ，内容是它的文档。可以给出多个签名，每个签名都在其自己的行中。</p>
 <p>Python 域也恰好是默认域，因此您不需要在标记前加上域名。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> enumerate(sequence[, start=0])
@@ -834,30 +834,51 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="cp">   ...</span>
 </pre></div>
 </div>
-<p>如果保留默认域的默认设置，则执行相同的工作。还有几个用于记录其他类型的Python对象的指令，例如 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 或 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a>。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> 文档的链接。</p>
+<p>如果保留默认域的默认设置，则执行相同的工作。还有几个用于记录其他类型的Python对象的指令，例如 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 或 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a>。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> 文档的链接。</p>
+<div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-blue docutils">
+<p class="card-text">RST</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The <span class="na">:py:func:</span><span class="nv">`enumerate`</span> function can be used for ...
 </pre></div>
 </div>
-<p>这是证据：</p>
-<p>The <a class="reference internal" href="#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> function can be used for ...</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 px-2 py-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header w3-pale-red docutils">
+<p class="card-text">渲染：</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">The <a class="reference internal" href="#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> function can be used for ...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>同样，如果 Python 域是默认域，则可以省略 <code class="docutils literal notranslate"><span class="pre">py:</span></code>。哪个文件包含 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> 的实际文档并不重要；Sphinx 会找到它并创建一个链接。</p>
 <p>每个域都有特殊的规则来表示签名的外观，并使格式化的输出看起来很漂亮，或添加特定的功能，如链接到参数类型，例如在 C/C ++ 域中。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>请参阅 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/domains.html">域</a>，了解所有可用域及其指令/角色。</p>
+<p>请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html">域</a>，了解所有可用域及其指令/角色。</p>
 </div>
 </div>
 <div class="section" id="id8">
 <h2>基本配置<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>之前我们提到过 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 文件控制着 Sphinx 处理文档的方式。在该文件中，它作为 Python 源文件执行，您可以分配配置值。对于高级用户：由于它是由 Sphinx 执行的，因此您可以在其中执行非平凡的任务，例如扩展 <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> 或导入模块以找出您正在记录的版本。</p>
-<p>您可能想要更改的配置值已经放入 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 由 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 并且最初被注释掉（使用标准的 Python 语法: <code class="docutils literal notranslate"><span class="pre">#</span></code> 注释其余的这条线）。要更改默认值，请删除哈希符号并修改该值。要自定义一个不会自动添加的配置值 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>，只需添加一个额外的赋值。</p>
+<p>您可能想要更改的配置值已经放入 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 由 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 并且最初被注释掉（使用标准的 Python 语法: <code class="docutils literal notranslate"><span class="pre">#</span></code> 注释其余的这行）。要更改默认值，请删除 <code class="docutils literal notranslate"><span class="pre">#</span></code> 并修改该值。要自定义一个不会自动添加的配置值 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>，只需添加一个额外的赋值。</p>
 <p>请记住，该文件使用 Python 语法来表示字符串，数字，列表等。默认情况下，文件以 UTF-8 保存，如第一行中的编码声明所示。如果在任何字符串值中使用非 ASCII 字符，则需要使用 Python Unicode 字符串（如 <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">=u'Exposé'</span></code>）。</p>
-<p>有关所有可用配置值的文档，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">配置</a>。</p>
+<p>有关所有可用配置值的文档，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html">配置</a>。</p>
 </div>
 <div class="section" id="autodoc">
-<h2>Autodoc<a class="headerlink" href="#autodoc" title="永久链接至标题">¶</a></h2>
+<h2>使用 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 自动生成文档<a class="headerlink" href="#autodoc" title="永久链接至标题">¶</a></h2>
 <p>在记录 Python 代码时，通常会在文档字符串中的源文件中放入大量文档。Sphinx 支持在模块中包含 docstrings extension（扩展名是为 Sphinx 项目提供附加功能的 Python 模块），称为 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>。</p>
-<p>为了使用 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>，你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中激活它，方法是将字符串 <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.autodoc'</span></code> 放入分配给 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置的列表中值。然后，您可以使用其他一些指令。</p>
+<p>为了使用 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>，你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中激活它，方法是将字符串 <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.autodoc'</span></code> 放入分配给 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置的列表中值。然后，您可以使用其他一些指令。</p>
 <p>例如，要记录函数 <code class="docutils literal notranslate"><span class="pre">io.open()</span></code> ，从源文件中读取它的签名和 docstring，你就写下：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autofunction</span><span class="p">::</span> io.open
 </pre></div>
@@ -873,22 +894,22 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 导入 要记录的模块。如果任何模块对导入有副作用，那么当运行 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 时，这些将由 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 执行。</p>
 <p>如果您记录脚本（而不是库模块），请确保它们的主例程受 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">=='__</span> <span class="pre">main</span> <span class="pre">__'</span></code> 条件的保护。</p>
 </div>
-<p>有关 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 功能的完整描述，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a>。</p>
+<p>有关 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 功能的完整描述，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></a>。</p>
 </div>
-<div class="section" id="intersphinx">
-<h2>Intersphinx<a class="headerlink" href="#intersphinx" title="永久链接至标题">¶</a></h2>
-<p>包括 <a class="reference external" href="https://docs.python.org/3">Python documentation</a> 在内的许多 Sphinx 文档都在 Internet 上发布。如果要从文档中链接到此类文档，可以使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a>。</p>
-<p>为了使用 intersphinx，你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中激活它，方法是将字符串 <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.intersphinx'</span></code> 放入 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a> 列表并设置 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#confval-intersphinx_mapping"><code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> 配置值。</p>
+<div class="section" id="sphinx">
+<h2>跨 Sphinx 引用<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
+<p>包括 <a class="reference external" href="https://docs.python.org/3">Python documentation</a> 在内的许多 Sphinx 文档都在 Internet 上发布。如果要从文档中链接到此类文档，可以使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a>。</p>
+<p>为了使用 intersphinx，你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中激活它，方法是将字符串 <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.intersphinx'</span></code> 放入 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a> 列表并设置 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#confval-intersphinx_mapping"><code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a> 配置值。</p>
 <p>例如，要链接到 Python 库手册中的 <code class="docutils literal notranslate"><span class="pre">io.open()</span></code>，你需要设置 <code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code> 如下：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>intersphinx_mapping = {&#39;python&#39;: (&#39;https://docs.python.org/3&#39;, None)}
 </pre></div>
 </div>
 <p>现在，您可以编写一个交叉引用，如 <code class="docutils literal notranslate"><span class="pre">:py:func:`io.open`</span> </code>。任何在当前文档集中没有匹配目标的交叉引用都将在配置的文档集中查找 <code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code>（这需要访问URL才能下载有效目标列表）。Intersphinx 也适用于其他一些 domain 的角色，包括 <code class="docutils literal notranslate"><span class="pre">:ref:</span></code>，但它不适用于 <code class="docutils literal notranslate"><span class="pre">:doc:</span></code>，因为那是非域角色。</p>
-<p>有关 intersphinx 功能的完整描述，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a>。</p>
+<p>有关 intersphinx 功能的完整描述，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx"><code class="docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a>。</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
-<dd><p>这是普通的布局。但是，<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 也可以存在于另一个目录中 <a class="reference external" href="https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory">configuration directory</a>。 有关更多信息，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html">sphinx-build</a> 手册页 。</p>
+<dd><p>这是普通的布局。但是，<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 也可以存在于另一个目录中 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-configuration-directory">configuration directory</a>。 有关更多信息，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/man/sphinx-build.html">sphinx-build</a> 手册页 。</p>
 </dd>
 </dl>
 </div>

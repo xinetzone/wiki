@@ -17,11 +17,13 @@ Sphinx 特点如下：
 - **层次结构**：文档树的简单定义，自动链接到兄弟结点、父结点和子结点
 - **自动目录**：通用目录和模块目录（index）
 - **代码处理**：使用 [Pygments](https://pygments.org/) 自动高亮显示
-- 内置[**扩展**](https://www.sphinx-doc.org/en/master/usage/extensions/index.html#builtin-sphinx-extensions)：例如自动测试代码片段和包含适当格式的文档字符串
-- **三方扩展**：[用户贡献](https://www.sphinx-doc.org/en/master/usage/extensions/index.html#third-party-extensions)的几十个扩展；大多数都可以从 PyPI 安装
+- 内置[**扩展**](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html#builtin-sphinx-extensions)：例如自动测试代码片段和包含适当格式的文档字符串
+- **三方扩展**：[用户贡献](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html#third-party-extensions)的几十个扩展；大多数都可以从 PyPI 安装
 
 ```{admonition} 参考：
 - 官方文档：[Sphinx documentation](https://www.sphinx-doc.org/en/master/)
 - 官方中文文档：[Sphinx 中文](https://www.sphinx-doc.org/zh_CN/master/)
 - [sphinx-doc/sphinx-doc-translations](https://github.com/sphinx-doc/sphinx-doc-translations)：一个在 Read The Docs 网站上提供多版本和多语言的 Sphinx 官方文档的项目。
 ```
+
+也可以 [对 sphinx 进行贡献](https://www.sphinx-doc.org/zh_CN/master/internals/contributing.html)。

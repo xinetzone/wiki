@@ -1,9 +1,9 @@
 (sphinx:configuration)=
 # 配置（待更）
 
-参考：[Configuration — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/en/master/usage/configuration.html)
+参考：[Configuration — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html)
 
-[配置目录](https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory) 必须包含一个名为 `conf.py` 的文件。这个文件（包含 Python 代码）被称为 "构建配置文件"，包含（几乎）所有自定义 Sphinx 输入和输出行为所需的配置。
+[配置目录](https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-configuration-directory) 必须包含一个名为 `conf.py` 的文件。这个文件（包含 Python 代码）被称为 "构建配置文件"，包含（几乎）所有自定义 Sphinx 输入和输出行为所需的配置。
 
 > 一个可选的文件 [docutils.conf](https://docutils.sourceforge.io/docs/user/config.html) 可以被添加到配置目录，以调整 [Docutils](https://docutils.sourceforge.io/) 配置，如果没有被 Sphinx 覆盖或设置的话。
 
@@ -15,7 +15,7 @@
 * 请记住，文档名称使用 `/` 作为路径分隔符，并且不包含文件扩展名。
 * 由于 `conf.py` 是作为一个 Python 文件被读取的，通常的规则适用于编码和 Unicode 支持。
 * 挑选 config 命名空间的内容（以便 Sphinx 可以在配置更改时找到），因此它可能不包含不可删除的值 - 如果合适，可以使用 `del` 从命名空间中删除它们。模块会自动删除，因此您在使用后无需 `del` 导入。
-* 配置文件中有一个名为 `tags` 的特殊对象。它可用于查询和更改标记（请参阅 [引用基于标签的内容](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tags)）。使用 `tags.has('tag')` 来查询，`tags.add('tag')` 和 `tags.remove('tag')` 来改变。只有通过 `-t` 命令行选项或 `tags.add('tag')` 设置的标签可以使用 `tags.has('tag')` 进行查询。请注意，当前构建器标记在 `conf.py` 中不可用，因为它是在初始化构建器 *之后* 创建的。
+* 配置文件中有一个名为 `tags` 的特殊对象。它可用于查询和更改标记（请参阅 [引用基于标签的内容](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#tags)）。使用 `tags.has('tag')` 来查询，`tags.add('tag')` 和 `tags.remove('tag')` 来改变。只有通过 `-t` 命令行选项或 `tags.add('tag')` 设置的标签可以使用 `tags.has('tag')` 进行查询。请注意，当前构建器标记在 `conf.py` 中不可用，因为它是在初始化构建器 *之后* 创建的。
 ```
 
 ## 项目信息
@@ -40,10 +40,10 @@
 
 ## 一般配置项
 
-[`extensions`](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
+[`extensions`](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html)
 :   模块名称为 `extensions` 的字符串列表。这些可以是 Sphinx（名为 `sphinx.ext.*`）或自定义的扩展。
 
-    请注意, 如果扩展名位于另一个目录中, 则可以在 `conf` 文件中扩展 [sys.path](https://docs.python.org/3/library/sys.html#sys.path) - 但请确保使用绝对路径。如果您的扩展路径是相对于 [configuration directory](https://www.sphinx-doc.org/en/master/glossary.html#term-configuration-directory)，请使用 `os.path.abspath()` 之类的：
+    请注意, 如果扩展名位于另一个目录中, 则可以在 `conf` 文件中扩展 [sys.path](https://docs.python.org/3/library/sys.html#sys.path) - 但请确保使用绝对路径。如果您的扩展路径是相对于 [configuration directory](https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-configuration-directory)，请使用 `os.path.abspath()` 之类的：
 
     ```python
     import sys, os
@@ -78,7 +78,7 @@
 :   所有 reST 源文件的编码。推荐的编码和默认值是 `'utf-8-sig'`。
 
 `source_parsers`
-:   如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 `docutils.parsers.Parser` 或 [`sphinx.parsers.Parser`](https://www.sphinx-doc.org/en/master/extdev/parserapi.html#sphinx.parsers.Parser)。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。
+:   如果给出, 则不同源的解析器类字典就足够了。键是后缀, 值可以是类或字符串, 给出解析器类的完全限定名称。解析器类可以是 `docutils.parsers.Parser` 或 [`sphinx.parsers.Parser`](https://www.sphinx-doc.org/zh_CN/master/extdev/parserapi.html#sphinx.parsers.Parser)。具有不在字典中的后缀的文件将使用默认的 reStructuredText 解析器进行解析。
 
     例如:
 
@@ -87,7 +87,7 @@
     ```
 
     ```{deprecated} 1.8 版后已移除
-    现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
+    现在, Sphinx 提供了一个 API [`Sphinx.add_source_parser()`](https://www.sphinx-doc.org/zh_CN/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser) 来注册一个源解析器。请改用它。
     ```
 
 `root_doc`
@@ -103,13 +103,13 @@
     * `'library/xml*'` – 忽略以 `library/xml` 开头的所有文件和目录
     * `'**/.svn'` – 忽略所有 `.svn` 目录
 
-    在 [`html_static_path`](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path) 和 [`html_extra_path`](https://www.sphinx.org.cn/usage/configuration.html#confval-html_extra_path) 中查找静态文件时也会查询 [`exclude_patterns`](https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns)
+    在 [`html_static_path`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-html_static_path) 和 [`html_extra_path`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-html_extra_path) 中查找静态文件时也会查询 [`exclude_patterns`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-exclude_patterns)
 
 `templates_path`
 :   包含额外模板（或覆盖内置/特定主题模板）的路径列表。相对路径被认为是相对于配置目录的。
 
 `template_bridge`
-:   一个字符串，包含一个可调用（或简单的类）的全称，它返回一个 [TemplateBridge](https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.TemplateBridge) 的实例。这个实例然后被用来渲染 HTML 文档，也可能是其他构建器的输出（目前是变化构建器）。（注意，如果要使用 HTML 主题，模板桥必须具有主题感知能力。）
+:   一个字符串，包含一个可调用（或简单的类）的全称，它返回一个 [TemplateBridge](https://www.sphinx-doc.org/zh_CN/master/extdev/appapi.html#sphinx.application.TemplateBridge) 的实例。这个实例然后被用来渲染 HTML 文档，也可能是其他构建器的输出（目前是变化构建器）。（注意，如果要使用 HTML 主题，模板桥必须具有主题感知能力。）
 
 `rst_epilog`
 :   reStructuredText 字符串，它将包含在每个被读取的源文件的末尾。这是一个可以添加每个文件中都应该有的替换的地方（另一个是 `rst_prolog`）。一个例子：
@@ -130,7 +130,7 @@
     ```
 
 `primary_domain`
-:   默认[域](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html)的名称。也可以用 `None` 来禁用默认域。默认是 `'py'`。那些在其他域中的对象（无论域名是明确给出的，还是由 `default-domain` 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 "Python function"，而不仅仅是 "function"）。
+:   默认[域](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html)的名称。也可以用 `None` 来禁用默认域。默认是 `'py'`。那些在其他域中的对象（无论域名是明确给出的，还是由 `default-domain` 指令选择的），在命名时都将明确地预留域名（例如，当默认域是 C 时，Python 函数将被命名为 "Python function"，而不仅仅是 "function"）。
 
 `default_role`
 :   一个 reST 角色的名字（内置的或 Sphinx 扩展的），作为默认的角色，也就是说，用于标记为 `` `like this` `` 的文本。这可以设置为 `'py:obj'`，使 `` `filter` `` 成为 Python 函数 "filter" 的交叉引用。默认是 `None`，它不会重新分配默认的角色。
@@ -176,7 +176,7 @@
 :   这个值可以是一个字典，指定扩展中对扩展的版本要求，例如，`needs_extensions = {'sphinxcontrib.something': '1.5'}`。版本字符串的形式应该是 `major.minor`。不需要为所有扩展指定要求，只需要为那些你想检查的扩展指定。
 
 ```{note}
-这要求扩展指定其版本给 Sphinx（参见 [开发扩展](https://www.sphinx-doc.org/en/master/extdev/index.html#dev-extensions)，了解如何做到这一点）。
+这要求扩展指定其版本给 Sphinx（参见 [开发扩展](https://www.sphinx-doc.org/zh_CN/master/extdev/index.html#dev-extensions)，了解如何做到这一点）。
 ```
 
 [^1]: A note on available globbing syntax: you can use the standard shell constructs *, ?, [...] and [!...] with the feature that these all don’t match slashes. A double star ** can be used to match any sequence of characters including slashes.

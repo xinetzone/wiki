@@ -224,7 +224,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   学科
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../math/index.html">
    数学
@@ -242,13 +242,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  叙述
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../sanstyle/index.html">
    上善若水
@@ -281,7 +274,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/00_start.html">
-       reStructuredText 快速上手
+       快速上手
       </a>
      </li>
      <li class="toctree-l3">
@@ -301,7 +294,7 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../rst/04_domains.html">
-       域（raw）
+       域
       </a>
      </li>
     </ul>
@@ -693,7 +686,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="markdown">
 <h1>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h1>
-<p>参考：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/markdown.html">Markdown — Sphinx documentation (sphinx-doc.org)</a></p>
+<p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/markdown.html">Markdown — Sphinx documentation (sphinx-doc.org)</a></p>
 <p><a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> 是一种轻量级的标记语言，具有简单的纯文本格式化语法。它在句法上有许多不同的风格。为了支持基于 Markdown 的文档，Sphinx 可以使用 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a>。MyST-Parser 是 Docutils 与 <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a> 的桥梁，这是一个用于解析 <a class="reference external" href="https://commonmark.org/">CommonMark</a> Markdown 风格 的 Python 包。</p>
 <div class="section" id="id1">
 <h2>配置<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -705,13 +698,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>将 <code class="docutils literal notranslate"><span class="pre">myst_parser</span></code> 添加到<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions">配置的扩展列表</a>中。</p></li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">myst_parser</span></code> 添加到<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-extensions">配置的扩展列表</a>中。</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>如果你想使用扩展名不是 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 的 Markdown 文件，调整 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-source_suffix">source_suffix</a> 变量。下面的例子将 Sphinx 配置为将所有扩展名为 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 的文件解析为Markdown。</p></li>
+<li><p>如果你想使用扩展名不是 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 的 Markdown 文件，调整 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-source_suffix">source_suffix</a> 变量。下面的例子将 Sphinx 配置为将所有扩展名为 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 的文件解析为Markdown。</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>

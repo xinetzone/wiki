@@ -1,12 +1,35 @@
 (rst:directives)=
 # 指令
 
-[如前所述](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-directives)，指令是显式标记的通用块。虽然Docutils提供了许多指令, 但 Sphinx 提供了更多指令, 并使用指令作为主要的扩展机制之一。
+[如前所述](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-directives)，指令是显式标记的通用块。虽然 Docutils 提供了许多指令, 但 Sphinx 提供了更多指令, 并使用指令作为主要的扩展机制之一。
 
-请参阅 [域](https://www.sphinx.org.cn/usage/restructuredtext/domains.html)，了解域添加的角色。
+请参阅 [域](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html)，了解域添加的角色。
 
 ```{seealso}
-有关 Docutils 提供的指令的概述, 请参阅 [reStructuredText Primer](https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-directives) 。
+有关 Docutils 提供的指令的概述, 请参阅 [reStructuredText Primer](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-directives) 。
+```
+
+```rst
+.. directivename:: argument ...
+   :option: value
+
+   Content of the directive.
+```
+
+```{panels}
+:container: +full-width
+:column: col-lg-9 px-2 py-2
+---
+:header: w3-light-blue
+reStructuredText 指令
+^^^
+指令可以有**参数**（arguments）、**选项**（options）和**内容**（content）。
+
+- **参数**在指令名称后面的双冒号后直接给出。每个指令决定它是否可以有参数，以及参数的数量。
+- **选项**是在参数之后以 "字段列表" 的形式给出的。
+- **内容**跟在选项或参数之后的空行。每个指令都决定是否允许内容，以及如何处理它。
+
+指令的一个常见问题是，**内容**的第一行必须缩进到与**选项**相同的水平。
 ```
 
 ## 目录
@@ -42,7 +65,7 @@
 
    **Entries**
 
-   第一个 [`toctree`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-toctree "toctree directive") 中的文档标题将自动从引用文档的标题中读取。如果这不是您想要的, 您可以使用与 reST 超链接类似的语法指定显式标题和目标（和 Sphinx 的 [cross-referencing syntax](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#xref-syntax)）。这看起来像：
+   第一个 [`toctree`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-toctree "toctree directive") 中的文档标题将自动从引用文档的标题中读取。如果这不是您想要的, 您可以使用与 reST 超链接类似的语法指定显式标题和目标（和 Sphinx 的 [cross-referencing syntax](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#xref-syntax)）。这看起来像：
 
    ```rst
    .. toctree::
@@ -74,7 +97,7 @@
 
    **其他选项**
 
-   你可以使用 `caption` 选项提供一个 toctree 标题, 你可以使用 `name` 选项来提供可以通过使用引用的隐式目标名 [`ref`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-ref "ref role")
+   你可以使用 `caption` 选项提供一个 toctree 标题, 你可以使用 `name` 选项来提供可以通过使用引用的隐式目标名 [`ref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref "ref role")
 
    ```rst
    .. toctree::
@@ -143,11 +166,11 @@
 
    然后可以通过 “hidden” 选项消除所有其他toctree条目。
 
-   最后, [source directory](https://www.sphinx.org.cn/glossary.html#term-source-directory) (或子目录)中的所有文档必须出现在某些 `toctree` 指令中;如果Sphinx找到未包含的文件, 它将发出警告, 因为这意味着无法通过标准导航访问此文件。
+   最后, [source directory](https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-source-directory) (或子目录)中的所有文档必须出现在某些 `toctree` 指令中;如果Sphinx找到未包含的文件, 它将发出警告, 因为这意味着无法通过标准导航访问此文件。
 
-   使用 [`exclude_patterns`](https://www.sphinx.org.cn/usage/configuration.html#confval-exclude_patterns) 可以完全排除文档或目录。使用 [“orphan” 元数据](https://www.sphinx.org.cn/usage/restructuredtext/field-lists.html#metadata) 来构建文档, 但通知Sphinx它是无法通过toctree访问的。
+   使用 [`exclude_patterns`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-exclude_patterns) 可以完全排除文档或目录。使用 [“orphan” 元数据](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/field-lists.html#metadata) 来构建文档, 但通知Sphinx它是无法通过toctree访问的。
 
-   “master document” (由 [`master_doc`](https://www.sphinx.org.cn/usage/configuration.html#confval-master_doc) 选择)是TOC树层次结构的 “root” 。如果你没有给出 `maxdepth` 选项, 它可以用作文档的主页面, 也可以用作 “完整的目录”。
+   “master document” (由 [`master_doc`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-master_doc) 选择)是TOC树层次结构的 “root” 。如果你没有给出 `maxdepth` 选项, 它可以用作文档的主页面, 也可以用作 “完整的目录”。
 
    ```{versionchanged} 0.3
    添加了 “globbing” 选项。
@@ -175,16 +198,16 @@
 
 ### 特别的名字
 
-Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称创建文档 - 这将导致问题。
+Sphinx 保留一些文件名供自己使用；您不应该尝试使用这些名称创建文档 - 这将导致问题。
 
 特殊文档名称（以及为它们生成的页面）是：
 
 `genindex`, `modindex`, `search`
 :  它们分别用于通用索引, Python 模块索引和搜索页面。
 
-   通用索引用模块中的项填充, 所有索引生成 [对象描述](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#basic-domain-markup)，以及来自 [`index`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-index "index directive") 指令。
+   通用索引用模块中的项填充, 所有索引生成 [对象描述](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#basic-domain-markup)，以及来自 [`index`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-index "index directive") 指令。
 
-  Python 模块索引包含一个条目 [`py:module`](https://www.sphinx.org.cn/usage/restructuredtext/domains.html#directive-py:module "py:module directive") 指令。
+  Python 模块索引包含一个条目 [`py:module`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:module "py:module directive") 指令。
 
   搜索页面包含一个表单, 该表单使用生成的 JSON 搜索索引和 JavaScript 对搜索词的生成文档进行全文搜索;它应该适用于支持现代 JavaScript 的每个主流浏览器。
 
@@ -231,7 +254,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ````
 
 `` .. warning:: ``
-:  关于 API 的一些重要信息, 用户在使用警告所涉及的任何API时都应该非常清楚。指令的内容应以完整的句子写成, 并包括所有适当的标点符号。这不同于 [`note`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-note "note directive")，因为建议使用 [`note`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-note "note directive") 以获取有关安全性的信息。
+:  关于 API 的一些重要信息, 用户在使用警告所涉及的任何API时都应该非常清楚。指令的内容应以完整的句子写成, 并包括所有适当的标点符号。这不同于 [`note`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-note "note directive")，因为建议使用 [`note`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-note "note directive") 以获取有关安全性的信息。
 
 `` .. versionadded:: version ``
 :  该指令记录了将所描述的功能添加到库或 C API 的项目版本。当这适用于整个模块时, 应该在任何散文之前将其放置在模块部分的顶部。
@@ -264,10 +287,10 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    请注意, 指令头和说明之间必须没有空行；这是为了使这些块在标记中在视觉上连续。
 
 `` .. versionchanged:: version ``
-:  类似于 [`versionadded`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-versionadded "versionadded directive")，但以某种方式描述命名特征中的更改时间和内容(新参数, 更改的副作用等)。
+:  类似于 [`versionadded`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-versionadded "versionadded directive")，但以某种方式描述命名特征中的更改时间和内容(新参数, 更改的副作用等)。
 
 `` .. deprecated:: version ``
-:  类似于 [`versionchanged`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-versionchanged "versionchanged directive")，但描述了该功能何时被弃用。还可以给出解释, 例如通知读者应该使用什么。例：
+:  类似于 [`versionchanged`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-versionchanged "versionchanged directive")，但描述了该功能何时被弃用。还可以给出解释, 例如通知读者应该使用什么。例：
 
    ````{panels}
    :container: w3-card-4 w3-pale-green w3-padding
@@ -291,11 +314,11 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ````
 
 `` .. seealso:: ``
-:  许多部分包括对模块文档或外部文档的引用列表。这些列表使用 [`seealso`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令创建。
+:  许多部分包括对模块文档或外部文档的引用列表。这些列表使用 [`seealso`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令创建。
 
-   [`seealso`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令通常放在任何子部分之前的部分中。对于HTML输出, 它显示为从文本的主流中框出来。
+   [`seealso`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令通常放在任何子部分之前的部分中。对于HTML输出, 它显示为从文本的主流中框出来。
 
-   以下内容 [`seealso`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令应该是reST定义列表。例：
+   以下内容 [`seealso`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-seealso "seealso directive") 指令应该是reST定义列表。例：
 
    ````{panels}
    :container: w3-card-4 w3-pale-green w3-padding
@@ -349,7 +372,9 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ```
    ````
 
-   **0.5 新版功能:** 短式。
+   ```{versionchanged} 0.5
+   短式。
+   ```
 
 `` .. rubric:: title ``
 :  该指令创建一个段落标题, 不用于创建目录节点。
@@ -365,7 +390,9 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    .. centered:: LICENSE AGREEMENT
    ```
 
-   **1.1 版后已移除:** 此演示文稿指令是旧版本的遗留代码。使用 `rst-class` 指令代替并添加适当的样式。
+   ```{deprecated} 1.1
+   此演示文稿指令是旧版本的遗留代码。使用 `rst-class` 指令代替并添加适当的样式。
+   ```
 
 `` .. hlist:: ``
 :  该指令必须包含项目符号列表。它会通过水平分布多个项目或减少项目间距来将其转换为更紧凑的列表, 具体取决于构建器。
@@ -405,23 +432,21 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ```
    ````
 
-   **0.6 新版功能.**
-
 ## 代码高亮
 
 有多种方法可以在 Sphinx 中显示语法高亮的文字代码块：
 
--  使用 [reST doctest blocks](https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-doctest-blocks)
--  使用 [reST literal blocks](https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-literal-blocks)，可选择与 [`highlight`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令结合使用
--  使用 [`code-block`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-code-block "code-block directive") 指令
--  并使用 [`literalinclude`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-literalinclude "literalinclude directive") 指令。
+-  使用 [reST doctest blocks](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-doctest-blocks)
+-  使用 [reST literal blocks](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-literal-blocks)，可选择与 [`highlight`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令结合使用
+-  使用 [`code-block`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-code-block "code-block directive") 指令
+-  并使用 [`literalinclude`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-literalinclude "literalinclude directive") 指令。
 
-[Doctest blocks](https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-doctest-blocks) 只能用于显示交互式Python会话, 而其余三个可用于其他语言。在这三个文件中, 当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时, 文字块是有用的。另一方面, 当你想要对每个块的样式进行更精细的控制, 或者当你有一个包含使用多种不同语法的代码块的文档时, 第一个 [`code-block`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-code-block "code-block directive") 指令更有意义。最后, [`literalinclude`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-literalinclude "literalinclude directive") 指令对于在文档中包含整个代码文件非常有用。
+[Doctest blocks](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-doctest-blocks) 只能用于显示交互式Python会话, 而其余三个可用于其他语言。在这三个文件中, 当整个文档或至少大部分文档使用具有相同语法的代码块并且应该以相同的方式设置样式时, 文字块是有用的。另一方面, 当你想要对每个块的样式进行更精细的控制, 或者当你有一个包含使用多种不同语法的代码块的文档时, 第一个 [`code-block`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-code-block "code-block directive") 指令更有意义。最后, [`literalinclude`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-literalinclude "literalinclude directive") 指令对于在文档中包含整个代码文件非常有用。
 
-在所有情况下, 语法高亮由 [Pygments](http://pygments.org/) 提供。使用文字块时, 使用源文件中的任何 [`highlight`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令进行配置。当遇到 `highlight` 指令时, 它会被使用, 直到遇到下一个 `highlight` 指令。如果文件中没有 `highlight` 指令, 则使用全局突出显示语言。这默认为 `python`，但可以使用 [`highlight_language`](https://www.sphinx.org.cn/usage/configuration.html#confval-highlight_language) 配置值进行配置。支持以下值:
+在所有情况下, 语法高亮由 [Pygments](http://pygments.org/) 提供。使用文字块时, 使用源文件中的任何 [`highlight`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令进行配置。当遇到 `highlight` 指令时, 它会被使用, 直到遇到下一个 `highlight` 指令。如果文件中没有 `highlight` 指令, 则使用全局突出显示语言。这默认为 `python`，但可以使用 [`highlight_language`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-highlight_language) 配置值进行配置。支持以下值:
 
 * `none` (没有突出显示)
-* `default` (类似于 `python3` 但是回退到 `none` 没有警告突出显示失败;默认情况下 [`highlight_language`](https://www.sphinx.org.cn/usage/configuration.html#confval-highlight_language) 未设置)
+* `default` (类似于 `python3` 但是回退到 `none` 没有警告突出显示失败;默认情况下 [`highlight_language`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-highlight_language) 未设置)
 * `guess` (让Pygments根据内容猜测词法分析器, 只适用于某些识别良好的语言)
 * `python`
 * `rest`
@@ -471,7 +496,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
       Some Ruby code.
    ```
 
-   该指令的别名 `sourcecode` 也可以。该指令将语言名称作为参数。它可以是Pygments支持的任何词法分析别名。如果没有给出, 将使用 [`highlight`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令的设置。如果没有设置, 将使用 [`highlight_language`](https://www.sphinx.org.cn/usage/configuration.html#confval-highlight_language) 。
+   该指令的别名 `sourcecode` 也可以。该指令将语言名称作为参数。它可以是Pygments支持的任何词法分析别名。如果没有给出, 将使用 [`highlight`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-highlight "highlight directive") 指令的设置。如果没有设置, 将使用 [`highlight_language`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-highlight_language) 。
 
    **选项**
 
@@ -564,7 +589,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    ```
    ````
 
-   可以给出 `caption` 选项以在代码块之前显示该名称。可以使用 `name` 选项提供隐式目标名称, 可以使用以下命令引用 [`ref`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-ref "ref role") 。例如：
+   可以给出 `caption` 选项以在代码块之前显示该名称。可以使用 `name` 选项提供隐式目标名称, 可以使用以下命令引用 [`ref`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref "ref role") 。例如：
 
    ````{panels}
    :container: w3-card-4 w3-pale-green w3-padding
@@ -623,7 +648,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
 
    **选项**
 
-   像 [`code-block`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-code-block "code-block directive")，该指令支持 `linenos` 标志选项来打开行号, `lineno-start` 选项来选择第一行号, `强调<span> -<span> lines` 选项用于强调特定行, `name` 选项用于提供隐式目标名称, `dedent` 选项用于删除代码块的缩进字符, 还有 `language` 选项用于选择a语言与当前文件的标准语言不同。另外, 它支持 `caption` 选项;但是, 这可以提供没有参数使用文件名作为标题。选项示例:
+   像 [`code-block`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-code-block "code-block directive")，该指令支持 `linenos` 标志选项来打开行号, `lineno-start` 选项来选择第一行号, `强调<span> -<span> lines` 选项用于强调特定行, `name` 选项用于提供隐式目标名称, `dedent` 选项用于删除代码块的缩进字符, 还有 `language` 选项用于选择a语言与当前文件的标准语言不同。另外, 它支持 `caption` 选项;但是, 这可以提供没有参数使用文件名作为标题。选项示例:
 
    ```rst
    .. literalinclude:: example.rb
@@ -634,7 +659,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
 
    如果给出带有所需制表符宽度的 `tab-width` 选项, 则会扩展输入中的制表符。
 
-   假设包含文件在 [`source_encoding`](https://www.sphinx.org.cn/usage/configuration.html#confval-source_encoding) 中编码。如果文件具有不同的编码, 则可以使用 `encoding` 选项指定它:
+   假设包含文件在 [`source_encoding`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-source_encoding) 中编码。如果文件具有不同的编码, 则可以使用 `encoding` 选项指定它:
 
    ```rst
    .. literalinclude:: example.py
@@ -722,7 +747,7 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
 ## 术语
 
 `` .. glossary:: ``
-:  该指令必须包含带有术语和定义的 reST 定义列表标记。然后, 这些定义可以引用 [`term`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-term "term role") 角色。例：
+:  该指令必须包含带有术语和定义的 reST 定义列表标记。然后, 这些定义可以引用 [`term`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-term "term role") 角色。例：
 
    ````{panels}
    :container: w3-card-4 w3-pale-green w3-padding
@@ -823,14 +848,14 @@ Sphinx 保留一些文件名供自己使用;您不应该尝试使用这些名称
    .. sectionauthor:: Guido van Rossum <guido@python.org>
    ```
 
-   默认情况下, 此标记不会以任何方式反映在输出中(它有助于跟踪贡献), 但您可以将配置值 [`show_authors`](https://www.sphinx.org.cn/usage/configuration.html#confval-show_authors) 设置为 `True` 以使它们生成一个段落输出。
+   默认情况下, 此标记不会以任何方式反映在输出中(它有助于跟踪贡献), 但您可以将配置值 [`show_authors`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-show_authors) 设置为 `True` 以使它们生成一个段落输出。
 
 `` .. codeauthor:: name <email> ``
-:  [`codeauthor`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-codeauthor "codeauthor directive") 指令, 可以多次出现, 命名所描述代码的作者, 就像 [`sectionauthor`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-sectionauthor "sectionauthor directive") 命名一篇文档的作者。如果 [`show_authors`](https://www.sphinx.org.cn/usage/configuration.html#confval-show_authors) 配置值为 “True”，它也只产生输出。
+:  [`codeauthor`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-codeauthor "codeauthor directive") 指令, 可以多次出现, 命名所描述代码的作者, 就像 [`sectionauthor`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-sectionauthor "sectionauthor directive") 命名一篇文档的作者。如果 [`show_authors`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-show_authors) 配置值为 “True”，它也只产生输出。
 
 ## 索引生成标记
 
-Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条目, 如 [域](https://www.sphinx.org.cn/usage/restructuredtext/domains.html) 中所述。
+Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条目, 如 [域](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html) 中所述。
 
 但是, 还有明确的标记可用, 以使索引更加全面, 并在文档中启用索引条目, 其中信息不主要包含在信息单元中, 例如语言参考。
 
@@ -903,7 +928,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    **选项**
 
    `:name:` a label for hyperlink (text)
-   :  定义隐含的目标名称，可以通过使用 [ref](https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref) 来引用。比如说：
+   :  定义隐含的目标名称，可以通过使用 [ref](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-ref) 来引用。比如说：
 
    ```rst
    .. index:: Python
@@ -911,7 +936,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    ```
 
 `` :index: ``
-:  虽然 [`index`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-index "index directive") 指令是块级标记并链接到下一段的开头, 但还有一个相应的角色可以直接设置链接目标的使用位置。
+:  虽然 [`index`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-index "index directive") 指令是块级标记并链接到下一段的开头, 但还有一个相应的角色可以直接设置链接目标的使用位置。
 
    角色的内容可以是一个简单的短语, 然后保存在文本中并用作索引条目。它也可以是文本和索引条目的组合, 其样式与交叉引用的显式目标类似。在这种情况下, “target ” 部分可以是完整条目, 如上面的指令所述。例如：
 
@@ -931,7 +956,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    .. only:: html and draft
    ```
 
-   未定义的标签是假的, 定义的标签(通过 `-t` 命令行选项或在 `conf.py` 中, 参见 [here](https://www.sphinx.org.cn/usage/configuration.html#conf-tags))是真的。支持布尔表达式, 也使用括号(如 `html` 和 (`latex` or `draft`))。
+   未定义的标签是假的, 定义的标签(通过 `-t` 命令行选项或在 `conf.py` 中, 参见 [here](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#conf-tags))是真的。支持布尔表达式, 也使用括号(如 `html` 和 (`latex` or `draft`))。
 
    *format* 和当前构建器的 *name* (`html`, `latex` 或 `text`)始终设置为标签 [^4]。为了明确区分格式和名称, 它们还添加了前缀 `format_` 和 `builder_`，例如: epub 构建器定义了标签 `html`，`epub`，`format_html` 和 `builder_epub` 。
 
@@ -949,7 +974,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
 
 ## 表格
 
-使用 [reStructuredText tables](https://www.sphinx.org.cn/usage/restructuredtext/basics.html#rst-tables)，即
+使用 [reStructuredText tables](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-tables)，即
 
 * 网格表语法 ([ref](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#grid-tables)),
 * 简单的表格语法 ([ref](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#simple-tables)),
@@ -984,11 +1009,11 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    **在 1.6 版更改:** 由于自定义Sphinx LaTeX宏, 合并的单元格现在可以包含多个段落并且处理得更好。这种新颖的情况促使人们默认切换到 `J` 说明符而不是 `L` 。
 
    ```{hint}
-   Sphinx 实际上使用 `T` 说明符来完成 `\newcolumntype{T}{J}` 。要恢复到以前的默认值, 请在LaTeX前导码中插入 `\newcolumntype{T}{L}` (参见 [`latex_elements`](https://www.sphinx.org.cn/usage/configuration.html#confval-latex_elements) )。
+   Sphinx 实际上使用 `T` 说明符来完成 `\newcolumntype{T}{J}` 。要恢复到以前的默认值, 请在LaTeX前导码中插入 `\newcolumntype{T}{L}` (参见 [`latex_elements`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-latex_elements) )。
 
    tabulary 的一个常见问题是内容很少的列被 “squeezed” 。最小列宽是一个名为 `\tymin` 的表格参数。您可以通过 `\setlength{\tymin}{40pt}` 在 LaTeX 前导码中全局设置它。
 
-   否则, 使用 [`tabularcolumns`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 指令, 对该列使用显式的 `p{40pt}` (例如)。您也可以使用 `l` 说明符, 但如果某个合并单元格与该列相交, 则会使设置列宽的任务更加困难。
+   否则, 使用 [`tabularcolumns`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 指令, 对该列使用显式的 `p{40pt}` (例如)。您也可以使用 `l` 说明符, 但如果某个合并单元格与该列相交, 则会使设置列宽的任务更加困难。
    ```
 
    ```{warning}
@@ -999,7 +1024,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    文字块根本不适用于 `tabulary`，因此包含文字块的表总是设置为 `tabular` 。用于文字块的逐字环境仅适用于 `p{width}` (和 `\X` 或 `\Y`)列, 因此Sphinx为包含文字块的表生成此类列规范。
    ```
 
-   从 Sphinx 1.5 开始, 使用 `\X{a}{b}` 说明符(说明字母*中有*反斜杠)。它就像 `p{width}`，宽度设置为当前行宽的一小部分 `a/b` 。你可以在 [`tabularcolumns`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 中使用它(如果某些LaTeX宏也被称为 `\X`，这不是问题。)
+   从 Sphinx 1.5 开始, 使用 `\X{a}{b}` 说明符(说明字母*中有*反斜杠)。它就像 `p{width}`，宽度设置为当前行宽的一小部分 `a/b` 。你可以在 [`tabularcolumns`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 中使用它(如果某些LaTeX宏也被称为 `\X`，这不是问题。)
 
    它不需要 `b` 是列的总数，也不需要 `\X` 指定的分数之和加起来是 1。例如 `|\X{2}{5}|\X{1}{5}|\X{1}{5}|` 是合法的, 表格将占据线宽的80％，它的三个列中的第一个具有与下两个列的总和相同的宽度。
 
@@ -1012,14 +1037,14 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    Sphinx 的合并单元格与 `p{width}`, `\X{a}{b}`，`Y{f}` 和 tabulary 列完美交互。
 
    ```{note}
-   [`tabularcolumns`](https://www.sphinx.org.cn/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 与表指令的 `:widths:` 选项冲突。如果两者都指定, 则 `:widths:` 选项将被忽略。
+   [`tabularcolumns`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-tabularcolumns "tabularcolumns directive") 与表指令的 `:widths:` 选项冲突。如果两者都指定, 则 `:widths:` 选项将被忽略。
    ```
 
 ## 数学
 
 数学的输入语言是LaTeX标记。这是纯文本数学符号的事实上的标准, 并且具有额外的优点, 即在构建LaTeX输出时不需要进一步的转换。
 
-请记住, 当你将数学标记放在 **Python文档字符串** 中读取 [`autodoc`](https://www.sphinx.org.cn/usage/extensions/autodoc.html#module-sphinx.ext.autodoc "sphinx.ext.autodoc: Include documentation from docstrings.") 时, 你要么必须加倍所有的反斜杠, 要么使用Python原始字符串(`r"raw"`)。
+请记住, 当你将数学标记放在 **Python文档字符串** 中读取 [`autodoc`](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/autodoc.html#module-sphinx.ext.autodoc "sphinx.ext.autodoc: Include documentation from docstrings.") 时, 你要么必须加倍所有的反斜杠, 要么使用Python原始字符串(`r"raw"`)。
 
 `` .. math:: ``
 :  显示数学的指令(数学为自己的整行)。
@@ -1051,7 +1076,7 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
    .. math:: (a + b)^2 = a^2 + 2ab + b^2
    ```
 
-   通常, 方程式没有编号。如果你想要你的方程式得到一个数字, 使用 `label` 选项。给定时, 它选择方程的内部标签, 通过它可以交叉引用, 并导致发出方程编号。请参阅 [`eq`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-eq "eq role") 作为示例。编号样式取决于输出格式。
+   通常, 方程式没有编号。如果你想要你的方程式得到一个数字, 使用 `label` 选项。给定时, 它选择方程的内部标签, 通过它可以交叉引用, 并导致发出方程编号。请参阅 [`eq`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-eq "eq role") 作为示例。编号样式取决于输出格式。
 
    还有一个选项 `nowrap` 可以防止在数学环境中包含给定的数学。当您提供此选项时, 您必须确保自己正确设置了数学运算。例如:
 
@@ -1067,9 +1092,9 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
 
 
 ```{seealso}
-[Sphinx中对HTML输出的数学支持](https://www.sphinx.org.cn/usage/extensions/math.html#math-support)使用HTML构建器渲染数学选项。
+[Sphinx中对HTML输出的数学支持](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/math.html#math-support)使用HTML构建器渲染数学选项。
 
-[`latex_engine`](https://www.sphinx.org.cn/usage/configuration.html#confval-latex_engine)说明如何配置LaTeX构建器以在数学标记中支持Unicode文字。
+[`latex_engine`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-latex_engine)说明如何配置LaTeX构建器以在数学标记中支持Unicode文字。
 ```
 
 ## 语法制作显示
@@ -1079,9 +1104,9 @@ Sphinx 自动从所有对象描述（如函数, 类或属性）创建索引条�
 `` .. productionlist:: [productionGroup] ``
 :  这条指令是用来包围一组产品的。每个产品都在一行中给出，由一个名称组成，用一个冒号与下面的定义隔开。如果定义跨越多行，每一个延续行必须以冒号开始，并与第一行中的冒号放置在同一列。生产列表指令参数中不允许有空行。
 
-   该定义可以包含标记为解释文本的标记名称(例如 `` “sum ::= `integer` "+" `integer`” ``) - 这会生成对这些标记的生成的交叉引用。在生产列表之外, 您可以使用以下命令引用令牌生产 [`token`](https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-token "token role") 。
+   该定义可以包含标记为解释文本的标记名称(例如 `` “sum ::= `integer` "+" `integer`” ``) - 这会生成对这些标记的生成的交叉引用。在生产列表之外, 您可以使用以下命令引用令牌生产 [`token`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#role-token "token role") 。
 
-   [productionlist](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-productionlist) 的参数 `productionGroup` 用于区分属于不同语法的不同生产列表集。因此，具有相同生产组的多个生产列表在同一范围内定义规则。
+   [productionlist](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-productionlist) 的参数 `productionGroup` 用于区分属于不同语法的不同生产列表集。因此，具有相同生产组的多个生产列表在同一范围内定义规则。
 
    Inside of the production list, tokens implicitly refer to productions from the current group. You can refer to the production of another grammar by prefixing the token with its group name and a colon, e.g, “`otherGroup:sum`”. If the group of the token should not be shown in the production, it can be prefixed by a tilde, e.g., “~otherGroup:sum”. To refer to a production from an unnamed grammar, the token should be prefixed by a colon, e.g., “`:sum`”.
 

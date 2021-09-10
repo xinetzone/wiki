@@ -210,7 +210,7 @@ RST
 在外部生成的文件中对目标位置的引用必须使用自动生成的[标识符键](https://docutils.sourceforge.io/docs/ref/doctree.html#identifier-keys)，由于输出格式中对标识符/标签的限制，该标识符键可能与引用名称不同。
 ```
 
-简单引用名称是由字母数字加上孤立的（没有两个相邻的）内部连字符、下划线、句号、冒号和加号组成的单字；不允许有空白或其他字符。脚注标签（[脚注](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes)和[脚注引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnote-references)）、引文标签（[引文](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations)和[引文引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citation-references)）、[解释性文本](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#interpreted-text)角色和一些[超链接引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-references)使用简单的引用名称语法。
+简单**引用名称**是由字母数字加上孤立的（没有两个相邻的）内部连字符、下划线、句号、冒号和加号组成的单字；不允许有空白或其他字符。脚注标签（[脚注](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes)和[脚注引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnote-references)）、引文标签（[引文](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations)和[引文引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citation-references)）、[解释性文本](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#interpreted-text)角色和一些[超链接引用](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-references)使用简单的引用名称语法。
 
 使用标点符号的引用名称或其名称为短语（两个或多个空格分隔的单词）的引用称为 "短语引用"。短语引用的表达方式是将短语置于反引号中，并将反引号文本视为引用名称。
 
