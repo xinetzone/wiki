@@ -1,5 +1,5 @@
 (sphinx:extensions)=
-# 扩展
+# 插件
 
 参考：[Extensions — Sphinx documentation (sphinx-doc.org)](https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html)
 

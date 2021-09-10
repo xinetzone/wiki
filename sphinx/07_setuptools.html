@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Setuptools integration（raw）</title>
+    <title>安装工具集成</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -96,8 +96,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Sphinx Web Support（raw）" href="08_websupport.html" />
-    <link rel="prev" title="Internationalization（raw）" href="06_intl.html" />
+    <link rel="next" title="Sphinx Web支持" href="08_websupport.html" />
+    <link rel="prev" title="国际化" href="06_intl.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -321,37 +321,37 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="02_configuration.html">
-       配置（待更）
+       配置
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="03_builder.html">
-       Builders （raw）
+       Builders
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="04_extensions.html">
-       扩展
+       插件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="05_theming.html">
-       HTML 主题（raw）
+       HTML 主题
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="06_intl.html">
-       Internationalization（raw）
+       国际化
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Setuptools integration（raw）
+       安装工具集成
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="08_websupport.html">
-       Sphinx Web Support（raw）
+       Sphinx Web支持
       </a>
      </li>
      <li class="toctree-l3">
@@ -663,6 +663,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   使用安装工具集成
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   安装工具集成选项
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -671,9 +689,113 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="setuptools-integration-raw">
-<h1>Setuptools integration（raw）<a class="headerlink" href="#setuptools-integration-raw" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1>安装工具集成<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/advanced/setuptools.html">Setuptools integration — Sphinx documentation (sphinx-doc.org)</a></p>
+<p>Sphinx 支持通过自定义命令 <code class="docutils literal notranslate"><span class="pre">BuildDoc</span></code> 与 <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> 和 <code class="docutils literal notranslate"><span class="pre">distutils</span></code> 整合。</p>
+<div class="section" id="id2">
+<h2>使用安装工具集成<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Sphinx 的构建可以从 distutils 触发，一些 Sphinx 的选项可以在 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 或 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 中设置，而不是 Sphinx 自己的配置文件。</p>
+<p>例如，从<code class="docutils literal notranslate"><span class="pre">setup.py</span></code>：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is only necessary when not using setuptools/distribute</span>
+<span class="kn">from</span> <span class="nn">sphinx.setup_command</span> <span class="kn">import</span> <span class="n">BuildDoc</span>
+<span class="n">cmdclass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;build_sphinx&#39;</span><span class="p">:</span> <span class="n">BuildDoc</span><span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;My project&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;1.2.0&#39;</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;Bernard Montgomery&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">release</span><span class="p">,</span>
+    <span class="n">cmdclass</span><span class="o">=</span><span class="n">cmdclass</span><span class="p">,</span>
+    <span class="c1"># these are optional and override conf.py settings</span>
+    <span class="n">command_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;build_sphinx&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span>
+            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span>
+            <span class="s1">&#39;release&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">release</span><span class="p">),</span>
+            <span class="s1">&#39;source_dir&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="s1">&#39;doc&#39;</span><span class="p">)}},</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>如果你直接在 <code class="docutils literal notranslate"><span class="pre">setup()</span></code> 命令中设置 Sphinx 选项，把变量名中的连字符替换为下划线。在上面的例子中，<code class="docutils literal notranslate"><span class="pre">source-dir</span></code> 变成 <code class="docutils literal notranslate"><span class="pre">source_dir</span></code>。</p>
+</div>
+<p>或者在 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 中添加：</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[build_sphinx]</span>
+<span class="na">project</span> <span class="o">=</span> <span class="s">&#39;My project&#39;</span>
+<span class="na">version</span> <span class="o">=</span> <span class="s">1.2</span>
+<span class="na">release</span> <span class="o">=</span> <span class="s">1.2.0</span>
+<span class="na">source-dir</span> <span class="o">=</span> <span class="s">&#39;doc&#39;</span>
+</pre></div>
+</div>
+<p>配置好后，通过调用 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 上的相关命令来调用：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>安装工具集成选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">fresh-env</span></code></dt><dd><p>一个布尔值，决定在构建时是否应该丢弃保存的环境。默认为 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p>
+<p>这也可以通过向 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 传递 <code class="docutils literal notranslate"><span class="pre">-E</span></code> 标志来设置：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -E
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">all-files</span></code></dt><dd><p>一个布尔值，决定是否所有文件都要从头开始建立。默认为 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p>
+<p>这也可以通过向 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 传递 <code class="docutils literal notranslate"><span class="pre">-a</span></code> 标志来设置：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -a
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">source-dir</span></code></dt><dd><p>目标源目录。这可以是相对于 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 或 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 文件的，也可以是绝对的。如果其中包含名为 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 的文件，则默认为 <code class="docutils literal notranslate"><span class="pre">./doc</span></code> 或 <code class="docutils literal notranslate"><span class="pre">./docs</span></code>（首先检查 <code class="docutils literal notranslate"><span class="pre">./doc</span></code>）；否则，默认为 <code class="docutils literal notranslate"><span class="pre">source-dir</span></code>。</p>
+<p>这也可以通过向 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 传递 <code class="docutils literal notranslate"><span class="pre">-s</span></code> 标志来设置：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -c <span class="nv">$CONFIG_DIR</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">builder</span></code></dt><dd><p>要使用的生成器或生成器列表。默认值为“<code class="docutils literal notranslate"><span class="pre">html</span></code>”。</p>
+<p>也可以通过将 <code class="docutils literal notranslate"><span class="pre">-b</span></code> 标志传递给 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -b <span class="nv">$BUILDER</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.6 版更改: </span>这现在可以是逗号分隔或空格分隔的构建器列表</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">warning-is-error</span></code></dt><dd><p>一个布尔值，确保Sphinx的警告会导致构建失败。默认是 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p>
+<p>这也可以通过向 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 传递 <code class="docutils literal notranslate"><span class="pre">-W</span></code>标志来设置：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx -W
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">project</span></code></dt><dd><p>记录的项目名称。默认值为 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">version</span></code></dt><dd><p>短X.Y版本。默认值为 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">release</span></code></dt><dd><p>完整版本，包括 <code class="docutils literal notranslate"><span class="pre">alpha/beta/rc</span></code> tags。默认值为 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">today</span></code></dt><dd><p>如何设置当前日期的格式，用于替换“今天”。默认值为 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">link-index</span></code></dt><dd><p>一个布尔值，确保 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 将被链接到根文档。默认是 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p>
+<p>这也可以通过向 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> 传递 <code class="docutils literal notranslate"><span class="pre">-i</span></code> 标志来设置。</p>
+<p>``sh
+$ python <a class="reference external" href="http://setup.py">setup.py</a> build_sphinx -i</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">copyright</span></code></dt><dd><p>版权字符串。默认值为 <code class="docutils literal notranslate"><span class="pre">''</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">nitpicky</span></code></dt><dd><p>使用 <code class="docutils literal notranslate"><span class="pre">nit-picky</span></code> 模式。目前来说，就是对每个缺少的引用给出 warning。使用配置 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-nitpick_ignore"><code class="docutils literal notranslate"><span class="pre">nitpick_ignore</span></code></a>，可以把某些引用标为“known missing”。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">pdb</span></code></dt><dd><p>用于在异常时配置“<code class="docutils literal notranslate"><span class="pre">pdb</span></code>”的布尔值。默认值为 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -710,7 +832,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">Internationalization（raw）</p>
+                <p class="prevnext-title">国际化</p>
             </div>
         </a>
     </div>
@@ -718,7 +840,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <a class="right-next" href="08_websupport.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">Sphinx Web Support（raw）</p>
+                <p class="prevnext-title">Sphinx Web支持</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
