@@ -36,6 +36,11 @@ parts:
     - file: sphinx/index
       sections:
       - glob: sphinx/**
+    - file: actions/index
+      sections:
+      - file: actions/sphinx/index
+        sections:
+        - glob: actions/sphinx/**
     - file: epb/index
       sections:
       - glob: epb/**
