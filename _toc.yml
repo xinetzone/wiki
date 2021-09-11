@@ -33,6 +33,9 @@ parts:
     - file: rst/index
       sections:
       - glob: rst/**
+    - file: myst/index
+      sections:
+      - glob: myst/**
     - file: sphinx/index
       sections:
       - glob: sphinx/**
