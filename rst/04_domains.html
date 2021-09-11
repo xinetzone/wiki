@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>域</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +41,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -83,22 +84,25 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/rst/04_domains.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Sphinx" href="../sphinx/index.html" />
+    <link rel="next" title="MyST" href="../myst/index.html" />
     <link rel="prev" title="指令" href="03_directives.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -127,7 +131,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -151,7 +155,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -192,7 +196,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   编程
  </span>
@@ -221,7 +225,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学科
  </span>
@@ -302,11 +306,38 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../sphinx/index.html">
-     Sphinx
+    <a class="reference internal" href="../myst/index.html">
+     MyST
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/00_start.html">
+       快速上手
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/01_syntax.html">
+       MyST 语法指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/02_optional.html">
+       可选的 MyST 语法
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sphinx/index.html">
+     Sphinx
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -372,8 +403,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../actions/index.html">
      Github Actions
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -382,15 +413,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       <a class="reference internal" href="../actions/sphinx/index.html">
        Sphinx
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../actions/sphinx/sphinx.html">
-         Sphinx Build
+        <a class="reference internal" href="../actions/sphinx/build.html">
+         通用 Sphinx Action
         </a>
        </li>
       </ul>
@@ -401,8 +432,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../epb/index.html">
      Executable Book Project
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -432,7 +463,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -442,8 +473,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -474,8 +505,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../glossary/index.html">
    术语表
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -571,8 +602,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../other/index.html">
    其他
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -826,7 +857,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="rst-domains">
+  <section class="tex2jax_ignore mathjax_ignore" id="rst-domains">
 <span id="id1"></span><h1>域<a class="headerlink" href="#rst-domains" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html">域</a></p>
 <p>最初，Sphinx 是为一个单一的项目设想的，即 Python 语言的文档。不久之后，它作为一个文档工具被提供给所有人，但 Python 模块的文档仍然被深深地嵌入其中–最基本的指令，比如 <code class="docutils literal notranslate"><span class="pre">function</span></code>，是为 Python 对象设计的。由于 Sphinx 已经变得有些流行，人们对将其用于许多不同的目的产生了兴趣。C/C++ 项目，JavaScript，甚至是 reStructuredText 标记（比如这个文档）。</p>
@@ -834,7 +865,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>域是一组标签(reStructuredText <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-directive">directive</a> 和 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-role">role</a>s)，用于描述和链接 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-object">object</a>，例如编程语言的元素。域中的指令和角色名称具有诸如 <code class="docutils literal notranslate"><span class="pre">domain:name</span></code> 之类的名称，例如 <code class="docutils literal notranslate"><span class="pre">py:function</span></code>。域还可以提供自定义索引(例如Python模块索引)。</p>
 <p>拥有域意味着当一组文档想要引用如 C++ 和 Python 类时，没有命名问题。这也意味着支持全新语言文档的扩展更容易编写。</p>
 <p>本节介绍 Sphinx 提供的域名。域 API 也在以下部分中记录 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/extdev/domainapi.html#domain-api">域 API</a> 。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>基本标记<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>大多数域提供了许多 <em>object description directives</em>，用于描述模块提供的特定对象。每个指令都需要一个或多个签名来提供有关所描述内容的基本信息，内容应该是描述。基本版本在一般索引中生成条目；如果不需要索引条目，可以给出指令选项标志 <code class="docutils literal notranslate"><span class="pre">:noindex:</span></code> 。使用 Python 域指令的示例：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -861,10 +892,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="card-body docutils">
 <dl class="py function">
-<dt id="spam">
-<code class="sig-name descname"><span class="pre">spam</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eggs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spam" title="永久链接至目标">¶</a></dt>
-<dt id="ham">
-<code class="sig-name descname"><span class="pre">ham</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eggs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ham" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object py" id="spam">
+<span class="sig-name descname"><span class="pre">spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eggs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spam" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object py" id="ham">
+<span class="sig-name descname"><span class="pre">ham</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eggs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ham" title="永久链接至目标">¶</a></dt>
 <dd><p class="card-text">Spam or ham the foo.</p>
 </dd></dl>
 
@@ -897,8 +928,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="card-body docutils">
 <dl class="py function">
-<dt>
-<code class="sig-name descname"><span class="pre">filterwarnings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Warning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">filterwarnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Warning</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
 <dd></dd></dl>
 
 </div>
@@ -912,7 +943,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>如您所见，指令和角色名称都包含域名和指令名称。</p>
-<div class="section" id="id3">
+<section id="id3">
 <h3>默认域<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>对于仅从一个域描述对象的文档，作者在指定默认值后，不必再在每个指令，角色等处再次声明其名称。这可以通过配置值 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-primary_domain"><code class="docutils literal notranslate"><span class="pre">primary_domain</span></code></a> 或通过此指令来完成:</p>
 <p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">default-domain::</span> <span class="pre">name</span></code> 选择一个新的默认域。虽然 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-primary_domain"><code class="docutils literal notranslate"><span class="pre">primary_domain</span></code></a> 选择全局默认值，但这只在同一个文件中有效。</p>
@@ -925,8 +956,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h3>交叉引用语法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>对于域提供的交叉引用角色，存在与一般交叉引用相同的工具。请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#xref-syntax">交叉引用语法</a> 。</p>
 <p>简而言之:</p>
@@ -935,12 +966,12 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <li><p>如果在内容前加上 <code class="docutils literal notranslate"><span class="pre">!</span></code> ，则不会创建引用/超链接。</p></li>
 <li><p>如果在内容前面添加 <code class="docutils literal notranslate"><span class="pre">~</span></code> ，则链接文本将只是目标的最后一个组件。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`~Queue.Queue.get`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">Queue.Queue.get</span></code> 但仅显示 <code class="docutils literal notranslate"><span class="pre">get</span></code> 作为链接文本。</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="python">
+</section>
+</section>
+<section id="python">
 <span id="rst-domains-python"></span><h2>Python 域<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h2>
 <p>Python 域（名称 <strong>py</strong>）为模块声明提供以下指令：</p>
-<div class="section" id="id5">
+<section id="id5">
 <h3>常用指令<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
 <div class="row docutils">
@@ -1183,8 +1214,8 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h3>Python 签名<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>函数，方法和类构造函数的签名可以像在 Python 中编写一样给出。</p>
 <p>可以给出可选参数的默认值(但如果它们包含逗号，则会混淆签名解析器)。还可以给出 Python 3 样式的参数注释以及返回类型注释：</p>
@@ -1193,13 +1224,13 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </div>
 <p>对于具有可选参数但没有默认值的函数（通常在没有关键字参数支持的C扩展模块中实现的函数），可以使用括号指定可选部分:</p>
 <dl class="py function">
-<dt id="compile">
-<code class="sig-name descname"><span class="pre">compile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">filename</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">symbol</span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#compile" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object py" id="compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">filename</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">symbol</span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#compile" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>习惯上将开口括号放在逗号之前。</p>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h3>信息字段列表<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>在 Python 对象描述指令中，具有这些字段的reST字段列表可以很好地识别和格式化：</p>
 <ul class="simple">
@@ -1234,16 +1265,16 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <p>这将呈现如下：</p>
 <div class="w3-padding w3-pale-red docutils">
 <dl class="py function">
-<dt id="send_message">
-<code class="sig-name descname"><span class="pre">send_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sender</span></em>, <em class="sig-param"><span class="pre">recipient</span></em>, <em class="sig-param"><span class="pre">message_body</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">priority=1</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#send_message" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object py" id="send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sender</span></em>, <em class="sig-param"><span class="pre">recipient</span></em>, <em class="sig-param"><span class="pre">message_body</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">priority=1</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#send_message" title="永久链接至目标">¶</a></dt>
 <dd><p>Send a message to a recipient</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sender</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) -- The person sending the message</p></li>
-<li><p><strong>recipient</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) -- The recipient of the message</p></li>
-<li><p><strong>message_body</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) -- The body of the message</p></li>
-<li><p><strong>priority</strong> (<em>integer</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.9)"><em>None</em></a>) -- The priority of the message, can be a number 1-5</p></li>
+<li><p><strong>sender</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The person sending the message</p></li>
+<li><p><strong>recipient</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The recipient of the message</p></li>
+<li><p><strong>message_body</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The body of the message</p></li>
+<li><p><strong>priority</strong> (<em>integer</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.9)"><em>None</em></a>) – The priority of the message, can be a number 1-5</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -1254,8 +1285,8 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 </dd>
 <dt class="field-even">引发</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(在 Python v3.9)"><strong>ValueError</strong></a> -- if the message_body exceeds 160 characters</p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(在 Python v3.9)"><strong>TypeError</strong></a> -- if the message_body is not a basestring</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(在 Python v3.9)"><strong>ValueError</strong></a> – if the message_body exceeds 160 characters</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(在 Python v3.9)"><strong>TypeError</strong></a> – if the message_body is not a basestring</p></li>
 </ul>
 </dd>
 </dl>
@@ -1281,8 +1312,8 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <span class="nc">:rtype:</span> float or str
 </pre></div>
 </div>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h3>交叉引用 Python 对象<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>以下角色引用模块中的对象，如果找到匹配的标识符，则可能是超链接：</p>
 <div class="w3-card-4 w3-padding w3-pale-green docutils">
@@ -1316,9 +1347,9 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <p>类似的启发式方法用于确定名称是否是当前记录的类的属性。</p>
 <p>此外，如果名称以点为前缀，并且未找到完全匹配，则将目标作为后缀，并搜索具有该后缀的所有对象名称。例如，<code class="docutils literal notranslate"><span class="pre">:py:meth:`.TarFile.close`</span></code> 引用 <code class="docutils literal notranslate"><span class="pre">tarfile.TarFile.close()</span></code> 函数，即使当前模块不是 <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> 。由于这可能会变得模棱两可，如果有多个可能匹配，您将收到 Sphinx 的警告。</p>
 <p>请注意，您可以组合使用 <code class="docutils literal notranslate"><span class="pre">~</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.</span></code> 前缀: <code class="docutils literal notranslate"><span class="pre">:py:meth:`~.TarFile.close`</span></code> 将引用 <code class="docutils literal notranslate"><span class="pre">tarfile.TarFile.close()</span></code> 方法，但可见的链接标题只是 <code class="docutils literal notranslate"><span class="pre">close()</span></code>。</p>
-</div>
-</div>
-<div class="section" id="c">
+</section>
+</section>
+<section id="c">
 <span id="rst-domains-c"></span><h2>C 域<a class="headerlink" href="#c" title="永久链接至标题">¶</a></h2>
 <p>C 域（名称  <strong>c</strong>）适用于 C API 的文档。</p>
 <dl class="simple myst">
@@ -1350,7 +1381,7 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <dt><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span> <span class="pre">typedef-like</span> <span class="pre">declaration</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">c:type::</span> <span class="pre">name</span></code></dt><dd><p>描述一个 C 类型，可以是一个 typedef，也可以是一个未指定的类型的别名。</p>
 </dd>
 </dl>
-<div class="section" id="id9">
+<section id="id9">
 <h3>交叉引用 C 构造<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>如果在文档中定义了以下角色，则会创建对C语言构造的交叉引用:</p>
 <ul class="simple">
@@ -1366,8 +1397,8 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <li><p><code class="docutils literal notranslate"><span class="pre">:c:type:</span></code></p></li>
 </ul>
 <p>引用一个 C 语言声明，如上定义。请注意，<code class="docutils literal notranslate"><span class="pre">c:member</span></code>、<code class="docutils literal notranslate"><span class="pre">c:data</span></code>和 <code class="docutils literal notranslate"><span class="pre">c:var</span></code> 是等同的。</p>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h3>匿名实体<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>C 语言支持匿名结构、枚举和联合体。为了便于记录，它们必须被赋予一些以 <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> 开头的名称，例如 <code class="docutils literal notranslate"><span class="pre">&#64;42</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&#64;data</span></code>。这些名字也可以在交叉引用中使用，尽管即使省略了嵌套符号也会被发现。<code class="docutils literal notranslate"><span class="pre">&#64;...</span></code> 的名字将总是被呈现为 <code class="docutils literal notranslate"><span class="pre">[anonymous]</span></code>（可能是一个链接）。</p>
 <p>例子：</p>
@@ -1400,19 +1431,19 @@ Explicit ref: <span class="na">:c:var:</span><span class="nv">`Data.@data.a`</sp
 </div>
 <div class="card-body docutils">
 <dl class="c struct">
-<dt id="c.Data">
-<em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">Data</span></code><a class="headerlink" href="#c.Data" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.Data">
+<span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Data</span></span></span><a class="headerlink" href="#c.Data" title="永久链接至目标">¶</a><br /></dt>
 <dd><dl class="c union">
-<dt id="c.Data.&#64;data">
-<em class="property"><span class="pre">union</span> </em><strong><span class="pre">[anonymous]</span></strong><a class="headerlink" href="#c.Data.@data" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.Data.&#64;data">
+<span class="k"><span class="pre">union</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#c.Data.@data" title="永久链接至目标">¶</a><br /></dt>
 <dd><dl class="c var">
-<dt id="c.Data.&#64;data.a">
-<span class="pre">int</span> <code class="sig-name descname"><span class="pre">a</span></code><a class="headerlink" href="#c.Data.@data.a" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.Data.&#64;data.a">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">a</span></span></span><a class="headerlink" href="#c.Data.@data.a" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c var">
-<dt id="c.Data.&#64;data.b">
-<span class="pre">double</span> <code class="sig-name descname"><span class="pre">b</span></code><a class="headerlink" href="#c.Data.@data.b" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.Data.&#64;data.b">
+<span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b</span></span></span><a class="headerlink" href="#c.Data.@data.b" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1425,8 +1456,8 @@ Explicit ref: <span class="na">:c:var:</span><span class="nv">`Data.@data.a`</sp
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id11">
+</section>
+<section id="id11">
 <h3>别名声明<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>有时，将声明列在主要文档以外的地方可能会有帮助，例如，在创建一个接口的概要时。以下指令可用于此目的。</p>
 <dl class="simple myst">
@@ -1456,20 +1487,20 @@ Explicit ref: <span class="na">:c:var:</span><span class="nv">`Data.@data.a`</sp
 </div>
 <div class="card-body docutils">
 <dl class="c var">
-<dt id="c.data2">
-<span class="pre">int</span> <code class="sig-name descname"><span class="pre">data2</span></code><a class="headerlink" href="#c.data2" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.data2">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data2</span></span></span><a class="headerlink" href="#c.data2" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c function">
-<dt id="c.f2">
-<span class="pre">int</span> <code class="sig-name descname"><span class="pre">f2</span></code><span class="sig-paren">(</span><span class="pre">double</span> <em><span class="pre">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.f2" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.f2">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f2</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">k</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.f2" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="alias">
-<dt>
-<span class="pre">int</span> <a class="reference internal" href="#c.data2" title="data2"><span class="pre">data2</span></a><br /></dt>
-<dt>
-<span class="pre">int</span> <a class="reference internal" href="#c.f2" title="f2"><span class="pre">f2</span></a><span class="sig-paren">(</span><span class="pre">double</span> <span class="pre">k</span><span class="sig-paren">)</span><br /></dt>
+<dl>
+<dt class="sig sig-object c">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><a class="reference internal" href="#c.data2" title="data2"><span class="n"><span class="pre">data2</span></span></a><br /></dt>
+<dt class="sig sig-object c">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><a class="reference internal" href="#c.f2" title="f2"><span class="n"><span class="pre">f2</span></span></a><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">)</span></span><br /></dt>
 </dl>
 
 </div>
@@ -1486,8 +1517,8 @@ Explicit ref: <span class="na">:c:var:</span><span class="nv">`Data.@data.a`</sp
 </dl>
 </dd>
 </dl>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h3>内联表达式和类型<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">:c:expr:</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">:c:texpr:</span></code></dt><dd><p>插入一个 C 语言表达式或类型，可以是内联代码（<code class="docutils literal notranslate"><span class="pre">cpp:expr</span></code>）或内联文本（<code class="docutils literal notranslate"><span class="pre">cpp:texpr</span></code>）。比如说：</p>
@@ -1519,18 +1550,18 @@ A type: <span class="na">:c:expr:</span><span class="nv">`const Data*`</span>
 </div>
 <div class="card-body docutils">
 <dl class="c var">
-<dt id="c.b">
-<span class="pre">int</span> <code class="sig-name descname"><span class="pre">b</span></code> <span class="pre">=</span> <span class="pre">42</span><a class="headerlink" href="#c.b" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.b">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#c.b" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="c function">
-<dt id="c.f">
-<span class="pre">int</span> <code class="sig-name descname"><span class="pre">f</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">i</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.f" title="永久链接至目标">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.f">
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">f</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.f" title="永久链接至目标">¶</a><br /></dt>
 <dd></dd></dl>
 
-<p class="card-text">An expression: <code class="xref c c-expr docutils literal notranslate"><a class="reference internal" href="#c.b" title="b"><span class="pre">b</span></a> <span class="pre">*</span> <a class="reference internal" href="#c.f" title="f"><span class="pre">f</span></a><span class="pre">(</span><a class="reference internal" href="#c.b" title="b"><span class="pre">b</span></a><span class="pre">)</span></code> (or as text: <span class="xref c c-texpr"><a class="reference internal" href="#c.b" title="b">b</a> * <a class="reference internal" href="#c.f" title="f">f</a>(<a class="reference internal" href="#c.b" title="b">b</a>)</span>).</p>
-<p class="card-text">A type: <code class="xref c c-expr docutils literal notranslate"><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#c.Data" title="Data"><span class="pre">Data</span></a><span class="pre">*</span></code>
-(or as text <span class="xref c c-texpr"><em class="property">const</em> <a class="reference internal" href="#c.Data" title="Data">Data</a>*</span>).</p>
+<p class="card-text">An expression: <span class="c-expr sig sig-inline c"><a class="reference internal" href="#c.b" title="b"><span class="n">b</span></a><span class="w"> </span><span class="o">*</span><span class="w"> </span><a class="reference internal" href="#c.f" title="f"><span class="n">f</span></a><span class="p">(</span><a class="reference internal" href="#c.b" title="b"><span class="n">b</span></a><span class="p">)</span></span> (or as text: <span class="c-texpr sig sig-inline c"><a class="reference internal" href="#c.b" title="b"><span class="n">b</span></a><span class="w"> </span><span class="o">*</span><span class="w"> </span><a class="reference internal" href="#c.f" title="f"><span class="n">f</span></a><span class="p">(</span><a class="reference internal" href="#c.b" title="b"><span class="n">b</span></a><span class="p">)</span></span>).</p>
+<p class="card-text">A type: <span class="c-expr sig sig-inline c"><span class="k">const</span><span class="w"> </span><a class="reference internal" href="#c.Data" title="Data"><span class="n">Data</span></a><span class="p">*</span></span>
+(or as text <span class="c-texpr sig sig-inline c"><span class="k">const</span><span class="w"> </span><a class="reference internal" href="#c.Data" title="Data"><span class="n">Data</span></a><span class="p">*</span></span>).</p>
 </div>
 </div>
 </div>
@@ -1538,8 +1569,8 @@ A type: <span class="na">:c:expr:</span><span class="nv">`const Data*`</span>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="id13">
+</section>
+<section id="id13">
 <h3>名称空间<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>C 语言本身并不支持命名，但有时在文档中模仿它是很有用的，例如，显示备用的声明。该功能也可用于记录结构体/联合体/枚举体的成员，与它们的父声明分开。</p>
 <p>当前的作用域可以通过三个命名空间指令来改变。它们管理一个堆栈声明，其中 <code class="docutils literal notranslate"><span class="pre">c:namespace</span></code> 重置了堆栈并改变了一个给定的作用域。</p>
@@ -1578,17 +1609,17 @@ A type: <span class="na">:c:expr:</span><span class="nv">`const Data*`</span>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="id14">
+</section>
+<section id="id14">
 <h3>配置变量<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#c-config">Options for the C domain</a>。</p>
-</div>
-</div>
-<div class="section" id="rst-domains-cpp">
+</section>
+</section>
+<section id="rst-domains-cpp">
 <span id="id15"></span><h2>C++ 域<a class="headerlink" href="#rst-domains-cpp" title="永久链接至标题">¶</a></h2>
 <p>参见：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#cpp-domain">CPP Domains — Sphinx documentation (sphinx-doc.org)</a>。</p>
-</div>
-<div class="section" id="id16">
+</section>
+<section id="id16">
 <h2>标准域<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
 <p>所谓的“标准”域收集所有不保证自己域名的标记。其指令和角色不以域名为前缀。</p>
 <p>标准域也是使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/extdev/appapi.html#sphinx.application.Sphinx.add_object_type"><code class="docutils literal notranslate"><span class="pre">add_object_type()</span></code></a> API 添加的自定义对象描述的位置。</p>
@@ -1639,8 +1670,8 @@ A type: <span class="na">:c:expr:</span><span class="nv">`const Data*`</span>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="javascript">
+</section>
+<section id="javascript">
 <span id="rst-domains-javascript"></span><h2>JavaScript域<a class="headerlink" href="#javascript" title="永久链接至标题">¶</a></h2>
 <p>JavaScript域(名称  <strong>js</strong> )提供以下指令:</p>
 <dl class="simple myst">
@@ -1662,19 +1693,19 @@ A type: <span class="na">:c:expr:</span><span class="nv">`const Data*`</span>
 </div>
 <p>这表现为：</p>
 <dl class="js function">
-<dt id="getJSON">
-<span id="_S_.getJSON"></span><code class="sig-prename descclassname"><span class="pre">$.</span></code><code class="sig-name descname"><span class="pre">getJSON</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">href</span></em>, <em class="sig-param"><span class="pre">callback</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">errback</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getJSON" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object js" id="getJSON">
+<span id="_S_.getJSON"></span><span class="sig-prename descclassname"><span class="pre">$.</span></span><span class="sig-name descname"><span class="pre">getJSON</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">href</span></em>, <em class="sig-param"><span class="pre">callback</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">errback</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#getJSON" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>href</strong> (<em>string</em>) -- An URI to the location of the resource.</p></li>
-<li><p><strong>callback</strong> -- Gets called with the object.</p></li>
-<li><p><strong>errback</strong> -- Gets called in case the request fails. And a lot of other
+<li><p><strong>href</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – An URI to the location of the resource.</p></li>
+<li><p><strong>callback</strong> – Gets called with the object.</p></li>
+<li><p><strong>errback</strong> – Gets called in case the request fails. And a lot of other
 text so we need multiple lines.</p></li>
 </ul>
 </dd>
 <dt class="field-even">抛出</dt>
-<dd class="field-even"><p><strong>SomeError</strong> -- For whatever reason in that case.</p>
+<dd class="field-even"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – For whatever reason in that case.</p>
 </dd>
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>Something.</p>
@@ -1694,13 +1725,13 @@ text so we need multiple lines.</p></li>
 </div>
 <p>这表现为：</p>
 <dl class="js class">
-<dt id="MyAnimal">
-<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">MyAnimal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">age</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyAnimal" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object js" id="MyAnimal">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MyAnimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">age</span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyAnimal" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>string</em>) -- The name of the animal</p></li>
-<li><p><strong>age</strong> (<em>number</em>) -- an optional age for the animal</p></li>
+<li><p><strong>name</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – The name of the animal</p></li>
+<li><p><strong>age</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – an optional age for the animal</p></li>
 </ul>
 </dd>
 </dl>
@@ -1721,8 +1752,8 @@ text so we need multiple lines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">:js:data:</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">:js:attr:</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="restructuredtext">
+</section>
+<section id="restructuredtext">
 <span id="rst-domains-rst"></span><h2>reStructuredText 域<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h2>
 <p>reStructuredText域（名称 <strong>rst</strong>）提供以下指令:</p>
 <dl class="simple myst">
@@ -1754,14 +1785,14 @@ text so we need multiple lines.</p></li>
 </div>
 <div class="card-body docutils">
 <dl class="rst directive">
-<dt id="directive-foo">
-<code class="sig-name descname"><span class="pre">..</span> <span class="pre">foo::</span></code><a class="headerlink" href="#directive-foo" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object rst" id="directive-foo">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">foo::</span></span><a class="headerlink" href="#directive-foo" title="永久链接至目标">¶</a></dt>
 <dd><p class="card-text">Foo description.</p>
 </dd></dl>
 
 <dl class="rst directive">
-<dt id="directive-bar">
-<code class="sig-name descname"><span class="pre">..</span> <span class="pre">bar::</span></code><code class="sig-prename descclassname"> <span class="pre">baz</span></code><a class="headerlink" href="#directive-bar" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object rst" id="directive-bar">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">bar::</span></span><span class="sig-prename descclassname"> <span class="pre">baz</span></span><a class="headerlink" href="#directive-bar" title="永久链接至目标">¶</a></dt>
 <dd><p class="card-text">Bar description.</p>
 </dd></dl>
 
@@ -1795,8 +1826,8 @@ text so we need multiple lines.</p></li>
 </div>
 <div class="card-body docutils">
 <dl class="rst role">
-<dt id="role-foo">
-<code class="sig-name descname"><span class="pre">:foo:</span></code><a class="headerlink" href="#role-foo" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object rst" id="role-foo">
+<span class="sig-name descname"><span class="pre">:foo:</span></span><a class="headerlink" href="#role-foo" title="永久链接至目标">¶</a></dt>
 <dd><p class="card-text">Foo description.</p>
 </dd></dl>
 
@@ -1832,13 +1863,13 @@ text so we need multiple lines.</p></li>
 </div>
 <div class="card-body docutils">
 <dl class="rst directive">
-<dt id="directive-toctree">
-<code class="sig-name descname"><span class="pre">..</span> <span class="pre">toctree::</span></code><a class="headerlink" href="#directive-toctree" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object rst" id="directive-toctree">
+<span class="sig-name descname"><span class="pre">..</span> <span class="pre">toctree::</span></span><a class="headerlink" href="#directive-toctree" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="rst directive:option">
-<dt id="directive-option-maxdepth">
-<span id="directive:option--maxdepth"></span><code class="sig-name descname"><span class="pre">:maxdepth:</span></code><em class="property"> <span class="pre">(integer</span> <span class="pre">or</span> <span class="pre">no</span> <span class="pre">value)</span></em><a class="headerlink" href="#directive-option-maxdepth" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object rst" id="directive-option-maxdepth">
+<span id="directive:option--maxdepth"></span><span class="sig-name descname"><span class="pre">:maxdepth:</span></span><em class="property"> <span class="pre">(integer</span> <span class="pre">or</span> <span class="pre">no</span> <span class="pre">value)</span></em><a class="headerlink" href="#directive-option-maxdepth" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -1853,8 +1884,8 @@ text so we need multiple lines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">:rst:dir:</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">:rst:role:</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="rst-domains-math">
+</section>
+<section id="rst-domains-math">
 <span id="id17"></span><h2>数学域<a class="headerlink" href="#rst-domains-math" title="永久链接至标题">¶</a></h2>
 <p>数学域（名称  <strong>math</strong>）提供以下角色：</p>
 <dl class="simple myst">
@@ -1885,7 +1916,7 @@ most beautiful mathematical formulas.
 <div class="card-body docutils">
 <div class="math notranslate nohighlight" id="equation-euler">
 <span class="eqno">(1)<a class="headerlink" href="#equation-euler" title="公式的永久链接">¶</a></span>\[e^{i\pi} + 1 = 0\]</div>
-<p class="card-text">Euler's identity, equation <a class="reference internal" href="#equation-euler">(1)</a>, was elected one of the
+<p class="card-text">Euler’s identity, equation <a class="reference internal" href="#equation-euler">(1)</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 </div>
 </div>
@@ -1894,12 +1925,12 @@ most beautiful mathematical formulas.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="section" id="id18">
+</section>
+<section id="id18">
 <h2>更多域<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/">sphinx-contrib</a> 存储库包含更多可用作扩展的域；目前有 <a class="reference external" href="https://pypi.org/project/sphinxcontrib-adadomain/">Ada</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-coffee/">CoffeeScript</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-erlangdomain/">Erlang</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-httpdomain/">HTTP</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-lassodomain/">Lasso</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-matlabdomain/">MATLAB</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-phpdomain/">PHP</a>, 和 <a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/src/default/rubydomain">Ruby</a> 域。另外还有 <a class="reference external" href="https://pypi.org/project/sphinxcontrib-chapeldomain/">Chapel</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-cldomain/">Common Lisp</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-dqndomain/">dqn</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-golangdomain/">Go</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-jinjadomain/">Jinja</a>, <a class="reference external" href="https://pypi.org/project/sphinxcontrib-operationdomain/">Operation</a>, 和 <a class="reference external" href="https://pypi.org/project/sphinxcontrib-scaladomain/">Scala</a> 的域。</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1940,10 +1971,10 @@ most beautiful mathematical formulas.</p>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../sphinx/index.html" title="下一页 页">
+        <a class="right-next" href="../myst/index.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">Sphinx</p>
+                <p class="prevnext-title">MyST</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

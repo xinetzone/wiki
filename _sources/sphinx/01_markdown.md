@@ -30,4 +30,4 @@ source_suffix = {
 }
 ```
 
-- 你可以进一步配置 MyST-Parser 以允许标准 CommonMark 不支持的自定义语法。在 [MyST-Parser 文档](https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html) 中阅读更多内容。
+- 你可以进一步配置 MyST-Parser 以允许标准 CommonMark 不支持的自定义语法。在 [MyST-Parser 文档](wiki:myst) 中阅读更多内容。

@@ -121,7 +121,7 @@ $ python setup.py build_sphinx
 
     这也可以通过向 `setup.py` 传递 `-i` 标志来设置。
 
-    ``sh
+    ```sh
     $ python setup.py build_sphinx -i
     ```
 

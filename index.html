@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wiki 导航</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>上善若水</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -40,7 +41,7 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -83,15 +84,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/index.html" />
     <link rel="shortcut icon" href="_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="genindex.html" />
@@ -124,7 +128,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -148,7 +152,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -189,7 +193,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   编程
  </span>
@@ -218,7 +222,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学科
  </span>
@@ -299,11 +303,38 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="sphinx/index.html">
-     Sphinx
+    <a class="reference internal" href="myst/index.html">
+     MyST
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="myst/00_start.html">
+       快速上手
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="myst/01_syntax.html">
+       MyST 语法指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="myst/02_optional.html">
+       可选的 MyST 语法
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="sphinx/index.html">
+     Sphinx
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -369,8 +400,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="actions/index.html">
      Github Actions
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -379,15 +410,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       <a class="reference internal" href="actions/sphinx/index.html">
        Sphinx
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="actions/sphinx/sphinx.html">
-         Sphinx Build
+        <a class="reference internal" href="actions/sphinx/build.html">
+         通用 Sphinx Action
         </a>
        </li>
       </ul>
@@ -398,8 +429,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="epb/index.html">
      Executable Book Project
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -429,7 +460,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -439,8 +470,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -471,8 +502,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="glossary/index.html">
    术语表
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -568,8 +599,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="other/index.html">
    其他
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -696,6 +727,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   笔记
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   他山之石
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -704,95 +753,114 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="wiki">
-<h1>Wiki 导航<a class="headerlink" href="#wiki" title="永久链接至标题">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>上善若水<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top docutils">
 <dl class="describe">
-<dt>
-<code class="sig-name descname"><span class="pre">功能支持</span></code></dt>
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">功能支持</span></span></dt>
 <dd><p><span class="fa fa-check text-success mr-1"></span> 可编辑
 <span class="fa fa-check text-success mr-1"></span> 可高亮标注
 <span class="fa fa-check text-success mr-1"></span> 可评论</p>
 </dd></dl>
 
 </div>
-<div class="tip dropdown w3-pale-blue w3-card-4 w3-padding w3-round-xlarge w3-margin-top admonition">
-<p class="admonition-title">导航</p>
+<section id="id2">
+<h2>笔记<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="sphinx-bs container pb-4 full-width text-center docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-pale-blue w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/write/">写作</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">与写作相关的一切。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-aqua w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/study/">学习</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">学习相关。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-light-grey w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/tips/">tips</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">技巧。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-light-gray w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/daily-notes/">日报</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">记录每一天。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-light-red w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/cbook/">cbook</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">C/C++ 学习笔记。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>他山之石<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>收录一些优质的资源，并进行二次整合。</p>
+<div class="sphinx-bs container pb-4 full-width text-center docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-pale-green w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/wiki/">Wiki</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">百科。</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 px-2 py-2 docutils">
+<div class="card w-100 w3-pale-red w3-card docutils">
+<div class="card-header w3-pale-blue w3-wide w3-card-4 docutils">
+<p class="card-text"><a class="reference external" href="https://xinetzone.github.io/crack-book/">crack-book</a></p>
+</div>
+<div class="card-body text-justify w3-padding docutils">
+<p class="card-text">裂缝检测。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">哲学</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="life/index.html">生活</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">学习</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="web/index.html">基础</a></li>
-<li class="toctree-l1"><a class="reference internal" href="study/index.html">终身学习</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">编程</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python/00_docutils.html">Docutils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/ipython.html">IPython</a></li>
-</ul>
-</li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">学科</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="math/index.html">数学</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sanstyle/index.html">上善若水</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sanstyle/00_template.html">Sanstyle GitHub 模板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sanstyle/01_book.html">Stanstyle Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/index.html">reStructuredText</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rst/00_start.html">快速上手</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/01_field-lists.html">字段列表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/02_roles.html">角色</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/03_directives.html">指令</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/04_domains.html">域</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions/index.html">Github Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="epb/index.html">Executable Book Project</a></li>
-</ul>
-</li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">混沌</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about/index.html">关于</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">Sanstyle Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary/index.html">术语表</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="glossary/canvas.html">Canvas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/css.html">CSS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/dash.html">Dash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/dataset.html">数据集</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/en.html">英语名词</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/html.html">HTML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/http.html">HTTP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/javascript.html">JavaScript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/jupyter.html">Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/jupyter-book.html">Jupyter Nook</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/jupyter-widgets.html">ipywidgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/plotly.html">Plotly Python 开源图形库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/plotly-figure.html">Python 图参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/python.html">Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/ros.html">ROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/soft.html">常用软件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary/svg.html">SVG</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="other/index.html">其他</a></li>
-</ul>
 </div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

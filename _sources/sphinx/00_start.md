@@ -1,25 +1,19 @@
 # 快速上手
 
-{term}`Sphinx` 是一个**文档创建工具**，它可以方便地创建智能而美观的文档，作者是 Georg Brandl，发布的协议是 BSD 协议。Sphinx 支持许多科学和学术出版所必需的功能。它也是 Jupyter Book 使用的核心技术之一。Sphinx 使用 {term}`reStructuredText` 作为它的标记语言，它的许多优势来自 reStructuredText 及其解析和翻译套件 {term}`Docutils` 的强大和直接。Sphinx 专注于文档，特别是手写文档，然而，Sphinx 也可以用来生成博客、 homepages 甚至书籍。
-
-安装（详细见：[Installing Sphinx](https://www.sphinx-doc.org/zh_CN/master/usage/installation.html)）：
+安装（详细见：[Installing Sphinx](https://www.sphinx-doc.org/zh_CN/master/usage/installation.html)）Sphinx：
 
 ```sh
 pip install -U Sphinx
 ```
 
-```{note}
-当前 Sphinx 版本 4.1.2。
-```
-
 ## 设置文档源
 
-Sphinx 的纯文本文件源集合的根目录被称为**源目录**（[source directory](https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-source-directory)）。该目录还包含 Sphinx 配置文件 `conf.py`，您可以在其中配置 Sphinx 如何读取源代码和构建文档的所有方面。[^1]
+Sphinx 的纯文本文件源集合的根目录被称为**源目录**（[source directory](https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-source-directory)）。该目录还包含 Sphinx 配置文件 `conf.py`，用于配置 Sphinx 如何读取源代码和构建文档。[^1]
 
 Sphinx 附带一个名为 `sphinx-quickstart` 的脚本，它设置一个源目录并创建一个默认的 `conf.py`，其中包含几个问题中最有用的配置值。要使用它，请运行：
 
 ```sh
-$ sphinx-quickstart
+sphinx-quickstart
 ```
 
 ![](image/index/1630897715068.png)
@@ -65,7 +59,7 @@ $ sphinx-quickstart
 现在您已经添加了一些文件和内容，让我们首先构建文档。使用 `sphinx-build` 程序启动构建：
 
 ```sh
-$ sphinx-build -b html sourcedir builddir
+sphinx-build -b html sourcedir builddir
 ```
 
 其中 `sourcedir` 是源目录，`builddir` 是您要在其中放置构建文档的目录。`-b` 选项选择一个构建器；在这个例子中，`Sphinx` 将构建 HTML 文件。
@@ -77,7 +71,7 @@ $ sphinx-build -b html sourcedir builddir
 但是，`sphinx-quickstart` 脚本创建了一个 `Makefile` 和一个 `make.bat`，它让你的生活更加轻松。这些可以通过运行 `make` 来执行，其中包含构建器的名称。例如：
 
 ```sh
-$ make html
+make html
 ```
 
 ## 文档对象
@@ -158,7 +152,7 @@ The :py:func:`enumerate` function can be used for ...
 
 请记住，该文件使用 Python 语法来表示字符串，数字，列表等。默认情况下，文件以 UTF-8 保存，如第一行中的编码声明所示。如果在任何字符串值中使用非 ASCII 字符，则需要使用 Python Unicode 字符串（如 `project =u'Exposé'`）。
 
-有关所有可用配置值的文档，请参阅 [配置](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html)。
+有关所有可用配置值的文档，请参阅 [配置](sphinx:configuration)。
 
 ## 使用 `autodoc` 自动生成文档
 

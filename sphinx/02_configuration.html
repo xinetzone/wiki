@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>配置</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +41,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -83,15 +84,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/sphinx/02_configuration.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -125,7 +129,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -149,7 +153,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -190,7 +194,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   编程
  </span>
@@ -219,7 +223,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学科
  </span>
@@ -299,12 +303,39 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../myst/index.html">
+     MyST
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/00_start.html">
+       快速上手
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/01_syntax.html">
+       MyST 语法指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/02_optional.html">
+       可选的 MyST 语法
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="index.html">
      Sphinx
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -370,8 +401,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../actions/index.html">
      Github Actions
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -380,15 +411,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       <a class="reference internal" href="../actions/sphinx/index.html">
        Sphinx
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../actions/sphinx/sphinx.html">
-         Sphinx Build
+        <a class="reference internal" href="../actions/sphinx/build.html">
+         通用 Sphinx Action
         </a>
        </li>
       </ul>
@@ -399,8 +430,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../epb/index.html">
      Executable Book Project
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -430,7 +461,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -440,8 +471,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -472,8 +503,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../glossary/index.html">
    术语表
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -569,8 +600,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../other/index.html">
    其他
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -723,7 +754,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="sphinx-configuration">
+  <section class="tex2jax_ignore mathjax_ignore" id="sphinx-configuration">
 <span id="id1"></span><h1>配置<a class="headerlink" href="#sphinx-configuration" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html">Configuration — Sphinx documentation (sphinx-doc.org)</a></p>
 <p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/glossary.html#term-configuration-directory">配置目录</a> 必须包含一个名为 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 的文件。这个文件（包含 Python 代码）被称为 “构建配置文件”，包含（几乎）所有自定义 Sphinx 输入和输出行为所需的配置。</p>
@@ -742,7 +773,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>配置文件中有一个名为 <code class="docutils literal notranslate"><span class="pre">tags</span></code> 的特殊对象。它可用于查询和更改标记（请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#tags">引用基于标签的内容</a>）。使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 来查询，<code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tags.remove('tag')</span></code> 来改变。只有通过 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 命令行选项或 <code class="docutils literal notranslate"><span class="pre">tags.add('tag')</span></code> 设置的标签可以使用 <code class="docutils literal notranslate"><span class="pre">tags.has('tag')</span></code> 进行查询。请注意，当前构建器标记在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中不可用，因为它是在初始化构建器 <em>之后</em> 创建的。</p></li>
 </ul>
 </div>
-<div class="section" id="id2">
+<section id="id2">
 <h2>项目信息<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><code class="docutils literal notranslate"><span class="pre">project</span></code></dt><dd><p>记录的项目名称。</p>
@@ -758,8 +789,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dt><code class="docutils literal notranslate"><span class="pre">release</span></code></dt><dd><p>完整的项目版本, 用作 <code class="docutils literal notranslate"><span class="pre">|release|</span></code> 的替代品, 例如在 HTML 模板中。例如, 对于 Python 文档, 这可能类似于 <code class="docutils literal notranslate"><span class="pre">2.6.0rc1</span></code>。如果你不需要在 <code class="docutils literal notranslate"><span class="pre">version</span></code> 和 <code class="docutils literal notranslate"><span class="pre">release</span></code> 之间提供分隔, 只需将它们设置为相同的值即可。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>一般配置项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <dl class="simple myst">
 <dt><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></dt><dd><p>模块名称为 <code class="docutils literal notranslate"><span class="pre">extensions</span></code> 的字符串列表。这些可以是 Sphinx（名为 <code class="docutils literal notranslate"><span class="pre">sphinx.ext.*</span></code>）或自定义的扩展。</p>
@@ -798,7 +829,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>现在, Sphinx 提供了一个 API <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/extdev/appapi.html#sphinx.application.Sphinx.add_source_parser"><code class="docutils literal notranslate"><span class="pre">Sphinx.add_source_parser()</span></code></a> 来注册一个源解析器。请改用它。</p>
 </div>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">root_doc</span></code></dt><dd><p>&quot;根&quot;文档的名称，即包含根 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令的文档。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;index&quot;</span></code>。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">root_doc</span></code></dt><dd><p>“根”文档的名称，即包含根 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 指令的文档。默认为 <code class="docutils literal notranslate"><span class="pre">&quot;index&quot;</span></code>。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></dt><dd><p>查找源文件时应排除的 <code class="docutils literal notranslate"><span class="pre">glob</span></code> 样式模式列表<a class="footnote-reference brackets" href="#id5" id="id4">1</a>。 它们与源目录相对于源目录进行匹配, 在所有平台上使用斜杠作为目录分隔符。</p>
 <p>示例模式:</p>
@@ -878,8 +909,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dd><p>A note on available globbing syntax: you can use the standard shell constructs *, ?, […] and [!..] with the feature that these all don’t match slashes. A double star ** can be used to match any sequence of characters including slashes.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

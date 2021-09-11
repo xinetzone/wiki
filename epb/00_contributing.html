@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>EPB 开发规范</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +41,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -83,15 +84,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/epb/00_contributing.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -125,7 +129,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -149,7 +153,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -190,7 +194,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   编程
  </span>
@@ -219,7 +223,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学科
  </span>
@@ -300,11 +304,38 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../sphinx/index.html">
-     Sphinx
+    <a class="reference internal" href="../myst/index.html">
+     MyST
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/00_start.html">
+       快速上手
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/01_syntax.html">
+       MyST 语法指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/02_optional.html">
+       可选的 MyST 语法
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sphinx/index.html">
+     Sphinx
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -370,8 +401,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../actions/index.html">
      Github Actions
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -380,15 +411,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       <a class="reference internal" href="../actions/sphinx/index.html">
        Sphinx
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../actions/sphinx/sphinx.html">
-         Sphinx Build
+        <a class="reference internal" href="../actions/sphinx/build.html">
+         通用 Sphinx Action
         </a>
        </li>
       </ul>
@@ -399,8 +430,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="index.html">
      Executable Book Project
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -430,7 +461,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -440,8 +471,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -472,8 +503,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../glossary/index.html">
    术语表
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -569,8 +600,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../other/index.html">
    其他
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -871,20 +902,20 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="epb">
+  <section class="tex2jax_ignore mathjax_ignore" id="epb">
 <span id="wiki-epb-contributing"></span><h1>EPB 开发规范<a class="headerlink" href="#epb" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html">Development Conventions — The Executable Book Project (executablebooks.org)</a></p>
 <p><strong>EPB 开发规范</strong>旨在帮助您尽可能高效地作出贡献，而不是制定必须始终遵守的严格规则。认为这些都是可以遵循的合理模式，EBP 也试图尽可能地遵循它们。但如果你喜欢做其他的事情，这通常是好的👍。</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>行为准则<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>本项目及其所有参与人员均受 <a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md">EBP 行为准则</a> 管辖。通过参与，你将被期望维护这一准则。请向 <a class="reference external" href="mailto:executablebooks&#37;&#52;&#48;gmail&#46;com">executablebooks<span>&#64;</span>gmail<span>&#46;</span>com</a> 报告不可接受的行为。</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>问题或反馈<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>可执行书籍项目使用一个 <a class="reference external" href="https://github.com/executablebooks/meta/discussions">GitHub 讨论板</a> 来提供社区问题、讨论和帮助。请在这里加入：<a class="reference external" href="https://github.com/executablebooks/meta/discussions">https://github.com/executablebooks/meta/discussions</a>。</p>
 <p>此外，如果你想看到一个新功能的实现，查看 EPB 的 <a class="reference external" href="https://executablebooks.org/en/latest/feature-vote.html">功能投票</a> 页面。</p>
-</div>
-<div class="section" id="ebp">
+</section>
+<section id="ebp">
 <h2>EBP 存储库的结构<a class="headerlink" href="#ebp" title="永久链接至标题">¶</a></h2>
 <p>EBP 是一个大型开源项目；它由许多包组成，以保持单个组件的模块化和可重用性。当您考虑为 EBP 做出贡献时，您可能不确定哪些存储库实现了您想要更改的功能或报告错误。这部分应该可以帮助你。</p>
 <p>以下是一些大的列表：</p>
@@ -899,8 +930,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://github.com/executablebooks/myst-language-support">myst-language-support</a> 提供了 aTextmate 语法和 VS Code 扩展，用于编辑 MyST 标记。</p></li>
 </ul>
 <p>下面是适用于所有存储库的约定文档，但单个存储库也可能包含针对特定代码库的额外贡献指南。</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>设计哲学<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>在做出技术和社区决策时，EPB 项目尝试遵循一些高级原则。他们的目标是要争取的，并且可能不是所有的时间都被完美地遵循。以下是其中一些原则：</p>
 <dl class="simple myst">
@@ -913,15 +944,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dt>尽早并经常发布</dt><dd><p>我们应该强调更小、更迭代的发布，而不是更大、更复杂的发布。这将使我们的文档与最新版本保持一致，并将与大更改相关的中断（以及随后的维护负担）降至最低。<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#releases-and-change-logs">创建一个发布版本的过程</a> 是相对简单和快速的，所以发布适当的补丁版本（或小版本）时不要犹豫。</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>编程风格<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>编码风格在很大程度上是自动执行的，使用 <a class="reference external" href="https://pre-commit.com/">pre-commit hooks</a>。对于 Python 包，预提交应该包括通过 <a class="reference external" href="https://black.readthedocs.io/">Black</a> 实现的自动代码格式化和通过 <a class="reference external" href="https://flake8.pycqa.org/">flake8</a> 实现的代码检测。</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>命名规范<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>应该使用以下命名约定。</p>
-<div class="section" id="id6">
+<section id="id6">
 <h3>指令<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>指令的名称应该是：</p>
 <ul class="simple">
@@ -934,9 +965,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 ```
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id7">
+</section>
+</section>
+<section id="id7">
 <h2>测试<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>所有的包都应该包含一个测试基础设施，通常是通过 <a class="reference external" href="https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow">GitHub Actions 工作流</a> 自动化的 PRs 和提交。</p>
 <p>测试哲学：</p>
@@ -947,8 +978,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>记录编写测试的原因：一旦测试失败，开发人员会感谢你的。</p></li>
 </ul>
 <p>对于 Python 包，测试基础设施应该通过 <a class="reference external" href="https://docs.pytest.org/">pytest</a> 实现。</p>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h2>文档<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>项目的最小描述应该包含在 <a class="reference external" href="http://readme.md/">README.md</a> 中，那么大多数文档通常应该包含在 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 文件夹中，使用 <a class="reference internal" href="../sphinx/index.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a>（直接或通过 jupyter book）作为文档生成器。</p>
 <p>Markdown 风格通常应该遵循 <a class="reference external" href="https://github.com/markdownlint/markdownlint">markdownlint</a> 中列出的规则，rST 也应该类似地遵循 <a class="reference external" href="https://github.com/myint/rstcheck">rstcheck</a>，这两者都可以添加到 pre-commit 配置中。</p>
@@ -993,8 +1024,8 @@ Out [1]: &quot;hi&quot;
 ```
 </pre></div>
 </div>
-</div>
-<div class="section" id="git">
+</section>
+<section id="git">
 <h2>Git 分支<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h2>
 <p>存储库应该使用 <code class="docutils literal notranslate"><span class="pre">master</span></code>（或者 <code class="docutils literal notranslate"><span class="pre">main</span></code>） 作为它们的主分支。这个分支在 GitHub 上应该是“受保护的”，并且在合并之前需要 PR 审查和状态检查（参见 <a class="reference external" href="https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches">GitHub 分支配置</a>）。</p>
 <p>添加到 <code class="docutils literal notranslate"><span class="pre">master</span></code> 应该遵循以下简单的概念：</p>
@@ -1003,8 +1034,8 @@ Out [1]: &quot;hi&quot;
 <li><p>使用拉请求将特性分支合并到主分支中。</p></li>
 <li><p>保持一个高质量，最新的主分支。</p></li>
 </ul>
-</div>
-<div class="section" id="id9">
+</section>
+<section id="id9">
 <h2>打开拉请求<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>Pull 请求应该尽早和经常提交给 <code class="docutils literal notranslate"><span class="pre">master</span></code>！</p>
 <p>为了提高对拉请求“一眼就能看出来”的理解，鼓励使用几个标准化的标题前缀：</p>
@@ -1021,72 +1052,72 @@ Out [1]: &quot;hi&quot;
 <p>PRs 通常还应该对一个或多个未决问题作出回应。你可以将 pull 请求链接到某个议题，以显示修复正在进行中，并在 pull 请求合并时自动关闭该问题；参见将 <a class="reference external" href="https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue">pull 请求链接到一个议题</a>。</p>
 <p>如果您的 pull 请求还没有准备好合并，请打开您的 pull 请求作为 draft。更多信息可以在<a class="reference external" href="https://help.github.com/articles/about-pull-requests/#draft-pull-requests"> GitHub 的文档中找到</a>。这告诉开发团队拉请求是一个“work-in-progress”，并且您计划继续处理它。</p>
 <p>当您的 pull 请求为“Ready for Review”时，您可以在 PR 页面上选择此选项，该选项将通知项目维护者审查您提出的更改。</p>
-</div>
-<div class="section" id="pull-request-reviews">
+</section>
+<section id="pull-request-reviews">
 <h2>Pull Request Reviews<a class="headerlink" href="#pull-request-reviews" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id10">
+<section id="id10">
 <h3>源<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p><a class="reference external" href="https://github.com/aiidateam/aiida-core/wiki/Best-practises-for-code-review">https://github.com/aiidateam/aiida-core/wiki/Best-practises-for-code-review</a></p>
 <p><a class="reference external" href="https://google.github.io/eng-practices/review/reviewer/standard.html">https://google.github.io/eng-practices/review/reviewer/standard.html</a></p>
 <p><a class="reference external" href="https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html">https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html</a></p>
 <p><a class="reference external" href="https://phauer.com/2018/code-review-guidelines/">https://phauer.com/2018/code-review-guidelines/</a></p>
-</div>
-<div class="section" id="id11">
+</section>
+<section id="id11">
 <h3>批准变更<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>技术事实和数据优于个人偏好</p></li>
 <li><p>如果 PR 确实能够改善代码的整体健康状况，那么就应该批准 PR，即使它并不完美</p></li>
 </ul>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h3>警惕<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>对评审请求做出反应。那些付出努力并做出回馈的用户最值得我们关注，而 PRs 的及时审核便是一大激励因素。</p></li>
 <li><p>查看正在修改的每一行代码。</p></li>
 <li><p>使用清单，特别是如果您是代码审查新手。</p></li>
 </ul>
-</div>
-<div class="section" id="id13">
+</section>
+<section id="id13">
 <h3>交流<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>对做得好的事情给予鼓励，不要只是指出错误。</p></li>
 <li><p>可以提到哪些地方需要改进，但不是强制性的（在注释前加上 “Nit:” 代替 “nitpick”）。</p></li>
 <li><p>分享知识有助于提交者提高他们对代码的理解（(明确你希望/不希望在什么地方采取行动）</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="check-list-what-to-look-for">
+</section>
+</section>
+<section id="check-list-what-to-look-for">
 <h2>Check-list - What to look for<a class="headerlink" href="#check-list-what-to-look-for" title="永久链接至标题">¶</a></h2>
-<div class="section" id="scope">
+<section id="scope">
 <h3>Scope<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#scope">¶</a><a class="headerlink" href="#scope" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Are you being asked to review more than 200 lines of code? Then don’t be shy to ask the submitter to split the PR - review effectiveness <a class="reference external" href="https://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/index.html">drops substantially beyond 200 lines of code</a>.</p></li>
 <li><p>Are there parts of the codebase that have not been modified, but <em>should</em> be adapted to the changes? Does the code change require an update of the documentation?</p></li>
 </ul>
-</div>
-<div class="section" id="design">
+</section>
+<section id="design">
 <h3>Design<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#design">¶</a><a class="headerlink" href="#design" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Does this change belong in the codebase?</p></li>
 <li><p>Is it integrated well?</p></li>
 </ul>
-</div>
-<div class="section" id="functionality">
+</section>
+<section id="functionality">
 <h3>Functionality<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#functionality">¶</a><a class="headerlink" href="#functionality" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Does the code do what the developer intended?</p></li>
 <li><p>Are there edge cases, where it could break?</p></li>
 <li><p>For UI changes: give it a try yourself! (difficult to grasp from reading code)</p></li>
 </ul>
-</div>
-<div class="section" id="complexity">
+</section>
+<section id="complexity">
 <h3>Complexity<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#complexity">¶</a><a class="headerlink" href="#complexity" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Any complex lines, functions, classes that are not easy to understand?</p></li>
 <li><p>Over-engineering: is the code too complex for the problem at hand?</p></li>
 </ul>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h3>Tests<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#tests">¶</a><a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Are there tests for new functionality?
@@ -1094,27 +1125,27 @@ Are bugs covered by a test that breaks if the bug resurfaces?</p></li>
 <li><p>Are the tests correct and useful?
 Do they make simple and useful assertions?</p></li>
 </ul>
-</div>
-<div class="section" id="naming">
+</section>
+<section id="naming">
 <h3>Naming<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#naming">¶</a><a class="headerlink" href="#naming" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>A good name is long enough to communicate what the item does, without being so long that it becomes hard to read</p></li>
 </ul>
-</div>
-<div class="section" id="comments">
+</section>
+<section id="comments">
 <h3>Comments<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#comments">¶</a><a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Do comments explain <em>why</em> code exists (rather than <em>what</em> it is doing)?</p></li>
 </ul>
-</div>
-<div class="section" id="style-consistency">
+</section>
+<section id="style-consistency">
 <h3>Style &amp; Consistency<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#style-consistency">¶</a><a class="headerlink" href="#style-consistency" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>Does the contribution follow generic coding style (mostly enforced automatically)?</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="merging-pull-requests">
+</section>
+</section>
+<section id="merging-pull-requests">
 <h2>Merging Pull Requests<a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#merging-pull-requests">¶</a><a class="headerlink" href="#merging-pull-requests" title="永久链接至标题">¶</a></h2>
 <p>A pull request should be opened only once you consider it ready for review. Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.</p>
 <p>There are three ways of ‘merging’ pull requests on GitHub. <strong>Squash and merge</strong> is the favoured method, applicable to the majority of PRs, but there are some use cases where the other two apply:</p>
@@ -1143,8 +1174,8 @@ Do they make simple and useful assertions?</p></li>
 <div><p><strong>How can I rename my commits locally?</strong></p>
 <p>If you’d like to rename commits locally (e.g., if you’d like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use <a class="reference external" href="https://executablebooks.org/en/latest/contributing.html#dev-commits">commit messages that are clear and concise</a>), you can try an <a class="reference external" href="https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history"><strong>interactive rebase</strong></a>. This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one. However, this is an advanced git technique so only do this if you know what you’re doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.</p>
 </div></blockquote>
-</div>
-<div class="section" id="id14">
+</section>
+<section id="id14">
 <h2>提交信息<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <p>提交信息：</p>
 <ul class="simple">
@@ -1186,8 +1217,8 @@ There is no need to mention you also added unit tests when adding a new feature.
 <li><p>❓ <code class="docutils literal notranslate"><span class="pre">OTHER:</span></code> (<code class="docutils literal notranslate"><span class="pre">:question:</span></code>) — anything not covered above (use as a last resort!).</p></li>
 </ul>
 <p>这个列表是松散的优先级顺序，例如，一个既修复了 bug 又不兼容的提交应该被归类为 <code class="docutils literal notranslate"><span class="pre">BREAKING</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">FIX</span></code>。</p>
-</div>
-<div class="section" id="id15">
+</section>
+<section id="id15">
 <h2>发布和变更日志<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
 <p>发布应该通过 <a class="reference external" href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">GitHub releases</a>，从主分支和使用语义版本标记，例如 <code class="docutils literal notranslate"><span class="pre">v1.2.1</span></code>，对于 <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> 以上的版本。对于低于 <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> 的版本，可以理解为破坏性的更改更频繁（即 repo 处于 beta 版），因此放宽了语义版本控制，因此 MINOR 版本更改也意味着向后不兼容的版本。</p>
 <p>变更日志应该便于用户和开发人员理解关键的变更，并且应该以以下格式反映上面描述的提交类别：</p>
@@ -1219,7 +1250,7 @@ There is no need to mention you also added unit tests when adding a new feature.
 <li><p><a class="reference external" href="https://github.com/pascalgn/npm-publish-action">https://github.com/pascalgn/npm-publish-action</a></p></li>
 </ul>
 <p>使用<a class="reference external" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds"><code class="docutils literal notranslate"><span class="pre">needs</span></code> 键</a> 来确保这些操作只在 pre-commit 和单元测试成功通过后才运行。</p>
-<div class="section" id="id16">
+<section id="id16">
 <h3>创建一个版本的过程<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>下面是创建一个版本的完整工作流：</p>
 <ul class="simple">
@@ -1227,9 +1258,9 @@ There is no need to mention you also added unit tests when adding a new feature.
 <li><p>为该提交创建一个 GitHub 版本，标签为 vM.m.p 版本（可以在正文中包括 changelog 部分）。</p></li>
 <li><p>检查自动发布工作流是否成功完成。</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="deprecations">
+</section>
+</section>
+<section id="deprecations">
 <h2>Deprecations<a class="headerlink" href="#deprecations" title="永久链接至标题">¶</a></h2>
 <p>在存储库退出 beta 开发之后（即 <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1.0.0</span></code>），API（函数，类等）的弃用应该在更改日志和代码中显示出来，例如在 Python 包中使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated">Sphinx deprecated 指令</a> 和/或 <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning">DeprecationWarning</a>：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -1240,8 +1271,8 @@ There is no need to mention you also added unit tests when adding a new feature.
 </div>
 <p>理想情况下，应该在实际从代码库中删除它们之前添加一个或两个主要版本。还应该指定将在何时删除它们的未来版本，以及（如果适用）将被替换的内容。</p>
 <p>在可能的情况下，还应该维护弃用项列表，例如：<a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/deprecated.html">https://www.sphinx-doc.org/en/master/extdev/deprecated.html</a>。</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

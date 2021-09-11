@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>快速上手</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +41,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -83,15 +84,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="canonical" href="https://xinetzone.github.io/wiki/rst/00_start.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -125,7 +129,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -149,7 +153,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -190,7 +194,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   编程
  </span>
@@ -219,7 +223,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   学科
  </span>
@@ -300,11 +304,38 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../sphinx/index.html">
-     Sphinx
+    <a class="reference internal" href="../myst/index.html">
+     MyST
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/00_start.html">
+       快速上手
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/01_syntax.html">
+       MyST 语法指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/02_optional.html">
+       可选的 MyST 语法
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sphinx/index.html">
+     Sphinx
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -370,8 +401,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../actions/index.html">
      Github Actions
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -380,15 +411,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       <a class="reference internal" href="../actions/sphinx/index.html">
        Sphinx
       </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
        <i class="fas fa-chevron-down">
        </i>
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../actions/sphinx/sphinx.html">
-         Sphinx Build
+        <a class="reference internal" href="../actions/sphinx/build.html">
+         通用 Sphinx Action
         </a>
        </li>
       </ul>
@@ -399,8 +430,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../epb/index.html">
      Executable Book Project
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -430,7 +461,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -440,8 +471,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -472,8 +503,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../glossary/index.html">
    术语表
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -569,8 +600,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../other/index.html">
    其他
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -868,11 +899,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>快速上手<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>参考：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html">reStructuredText Primer — Sphinx documentation (sphinx-doc.org)</a> &amp; <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">reStructuredText Markup Specification</a></p>
 <p>reStructuredText 是 Sphinx 使用的默认纯文本标记语言。本节是对 reStructuredText(reST) 概念和语法的简要介绍，旨在为作者提供足够的信息来有效地编写文档。由于 reST 被设计成一种简单的、不显眼的标记语言，这不会花费太多时间。下面介绍 Doctree Body 元素。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>段落<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>段落（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs">ref</a>）是 reST 文档中最基本的块。段落只是由一个或多个空行分隔的文本块。与在 Python 中一样，缩进在 reST 中很重要，因此同一段落中的所有行必须左对齐到相同的缩进级别。</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -901,7 +932,7 @@ This is another one.
 <p class="card-text">渲染：</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">This is a paragraph.  It's quite
+<p class="card-text">This is a paragraph.  It’s quite
 short.</p>
 <blockquote>
 <div><p class="card-text">This paragraph will result in an indented block of
@@ -913,8 +944,8 @@ text, typically used for quoting other text.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>块引用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
 <div class="row docutils">
@@ -950,8 +981,8 @@ text, typically used for quoting other text.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>行内标记<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>标准的 reST 行内标记非常简单：</p>
 <ul class="simple">
@@ -968,10 +999,10 @@ text, typically used for quoting other text.</p>
 </ul>
 <p>在将来的 docutils 版本中可能会取消这些限制。</p>
 <p>也可以使用 role 替换或扩展此行内标记。有关更多信息，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-roles-alt">角色</a>。</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>列表和引用样块<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id6">
+<section id="id6">
 <h3>普通列表<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>列表标记（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists">ref</a>）是很自然的：只需在段落的开头放置一个星号并适当缩进。编号列表也是如此，它们也可以用 <code class="docutils literal notranslate"><span class="pre">#.</span></code> 号自动编号。</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1060,8 +1091,8 @@ item uses two lines.</p></li>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h3>定义列表<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>定义列表（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists">ref</a>）的创建方法如下。</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1137,8 +1168,8 @@ next term
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="rst-field-lists">
+</section>
+<section id="rst-field-lists">
 <span id="id8"></span><h3>字段列表<a class="headerlink" href="#rst-field-lists" title="永久链接至标题">¶</a></h3>
 <p>Doctree 元素：<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#field-list">field_list</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#field">field</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#field-name">field_name</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#field-body">field_body</a>.</p>
 <p>字段列表（Field Lists，<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists">ref</a>）被用作扩展语法的一部分，如指令的选项，或类似数据库的记录（records），用于进一步处理。它们也可用于类似于数据库记录的两列表结构（标签和数据对）。reStructuredText 的应用可以在某些情况下识别字段名并转换字段或字段体。例子见下面的<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#toc-entry-18">书目字段</a>，或 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">reStructuredText 指令</a> 中的 “<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image</a>” 和 “<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#metadata">meta</a>” 指令。</p>
@@ -1273,7 +1304,7 @@ indented relative to the field marker.</p>
 </div>
 </div>
 </div>
-<div class="section" id="id9">
+<section id="id9">
 <h4>书目字段<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
 <p>Doctree 元素：<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#docinfo">docinfo</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#address">address</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#author">author</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#authors">authors</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#contact">contact</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#copyright">copyright</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#date">date</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#organization">organization</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#revision">revision</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#status">status</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#topic">topic</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#version">version</a>.</p>
 <p>当一个字段列表是文档中的第一个元素（如果有的话，在文档标题之后）<a class="footnote-reference brackets" href="#id29" id="id10">7</a>，它的字段可能被转化为文档书目数据。这种书目数据对应于一本书的正面内容，如标题页和版权页。</p>
@@ -1324,9 +1355,9 @@ indented relative to the field marker.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="id11">
+</section>
+</section>
+<section id="id11">
 <h3>选项列表<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>Doctree 元素：<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option-list">option_list</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option-list-item">option_list_item</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option-group">option_group</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option">option</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option-string">option_string</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#option-argument">option_argument</a>, <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#description">description</a>.</p>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists">选项列表</a> 是命令行选项和描述的两栏列表，记录了一个程序的选项。比如说：</p>
@@ -1358,7 +1389,7 @@ indented relative to the field marker.</p>
 <div class="card-body docutils">
 <dl class="option-list">
 <dt><kbd><span class="option">-a</span></kbd></dt>
-<dd><p class="card-text">command-line option &quot;a&quot;</p>
+<dd><p class="card-text">command-line option “a”</p>
 </dd>
 <dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
 <dd><p class="card-text">options can have arguments
@@ -1384,13 +1415,13 @@ arguments</p>
 <ul class="simple">
 <li><p>短 POSIX 选项由一个破折号和一个选项字母组成。</p></li>
 <li><p>长的 POSIX 选项由两个破折号和一个选项词组成；有些系统使用单破折号。</p></li>
-<li><p>旧的 GNU 风格的 &quot;加号 &quot;选项由一个加号和一个选项字母组成（&quot;加号 &quot;选项现在已经废弃，不鼓励使用）。</p></li>
+<li><p>旧的 GNU 风格的 “加号 “选项由一个加号和一个选项字母组成（”加号 “选项现在已经废弃，不鼓励使用）。</p></li>
 <li><p>DOS/VMS 的选项由一个斜线和一个选项字母或单词组成。</p></li>
 </ul>
 <p>请注意，POSIX 风格和 DOS/VMS 风格的选项都可以被 DOS 或 Windows 软件使用。这些和其他的变化有时会混在一起使用。上面的名称只是为了方便而选择的。</p>
 <p>短和长 POSIX 选项的语法是基于 Python 的 <a class="reference external" href="http://www.python.org/doc/current/lib/module-getopt.html"><code class="docutils literal notranslate"><span class="pre">getopt.py</span></code></a> 模块所支持的语法，该模块实现了一个与 <a class="reference external" href="http://www.gnu.org/software/libc/manual/html_node/Getopt-Long-Options.html">GNU libc getopt_long()</a> 函数类似的选项解析器，但有一些限制。有许多不同的选项系统，reStructuredText 的选项列表并不支持所有这些系统。</p>
 <p>尽管在命令行上使用长的 POSIX 和 DOS/VMS 选项词时，操作系统或应用程序可能允许截断，但 reStructuredText 的选项列表并不显示或支持任何特殊的语法。应该给出完整的选项词，并在适用的情况下辅以截断的说明。</p>
-<p>选项后面可以有一个参数占位符，其作用和语法应该在描述文本中解释。空格或等号可以作为选项和参数占位符之间的分隔符；简短的选项（只有&quot;<code class="docutils literal notranslate"><span class="pre">-</span></code>&quot;或 &quot;<code class="docutils literal notranslate"><span class="pre">+</span></code>&quot;前缀）可以省略分隔符。选项参数可以采取两种形式之一：</p>
+<p>选项后面可以有一个参数占位符，其作用和语法应该在描述文本中解释。空格或等号可以作为选项和参数占位符之间的分隔符；简短的选项（只有”<code class="docutils literal notranslate"><span class="pre">-</span></code>“或 “<code class="docutils literal notranslate"><span class="pre">+</span></code>”前缀）可以省略分隔符。选项参数可以采取两种形式之一：</p>
 <ul class="simple">
 <li><p>以字母（<code class="docutils literal notranslate"><span class="pre">[a-zA-Z]</span></code>）开头，随后由字母、数字、下划线和连字符组成（<code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9_-]</span></code>）。</p></li>
 <li><p>以开角括号（<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>）开始，以闭角括号（<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>）结束；除开角括号外，内部允许任何字符。</p></li>
@@ -1405,9 +1436,9 @@ arguments</p>
         +----------------------------------+
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="literal">
+</section>
+</section>
+<section id="literal">
 <h2>Literal 块<a class="headerlink" href="#literal" title="永久链接至标题">¶</a></h2>
 <p>通过使用特殊标记 <code class="docutils literal notranslate"><span class="pre">::</span></code> 结束段落来引入文字代码块(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks">ref</a>)。文字块必须缩进(和所有段落一样，用空行与周围的段分开)：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1455,8 +1486,8 @@ preceding paragraph (right here --&gt;)<span class="se">::</span>
 </div>
 <p class="card-text">This is a normal text paragraph again.</p>
 <p class="card-text">Literal blocks are either indented or line-prefix-quoted blocks,
-and indicated with a double-colon (&quot;::&quot;) at the end of the
-preceding paragraph (right here --&gt;):</p>
+and indicated with a double-colon (“::”) at the end of the
+preceding paragraph (right here –&gt;):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;is left as-is&#39;</span>
     <span class="n">spaces_and_linebreaks</span> <span class="o">=</span> <span class="s1">&#39;are preserved&#39;</span>
@@ -1476,8 +1507,8 @@ preceding paragraph (right here --&gt;):</p>
 </ul>
 <p>这样，上面例子的第一段中的第二句将呈现为 “The next paragraph is a code sample:”。</p>
 <p>可以使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-highlight">highlight</a> 指令在文档范围内为这些文字块启用代码突出显示，并在项目范围内使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-highlight_language">highlight_language</a> 配置选项。<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#directive-code-block">code-block</a> 指令可用于逐块设置突出显示。这些指令将在后面讨论。</p>
-</div>
-<div class="section" id="doctest">
+</section>
+<section id="doctest">
 <h2>Doctest 块<a class="headerlink" href="#doctest" title="永久链接至标题">¶</a></h2>
 <p>Doctest 块(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks">ref</a>)是剪切并粘贴到文档字符串中的交互式 Python 会话。它们不需要 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/basics.html#rst-literal-blocks">literal blocks</a> 语法。doctest 块必须以空行结束，并且 不 以未使用的 prompt 结束：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1518,10 +1549,10 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id12">
+</section>
+<section id="id12">
 <h2>表<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
-<div class="section" id="grid">
+<section id="grid">
 <h3>Grid 表<a class="headerlink" href="#grid" title="永久链接至标题">¶</a></h3>
 <p>对于 Grid 表 (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">ref</a>)，你必须自己”绘制”单元格网格。他们看起来像这样：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1573,8 +1604,8 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 <td><p class="card-text">column 4</p></td>
 </tr>
 <tr class="row-odd"><td><p class="card-text">body row 2</p></td>
-<td><p class="card-text">...</p></td>
-<td><p class="card-text">...</p></td>
+<td><p class="card-text">…</p></td>
+<td><p class="card-text">…</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -1584,8 +1615,8 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id13">
+</section>
+<section id="id13">
 <h3>简单表<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>简单表 (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables">ref</a>)更容易编写，但有限制: 它们必须包含多行，并且第一列单元格不能包含多行。他们看起来像这样：</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
@@ -1652,11 +1683,11 @@ True   True   True
 </div>
 </div>
 <p>支持另外两种语法: CSV 表 和 List 表。他们使用 显式标记块。有关更多信息，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/directives.html#table-directives">表格</a>。</p>
-</div>
-</div>
-<div class="section" id="id14">
+</section>
+</section>
+<section id="id14">
 <h2>超链接<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id15">
+<section id="id15">
 <h3>外部链接<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>使用  <code class="docutils literal notranslate"><span class="pre">`Link</span> <span class="pre">text</span> <span class="pre">&lt;https://domain.invalid/&gt;`_</span></code> 用于内联网络链接。如果链接文本应该是网络地址，你根本不需要特殊的标记，解析器会在普通文本中找到链接和邮件地址。</p>
 <div class="admonition important">
@@ -1669,13 +1700,13 @@ True   True   True
 <span class="p">..</span> <span class="nt">_a link:</span> https://domain.invalid/
 </pre></div>
 </div>
-</div>
-<div class="section" id="id16">
+</section>
+<section id="id16">
 <h3>内部链接<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>内部链接是通过 Sphinx 提供的特殊 reST 角色完成的，请参阅特定标记部分 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#ref-role">交叉引用任意位置</a>。</p>
-</div>
-</div>
-<div class="section" id="id17">
+</section>
+</section>
+<section id="id17">
 <h2>章节<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
 <p>章节标题（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections">ref</a>）是通过在章节标题下划线（也可选择在上面划线）来创建的，标点符号的长度至少与文本一样。</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">=================</span>
@@ -1693,8 +1724,8 @@ True   True   True
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, 用于段（paragraphs）</p></li>
 </ul>
 <p>当然，您可以自由使用自己的标记字符(请参阅 reST 文档)，并使用更深层次的嵌套级别，但请记住，大多数目标格式（HTML，LaTeX）具有有限的支持嵌套深度。</p>
-</div>
-<div class="section" id="id18">
+</section>
+<section id="id18">
 <h2>角色<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <p>角色或 “自定义解释的文本角色”（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#roles">ref</a>）是一个内联的明确标记。它标志着封闭的文本应该以一种特定的方式被解释。Sphinx 用它来提供语义标记和标识符的交叉引用，如在适当的章节中描述。一般的语法是 <code class="docutils literal notranslate"><span class="pre">:rolename:`content`</span></code>。</p>
 <p>Docutils 支持以下角色：</p>
@@ -1707,12 +1738,12 @@ True   True   True
 <li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/roles.html#title-reference">title-reference</a> – 书籍、期刊和其他材料的标题</p></li>
 </ul>
 <p>请参阅 <a class="reference internal" href="02_roles.html#rst-roles"><span class="std std-ref">角色</span></a>，了解 Sphinx 添加的角色。</p>
-</div>
-<div class="section" id="id19">
+</section>
+<section id="id19">
 <h2>显式标记<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
 <p>“显式标记”（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#explicit-markup-blocks">ref</a>）在 reST 中用于大多数需要特殊处理的构造，例如脚注，特别突出显示的段落，注释和泛型指令。</p>
 <p>显式标记块以 ”空行+<code class="docutils literal notranslate"><span class="pre">..</span></code>” 开头，后跟空格，并在相同的缩进级别由下一段终止。（显式标记和普通段落之间需要有一个空行。这可能听起来有点复杂，但是当你写它时它足够直观。）</p>
-<div class="section" id="id20">
+<section id="id20">
 <h3>指令<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
 <p>指令（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives">ref</a>）是一个通用的显式标记块。和角色一样，它是 reST 的扩展机制之一，Sphinx 也大量使用它。</p>
 <p>Docutils 支持以下指令：</p>
@@ -1779,8 +1810,8 @@ True   True   True
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">function</span></code> 是指令名称。这里给出了两个参数，第一行和第二行的其余部分，以及一个选项 <code class="docutils literal notranslate"><span class="pre">module</span></code>（如你所见，选项在紧跟在参数后面的行中给出并由冒号表示）。选项必须缩进到与指令内容相同的级别。</p>
 <p>指令内容在空白行后面，并相对于指令开始缩进。</p>
-</div>
-<div class="section" id="id22">
+</section>
+<section id="id22">
 <h3>脚注<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
 <p>对于脚注(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes">ref</a>)，使用 <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code> 标记脚注位置，并在 “Footnotes” 标题后添加脚注主体在文档底部，像这样：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[#f1]_</span> dolor sit amet ... <span class="s">[#f2]_</span>
@@ -1792,8 +1823,8 @@ True   True   True
 </pre></div>
 </div>
 <p>您还可以明确编号脚注(<code class="docutils literal notranslate"><span class="pre">[1]_</span></code>)或使用不带名字的自动编号脚注(<code class="docutils literal notranslate"><span class="pre">[#]_</span></code>)。</p>
-</div>
-<div class="section" id="id23">
+</section>
+<section id="id23">
 <h3>引文<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
 <p>支持标准 reST 引用(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#citations">ref</a>)，其附加功能是 “global” ，即所有引用都可以从所有文件引用。像这样使用它们：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Lorem ipsum <span class="s">[Ref]_</span> dolor sit amet.
@@ -1802,8 +1833,8 @@ True   True   True
 </pre></div>
 </div>
 <p>引用用法类似于脚注用法，但标签不是数字或以”<code class="docutils literal notranslate"><span class="pre">#</span></code>”开头。</p>
-</div>
-<div class="section" id="id24">
+</section>
+<section id="id24">
 <h3>替换<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
 <p>reST支持 “substitutions” (<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions">ref</a>)，它们是文本中按 <code class="docutils literal notranslate"><span class="pre">|name|</span></code> 引用的文本和/或标记。它们被定义为带有显式标记块的脚注，如下：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|name|</span> <span class="ow">replace</span><span class="p">::</span> replacement <span class="ge">*text*</span>
@@ -1817,8 +1848,8 @@ True   True   True
 <p>有关详细信息，请参阅 <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#substitution-definitions">reST 参考替换</a>。</p>
 <p>如果要对所有文档使用一些替换，请将它们放入 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-rst_prolog">rst_prolog</a> 或 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-rst_epilog">rst_epilog</a> 或将它们放入单独的文件中，并将其包含在要使用它们的所有文档中，使用 <code class="docutils literal notranslate"><span class="pre">include</span></code> 指令。（确保为 <code class="docutils literal notranslate"><span class="pre">include</span></code> 文件提供与其他源文件不同的文件扩展名，以避免 Sphinx 将其作为独立文档发现。）</p>
 <p>Sphinx 定义了一些默认替换，请参阅 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/roles.html#default-substitutions">替换</a>。</p>
-</div>
-<div class="section" id="id25">
+</section>
+<section id="id25">
 <h3>评论<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <p>每个显式标记块都不是有效的标记结构（如上面的脚注），它被视为注释(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#comments">ref</a>)。例如：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. This is a comment.</span>
@@ -1832,9 +1863,9 @@ True   True   True
 <span class="cp">   Still in the comment.</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id26">
+</section>
+</section>
+<section id="id26">
 <h2>图片<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
 <p>reST 支持一个 <code class="docutils literal notranslate"><span class="pre">image</span></code> 指令(<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">ref</a>)，像这样使用：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> gnu.png
@@ -1850,8 +1881,8 @@ True   True   True
 </div>
 <p>然后，Sphinx 搜索与提供的模式匹配的所有图像并确定其类型。然后，每个构建器从这些候选者中选择最佳图像。例如，如果给出了文件名 <code class="docutils literal notranslate"><span class="pre">gnu.*</span></code> 并且源树中存在两个文件 <code class="docutils literal notranslate"><span class="pre">gnu.pdf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">gnu.png</span></code>，则 LaTeX 构建器将选择前者，而 HTML 构建器更喜欢后者。支持的图像类型和选择优先级定义在 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/builders/index.html">构建器</a>。</p>
 <p>请注意，图像文件名不应包含空格。</p>
-</div>
-<div class="section" id="html-metadata">
+</section>
+<section id="html-metadata">
 <h2>HTML Metadata<a class="headerlink" href="#html-metadata" title="永久链接至标题">¶</a></h2>
 <p>元指令（<a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#meta">ref</a>）允许指定 Sphinx 文档页面的 HTML 元数据元素。例如，指令：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
@@ -1877,12 +1908,12 @@ True   True   True
 <li><p><code class="docutils literal notranslate"><span class="pre">bittediesenkeyfinden</span></code> to <em>German</em> builds;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backup</span></code> to builds in all languages.</p></li>
 </ul>
-</div>
-<div class="section" id="id27">
+</section>
+<section id="id27">
 <h2>源编码<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
 <p>由于在 reST 中包含特殊字符如 em 破折号或版权标志的最简单方法是直接把它们写成 Unicode 字符，所以必须指定一个编码。Sphinx 假设源文件默认为 UTF-8 编码；你可以用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-source_encoding"><code class="docutils literal notranslate"><span class="pre">source_encoding</span></code></a> 配置值来改变它。</p>
-</div>
-<div class="section" id="id28">
+</section>
+<section id="id28">
 <h2>陷阱<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
 <p>在编写 reST 文档时，通常会遇到一些问题：</p>
 <ul class="simple">
@@ -1898,8 +1929,8 @@ True   True   True
 <dd><p>When the default domain contains a class directive, this directive will be shadowed. Therefore, Sphinx re-exports it as rst-class.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
