@@ -24,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -121,6 +121,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -842,7 +846,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <section class="tex2jax_ignore mathjax_ignore" id="myst">
 <span id="wiki-myst-syntax"></span><h1>MyST 语法指南<a class="headerlink" href="#myst" title="永久链接至标题">¶</a></h1>
 <blockquote>
-<div><p>2021 年 09 月 11 日 | 2 min read</p>
+<div><p>2021 年 09 月 23 日 | 2 min read</p>
 </div></blockquote>
 <p>作为一个基础，MyST 遵守 <a class="reference external" href="https://spec.commonmark.org/">CommonMark 规范</a>。为此，它使用了 <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a> 分析器，这是一个结构良好的 Python Markdown 分析器，符合 CommonMark 规范，而且可以扩展。</p>
 <p>MyST 为 CommonMark 增加了几个新的语法选项，以便与 Sphinx 一起使用，Sphinx 是 Python 生态系统中广泛使用的文档生成引擎。</p>
@@ -1180,8 +1184,8 @@ most beautiful mathematical formulas.</p>
 <p>front-matter 可以包含特殊的键 <code class="docutils literal notranslate"><span class="pre">html_meta</span></code>；一个包含数据的 dict，作为 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"><code class="docutils literal notranslate"><span class="pre">&lt;meta&gt;</span></code> 元素</a> 添加到生成的HTML中。这相当于使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#html-metadata">RST <code class="docutils literal notranslate"><span class="pre">meta</span></code> 指令</a>。</p>
 <p>HTML 元数据也可以在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中通过 <code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> 变量全局添加，在这种情况下，它将被添加到所有 MyST 文档中。对于每个文档，<code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> dict 将被文档级别的front-matter <code class="docutils literal notranslate"><span class="pre">html_meta</span></code> 所更新，而 front-matter 优先。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3e91ffad-cabd-450a-85e3-faef93825815" name="02eca124-30be-4e4e-bfbb-d7535666ba45" type="radio">
-</input><label class="tabbed-label" for="3e91ffad-cabd-450a-85e3-faef93825815">
+<input checked="checked" id="57606aeb-cc17-471a-81dc-76b1036c72ce" name="e411d43b-01fe-42fc-84b1-712b42000ff9" type="radio">
+</input><label class="tabbed-label" for="57606aeb-cc17-471a-81dc-76b1036c72ce">
 Sphinx Configuration</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;en&quot;</span>
 <span class="n">myst_html_meta</span> <span class="o">=</span> <span class="p">{</span>
@@ -1193,8 +1197,8 @@ Sphinx Configuration</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="068b3b9a-803a-4bc1-9c87-18cd6b339ca2" name="02eca124-30be-4e4e-bfbb-d7535666ba45" type="radio">
-</input><label class="tabbed-label" for="068b3b9a-803a-4bc1-9c87-18cd6b339ca2">
+<input id="4d4333e2-2740-4c62-8e06-210fdf19f53b" name="e411d43b-01fe-42fc-84b1-712b42000ff9" type="radio">
+</input><label class="tabbed-label" for="4d4333e2-2740-4c62-8e06-210fdf19f53b">
 MyST Front-Matter</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">html_meta</span><span class="p">:</span>
@@ -1206,8 +1210,8 @@ MyST Front-Matter</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="465256f9-356e-4eb6-9154-445cff7d9b17" name="02eca124-30be-4e4e-bfbb-d7535666ba45" type="radio">
-</input><label class="tabbed-label" for="465256f9-356e-4eb6-9154-445cff7d9b17">
+<input id="b4b357ab-db23-4e30-b153-267c65fbbafd" name="e411d43b-01fe-42fc-84b1-712b42000ff9" type="radio">
+</input><label class="tabbed-label" for="b4b357ab-db23-4e30-b153-267c65fbbafd">
 RestructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
    <span class="nc">:description lang=en:</span> metadata description
@@ -1217,8 +1221,8 @@ RestructuredText</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="3b4f88db-0b7b-400c-aad5-7d9d2e149d0b" name="02eca124-30be-4e4e-bfbb-d7535666ba45" type="radio">
-</input><label class="tabbed-label" for="3b4f88db-0b7b-400c-aad5-7d9d2e149d0b">
+<input id="8a1ef232-71a4-432b-87d9-7d1e5d89f00d" name="e411d43b-01fe-42fc-84b1-712b42000ff9" type="radio">
+</input><label class="tabbed-label" for="8a1ef232-71a4-432b-87d9-7d1e5d89f00d">
 HTML Output</label><div class="tabbed-content docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1451,7 +1455,7 @@ that are not separated by a blank line</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

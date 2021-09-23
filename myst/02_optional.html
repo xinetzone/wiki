@@ -24,7 +24,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -121,6 +121,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -1101,8 +1105,8 @@ Either directly; <code class="docutils literal notranslate"><span class="pre">pi
 </div>
 <p>You can use these substitutions inline or as blocks, and you can even nest substitutions in other substitutions (but circular references are prohibited):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8ab4f40b-40e1-400d-b586-db820abfc644" name="f7bd8ae3-1501-4652-bb35-f88499aa6da8" type="radio">
-</input><label class="tabbed-label" for="8ab4f40b-40e1-400d-b586-db820abfc644">
+<input checked="checked" id="ab0ca2ac-210a-4609-a45e-dfa4b2b322a1" name="0126f9cc-3c9c-48aa-bceb-5dbac66a3724" type="radio">
+</input><label class="tabbed-label" for="ab0ca2ac-210a-4609-a45e-dfa4b2b322a1">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline: {{ key1 }}
 
@@ -1116,8 +1120,8 @@ Block level:
 </pre></div>
 </div>
 </div>
-<input id="f8bcd8dd-5445-4e0d-82d2-fb3560225772" name="f7bd8ae3-1501-4652-bb35-f88499aa6da8" type="radio">
-</input><label class="tabbed-label" for="f8bcd8dd-5445-4e0d-82d2-fb3560225772">
+<input id="62022882-2fc9-4f0f-b24d-4477e982fbf7" name="0126f9cc-3c9c-48aa-bceb-5dbac66a3724" type="radio">
+</input><label class="tabbed-label" for="62022882-2fc9-4f0f-b24d-4477e982fbf7">
 Rendered Output</label><div class="tabbed-content docutils">
 <p>Inline: I’m a <strong>substitution</strong></p>
 <p>Block level:</p>
@@ -1202,8 +1206,8 @@ you can also use <code class="docutils literal notranslate"><span class="pre">::
 <p>Using colons instead of back-ticks has the benefit of allowing the content to be rendered correctly, when you are working in any standard Markdown editor.
 It is ideal for admonition type directives (as documented in <a class="reference internal" href="01_syntax.html#syntax-directives"><span class="std std-ref">Directives</span></a>) or tables with titles, for example:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="06f0ffe4-9679-4de2-a297-40b81a9a5777" name="65a01447-8d40-43fd-8dae-ed90c55af837" type="radio">
-</input><label class="tabbed-label" for="06f0ffe4-9679-4de2-a297-40b81a9a5777">
+<input checked="checked" id="17b78202-9abd-46e8-b289-ac494fc5f5ec" name="dd3e8378-a68e-447b-a0fc-f1255ad8c2f7" type="radio">
+</input><label class="tabbed-label" for="17b78202-9abd-46e8-b289-ac494fc5f5ec">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{note}
 This text is <span class="gs">**standard**</span> <span class="ge">_Markdown_</span>
@@ -1220,8 +1224,8 @@ abc | mnp | xyz
 </pre></div>
 </div>
 </div>
-<input id="224590ec-b593-49e4-b7c3-bb44c9a14a6b" name="65a01447-8d40-43fd-8dae-ed90c55af837" type="radio">
-</input><label class="tabbed-label" for="224590ec-b593-49e4-b7c3-bb44c9a14a6b">
+<input id="8252c092-475f-431c-935d-dabdc74e0f1a" name="dd3e8378-a68e-447b-a0fc-f1255ad8c2f7" type="radio">
+</input><label class="tabbed-label" for="8252c092-475f-431c-935d-dabdc74e0f1a">
 Rendered Output</label><div class="tabbed-content docutils">
 <div class="admonition note">
 <p class="admonition-title">注解</p>
@@ -1556,8 +1560,8 @@ a<span class="nb">_{</span>21<span class="nb">}&amp;</span> =b<span class="nb">_
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-b0bbc53d-4726-4776-9a56-8a1b727e1343">
-<span class="eqno">(4)<a class="headerlink" href="#equation-b0bbc53d-4726-4776-9a56-8a1b727e1343" title="公式的永久链接">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bc7f8df5-57cd-4cbf-a17c-9cabeb3b092d">
+<span class="eqno">(4)<a class="headerlink" href="#equation-bc7f8df5-57cd-4cbf-a17c-9cabeb3b092d" title="公式的永久链接">¶</a></span>\[\begin{align}
 a_{11}&amp; =b_{11}&amp;
   a_{12}&amp; =b_{12}\\
 a_{21}&amp; =b_{21}&amp;
@@ -1654,7 +1658,7 @@ We hope to implement this in a future update (see <a class="reference external" 
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
