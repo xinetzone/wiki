@@ -140,6 +140,9 @@ sphinx:
       myst-parser:
         - "https://myst-parser.readthedocs.io/en/latest/"
         - null
+      sphinx:
+        - "https://www.sphinx-doc.org/"
+        - null
     
     language: zh_CN
 
@@ -147,4 +150,6 @@ sphinx:
     - sphinx_click.ext
     - sphinx_inline_tabs
     - sphinxcontrib.mermaid
-    # - sphinx.ext.intersphinx
+    - sphinx.ext.intersphinx
+    - sphinx.ext.autodoc
+    - sphinx.ext.autosummary

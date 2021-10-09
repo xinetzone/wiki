@@ -38,7 +38,7 @@ parts:
       - glob: myst/**
     - file: sphinx/index
       sections:
-      - glob: sphinx/**
+      - glob: sphinx/start/**
     - file: actions/index
       sections:
       - file: actions/sphinx/index
