@@ -115,7 +115,9 @@ Python 域也恰好是默认域，因此您不需要在标记前加上域名。
    ...
 ```
 
-如果保留默认域的默认设置，则执行相同的工作。还有几个用于记录其他类型的Python对象的指令，例如 [`py:class`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:class) 或 [`py:method`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:method)。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 `enumerate()` 文档的链接。
+如果保留默认域的默认设置，则执行相同的工作。
+
+还有几个用于记录其他类型的Python对象的指令，例如 [`py:class`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:class) 或 [`py:method`](https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:method)。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 `enumerate()` 文档的链接。
 
 ````{panels}
 :container: w3-card-4 w3-pale-green w3-padding
@@ -160,7 +162,7 @@ The :py:func:`enumerate` function can be used for ...
 
 为了使用 `autodoc`，你需要在 `conf.py` 中激活它，方法是将字符串 `'sphinx.ext.autodoc'` 放入分配给 [`extensions`](https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-extensions) 配置的列表中值。然后，您可以使用其他一些指令。
 
-例如，要记录函数 `io.open()` ，从源文件中读取它的签名和 docstring，你就写下：
+例如，要记录函数 `io.open()`，从源文件中读取它的签名和 docstring，你就写下：
 
 ```rst
 .. autofunction:: io.open
