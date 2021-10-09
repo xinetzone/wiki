@@ -903,7 +903,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="cp">   ...</span>
 </pre></div>
 </div>
-<p>如果保留默认域的默认设置，则执行相同的工作。还有几个用于记录其他类型的Python对象的指令，例如 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 或 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a>。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> 文档的链接。</p>
+<p>如果保留默认域的默认设置，则执行相同的工作。</p>
+<p>还有几个用于记录其他类型的Python对象的指令，例如 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:class"><code class="docutils literal notranslate"><span class="pre">py:class</span></code></a> 或 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/restructuredtext/domains.html#directive-py:method"><code class="docutils literal notranslate"><span class="pre">py:method</span></code></a>。对于每种对象类型，还有一个交叉引用 role。这个标记将创建一个指向 <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> 文档的链接。</p>
 <div class="sphinx-bs w3-card-4 w3-pale-green w3-padding docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
@@ -948,7 +949,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>使用 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> 自动生成文档<a class="headerlink" href="#autodoc" title="永久链接至标题">¶</a></h2>
 <p>在记录 Python 代码时，通常会在文档字符串中的源文件中放入大量文档。Sphinx 支持在模块中包含 docstrings extension（扩展名是为 Sphinx 项目提供附加功能的 Python 模块），称为 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>。</p>
 <p>为了使用 <code class="docutils literal notranslate"><span class="pre">autodoc</span></code>，你需要在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中激活它，方法是将字符串 <code class="docutils literal notranslate"><span class="pre">'sphinx.ext.autodoc'</span></code> 放入分配给 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#confval-extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a> 配置的列表中值。然后，您可以使用其他一些指令。</p>
-<p>例如，要记录函数 <code class="docutils literal notranslate"><span class="pre">io.open()</span></code> ，从源文件中读取它的签名和 docstring，你就写下：</p>
+<p>例如，要记录函数 <code class="docutils literal notranslate"><span class="pre">io.open()</span></code>，从源文件中读取它的签名和 docstring，你就写下：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autofunction</span><span class="p">::</span> io.open
 </pre></div>
 </div>
