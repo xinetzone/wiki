@@ -102,7 +102,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Sphinx" href="../sphinx/index.html" />
+    <link rel="next" title="笔记" href="other.html" />
     <link rel="prev" title="MyST 语法指南" href="01_syntax.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -334,6 +334,11 @@ commentsRunWhenDOMLoaded(addUtterances);
        可选的 MyST 语法
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other.html">
+       笔记
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -347,57 +352,52 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/00_start.html">
+      <a class="reference internal" href="../sphinx/start/00_start.html">
        快速上手
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/01_markdown.html">
+      <a class="reference internal" href="../sphinx/start/01_markdown.html">
        Markdown
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/02_configuration.html">
+      <a class="reference internal" href="../sphinx/start/02_configuration.html">
        配置
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/03_builder.html">
+      <a class="reference internal" href="../sphinx/start/03_builder.html">
        Builders
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/04_extensions.html">
-       插件
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/05_theming.html">
+      <a class="reference internal" href="../sphinx/start/05_theming.html">
        HTML 主题
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/06_intl.html">
+      <a class="reference internal" href="../sphinx/start/06_intl.html">
        国际化
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/07_setuptools.html">
+      <a class="reference internal" href="../sphinx/start/07_setuptools.html">
        安装工具集成
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/08_websupport.html">
+      <a class="reference internal" href="../sphinx/start/08_websupport.html">
        Sphinx Web支持
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/09_bibtex-format.html">
+      <a class="reference internal" href="../sphinx/start/09_bibtex-format.html">
        Bibtex 格式说明（raw）
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/10_tutorial.html">
+      <a class="reference internal" href="../sphinx/start/10_tutorial.html">
        教程
       </a>
      </li>
@@ -1110,8 +1110,8 @@ Either directly; <code class="docutils literal notranslate"><span class="pre">pi
 </div>
 <p>You can use these substitutions inline or as blocks, and you can even nest substitutions in other substitutions (but circular references are prohibited):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4a1c488b-3f29-45b9-8d9c-f9d46c021b40" name="f51b260a-7dd8-47fc-8c1b-bb07e9d73969" type="radio">
-</input><label class="tabbed-label" for="4a1c488b-3f29-45b9-8d9c-f9d46c021b40">
+<input checked="checked" id="4ccf5fbb-d941-4074-a179-ce6d68880252" name="d45c743b-2079-4f07-b1cc-b89e050ea87f" type="radio">
+</input><label class="tabbed-label" for="4ccf5fbb-d941-4074-a179-ce6d68880252">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline: {{ key1 }}
 
@@ -1125,8 +1125,8 @@ Block level:
 </pre></div>
 </div>
 </div>
-<input id="1a489155-3cf0-45cc-963f-f5246818195d" name="f51b260a-7dd8-47fc-8c1b-bb07e9d73969" type="radio">
-</input><label class="tabbed-label" for="1a489155-3cf0-45cc-963f-f5246818195d">
+<input id="8bc25587-22be-4223-99b8-879daf7f7fec" name="d45c743b-2079-4f07-b1cc-b89e050ea87f" type="radio">
+</input><label class="tabbed-label" for="8bc25587-22be-4223-99b8-879daf7f7fec">
 Rendered Output</label><div class="tabbed-content docutils">
 <p>Inline: I’m a <strong>substitution</strong></p>
 <p>Block level:</p>
@@ -1211,8 +1211,8 @@ you can also use <code class="docutils literal notranslate"><span class="pre">::
 <p>Using colons instead of back-ticks has the benefit of allowing the content to be rendered correctly, when you are working in any standard Markdown editor.
 It is ideal for admonition type directives (as documented in <a class="reference internal" href="01_syntax.html#syntax-directives"><span class="std std-ref">Directives</span></a>) or tables with titles, for example:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="84c22139-7c7d-491a-9dae-2cf29f4f83f3" name="feabe474-b6dd-4af0-b702-0d977b8e8e5c" type="radio">
-</input><label class="tabbed-label" for="84c22139-7c7d-491a-9dae-2cf29f4f83f3">
+<input checked="checked" id="179cb286-71fe-4594-b1a3-50f0526994cd" name="827c8d82-1377-433e-bc32-2b5dcfe03890" type="radio">
+</input><label class="tabbed-label" for="179cb286-71fe-4594-b1a3-50f0526994cd">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{note}
 This text is <span class="gs">**standard**</span> <span class="ge">_Markdown_</span>
@@ -1229,8 +1229,8 @@ abc | mnp | xyz
 </pre></div>
 </div>
 </div>
-<input id="bf28e93e-623c-463b-a539-62900d7adff0" name="feabe474-b6dd-4af0-b702-0d977b8e8e5c" type="radio">
-</input><label class="tabbed-label" for="bf28e93e-623c-463b-a539-62900d7adff0">
+<input id="8f92d8e9-d356-4d28-9dff-7098dbad9762" name="827c8d82-1377-433e-bc32-2b5dcfe03890" type="radio">
+</input><label class="tabbed-label" for="8f92d8e9-d356-4d28-9dff-7098dbad9762">
 Rendered Output</label><div class="tabbed-content docutils">
 <div class="admonition note">
 <p class="admonition-title">注解</p>
@@ -1565,8 +1565,8 @@ a<span class="nb">_{</span>21<span class="nb">}&amp;</span> =b<span class="nb">_
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-e4f7a6b3-a720-4d36-8bf1-9ee171169369">
-<span class="eqno">(4)<a class="headerlink" href="#equation-e4f7a6b3-a720-4d36-8bf1-9ee171169369" title="公式的永久链接">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-810ca7e5-b978-411c-920e-f09b2d8c995b">
+<span class="eqno">(4)<a class="headerlink" href="#equation-810ca7e5-b978-411c-920e-f09b2d8c995b" title="公式的永久链接">¶</a></span>\[\begin{align}
 a_{11}&amp; =b_{11}&amp;
   a_{12}&amp; =b_{12}\\
 a_{21}&amp; =b_{21}&amp;
@@ -1650,10 +1650,10 @@ We hope to implement this in a future update (see <a class="reference external" 
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../sphinx/index.html" title="下一页 页">
+        <a class="right-next" href="other.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">Sphinx</p>
+                <p class="prevnext-title">笔记</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

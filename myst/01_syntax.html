@@ -334,6 +334,11 @@ commentsRunWhenDOMLoaded(addUtterances);
        可选的 MyST 语法
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other.html">
+       笔记
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -347,57 +352,52 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/00_start.html">
+      <a class="reference internal" href="../sphinx/start/00_start.html">
        快速上手
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/01_markdown.html">
+      <a class="reference internal" href="../sphinx/start/01_markdown.html">
        Markdown
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/02_configuration.html">
+      <a class="reference internal" href="../sphinx/start/02_configuration.html">
        配置
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/03_builder.html">
+      <a class="reference internal" href="../sphinx/start/03_builder.html">
        Builders
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/04_extensions.html">
-       插件
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/05_theming.html">
+      <a class="reference internal" href="../sphinx/start/05_theming.html">
        HTML 主题
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/06_intl.html">
+      <a class="reference internal" href="../sphinx/start/06_intl.html">
        国际化
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/07_setuptools.html">
+      <a class="reference internal" href="../sphinx/start/07_setuptools.html">
        安装工具集成
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/08_websupport.html">
+      <a class="reference internal" href="../sphinx/start/08_websupport.html">
        Sphinx Web支持
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/09_bibtex-format.html">
+      <a class="reference internal" href="../sphinx/start/09_bibtex-format.html">
        Bibtex 格式说明（raw）
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/10_tutorial.html">
+      <a class="reference internal" href="../sphinx/start/10_tutorial.html">
        教程
       </a>
      </li>
@@ -851,7 +851,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <section class="tex2jax_ignore mathjax_ignore" id="myst">
 <span id="wiki-myst-syntax"></span><h1>MyST 语法指南<a class="headerlink" href="#myst" title="永久链接至标题">¶</a></h1>
 <blockquote>
-<div><p>2021 年 09 月 27 日 | 2 min read</p>
+<div><p>2021 年 10 月 09 日 | 2 min read</p>
 </div></blockquote>
 <p>作为一个基础，MyST 遵守 <a class="reference external" href="https://spec.commonmark.org/">CommonMark 规范</a>。为此，它使用了 <a class="reference external" href="https://github.com/executablebooks/markdown-it-py">markdown-it-py</a> 分析器，这是一个结构良好的 Python Markdown 分析器，符合 CommonMark 规范，而且可以扩展。</p>
 <p>MyST 为 CommonMark 增加了几个新的语法选项，以便与 Sphinx 一起使用，Sphinx 是 Python 生态系统中广泛使用的文档生成引擎。</p>
@@ -1189,8 +1189,8 @@ most beautiful mathematical formulas.</p>
 <p>front-matter 可以包含特殊的键 <code class="docutils literal notranslate"><span class="pre">html_meta</span></code>；一个包含数据的 dict，作为 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"><code class="docutils literal notranslate"><span class="pre">&lt;meta&gt;</span></code> 元素</a> 添加到生成的HTML中。这相当于使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#html-metadata">RST <code class="docutils literal notranslate"><span class="pre">meta</span></code> 指令</a>。</p>
 <p>HTML 元数据也可以在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中通过 <code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> 变量全局添加，在这种情况下，它将被添加到所有 MyST 文档中。对于每个文档，<code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> dict 将被文档级别的front-matter <code class="docutils literal notranslate"><span class="pre">html_meta</span></code> 所更新，而 front-matter 优先。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8a8b856d-5f90-4bec-8dcf-06cb7f3dc3b3" name="1ac2a5d7-5a31-4c7c-8dfd-dd22e16a02b5" type="radio">
-</input><label class="tabbed-label" for="8a8b856d-5f90-4bec-8dcf-06cb7f3dc3b3">
+<input checked="checked" id="6ea589d0-1367-4d0d-9015-feca5d6d3d27" name="9eab7623-3547-429e-b671-5af3826ecb14" type="radio">
+</input><label class="tabbed-label" for="6ea589d0-1367-4d0d-9015-feca5d6d3d27">
 Sphinx Configuration</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;en&quot;</span>
 <span class="n">myst_html_meta</span> <span class="o">=</span> <span class="p">{</span>
@@ -1202,8 +1202,8 @@ Sphinx Configuration</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="8c26c106-bbdd-4c12-b7ed-83ff39f018ad" name="1ac2a5d7-5a31-4c7c-8dfd-dd22e16a02b5" type="radio">
-</input><label class="tabbed-label" for="8c26c106-bbdd-4c12-b7ed-83ff39f018ad">
+<input id="e93f2c00-ea88-466f-be20-84ef5ff021f7" name="9eab7623-3547-429e-b671-5af3826ecb14" type="radio">
+</input><label class="tabbed-label" for="e93f2c00-ea88-466f-be20-84ef5ff021f7">
 MyST Front-Matter</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">html_meta</span><span class="p">:</span>
@@ -1215,8 +1215,8 @@ MyST Front-Matter</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="fcb8cac0-1b9f-42c0-8b69-d5fe64086581" name="1ac2a5d7-5a31-4c7c-8dfd-dd22e16a02b5" type="radio">
-</input><label class="tabbed-label" for="fcb8cac0-1b9f-42c0-8b69-d5fe64086581">
+<input id="ca4f65c7-7f47-4620-ae30-35ea3c03366e" name="9eab7623-3547-429e-b671-5af3826ecb14" type="radio">
+</input><label class="tabbed-label" for="ca4f65c7-7f47-4620-ae30-35ea3c03366e">
 RestructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
    <span class="nc">:description lang=en:</span> metadata description
@@ -1226,8 +1226,8 @@ RestructuredText</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c1d2e3f0-5346-4b03-9b68-f76df508f5ac" name="1ac2a5d7-5a31-4c7c-8dfd-dd22e16a02b5" type="radio">
-</input><label class="tabbed-label" for="c1d2e3f0-5346-4b03-9b68-f76df508f5ac">
+<input id="b2044074-d99c-4f65-a365-9a44f9aa4401" name="9eab7623-3547-429e-b671-5af3826ecb14" type="radio">
+</input><label class="tabbed-label" for="b2044074-d99c-4f65-a365-9a44f9aa4401">
 HTML Output</label><div class="tabbed-content docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>

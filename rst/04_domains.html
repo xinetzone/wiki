@@ -334,6 +334,11 @@ commentsRunWhenDOMLoaded(addUtterances);
        可选的 MyST 语法
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../myst/other.html">
+       笔记
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -347,57 +352,52 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/00_start.html">
+      <a class="reference internal" href="../sphinx/start/00_start.html">
        快速上手
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/01_markdown.html">
+      <a class="reference internal" href="../sphinx/start/01_markdown.html">
        Markdown
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/02_configuration.html">
+      <a class="reference internal" href="../sphinx/start/02_configuration.html">
        配置
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/03_builder.html">
+      <a class="reference internal" href="../sphinx/start/03_builder.html">
        Builders
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/04_extensions.html">
-       插件
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/05_theming.html">
+      <a class="reference internal" href="../sphinx/start/05_theming.html">
        HTML 主题
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/06_intl.html">
+      <a class="reference internal" href="../sphinx/start/06_intl.html">
        国际化
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/07_setuptools.html">
+      <a class="reference internal" href="../sphinx/start/07_setuptools.html">
        安装工具集成
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/08_websupport.html">
+      <a class="reference internal" href="../sphinx/start/08_websupport.html">
        Sphinx Web支持
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/09_bibtex-format.html">
+      <a class="reference internal" href="../sphinx/start/09_bibtex-format.html">
        Bibtex 格式说明（raw）
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/10_tutorial.html">
+      <a class="reference internal" href="../sphinx/start/10_tutorial.html">
        教程
       </a>
      </li>
@@ -1280,22 +1280,22 @@ Reference to <span class="na">:func:</span><span class="nv">`pyfunc`</span>.
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sender</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The person sending the message</p></li>
-<li><p><strong>recipient</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The recipient of the message</p></li>
-<li><p><strong>message_body</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.9)"><em>str</em></a>) – The body of the message</p></li>
-<li><p><strong>priority</strong> (<em>integer</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.9)"><em>None</em></a>) – The priority of the message, can be a number 1-5</p></li>
+<li><p><strong>sender</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><em>str</em></a>) – The person sending the message</p></li>
+<li><p><strong>recipient</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><em>str</em></a>) – The recipient of the message</p></li>
+<li><p><strong>message_body</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(在 Python v3.10)"><em>str</em></a>) – The body of the message</p></li>
+<li><p><strong>priority</strong> (<em>integer</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(在 Python v3.10)"><em>None</em></a>) – The priority of the message, can be a number 1-5</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>the message id</p>
 </dd>
 <dt class="field-odd">返回类型</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(在 Python v3.9)">int</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(在 Python v3.10)">int</a></p>
 </dd>
 <dt class="field-even">引发</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(在 Python v3.9)"><strong>ValueError</strong></a> – if the message_body exceeds 160 characters</p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(在 Python v3.9)"><strong>TypeError</strong></a> – if the message_body is not a basestring</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(在 Python v3.10)"><strong>ValueError</strong></a> – if the message_body exceeds 160 characters</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(在 Python v3.10)"><strong>TypeError</strong></a> – if the message_body is not a basestring</p></li>
 </ul>
 </dd>
 </dl>
