@@ -14,42 +14,6 @@
 ```
 ````
 
-:::{panels}
-:container: +full-width text-center
-:header: w3-pale-yellow
-:column: col-lg-4 px-2 py-2
-:card: w3-pale-red
-
-**[符合 CommonMark 标准](commonmark-block-tokens)** ✔
-^^^
-MyST 是 [CommonMark Markdown][commonmark] 的一个超集。任何 CommonMark 文档也都是符合 MyST 的。
----
-
-**[写作的额外语法](extended-block-tokens)** ✍
-^^^
-MyST 扩展了 CommonMark 的语法，[旨在用于学术写作和技术文档](extended-block-tokens)。
-
----
-**[可扩展的语法](syntax/directives)** 🚀
-^^^
-MyST 提供了 [角色](syntax/roles) 和 [指令](syntax/directives)，使你可以扩展 MyST 的功能。
-
----
-**[与 Sphinx 兼容 ](sphinx/index)** 📄
-^^^
-MyST 的灵感来自于 Sphinx，并[配有自己的 Sphinx 分析器](sphinx/index)。[用 Markdown 编写你的 Sphinx 文档](https://www.sphinx-doc.org/en/master/usage/quickstart.html)，或将现有的 [RST 转换为 Markdown][rst-to-myst]！
-
----
-**[可以用 Python 破解](api/index)** 🐍
-^^^
-这个 MyST 解析器是建立在 [`markdown-it-py` package][markdown-it-py] 包之上的，这是一个可拔插的 Markdown 的 Python 解析器。
-
----
-**[可以用 Javascript 破解 ][markdown-it-myst]** 🌍
-^^^
-该 [JavaScript 解析器][markdown-it-myst] 建立在 [markdown-it][markdown-it] 的基础上，允许你在网站中解析 MyST。
-:::
-
 [commonmark]: https://commonmark.org/
 [github-ci]: https://github.com/executablebooks/MyST-Parser/workflows/continuous-integration/badge.svg?branch=master
 [github-link]: https://github.com/executablebooks/MyST-Parser
@@ -68,3 +32,5 @@ MyST 的灵感来自于 Sphinx，并[配有自己的 Sphinx 分析器](sphinx/in
 [markdown-it-myst]: https://github.com/executablebooks/markdown-it-myst
 [markdown-it]: https://markdown-it.github.io/
 [rst-to-myst]: https://rst-to-myst.readthedocs.io
+
+可以参考 [MyST 中文手册](https://xinetzone.github.io/myst-parser/)
