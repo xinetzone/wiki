@@ -26,4 +26,4 @@ Sphinx 特点如下：
 - [sphinx-doc/sphinx-doc-translations](https://github.com/sphinx-doc/sphinx-doc-translations)：一个在 Read The Docs 网站上提供多版本和多语言的 Sphinx 官方文档的项目。
 ```
 
-也可以 [对 sphinx 进行贡献](https://www.sphinx-doc.org/zh_CN/master/internals/contributing.html)。
+更多教程，参见中文版 [Sphinx 手册](https://xinetzone.github.io/sphinx-doc/)。

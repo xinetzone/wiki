@@ -337,41 +337,6 @@ commentsRunWhenDOMLoaded(addUtterances);
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/01_markdown.html">
-       Markdown
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/02_configuration.html">
-       配置
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/03_builder.html">
-       Builders
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/05_theming.html">
-       HTML 主题
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/06_intl.html">
-       国际化
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/07_setuptools.html">
-       安装工具集成
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/08_websupport.html">
-       Sphinx Web支持
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../sphinx/start/09_bibtex-format.html">
        Bibtex 格式说明（raw）
       </a>
@@ -1169,8 +1134,8 @@ most beautiful mathematical formulas.</p>
 <p>front-matter 可以包含特殊的键 <code class="docutils literal notranslate"><span class="pre">html_meta</span></code>；一个包含数据的 dict，作为 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"><code class="docutils literal notranslate"><span class="pre">&lt;meta&gt;</span></code> 元素</a> 添加到生成的HTML中。这相当于使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#html-metadata">RST <code class="docutils literal notranslate"><span class="pre">meta</span></code> 指令</a>。</p>
 <p>HTML 元数据也可以在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中通过 <code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> 变量全局添加，在这种情况下，它将被添加到所有 MyST 文档中。对于每个文档，<code class="docutils literal notranslate"><span class="pre">myst_html_meta</span></code> dict 将被文档级别的front-matter <code class="docutils literal notranslate"><span class="pre">html_meta</span></code> 所更新，而 front-matter 优先。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1a3916cf-658f-4d2a-8edf-612ea5a580ab" name="9f34c60e-17de-4fb5-9067-46fc73f01052" type="radio">
-</input><label class="tabbed-label" for="1a3916cf-658f-4d2a-8edf-612ea5a580ab">
+<input checked="checked" id="c5796dca-d430-42c1-85be-6c7b164c209e" name="46d19ce0-ae8c-43e7-baaa-bb0a38bea900" type="radio">
+</input><label class="tabbed-label" for="c5796dca-d430-42c1-85be-6c7b164c209e">
 Sphinx Configuration</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;en&quot;</span>
 <span class="n">myst_html_meta</span> <span class="o">=</span> <span class="p">{</span>
@@ -1182,8 +1147,8 @@ Sphinx Configuration</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="b3a08533-f958-41a1-9450-8f50215ed5a7" name="9f34c60e-17de-4fb5-9067-46fc73f01052" type="radio">
-</input><label class="tabbed-label" for="b3a08533-f958-41a1-9450-8f50215ed5a7">
+<input id="b36a6b5d-341c-4b65-b957-bae189cbc437" name="46d19ce0-ae8c-43e7-baaa-bb0a38bea900" type="radio">
+</input><label class="tabbed-label" for="b36a6b5d-341c-4b65-b957-bae189cbc437">
 MyST Front-Matter</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">html_meta</span><span class="p">:</span>
@@ -1195,8 +1160,8 @@ MyST Front-Matter</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c4e0e1a4-528e-4bce-ac41-dff5ed644a39" name="9f34c60e-17de-4fb5-9067-46fc73f01052" type="radio">
-</input><label class="tabbed-label" for="c4e0e1a4-528e-4bce-ac41-dff5ed644a39">
+<input id="8bc07ad4-34f4-4fea-9b30-de0e91515ddc" name="46d19ce0-ae8c-43e7-baaa-bb0a38bea900" type="radio">
+</input><label class="tabbed-label" for="8bc07ad4-34f4-4fea-9b30-de0e91515ddc">
 RestructuredText</label><div class="tabbed-content docutils">
 <div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span>
    <span class="nc">:description lang=en:</span> metadata description
@@ -1206,8 +1171,8 @@ RestructuredText</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="bdd5c3b5-1435-40ab-b5b7-e78ecb9c79f9" name="9f34c60e-17de-4fb5-9067-46fc73f01052" type="radio">
-</input><label class="tabbed-label" for="bdd5c3b5-1435-40ab-b5b7-e78ecb9c79f9">
+<input id="913f1308-6f2f-4dbe-bf7a-22a80d8bd55e" name="46d19ce0-ae8c-43e7-baaa-bb0a38bea900" type="radio">
+</input><label class="tabbed-label" for="913f1308-6f2f-4dbe-bf7a-22a80d8bd55e">
 HTML Output</label><div class="tabbed-content docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
