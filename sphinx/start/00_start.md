@@ -154,8 +154,6 @@ The :py:func:`enumerate` function can be used for ...
 
 请记住，该文件使用 Python 语法来表示字符串，数字，列表等。默认情况下，文件以 UTF-8 保存，如第一行中的编码声明所示。如果在任何字符串值中使用非 ASCII 字符，则需要使用 Python Unicode 字符串（如 `project =u'Exposé'`）。
 
-有关所有可用配置值的文档，请参阅 [配置](sphinx:configuration)。
-
 ## 使用 `autodoc` 自动生成文档
 
 在记录 Python 代码时，通常会在文档字符串中的源文件中放入大量文档。Sphinx 支持在模块中包含 docstrings extension（扩展名是为 Sphinx 项目提供附加功能的 Python 模块），称为 `autodoc`。
