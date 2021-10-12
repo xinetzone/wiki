@@ -283,28 +283,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../rst/00_start.html">
-       快速上手
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../rst/01_field-lists.html">
-       字段列表
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../rst/02_roles.html">
-       角色
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../rst/03_directives.html">
-       指令
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../rst/04_domains.html">
-       域
+      <a class="reference internal" href="../rst/other.html">
+       其他
       </a>
      </li>
     </ul>
@@ -1001,10 +981,10 @@ This is the best equation <span class="nb">{</span>eq<span class="nb">}</span>`e
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-eqn-best">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eqn-best" title="公式的永久链接">¶</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-eqn-best" title="公式的永久链接">¶</a></span>\[
 e = mc^2
 \]</div>
-<p>This is the best equation <a class="reference internal" href="#equation-eqn-best">(3)</a></p>
+<p>This is the best equation <a class="reference internal" href="#equation-eqn-best">(2)</a></p>
 <p>There are a few other options available to control dollar math parsing:</p>
 <p><code class="docutils literal notranslate"><span class="pre">myst_dmath_allow_space=False</span></code>, will cause inline math to only be parsed if there are no initial / final spaces, e.g. <code class="docutils literal notranslate"><span class="pre">$a$</span></code> but not <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">a$</span></code> or <code class="docutils literal notranslate"><span class="pre">$a</span> <span class="pre">$</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">myst_dmath_allow_digits=False</span></code>, will cause inline math to only be parsed if there are no initial / final digits, e.g. <code class="docutils literal notranslate"><span class="pre">$a$</span></code> but not <code class="docutils literal notranslate"><span class="pre">1$a$</span></code> or <code class="docutils literal notranslate"><span class="pre">$a$2</span></code>.</p>
@@ -1110,8 +1090,8 @@ Either directly; <code class="docutils literal notranslate"><span class="pre">pi
 </div>
 <p>You can use these substitutions inline or as blocks, and you can even nest substitutions in other substitutions (but circular references are prohibited):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d22b3dd0-27c9-4b90-a97f-e60e3339f240" name="fed70708-bb97-4451-943a-3a2b769a2465" type="radio">
-</input><label class="tabbed-label" for="d22b3dd0-27c9-4b90-a97f-e60e3339f240">
+<input checked="checked" id="56950e7e-bb87-460e-ae1b-66bd3bc691b8" name="787e6a53-9d02-43a6-9034-4e681500e31d" type="radio">
+</input><label class="tabbed-label" for="56950e7e-bb87-460e-ae1b-66bd3bc691b8">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline: {{ key1 }}
 
@@ -1125,8 +1105,8 @@ Block level:
 </pre></div>
 </div>
 </div>
-<input id="5fb94cdf-3dbb-4beb-8757-9f9e6d8ef8c0" name="fed70708-bb97-4451-943a-3a2b769a2465" type="radio">
-</input><label class="tabbed-label" for="5fb94cdf-3dbb-4beb-8757-9f9e6d8ef8c0">
+<input id="bc1d492f-9a5d-4eb4-b569-bbd1c0ca3c7e" name="787e6a53-9d02-43a6-9034-4e681500e31d" type="radio">
+</input><label class="tabbed-label" for="bc1d492f-9a5d-4eb4-b569-bbd1c0ca3c7e">
 Rendered Output</label><div class="tabbed-content docutils">
 <p>Inline: I’m a <strong>substitution</strong></p>
 <p>Block level:</p>
@@ -1211,8 +1191,8 @@ you can also use <code class="docutils literal notranslate"><span class="pre">::
 <p>Using colons instead of back-ticks has the benefit of allowing the content to be rendered correctly, when you are working in any standard Markdown editor.
 It is ideal for admonition type directives (as documented in <a class="reference internal" href="01_syntax.html#syntax-directives"><span class="std std-ref">Directives</span></a>) or tables with titles, for example:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f48da1a2-3781-4c2d-ba29-799a071ea160" name="9878ab8a-4ba9-4994-8397-8444862a79c9" type="radio">
-</input><label class="tabbed-label" for="f48da1a2-3781-4c2d-ba29-799a071ea160">
+<input checked="checked" id="39c4bd08-a589-4048-87b6-27acb00450ec" name="bfe58a2b-ef5e-452a-81ec-2e4e923f06a0" type="radio">
+</input><label class="tabbed-label" for="39c4bd08-a589-4048-87b6-27acb00450ec">
 Markdown Input</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{note}
 This text is <span class="gs">**standard**</span> <span class="ge">_Markdown_</span>
@@ -1229,8 +1209,8 @@ abc | mnp | xyz
 </pre></div>
 </div>
 </div>
-<input id="e2c854d9-5306-438f-bb08-ce5e342192d9" name="9878ab8a-4ba9-4994-8397-8444862a79c9" type="radio">
-</input><label class="tabbed-label" for="e2c854d9-5306-438f-bb08-ce5e342192d9">
+<input id="dc86aaac-08b3-455b-9698-eca8a731c3c9" name="bfe58a2b-ef5e-452a-81ec-2e4e923f06a0" type="radio">
+</input><label class="tabbed-label" for="dc86aaac-08b3-455b-9698-eca8a731c3c9">
 Rendered Output</label><div class="tabbed-content docutils">
 <div class="admonition note">
 <p class="admonition-title">注解</p>
@@ -1565,8 +1545,8 @@ a<span class="nb">_{</span>21<span class="nb">}&amp;</span> =b<span class="nb">_
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-46499ad1-f023-4616-bdc2-7113761917c4">
-<span class="eqno">(4)<a class="headerlink" href="#equation-46499ad1-f023-4616-bdc2-7113761917c4" title="公式的永久链接">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-767f91cc-5ef3-48ba-92f9-8b7e216eb7ca">
+<span class="eqno">(3)<a class="headerlink" href="#equation-767f91cc-5ef3-48ba-92f9-8b7e216eb7ca" title="公式的永久链接">¶</a></span>\[\begin{align}
 a_{11}&amp; =b_{11}&amp;
   a_{12}&amp; =b_{12}\\
 a_{21}&amp; =b_{21}&amp;
