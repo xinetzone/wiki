@@ -1,6 +1,16 @@
 # 中英对照
 
-缩略语|全名
+## 写作
+
+英文|中文
+:-|:-
+what-you-see-is-what-you-get|所见即所得
+plaintext|纯文本
+man pages|手册页
+
+## 未分类
+
+英文|中文
 :-|:-
 RBM Restricted Boltzmann Machines |限制性波尔兹曼机
 DBN Deep Belief Network |深度置信网络
@@ -20,3 +30,9 @@ LMDB Symas Lightning Memory-Mapped Database |快速内存映射库
 HDF5 Hierarchical data file |分层数据文件
 GPU Graphics Processing Unit |图像处理器
 ICIP |The International Conference on Image Processing
+Frequently Asked Questions|常见问题
+catalog templates|目录模板
+locale directory|本地化目录
+backquotes|反单引号
+asterisk|星号
+backslash|花括号

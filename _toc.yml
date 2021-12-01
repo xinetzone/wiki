@@ -15,12 +15,21 @@ parts:
   - file: study/index
     sections:
     - glob: study/**
+  - file: write/index
+    sections:
+    - glob: write/**
 
 - caption: 编程
   chapters:
   - file: python/index
     sections:
     - glob: python/**
+    - file: rst/index
+      sections:
+      - glob: rst/**
+    - file: myst/index
+      sections:
+      - glob: myst/**
 
 - caption: 学科
   chapters:
@@ -30,15 +39,6 @@ parts:
   - file: sanstyle/index
     sections:
     - glob: sanstyle/**
-    - file: rst/index
-      sections:
-      - glob: rst/**
-    - file: myst/index
-      sections:
-      - glob: myst/**
-    - file: sphinx/index
-      sections:
-      - glob: sphinx/start/**
     - file: actions/index
       sections:
       - file: actions/sphinx/index
