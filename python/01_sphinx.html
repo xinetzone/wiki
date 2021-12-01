@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docutils</title>
+    <title>Sphinx</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -95,12 +95,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
-    <link rel="canonical" href="https://xinetzone.github.io/wiki/python/00_docutils.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/wiki/python/01_sphinx.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Sphinx" href="01_sphinx.html" />
-    <link rel="prev" title="Python" href="index.html" />
+    <link rel="next" title="IPython" href="ipython.html" />
+    <link rel="prev" title="Docutils" href="00_docutils.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -233,13 +233,13 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_docutils.html">
      Docutils
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01_sphinx.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Sphinx
     </a>
    </li>
@@ -643,7 +643,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/00_docutils.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/01_sphinx.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -663,7 +663,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Fpython/00_docutils.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/wiki/issues/new?title=Issue%20on%20page%20%2Fpython/01_sphinx.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -692,21 +692,34 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="docutils">
-<h1>Docutils<a class="headerlink" href="#docutils" title="永久链接至标题">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="sphinx">
+<span id="id1"></span><h1>Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
 <div class="w3-pale-green w3-padding docutils">
-<dl class="glossary simple">
-<dt id="term-Docutils"><a class="reference external" href="https://docutils.sourceforge.io/">Docutils</a><a class="headerlink" href="#term-Docutils" title="Permalink to this term">¶</a></dt><dd><p>Docutils（Documentation Utilities，文档实用程序）是一个开源的文本处理系统，用于将文档处理成有用的格式，如 HTML、XML 和 LaTeX。它支持 reStructuredText，一种易于阅读的、所见即所得的纯文本标记语法。</p>
+<dl class="glossary">
+<dt id="term-Sphinx"><a class="reference external" href="https://github.com/sphinx-doc/sphinx">Sphinx</a><a class="headerlink" href="#term-Sphinx" title="Permalink to this term">¶</a></dt><dd><p>Sphinx 是一个由 Georg Brandl 编写的工具，它可以方便地为 Python 项目（或包含多个 <a class="reference internal" href="../rst/index.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> 源的其他文档）创建智能而漂亮的文档。它最初是为新的 Python 文档创建的，并且为 Python 项目文档提供了极好的工具，但是它也支持 C/C++，并且计划支持更多的语言。</p>
+<p>Sphinx 使用 <a class="reference internal" href="../rst/index.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> 作为它的标记语言，它的许多优势来自于 <a class="reference internal" href="../rst/index.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> 及其解析和翻译套件 Docutils 的强大和直接性。</p>
 </dd>
 </dl>
 </div>
-<p>运行 Docutils 的唯一要求是 <a class="reference internal" href="../glossary/python.html#term-Python"><span class="xref std std-term">Python</span></a>。</p>
-<p>安装：</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python -m pip install docutils
-</pre></div>
+<p>Sphinx 特点如下：</p>
+<ul class="simple">
+<li><p><strong>输出格式</strong>：HTML（包括派生格式如 Windows HTML Help），<a class="reference external" href="https://en.wikipedia.org/wiki/EPub">Epub</a> 和 Qt Help，纯文本，<a class="reference external" href="https://en.wikipedia.org/wiki/Man_page">手册</a>和 LaTeX（或直接使用 rst2pdf 输出 <a class="reference external" href="https://en.wikipedia.org/wiki/PDF">PDF</a>），<a class="reference external" href="https://en.wikipedia.org/wiki/Texinfo">Texinfo</a></p></li>
+<li><p><strong>广泛的交叉引用</strong>：函数、类、术语表及类似信息的<strong>语义标记</strong>和<strong>自动链接</strong></p></li>
+<li><p><strong>层次结构</strong>：文档树的简单定义，自动链接到兄弟结点、父结点和子结点</p></li>
+<li><p><strong>自动目录</strong>：通用目录和模块目录（index）</p></li>
+<li><p><strong>代码处理</strong>：使用 <a class="reference external" href="https://pygments.org/">Pygments</a> 自动高亮显示</p></li>
+<li><p>内置<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html#builtin-sphinx-extensions"><strong>扩展</strong></a>：例如自动测试代码片段和包含适当格式的文档字符串</p></li>
+<li><p><strong>三方扩展</strong>：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/extensions/index.html#third-party-extensions">用户贡献</a>的几十个扩展；大多数都可以从 PyPI 安装</p></li>
+</ul>
+<div class="admonition- admonition">
+<p class="admonition-title">参考：</p>
+<ul class="simple">
+<li><p>官方文档：<a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx documentation</a></p></li>
+<li><p>官方中文文档：<a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/">Sphinx 中文</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sphinx-doc/sphinx-doc-translations">sphinx-doc/sphinx-doc-translations</a>：一个在 Read The Docs 网站上提供多版本和多语言的 Sphinx 官方文档的项目。</p></li>
+</ul>
 </div>
-<p>要安装预编译版本，请附加选项 <code class="docutils literal notranslate"><span class="pre">--pre</span></code>。要安装开发版本，请按照下面安装一节中的说明。</p>
-<p>更多内容见：<a class="reference external" href="http://daobook.github.io/docutils/">docutils</a>。</p>
+<p>更多教程，参见中文版 <a class="reference external" href="https://xinetzone.github.io/sphinx-doc/">Sphinx 手册</a>。</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -734,17 +747,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="00_docutils.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Python</p>
+            <p class="prev-next-title">Docutils</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_sphinx.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="ipython.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Sphinx</p>
+        <p class="prev-next-title">IPython</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -4,12 +4,11 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyST</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -33,13 +32,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -103,7 +102,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="笔记" href="other.html" />
     <link rel="prev" title="其他" href="../rst/other.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -133,7 +135,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   哲学
  </span>
@@ -157,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   学习
  </span>
@@ -197,16 +199,9 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  编程
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../python/index.html">
-   Python
+  <a class="reference internal" href="../write/index.html">
+   写作
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -215,8 +210,37 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../write/09_bibtex-format.html">
+     Bibtex 格式说明（raw）
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  编程
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../python/index.html">
+   Python
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
     <a class="reference internal" href="../python/00_docutils.html">
      Docutils
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/01_sphinx.html">
+     Sphinx
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,58 +248,22 @@ commentsRunWhenDOMLoaded(addUtterances);
      IPython
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  学科
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../math/index.html">
-   数学
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../math/analysis.html">
-     分析
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../sanstyle/index.html">
-   上善若水
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../sanstyle/00_template.html">
-     Sanstyle GitHub 模板
+    <a class="reference internal" href="../python/raw.html">
+     未分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sanstyle/01_book.html">
-     Stanstyle Book
+    <a class="reference internal" href="../python/wiki.html">
+     常用术语
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../rst/index.html">
      reStructuredText
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -291,8 +279,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="current reference internal" href="#">
      MyST
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -304,32 +292,51 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../sphinx/index.html">
-     Sphinx
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  学科
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../math/index.html">
+   数学
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math/analysis.html">
+     分析
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/00_start.html">
-       快速上手
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/09_bibtex-format.html">
-       Bibtex 格式说明（raw）
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../sphinx/start/10_tutorial.html">
-       教程
-      </a>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sanstyle/index.html">
+   上善若水
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sanstyle/00_template.html">
+     Sanstyle GitHub 模板
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sanstyle/01_book.html">
+     Stanstyle Book
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../actions/index.html">
@@ -395,7 +402,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   混沌
  </span>
@@ -560,6 +567,16 @@ commentsRunWhenDOMLoaded(addUtterances);
      中英对照
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/notation.html">
+     符号
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other/raw.html">
+     缓存资源
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -675,13 +692,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="myst">
+  <div class="tex2jax_ignore mathjax_ignore section" id="myst">
 <span id="wiki-myst"></span><h1>MyST<a class="headerlink" href="#myst" title="永久链接至标题">¶</a></h1>
 <div class="w3-pale-green w3-padding docutils">
 <dl class="glossary">
-<dt id="term-MyST-Markdown"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST Markdown</a><a class="headerlink" href="#term-MyST-Markdown" title="Permalink to this term">¶</a></dt><dt id="term-MyST"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST</a><a class="headerlink" href="#term-MyST" title="Permalink to this term">¶</a></dt><dd><p>MyST（全称 Markedly Structured Text）专为 <a class="reference internal" href="../sphinx/index.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 项目使用而设计的 Markdown 风格。它是 <a class="reference internal" href="../glossary/jupyter-book.html#term-CommonMark"><span class="xref std std-term">CommonMark Markdown</span></a> 和一些额外的语法片段的组合，以支持 Sphinx 的功能，因此您可以用纯 Markdown 编写 Sphinx 文档。它是 <a class="reference internal" href="../glossary/jupyter.html#term-Jupyter-Book"><span class="xref std std-term">Jupyter Book</span></a> 使用的核心技术之一。</p>
+<dt id="term-MyST-Markdown"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST Markdown</a><a class="headerlink" href="#term-MyST-Markdown" title="Permalink to this term">¶</a></dt><dt id="term-MyST"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST</a><a class="headerlink" href="#term-MyST" title="Permalink to this term">¶</a></dt><dd><p>MyST（全称 Markedly Structured Text）专为 <a class="reference internal" href="../python/01_sphinx.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 项目使用而设计的 Markdown 风格。它是 <a class="reference internal" href="../glossary/jupyter-book.html#term-CommonMark"><span class="xref std std-term">CommonMark Markdown</span></a> 和一些额外的语法片段的组合，以支持 Sphinx 的功能，因此您可以用纯 Markdown 编写 Sphinx 文档。它是 <a class="reference internal" href="../glossary/jupyter.html#term-Jupyter-Book"><span class="xref std std-term">Jupyter Book</span></a> 使用的核心技术之一。</p>
 </dd>
-<dt id="term-MyST-Parser"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a><a class="headerlink" href="#term-MyST-Parser" title="Permalink to this term">¶</a></dt><dd><p>MyST-Parser 是 <a class="reference internal" href="../sphinx/index.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 的解析器，它可以读取以 MyST Markdown 编写的内容。<a class="reference internal" href="../glossary/jupyter-book.html#term-MyST-NB"><span class="xref std std-term">MyST-NB</span></a> 也使用它来解析 Jupyter 笔记本内部的 MyST Markdown。</p>
+<dt id="term-MyST-Parser"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a><a class="headerlink" href="#term-MyST-Parser" title="Permalink to this term">¶</a></dt><dd><p>MyST-Parser 是 <a class="reference internal" href="../python/01_sphinx.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 的解析器，它可以读取以 MyST Markdown 编写的内容。<a class="reference internal" href="../glossary/jupyter-book.html#term-MyST-NB"><span class="xref std std-term">MyST-NB</span></a> 也使用它来解析 Jupyter 笔记本内部的 MyST Markdown。</p>
 <p>它包含一个使用 <a class="reference external" href="https://markdown-it-py.readthedocs.io/">markdown-it-py</a> 的符合 <a class="reference external" href="https://commonmark.org/">CommonMark</a> 标准的扩展解析器，以及一个允许你在 Sphinx 中编写 MyST Markdown 的 Sphinx 扩展。</p>
 </dd>
 </dl>
@@ -689,7 +706,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>可以参考 <a class="reference external" href="https://xinetzone.github.io/myst-parser/">MyST 中文手册</a></p>
 <div class="toctree-wrapper compound">
 </div>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -714,31 +731,22 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../rst/other.html" title="上一页 页">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">其他</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../rst/other.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">其他</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="other.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">笔记</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="other.html" title="下一页 页">
-            <div class="prevnext-info">
-                <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">笔记</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -764,8 +772,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
